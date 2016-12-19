@@ -1,0 +1,6 @@
+target "FirebasePod" do
+platform :ios, '7.0'
+pod 'Firebase'
+end
+
+project 'path/to/Project.xcodeproj'
