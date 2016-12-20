@@ -24,6 +24,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        FIRApp.configure() 
         
         registerBtn.layer.borderWidth = 0
         registerBtn.clipsToBounds = true
@@ -114,6 +115,7 @@ class LoginViewController: UIViewController {
     
     
     // TODO: if user clicks skip button disable tvc for save advice
+    // TODO: fix constraints for all devices
     
     
     /*

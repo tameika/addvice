@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDWE0wdMYKpkjiiAbKdnX1EWcYTLMs0jCU</string>
+	<key>BUNDLE_ID</key>
+	<string>com.flatironschool.adviceApp</string>
+	<key>CFBundleDisplayName</key>
+	<string>Advice</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>CLIENT_ID</key>
+	<string>268061504883-aiptmk5fsjgtmcfi0t8d248ifim8rvpg.apps.googleusercontent.com</string>
+	<key>DATABASE_URL</key>
+	<string>https://adviceapp-4cc2e.firebaseio.com</string>
+	<key>GCM_SENDER_ID</key>
+	<string>268061504883</string>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:268061504883:ios:eaf354b99755bb99</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>PROJECT_ID</key>
+	<string>adviceapp-4cc2e</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.268061504883-aiptmk5fsjgtmcfi0t8d248ifim8rvpg</string>
+	<key>STORAGE_BUCKET</key>
+	<string>adviceapp-4cc2e.appspot.com</string>
+</dict>
+</plist>
