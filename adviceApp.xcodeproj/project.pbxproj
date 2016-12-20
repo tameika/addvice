@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BC20D3FB1E09B8F3000DD097 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC20D3FA1E09B8F3000DD097 /* Info.plist */; };
+		BC20D3FC1E09BA94000DD097 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC20D3FA1E09B8F3000DD097 /* Info.plist */; };
 		BC2917E81DFF6EE30016B511 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2917E71DFF6EE30016B511 /* LoginViewController.swift */; };
 		BC43C33D1DDBA157000994ED /* APIClient .swift in Sources */ = {isa = PBXBuildFile; fileRef = BC43C33C1DDBA157000994ED /* APIClient .swift */; };
 		BC6244C41DDA2E0C00AE6523 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6244C31DDA2E0C00AE6523 /* DataStore.swift */; };
@@ -282,10 +282,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC20D3FC1E09BA94000DD097 /* Info.plist in Resources */,
 				BC9979961D981513004A572C /* LaunchScreen.storyboard in Resources */,
 				BC9470C71E086AA500E2F21D /* Default-568h@2x.png in Resources */,
 				BC9979931D981513004A572C /* Assets.xcassets in Resources */,
-				BC20D3FB1E09B8F3000DD097 /* Info.plist in Resources */,
 				BC9979911D981513004A572C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -523,7 +523,7 @@
 				INFOPLIST_FILE = "adviceApp/GoogleService-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Tameika.AdviceApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.flatironschool.adviceApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -538,7 +538,7 @@
 				INFOPLIST_FILE = "adviceApp/GoogleService-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Tameika.AdviceApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.flatironschool.adviceApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
