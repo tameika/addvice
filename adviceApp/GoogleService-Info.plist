@@ -11,7 +11,7 @@
 	<key>BUNDLE_ID</key>
 	<string>com.flatironschool.adviceApp</string>
 	<key>CFBundleDisplayName</key>
-	<string>Advice</string>
+	<string>advice</string>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleShortVersionString</key>

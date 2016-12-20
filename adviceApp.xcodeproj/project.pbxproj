@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC20D3FB1E09B8F3000DD097 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC20D3FA1E09B8F3000DD097 /* Info.plist */; };
 		BC2917E81DFF6EE30016B511 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2917E71DFF6EE30016B511 /* LoginViewController.swift */; };
 		BC43C33D1DDBA157000994ED /* APIClient .swift in Sources */ = {isa = PBXBuildFile; fileRef = BC43C33C1DDBA157000994ED /* APIClient .swift */; };
 		BC6244C41DDA2E0C00AE6523 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6244C31DDA2E0C00AE6523 /* DataStore.swift */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		454989B972D947CDAF6E2A96 /* Pods_adviceApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_adviceApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92BEE6EC578CFF2EBC635D56 /* Pods-adviceApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-adviceApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-adviceApp/Pods-adviceApp.release.xcconfig"; sourceTree = "<group>"; };
+		BC20D3FA1E09B8F3000DD097 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC2917E71DFF6EE30016B511 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BC43C33C1DDBA157000994ED /* APIClient .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APIClient .swift"; sourceTree = "<group>"; };
 		BC6244C31DDA2E0C00AE6523 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
@@ -61,7 +63,6 @@
 		BC9979A21D981513004A572C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC9979A71D981513004A572C /* adviceAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = adviceAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC9979AB1D981513004A572C /* adviceAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adviceAppUITests.swift; sourceTree = "<group>"; };
-		BC9979AD1D981514004A572C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCB17C601DE8BD54004CA1DF /* BadWordsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadWordsList.swift; sourceTree = "<group>"; };
 		BCBAF3681DEBE59E00B714B5 /* MyAdviceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAdviceTableViewController.swift; sourceTree = "<group>"; };
 		EA392F6288A6574087F33774 /* Pods-adviceApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-adviceApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-adviceApp/Pods-adviceApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -143,6 +144,7 @@
 				BC99798F1D981513004A572C /* Main.storyboard */,
 				BCB17C601DE8BD54004CA1DF /* BadWordsList.swift */,
 				BC43C33C1DDBA157000994ED /* APIClient .swift */,
+				BC20D3FA1E09B8F3000DD097 /* Info.plist */,
 				BC6244C51DDA308500AE6523 /* adviceApp.xcdatamodeld */,
 				BC6244C31DDA2E0C00AE6523 /* DataStore.swift */,
 				BC9979921D981513004A572C /* Assets.xcassets */,
@@ -165,7 +167,6 @@
 			isa = PBXGroup;
 			children = (
 				BC9979AB1D981513004A572C /* adviceAppUITests.swift */,
-				BC9979AD1D981514004A572C /* Info.plist */,
 			);
 			path = adviceAppUITests;
 			sourceTree = "<group>";
@@ -284,6 +285,7 @@
 				BC9979961D981513004A572C /* LaunchScreen.storyboard in Resources */,
 				BC9470C71E086AA500E2F21D /* Default-568h@2x.png in Resources */,
 				BC9979931D981513004A572C /* Assets.xcassets in Resources */,
+				BC20D3FB1E09B8F3000DD097 /* Info.plist in Resources */,
 				BC9979911D981513004A572C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
