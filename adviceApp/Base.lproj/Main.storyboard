@@ -166,7 +166,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BON-aU-B1l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3421" y="139"/>
+            <point key="canvasLocation" x="3607" y="139"/>
         </scene>
         <!--Title-->
         <scene sceneID="AZw-AT-U01">
@@ -180,42 +180,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fMG-ab-cd0">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fMG-ab-cd0">
                                 <rect key="frame" x="29" y="108" width="315" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1v-c5-uAd">
-                                <rect key="frame" x="133" y="241" width="98" height="36"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password " textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TFd-EF-jzD">
+                                <rect key="frame" x="29" y="167" width="312" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zry-Lh-AOa">
+                                <rect key="frame" x="126" y="386" width="98" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.42884615380000002" green="0.42884615380000002" blue="0.42884615380000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
-                                <state key="normal" title="register">
-                                    <color key="titleColor" red="0.32401610246153856" green="0.0081683466499554453" blue="0.14478291678684221" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="skip">
+                                    <color key="titleColor" white="0.96999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="signUpBtnPressed:" destination="cUX-ht-yrv" eventType="touchUpInside" id="fbw-AV-WRH"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="showAdviceHome" id="oNM-6t-9GU"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TFd-EF-jzD">
-                                <rect key="frame" x="26" y="167" width="315" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="confirm password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VrR-dD-WC9">
+                                <rect key="frame" x="29" y="229" width="312" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zry-Lh-AOa">
-                                <rect key="frame" x="133" y="302" width="98" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1v-c5-uAd">
+                                <rect key="frame" x="126" y="315" width="98" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.42884615380000002" green="0.42884615380000002" blue="0.42884615380000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
-                                <state key="normal" title="skip">
-                                    <color key="titleColor" red="0.32401610250000001" green="0.0081683466499999999" blue="0.14478291679999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="register">
+                                    <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="oNM-6t-9GU"/>
+                                    <action selector="registerBtnPressed:" destination="cUX-ht-yrv" eventType="touchUpInside" id="Egr-Kt-Fmb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -223,6 +230,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="ck1-fj-Z3t"/>
                     <connections>
+                        <outlet property="confirmPasswordField" destination="VrR-dD-WC9" id="b29-Kt-ieC"/>
                         <outlet property="passwordField" destination="TFd-EF-jzD" id="UVx-za-bbo"/>
                         <outlet property="registerBtn" destination="l1v-c5-uAd" id="YwC-0l-ydq"/>
                         <outlet property="skipBtn" destination="zry-Lh-AOa" id="sSl-OL-XJ4"/>
@@ -231,13 +239,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uhM-hG-uT2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2252" y="138.98050974512745"/>
+            <point key="canvasLocation" x="2084" y="138.98050974512745"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="l0b-gX-IzX">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="q3v-U7-b6J" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="akP-Y9-sjZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -249,7 +258,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pUM-c7-v88" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1679" y="139"/>
+            <point key="canvasLocation" x="1370" y="139"/>
         </scene>
     </scenes>
 </document>

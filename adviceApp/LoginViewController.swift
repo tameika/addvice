@@ -16,15 +16,17 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var passwordField: UITextField!
     
+    @IBOutlet weak var confirmPasswordField: UITextField!
+    
+    
     @IBOutlet weak var registerBtn: UIButton!
     
     @IBOutlet weak var skipBtn: UIButton!
     
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        FIRApp.configure() 
         
         registerBtn.layer.borderWidth = 0
         registerBtn.clipsToBounds = true
@@ -90,42 +92,52 @@ class LoginViewController: UIViewController {
             
         })
     }
+
+
     
-    
-    
-    
-    
-    @IBAction func signUpBtnPressed(_ sender: Any) {
+    @IBAction func registerBtnPressed(_ sender: UIButton) {
         
-        guard let username = usernameField.text else { return }
-        guard let password = passwordField.text else { return }
+        print("🔥inside the register btn and it was pressed")
+ 
+        guard let username = usernameField.text, let password = passwordField.text, let passwordConfirmation = confirmPasswordField.text else { return }
         
-        FIRAuth.auth()?.createUser(withEmail: username, password: password, completion: { (user: FIRUser?, error) in
-            if error == nil {
-                //message of success
-            }else{
-                //message of failure
+        guard username != "" && password != "" && passwordConfirmation != "" else { return }
+        
+        if password != passwordConfirmation {
             
+            confirmPasswordField.backgroundColor = UIColor.red
+        }else{
+ 
+        FIRAuth.auth()?.createUser(withEmail: username, password: password, completion: { (user: FIRUser?, error) in
+            
+            if error != nil {
+                print("🔥successfully created new user")
+                self.performSegue(withIdentifier: "showAdviceHome", sender: self)
+                
+            
+            }else{
+                print("🔥failure to create new user")
             }
         })
-        
-        
+        }
+    
     }
+    
+
+    
+    
+    
+    
     
     
     
     // TODO: if user clicks skip button disable tvc for save advice
     // TODO: fix constraints for all devices
+    // TODO: present user with registration success message
     
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }
+
+
+
