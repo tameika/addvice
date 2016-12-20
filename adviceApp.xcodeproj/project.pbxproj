@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BC20D3FC1E09BA94000DD097 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC20D3FA1E09B8F3000DD097 /* Info.plist */; };
+		BC20D3FE1E09BB46000DD097 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC20D3FD1E09BB46000DD097 /* GoogleService-Info.plist */; };
 		BC2917E81DFF6EE30016B511 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2917E71DFF6EE30016B511 /* LoginViewController.swift */; };
 		BC43C33D1DDBA157000994ED /* APIClient .swift in Sources */ = {isa = PBXBuildFile; fileRef = BC43C33C1DDBA157000994ED /* APIClient .swift */; };
 		BC6244C41DDA2E0C00AE6523 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6244C31DDA2E0C00AE6523 /* DataStore.swift */; };
@@ -46,11 +47,11 @@
 		454989B972D947CDAF6E2A96 /* Pods_adviceApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_adviceApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92BEE6EC578CFF2EBC635D56 /* Pods-adviceApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-adviceApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-adviceApp/Pods-adviceApp.release.xcconfig"; sourceTree = "<group>"; };
 		BC20D3FA1E09B8F3000DD097 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC20D3FD1E09BB46000DD097 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BC2917E71DFF6EE30016B511 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BC43C33C1DDBA157000994ED /* APIClient .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APIClient .swift"; sourceTree = "<group>"; };
 		BC6244C31DDA2E0C00AE6523 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		BC6244C61DDA308500AE6523 /* adviceApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = adviceApp.xcdatamodel; sourceTree = "<group>"; };
-		BC9470C41E085F5500E2F21D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BC9470C61E086AA500E2F21D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BC9979881D981513004A572C /* adviceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = adviceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC99798B1D981513004A572C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -147,9 +148,9 @@
 				BC20D3FA1E09B8F3000DD097 /* Info.plist */,
 				BC6244C51DDA308500AE6523 /* adviceApp.xcdatamodeld */,
 				BC6244C31DDA2E0C00AE6523 /* DataStore.swift */,
+				BC20D3FD1E09BB46000DD097 /* GoogleService-Info.plist */,
 				BC9979921D981513004A572C /* Assets.xcassets */,
 				BC9979941D981513004A572C /* LaunchScreen.storyboard */,
-				BC9470C41E085F5500E2F21D /* GoogleService-Info.plist */,
 			);
 			path = adviceApp;
 			sourceTree = "<group>";
@@ -287,6 +288,7 @@
 				BC9470C71E086AA500E2F21D /* Default-568h@2x.png in Resources */,
 				BC9979931D981513004A572C /* Assets.xcassets in Resources */,
 				BC9979911D981513004A572C /* Main.storyboard in Resources */,
+				BC20D3FE1E09BB46000DD097 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,7 +522,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KXY9EDFTF5;
-				INFOPLIST_FILE = "adviceApp/GoogleService-Info.plist";
+				INFOPLIST_FILE = adviceApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.flatironschool.adviceApp;
@@ -535,7 +537,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KXY9EDFTF5;
-				INFOPLIST_FILE = "adviceApp/GoogleService-Info.plist";
+				INFOPLIST_FILE = adviceApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.flatironschool.adviceApp;
