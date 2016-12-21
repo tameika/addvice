@@ -111,7 +111,7 @@ class RegisterViewController: UIViewController {
             
             if error != nil {
                 print("🔥successfully created new user")
-                self.performSegue(withIdentifier: "showAdviceHome", sender: self)
+                self.performSegue(withIdentifier: "newToAdviceHome", sender: self)
                 
             
             }else{
@@ -130,7 +130,7 @@ class RegisterViewController: UIViewController {
     
     
     
-    // TODO: if user clicks skip button disable tvc for save advice
+    // TODO: stop advice home from showing twice after registration
     // TODO: fix constraints for all devices
     // TODO: present user with registration success message
     

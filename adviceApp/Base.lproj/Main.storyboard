@@ -136,7 +136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5864.8000000000002" y="138.98050974512745"/>
+            <point key="canvasLocation" x="5206" y="139"/>
         </scene>
         <!--My Favorite Advice-->
         <scene sceneID="t9W-Sq-Uks">
@@ -167,7 +167,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BON-aU-B1l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6799.1999999999998" y="138.98050974512745"/>
+            <point key="canvasLocation" x="5937" y="139"/>
         </scene>
         <!--Title-->
         <scene sceneID="AZw-AT-U01">
@@ -214,6 +214,7 @@
                                 </state>
                                 <connections>
                                     <action selector="registerBtnPressed:" destination="cUX-ht-yrv" eventType="touchUpInside" id="Egr-Kt-Fmb"/>
+                                    <segue destination="ceF-89-aov" kind="showDetail" identifier="newToAdviceHome" id="pFh-Sb-K5M"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4T3-3G-HiE">
@@ -234,7 +235,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uhM-hG-uT2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3962.4000000000001" y="138.98050974512745"/>
+            <point key="canvasLocation" x="3718" y="139"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="KU3-rr-Oz3">
@@ -299,7 +300,7 @@
                                     <color key="titleColor" red="0.11904106590000001" green="0.057622839289999998" blue="0.18086939099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="popoverPresentation" popoverAnchorView="GDQ-jJ-1dW" id="hIp-4r-J1D">
+                                    <segue destination="ceF-89-aov" kind="popoverPresentation" identifier="skipToAdviceHome" popoverAnchorView="GDQ-jJ-1dW" id="xBb-8U-7HT">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
                                 </connections>
@@ -351,10 +352,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uBk-TZ-vlX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4925.6000000000004" y="138.98050974512745"/>
+            <point key="canvasLocation" x="4447" y="139"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="hIp-4r-J1D"/>
+        <segue reference="xBb-8U-7HT"/>
     </inferredMetricsTieBreakers>
 </document>
