@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="q3v-U7-b6J">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OVm-qa-Fjp">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -37,7 +37,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                 <state key="normal" title="give advice">
-                                    <color key="titleColor" red="0.85625608519999996" green="0.79896208000000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.11904106590000001" green="0.057622839289999998" blue="0.18086939099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="submitAdviceBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mb8-gK-UcN"/>
@@ -95,7 +95,7 @@
                                         <barButtonItem key="rightBarButtonItem" title="f❥vorites" id="sJl-pS-67c">
                                             <color key="tintColor" red="0.85625608519999996" green="0.79896208000000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="zin-4q-VQY" kind="show" id="FFQ-ht-xyh"/>
+                                                <segue destination="zin-4q-VQY" kind="show" identifier="showSavedAdvice" id="FFQ-ht-xyh"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -125,6 +125,7 @@
                             <constraint firstItem="gaj-ul-fPQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="z4O-tW-9PB"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="lGo-pe-Hq5"/>
                     <connections>
                         <outlet property="displayAdviceTextLabel" destination="yFv-1J-CLp" id="eFC-RN-LJJ"/>
                         <outlet property="getAdviceBtnOutlet" destination="o30-GB-no8" id="jYy-ec-d0T"/>
@@ -135,7 +136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2825" y="139"/>
+            <point key="canvasLocation" x="5864.8000000000002" y="138.98050974512745"/>
         </scene>
         <!--My Favorite Advice-->
         <scene sceneID="t9W-Sq-Uks">
@@ -166,12 +167,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BON-aU-B1l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3607" y="139"/>
+            <point key="canvasLocation" x="6799.1999999999998" y="138.98050974512745"/>
         </scene>
         <!--Title-->
         <scene sceneID="AZw-AT-U01">
             <objects>
-                <viewController id="cUX-ht-yrv" customClass="LoginViewController" customModule="adviceApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cUX-ht-yrv" customClass="RegisterViewController" customModule="adviceApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JcI-5P-z0t"/>
                         <viewControllerLayoutGuide type="bottom" id="lRB-em-ce0"/>
@@ -180,43 +181,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fMG-ab-cd0">
-                                <rect key="frame" x="29" y="108" width="315" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.20000000000000001" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fMG-ab-cd0">
+                                <rect key="frame" x="29" y="83" width="315" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="backgroundColor" red="0.85625608519999996" green="0.79896208000000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password " textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TFd-EF-jzD">
-                                <rect key="frame" x="29" y="167" width="312" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.20000000000000001" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password " textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TFd-EF-jzD">
+                                <rect key="frame" x="30" y="112" width="315" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="backgroundColor" red="0.85625608519999996" green="0.79896208000000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zry-Lh-AOa">
-                                <rect key="frame" x="126" y="386" width="98" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.20000000000000001" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="confirm password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VrR-dD-WC9">
+                                <rect key="frame" x="30" y="141" width="315" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.42884615380000002" green="0.42884615380000002" blue="0.42884615380000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
-                                <state key="normal" title="skip">
-                                    <color key="titleColor" white="0.96999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="showAdviceHome" id="oNM-6t-9GU"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="confirm password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VrR-dD-WC9">
-                                <rect key="frame" x="29" y="229" width="312" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="backgroundColor" red="0.85625608519999996" green="0.79896208000000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1v-c5-uAd">
-                                <rect key="frame" x="126" y="315" width="98" height="36"/>
+                                <rect key="frame" x="137" y="205" width="98" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.42884615380000002" green="0.42884615380000002" blue="0.42884615380000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                 <state key="normal" title="register">
                                     <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
@@ -225,40 +216,145 @@
                                     <action selector="registerBtnPressed:" destination="cUX-ht-yrv" eventType="touchUpInside" id="Egr-Kt-Fmb"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4T3-3G-HiE">
+                                <rect key="frame" x="164" y="255" width="45" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="cancel"/>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.85625608519999996" green="0.79896208000000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.11904106588486239" green="0.057622839291036496" blue="0.18086939102564104" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="ck1-fj-Z3t"/>
                     <connections>
                         <outlet property="confirmPasswordField" destination="VrR-dD-WC9" id="b29-Kt-ieC"/>
                         <outlet property="passwordField" destination="TFd-EF-jzD" id="UVx-za-bbo"/>
                         <outlet property="registerBtn" destination="l1v-c5-uAd" id="YwC-0l-ydq"/>
-                        <outlet property="skipBtn" destination="zry-Lh-AOa" id="sSl-OL-XJ4"/>
                         <outlet property="usernameField" destination="fMG-ab-cd0" id="4e7-aR-Ker"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uhM-hG-uT2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2084" y="138.98050974512745"/>
+            <point key="canvasLocation" x="3962.4000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="KU3-rr-Oz3">
+            <objects>
+                <viewController id="3oO-kB-e8R" customClass="LoginViewController" customModule="adviceApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2b0-ak-DDc"/>
+                        <viewControllerLayoutGuide type="bottom" id="pm3-kg-zBq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="emT-qX-cfo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yoW-C2-hXy">
+                                <rect key="frame" x="104" y="79" width="167" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.20000000000000001" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0yK-RN-iM2">
+                                <rect key="frame" x="58" y="196" width="258" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.20000000000000001" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jy5-Iz-Gkl">
+                                <rect key="frame" x="58" y="226" width="258" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9R5-xp-dxL">
+                                <rect key="frame" x="129" y="327" width="105" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="register">
+                                    <color key="titleColor" red="0.11904106590000001" green="0.057622839289999998" blue="0.18086939099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cUX-ht-yrv" kind="popoverPresentation" popoverAnchorView="9R5-xp-dxL" id="v2v-3L-4DV">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRl-7x-zw1">
+                                <rect key="frame" x="164" y="289" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="login">
+                                    <color key="titleColor" red="0.11904106590000001" green="0.057622839289999998" blue="0.18086939099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginBtnPressed:" destination="3oO-kB-e8R" eventType="touchUpInside" id="Eos-ut-nw9"/>
+                                    <segue destination="ceF-89-aov" kind="showDetail" identifier="showAdviceHome" id="i4O-ly-Kch"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GDQ-jJ-1dW">
+                                <rect key="frame" x="164" y="365" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="skip">
+                                    <color key="titleColor" red="0.11904106590000001" green="0.057622839289999998" blue="0.18086939099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="popoverPresentation" popoverAnchorView="GDQ-jJ-1dW" id="hIp-4r-J1D">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.85625608519999996" green="0.79896208000000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="EJ4-1d-mgN"/>
+                    <connections>
+                        <outlet property="passwordField" destination="jy5-Iz-Gkl" id="ckf-CY-Nim"/>
+                        <outlet property="usernameField" destination="0yK-RN-iM2" id="8Au-Pg-e33"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3xq-ty-2oC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2986" y="139"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="l0b-gX-IzX">
+        <scene sceneID="dhQ-Yk-B8U">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="q3v-U7-b6J" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OVm-qa-Fjp" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="akP-Y9-sjZ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8na-Og-JxW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="cUX-ht-yrv" kind="relationship" relationship="rootViewController" id="Phj-gI-CyV"/>
+                        <segue destination="3oO-kB-e8R" kind="relationship" relationship="rootViewController" id="MH1-no-GeA"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pUM-c7-v88" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o0U-dj-D3t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1370" y="139"/>
+            <point key="canvasLocation" x="2042" y="139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Md8-Tg-B0y">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ceF-89-aov" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="z5J-rd-WFd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Exe-LH-Aex"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uBk-TZ-vlX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4925.6000000000004" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="hIp-4r-J1D"/>
+    </inferredMetricsTieBreakers>
 </document>

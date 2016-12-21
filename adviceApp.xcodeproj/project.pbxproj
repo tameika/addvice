@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		BC20D3FC1E09BA94000DD097 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC20D3FA1E09B8F3000DD097 /* Info.plist */; };
 		BC20D3FE1E09BB46000DD097 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC20D3FD1E09BB46000DD097 /* GoogleService-Info.plist */; };
-		BC2917E81DFF6EE30016B511 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2917E71DFF6EE30016B511 /* LoginViewController.swift */; };
+		BC2917E81DFF6EE30016B511 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2917E71DFF6EE30016B511 /* RegisterViewController.swift */; };
 		BC43C33D1DDBA157000994ED /* APIClient .swift in Sources */ = {isa = PBXBuildFile; fileRef = BC43C33C1DDBA157000994ED /* APIClient .swift */; };
+		BC4B661C1E0A3988003EEEC0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4B661B1E0A3988003EEEC0 /* LoginViewController.swift */; };
 		BC6244C41DDA2E0C00AE6523 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6244C31DDA2E0C00AE6523 /* DataStore.swift */; };
 		BC6244C71DDA308500AE6523 /* adviceApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC6244C51DDA308500AE6523 /* adviceApp.xcdatamodeld */; };
 		BC9470C71E086AA500E2F21D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC9470C61E086AA500E2F21D /* Default-568h@2x.png */; };
@@ -48,8 +49,9 @@
 		92BEE6EC578CFF2EBC635D56 /* Pods-adviceApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-adviceApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-adviceApp/Pods-adviceApp.release.xcconfig"; sourceTree = "<group>"; };
 		BC20D3FA1E09B8F3000DD097 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC20D3FD1E09BB46000DD097 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		BC2917E71DFF6EE30016B511 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BC2917E71DFF6EE30016B511 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		BC43C33C1DDBA157000994ED /* APIClient .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APIClient .swift"; sourceTree = "<group>"; };
+		BC4B661B1E0A3988003EEEC0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BC6244C31DDA2E0C00AE6523 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		BC6244C61DDA308500AE6523 /* adviceApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = adviceApp.xcdatamodel; sourceTree = "<group>"; };
 		BC9470C61E086AA500E2F21D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -139,7 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				BC99798B1D981513004A572C /* AppDelegate.swift */,
-				BC2917E71DFF6EE30016B511 /* LoginViewController.swift */,
+				BC4B661B1E0A3988003EEEC0 /* LoginViewController.swift */,
+				BC2917E71DFF6EE30016B511 /* RegisterViewController.swift */,
 				BC99798D1D981513004A572C /* GiveGetAdviceViewController.swift */,
 				BCBAF3681DEBE59E00B714B5 /* MyAdviceTableViewController.swift */,
 				BC99798F1D981513004A572C /* Main.storyboard */,
@@ -361,11 +364,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC4B661C1E0A3988003EEEC0 /* LoginViewController.swift in Sources */,
 				BC99798E1D981513004A572C /* GiveGetAdviceViewController.swift in Sources */,
 				BCB17C611DE8BD54004CA1DF /* BadWordsList.swift in Sources */,
 				BC6244C41DDA2E0C00AE6523 /* DataStore.swift in Sources */,
 				BC99798C1D981513004A572C /* AppDelegate.swift in Sources */,
-				BC2917E81DFF6EE30016B511 /* LoginViewController.swift in Sources */,
+				BC2917E81DFF6EE30016B511 /* RegisterViewController.swift in Sources */,
 				BC43C33D1DDBA157000994ED /* APIClient .swift in Sources */,
 				BCBAF3691DEBE59E00B714B5 /* MyAdviceTableViewController.swift in Sources */,
 				BC6244C71DDA308500AE6523 /* adviceApp.xcdatamodeld in Sources */,
