@@ -20,12 +20,17 @@ class RegisterViewController: UIViewController {
     
     @IBOutlet weak var registerBtn: UIButton!
     
+    @IBOutlet weak var cancelBtn: UIButton!
+    
+    
+    
     //@IBOutlet weak var skipBtn: UIButton!
     
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         registerBtn.layer.borderWidth = 0
         registerBtn.clipsToBounds = true
@@ -105,13 +110,15 @@ class RegisterViewController: UIViewController {
         if password != passwordConfirmation {
             
             confirmPasswordField.backgroundColor = UIColor.red
+            
         }else{
+            
  
         FIRAuth.auth()?.createUser(withEmail: username, password: password, completion: { (user: FIRUser?, error) in
             
             if error != nil {
                 print("🔥successfully created new user")
-                self.performSegue(withIdentifier: "newToAdviceHome", sender: self)
+                //self.performSegue(withIdentifier: "newToAdviceHome", sender: self)
                 
             
             }else{
@@ -124,6 +131,11 @@ class RegisterViewController: UIViewController {
     
 
     
+    @IBAction func cancelBtnPressed(_ sender: UIButton) {
+        
+        self.dismiss(animated: true) {
+        }
+    }
     
     
     
@@ -131,6 +143,7 @@ class RegisterViewController: UIViewController {
     
     
     // TODO: stop advice home from showing twice after registration
+    // TODO: stop registration if passwords don't match
     // TODO: fix constraints for all devices
     // TODO: present user with registration success message
     

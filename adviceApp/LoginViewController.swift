@@ -30,7 +30,8 @@ class LoginViewController: UIViewController {
             if let error = error {
                 print(error.localizedDescription)
             } else {
-                self.performSegue(withIdentifier: "showAdviceHome", sender: self)
+                print("🔥successfully logged in")
+                //self.performSegue(withIdentifier: "showAdviceHome", sender: self)
             }
             
         })
