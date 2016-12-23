@@ -32,10 +32,10 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         
         
-        registerBtn.layer.borderWidth = 0
-        registerBtn.clipsToBounds = true
-        registerBtn.layer.cornerRadius = registerBtn.bounds.height * 0.5
-        registerBtn.backgroundColor = UIColor.gray.withAlphaComponent(0.5)
+        //registerBtn.layer.borderWidth = 0
+        //registerBtn.clipsToBounds = true
+        //registerBtn.layer.cornerRadius = registerBtn.bounds.height * 0.5
+        //registerBtn.backgroundColor = UIColor.gray.withAlphaComponent(0.5)
         
 //        skipBtn.layer.borderWidth = 0
 //        skipBtn.clipsToBounds = true

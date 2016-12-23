@@ -12,6 +12,12 @@ class MyAdviceTableViewController: UITableViewController {
     
     var savedAdviceList = [Advice]()
     
+    let eggplant = UIColor(red: 26.0,
+                           green: 0.0,
+                           blue: 28.0,
+                           alpha: 1.0)
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,11 +26,7 @@ class MyAdviceTableViewController: UITableViewController {
         
         tableView.estimatedRowHeight = 50.0
         
-        //let eggplant = UIColor(red: 33.0,
-                               //green: 0.0,
-                              // blue: 46.0,
-                              // alpha: 1.0)
-      
+        
         
         // TODO: Make a NEW fetch request for items where isFavorited is true.
         
@@ -76,7 +78,7 @@ class MyAdviceTableViewController: UITableViewController {
         
         cell.textLabel?.font = UIFont(name: "Avenir-Light", size: 22)
         
-        cell.textLabel?.textColor = UIColor.makeEggplantColor()
+        //cell.textLabel?.textColor = eggplant
         
         cell.textLabel?.sizeToFit()
         
@@ -201,12 +203,12 @@ class MyAdviceTableViewController: UITableViewController {
     
 }
 
-extension UIColor {
-    
-    func makeEggplantColor() {
-        let eggplant = UIColor(red: 33.0,
-                         green: 0.0,
-                         blue: 46.0,
-                         alpha: 1.0)
-    }
-}
+//extension UIColor {
+//    
+//    func makeEggplantColor() {
+//        let eggplant = UIColor(red: 33.0,
+//                         green: 0.0,
+//                         blue: 46.0,
+//                         alpha: 1.0)
+//    }
+//}

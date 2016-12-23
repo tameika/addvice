@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BC20D3FC1E09BA94000DD097 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC20D3FA1E09B8F3000DD097 /* Info.plist */; };
 		BC20D3FE1E09BB46000DD097 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC20D3FD1E09BB46000DD097 /* GoogleService-Info.plist */; };
 		BC2917E81DFF6EE30016B511 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2917E71DFF6EE30016B511 /* RegisterViewController.swift */; };
 		BC43C33D1DDBA157000994ED /* APIClient .swift in Sources */ = {isa = PBXBuildFile; fileRef = BC43C33C1DDBA157000994ED /* APIClient .swift */; };
@@ -250,7 +249,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = flatiron;
 				TargetAttributes = {
 					BC9979871D981512004A572C = {
@@ -295,7 +294,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC20D3FC1E09BA94000DD097 /* Info.plist in Resources */,
 				BC9979961D981513004A572C /* LaunchScreen.storyboard in Resources */,
 				BC4B661E1E0B53E9003EEEC0 /* balloon-898682_1920.jpg in Resources */,
 				BC9470C71E086AA500E2F21D /* Default-568h@2x.png in Resources */,

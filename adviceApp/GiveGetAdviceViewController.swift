@@ -41,25 +41,25 @@ class ViewController: UIViewController {
         
                 
         giveAdviceTextField.delegate = self
-        self.giveAdviceBtnOutlet.layer.borderWidth = 0
-        self.giveAdviceBtnOutlet.clipsToBounds = true
-        self.giveAdviceBtnOutlet.layer.cornerRadius = giveAdviceBtnOutlet.bounds.height * 0.5
-        self.giveAdviceBtnOutlet.layer.borderColor = UIColor.white.cgColor
-        self.giveAdviceBtnOutlet.backgroundColor = UIColor.gray.withAlphaComponent(0.5)
+        //self.giveAdviceBtnOutlet.layer.borderWidth = 0
+        //self.giveAdviceBtnOutlet.clipsToBounds = true
+        //self.giveAdviceBtnOutlet.layer.cornerRadius = giveAdviceBtnOutlet.bounds.height * 0.5
+        //self.giveAdviceBtnOutlet.layer.borderColor = UIColor.white.cgColor
+        //self.giveAdviceBtnOutlet.backgroundColor = UIColor.gray.withAlphaComponent(0.5)
         
         
-        self.getAdviceBtnOutlet.layer.borderWidth = 0
-        self.getAdviceBtnOutlet.clipsToBounds = true
-        self.getAdviceBtnOutlet.layer.cornerRadius = getAdviceBtnOutlet.bounds.height * 0.5
-        self.getAdviceBtnOutlet.layer.borderColor = UIColor.white.cgColor
-        self.getAdviceBtnOutlet.backgroundColor = UIColor.gray.withAlphaComponent(0.5)
-
-        self.savedAdviceBtn.layer.borderWidth = 0
-        self.savedAdviceBtn.clipsToBounds = true
-        self.savedAdviceBtn.layer.cornerRadius = 10
-        self.savedAdviceBtn.layer.cornerRadius = savedAdviceBtn.bounds.height * 0.5
-        self.savedAdviceBtn.layer.borderColor = UIColor.white.cgColor
-        self.savedAdviceBtn.backgroundColor = UIColor.gray.withAlphaComponent(0.5)
+//        self.getAdviceBtnOutlet.layer.borderWidth = 0
+//        self.getAdviceBtnOutlet.clipsToBounds = true
+//        self.getAdviceBtnOutlet.layer.cornerRadius = getAdviceBtnOutlet.bounds.height * 0.5
+//        self.getAdviceBtnOutlet.layer.borderColor = UIColor.white.cgColor
+//        self.getAdviceBtnOutlet.backgroundColor = UIColor.gray.withAlphaComponent(0.5)
+//
+//        self.savedAdviceBtn.layer.borderWidth = 0
+//        self.savedAdviceBtn.clipsToBounds = true
+//        self.savedAdviceBtn.layer.cornerRadius = 10
+//        self.savedAdviceBtn.layer.cornerRadius = savedAdviceBtn.bounds.height * 0.5
+//        self.savedAdviceBtn.layer.borderColor = UIColor.white.cgColor
+//        self.savedAdviceBtn.backgroundColor = UIColor.gray.withAlphaComponent(0.5)
         
         self.displayAdviceTextLabel.clipsToBounds = true 
         self.displayAdviceTextLabel.layer.cornerRadius = 5
