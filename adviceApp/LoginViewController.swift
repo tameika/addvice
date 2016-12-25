@@ -18,7 +18,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var skipBtn: UIButton!
     
-    //var skipDelegate:
+    var skipDelegate: disableSavedAdviceList
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +46,7 @@ class LoginViewController: UIViewController {
 
     @IBAction func skipBtnPressed(_ sender: UIButton) {
         
-        //call delegate with function on it
+        skipDelegate.disableSavedAdviceList()
     }
     
     

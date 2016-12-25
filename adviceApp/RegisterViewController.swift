@@ -45,46 +45,46 @@ class RegisterViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        usernameField.center.x -= view.bounds.width
-        passwordField.center.x -= view.bounds.width
-        registerBtn.center.y += view.bounds.width * 2.0
+//        usernameField.center.x -= view.bounds.width
+//        passwordField.center.x -= view.bounds.width
+//        registerBtn.center.y += view.bounds.width * 2.0
         //skipBtn.center.y += view.bounds.width * 2.0
     }
     
     override func viewDidAppear(_ animated: Bool) {
         
-        UIView.animate(withDuration: 0.6,
-                       delay: 0.0,
-                       usingSpringWithDamping: CGFloat(0.50),
-                       initialSpringVelocity: CGFloat(1.0),
-                       options: UIViewAnimationOptions.curveLinear,
-                       animations: {
-                        self.usernameField.center.x += self.view.bounds.width
-        },
-                       completion: { Void in()  }
-        )
-
-
-        UIView.animate(withDuration: 0.6,
-                       delay: 0.1,
-                       usingSpringWithDamping: CGFloat(0.50),
-                       initialSpringVelocity: CGFloat(1.0),
-                       options: UIViewAnimationOptions.allowUserInteraction,
-                       animations: {
-                        self.passwordField.center.x += self.view.bounds.width
-        },
-                       completion: { Void in()  }
-        )
-        
-        
-        UIView.animate(withDuration: 0.8,
-                       delay: 0.1,
-                       options: .curveEaseInOut,
-                       animations:  {
-                        self.registerBtn.center.y -= self.view.center.y * 2.3
-        },
-                       completion: { Void in()
-        })
+//        UIView.animate(withDuration: 0.6,
+//                       delay: 0.0,
+//                       usingSpringWithDamping: CGFloat(0.50),
+//                       initialSpringVelocity: CGFloat(1.0),
+//                       options: UIViewAnimationOptions.curveLinear,
+//                       animations: {
+//                        self.usernameField.center.x += self.view.bounds.width
+//        },
+//                       completion: { Void in()  }
+//        )
+//
+//
+//        UIView.animate(withDuration: 0.6,
+//                       delay: 0.1,
+//                       usingSpringWithDamping: CGFloat(0.50),
+//                       initialSpringVelocity: CGFloat(1.0),
+//                       options: UIViewAnimationOptions.allowUserInteraction,
+//                       animations: {
+//                        self.passwordField.center.x += self.view.bounds.width
+//        },
+//                       completion: { Void in()  }
+//        )
+//        
+//        
+//        UIView.animate(withDuration: 0.8,
+//                       delay: 0.1,
+//                       options: .curveEaseInOut,
+//                       animations:  {
+//                        self.registerBtn.center.y -= self.view.center.y * 2.3
+//        },
+//                       completion: { Void in()
+//        })
         
 //        UIView.animate(withDuration: 0.8,
 //                       delay: 0.2,

@@ -197,7 +197,10 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "myAdviceListSegue" {
-            
+            print("going to saved adivce list table")
+        } else  {
+            let dest = segue.destination as! LoginViewController
+            dest.skipDelegate = self
         }
     }
     
