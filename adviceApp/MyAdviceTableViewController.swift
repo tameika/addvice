@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class MyAdviceTableViewController: UITableViewController {
     
     var savedAdviceList = [Advice]()
@@ -17,8 +19,7 @@ class MyAdviceTableViewController: UITableViewController {
                            blue: 28.0,
                            alpha: 1.0)
 
-    
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         

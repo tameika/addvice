@@ -15,6 +15,10 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usernameField: UITextField!
     
     @IBOutlet weak var passwordField: UITextField!
+    
+    @IBOutlet weak var skipBtn: UIButton!
+    
+    //var skipDelegate:
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +41,13 @@ class LoginViewController: UIViewController {
         })
     }
     
+    
+    
+
+    @IBAction func skipBtnPressed(_ sender: UIButton) {
+        
+        //call delegate with function on it
+    }
     
     
     

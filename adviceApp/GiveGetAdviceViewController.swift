@@ -8,6 +8,17 @@
 
 import UIKit
 
+// create protocol (a type to use later) which holds property or method
+
+
+// create an extension on the viewcontroller class to adopt and conform to the protocol
+// send delegate to the needed viewcontroller using a segue
+
+
+protocol disableSavedAdviceList {
+    func disableSavedAdviceList()
+}
+
 class ViewController: UIViewController {
     
     // MARK: UI Properties
@@ -17,14 +28,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var displayAdviceTextLabel: UILabel!
     
     @IBOutlet weak var getAdviceBtnOutlet: UIButton!
-    
-    @IBOutlet weak var myAdviceBarBtn: UIBarButtonItem!
+ 
+    @IBOutlet weak var savedAdviceBarBtn: UIBarButtonItem!
     
     @IBOutlet weak var savedAdviceBtn: UIButton!
     
     @IBOutlet weak var giveAdviceBtnOutlet: UIButton!
     
-
     
     // MARK: Logic Properties
     
@@ -197,7 +207,12 @@ class ViewController: UIViewController {
 }
 
 
-
+extension ViewController: disableSavedAdviceList {
+    
+    func disableSavedAdviceList() {
+        savedAdviceBarBtn.isEnabled = false
+    }
+}
 
 extension ViewController: UITextFieldDelegate {
     

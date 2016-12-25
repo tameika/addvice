@@ -152,7 +152,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" tableViewCell="GZh-FK-z1x" id="9uK-Y7-uf1">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <color key="tintColor" red="0.42884615380000002" green="0.42884615380000002" blue="0.42884615380000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -326,6 +326,7 @@
                     <navigationItem key="navigationItem" id="EJ4-1d-mgN"/>
                     <connections>
                         <outlet property="passwordField" destination="jy5-Iz-Gkl" id="ckf-CY-Nim"/>
+                        <outlet property="skipBtn" destination="GDQ-jJ-1dW" id="lA9-sP-GNJ"/>
                         <outlet property="usernameField" destination="0yK-RN-iM2" id="8Au-Pg-e33"/>
                     </connections>
                 </viewController>
