@@ -24,7 +24,6 @@ class RegisterViewController: UIViewController {
     
     
     
-    //@IBOutlet weak var skipBtn: UIButton!
     
 
     
@@ -37,10 +36,6 @@ class RegisterViewController: UIViewController {
         //registerBtn.layer.cornerRadius = registerBtn.bounds.height * 0.5
         //registerBtn.backgroundColor = UIColor.gray.withAlphaComponent(0.5)
         
-//        skipBtn.layer.borderWidth = 0
-//        skipBtn.clipsToBounds = true
-//        skipBtn.layer.cornerRadius = registerBtn.bounds.height * 0.5
-//        skipBtn.backgroundColor = UIColor.gray.withAlphaComponent(0.5)
 
     }
     
@@ -48,7 +43,6 @@ class RegisterViewController: UIViewController {
 //        usernameField.center.x -= view.bounds.width
 //        passwordField.center.x -= view.bounds.width
 //        registerBtn.center.y += view.bounds.width * 2.0
-        //skipBtn.center.y += view.bounds.width * 2.0
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -86,30 +80,12 @@ class RegisterViewController: UIViewController {
 //                       completion: { Void in()
 //        })
         
-//        UIView.animate(withDuration: 0.8,
-//                       delay: 0.2,
-//                       options: .curveEaseInOut,
-//                       animations: {
-//                        self.skipBtn.center.y -= self.view.center.y * 2.35
-//        },
-//                       completion: { Void in()
-//            
-//        })
+
     }
 
 
     
     @IBAction func registerBtnPressed(_ sender: UIButton) {
-//        guard let username = usernameField.text, let password = passwordField.text, let passwordConfirmation = confirmPasswordField.text else { return }
-//
-//        
-//        switch (username, password, passwordConfirmation) {
-//        case (username == "", password == "", passwordConfirmation == "" :
-//            <#code#>
-//        default:
-//            <#code#>
-//        }
-//        
         
         print("🔥inside the register btn and it was pressed")
  
@@ -130,10 +106,7 @@ class RegisterViewController: UIViewController {
                 print("🔥successfully created new user")
                 
                 self.performSegue(withIdentifier: "getGiveSegue", sender: nil)
-                
-//                guard let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "id") as? ViewController else { return }
-//                self.navigationController?.pushViewController(vc, animated: true)
-            
+        
             }else{
                 print("🔥failure to create new user")
             }
@@ -149,14 +122,9 @@ class RegisterViewController: UIViewController {
         self.dismiss(animated: true) {
         }
     }
+ 
     
     
-    
-    
-    
-    
-    // TODO: stop advice home from showing twice after registration
-    // TODO: stop registration if passwords don't match
     // TODO: fix constraints for all devices
     // TODO: present user with registration success message
     

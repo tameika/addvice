@@ -70,7 +70,6 @@ class LoginViewController: UIViewController {
     
     
     
-    // TODO: IF SKIP BUTTON IS PRESSED DISABLE SAVED ADVICE TVC
     
 
     /*

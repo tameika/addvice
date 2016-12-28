@@ -8,17 +8,6 @@
 
 import UIKit
 
-// create protocol (a type to use later) which holds property or method
-
-
-// create an extension on the viewcontroller class to adopt and conform to the protocol
-// send delegate to the needed viewcontroller using a segue
-
-
-protocol disableSavedAdviceList {
-    func disableSavedAdviceList()
-}
-
 class ViewController: UIViewController {
     
     // MARK: UI Properties
@@ -127,7 +116,7 @@ class ViewController: UIViewController {
         
         //TODO: Receiving own advice. Fix that.
         
-        savedAdviceBtn.isEnabled = true
+        //savedAdviceBtn.isEnabled = true
         
         var randomAdviceIndex = Int(arc4random_uniform(UInt32(store.adviceArray.count)))
         
@@ -157,9 +146,7 @@ class ViewController: UIViewController {
             
             // TODO: Let the user know that it was saved (display something to them)
             // TODO: Also, should we then immediately display a new piece of advice after we save one?
-            
-            //
-            
+
         }
         
     }
@@ -209,10 +196,7 @@ class ViewController: UIViewController {
         
         segue.identifier == "myAdviceListSegue"
             print("going to saved adivce list table")
-//        } else  {
-//            let dest = segue.destination as? LoginViewController
-//            dest?.skipDelegate = self
-//        }
+
     }
     
     
@@ -221,12 +205,6 @@ class ViewController: UIViewController {
 }
 
 
-//extension ViewController: disableSavedAdviceList {
-//    
-//    func disableSavedAdviceList() {
-//        savedAdviceBarBtn.isEnabled = false
-//    }
-//}
 
 extension ViewController: UITextFieldDelegate {
     
@@ -252,17 +230,9 @@ extension ViewController: UITextFieldDelegate {
 
 
 
-
-//To do list:
-
-
-//3. decide whether there should be limit to how many times get advice can be clicked
-
-// decide how many times someone can submit advice
-
-// animate alert controller
-
-// FLAG BAD ADVICE 
+// Todo: animate alert controller
+// Todo: implement logout feature
+// Todo: FLAG BAD ADVICE
 
 
 
