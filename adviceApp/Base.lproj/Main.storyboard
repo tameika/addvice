@@ -238,11 +238,12 @@
                         <outlet property="passwordField" destination="TFd-EF-jzD" id="UVx-za-bbo"/>
                         <outlet property="registerBtn" destination="l1v-c5-uAd" id="YwC-0l-ydq"/>
                         <outlet property="usernameField" destination="fMG-ab-cd0" id="4e7-aR-Ker"/>
+                        <segue destination="ceF-89-aov" kind="show" identifier="getGiveSegue" id="pzh-rZ-kHf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uhM-hG-uT2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3717.5999999999999" y="138.98050974512745"/>
+            <point key="canvasLocation" x="3714" y="508"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="KU3-rr-Oz3">
@@ -284,7 +285,6 @@
                                 </state>
                                 <connections>
                                     <action selector="loginBtnPressed:" destination="3oO-kB-e8R" eventType="touchUpInside" id="Eos-ut-nw9"/>
-                                    <segue destination="ceF-89-aov" kind="showDetail" identifier="showAdviceHome" id="i4O-ly-Kch"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GDQ-jJ-1dW">
@@ -330,6 +330,7 @@
                         <outlet property="passwordField" destination="jy5-Iz-Gkl" id="ckf-CY-Nim"/>
                         <outlet property="skipBtn" destination="GDQ-jJ-1dW" id="lA9-sP-GNJ"/>
                         <outlet property="usernameField" destination="0yK-RN-iM2" id="8Au-Pg-e33"/>
+                        <segue destination="ceF-89-aov" kind="show" identifier="loginToAdviceHome" id="QC4-18-FUe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3xq-ty-2oC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -381,6 +382,6 @@
         <image name="positive-725842_1920.jpg" width="1920" height="1482"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xBb-8U-7HT"/>
+        <segue reference="QC4-18-FUe"/>
     </inferredMetricsTieBreakers>
 </document>

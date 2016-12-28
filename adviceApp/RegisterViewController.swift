@@ -128,8 +128,11 @@ class RegisterViewController: UIViewController {
             
             if error != nil {
                 print("🔥successfully created new user")
-                let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "identifier") as? ViewController
-                self.navigationController?.pushViewController(vc!, animated: true)
+                
+                self.performSegue(withIdentifier: "getGiveSegue", sender: nil)
+                
+//                guard let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "id") as? ViewController else { return }
+//                self.navigationController?.pushViewController(vc, animated: true)
             
             }else{
                 print("🔥failure to create new user")

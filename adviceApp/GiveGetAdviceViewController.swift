@@ -35,6 +35,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var giveAdviceBtnOutlet: UIButton!
     
+    var userHasSkippedLogin: Bool = false
+    
     
     // MARK: Logic Properties
     
@@ -48,6 +50,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if userHasSkippedLogin {
+            
+            disableSaveButton()
+        }
         
                 
         giveAdviceTextField.delegate = self
@@ -158,6 +165,10 @@ class ViewController: UIViewController {
     }
     
     
+    func disableSaveButton() {
+        savedAdviceBarBtn.isEnabled = false
+    }
+    
     
     
     
@@ -196,12 +207,12 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "myAdviceListSegue" {
+        segue.identifier == "myAdviceListSegue"
             print("going to saved adivce list table")
-        } else  {
-            let dest = segue.destination as? LoginViewController
-            dest?.skipDelegate = self
-        }
+//        } else  {
+//            let dest = segue.destination as? LoginViewController
+//            dest?.skipDelegate = self
+//        }
     }
     
     
@@ -210,12 +221,12 @@ class ViewController: UIViewController {
 }
 
 
-extension ViewController: disableSavedAdviceList {
-    
-    func disableSavedAdviceList() {
-        savedAdviceBarBtn.isEnabled = false
-    }
-}
+//extension ViewController: disableSavedAdviceList {
+//    
+//    func disableSavedAdviceList() {
+//        savedAdviceBarBtn.isEnabled = false
+//    }
+//}
 
 extension ViewController: UITextFieldDelegate {
     

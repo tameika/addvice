@@ -18,7 +18,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var skipBtn: UIButton!
     
-    var skipDelegate: disableSavedAdviceList?
+    //var skipDelegate: disableSavedAdviceList?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +35,7 @@ class LoginViewController: UIViewController {
                 print(error.localizedDescription)
             } else {
                 print("🔥successfully logged in")
-                //self.performSegue(withIdentifier: "showAdviceHome", sender: self)
+                self.performSegue(withIdentifier: "loginToAdviceHome", sender: self)
             }
             
         })
@@ -44,11 +44,27 @@ class LoginViewController: UIViewController {
     
     
 
-    @IBAction func skipBtnPressed(_ sender: UIButton) {
+//    @IBAction func skipBtnPressed(_ sender: UIButton) {
+//        
+//        print("🎉i am in the skip button")
+//        
+//        skipDelegate?.disableSavedAdviceList()
+//        
+//    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        print("🎉i am in the skip button")
+        if segue.identifier == "skipToAdviceHome" {
+            
+            let destNavController = segue.destination as! UINavigationController
+            
+            let firstVC = destNavController.viewControllers.first! as! ViewController
+            
+            firstVC.userHasSkippedLogin = true
+            
+        }
         
-        skipDelegate?.disableSavedAdviceList()
         
     }
     
