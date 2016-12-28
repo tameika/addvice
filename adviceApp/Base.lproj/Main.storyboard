@@ -215,7 +215,6 @@
                                 </state>
                                 <connections>
                                     <action selector="registerBtnPressed:" destination="cUX-ht-yrv" eventType="touchUpInside" id="Egr-Kt-Fmb"/>
-                                    <segue destination="ceF-89-aov" kind="showDetail" identifier="newToAdviceHome" id="pFh-Sb-K5M"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4T3-3G-HiE">

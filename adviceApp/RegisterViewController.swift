@@ -100,6 +100,16 @@ class RegisterViewController: UIViewController {
 
     
     @IBAction func registerBtnPressed(_ sender: UIButton) {
+//        guard let username = usernameField.text, let password = passwordField.text, let passwordConfirmation = confirmPasswordField.text else { return }
+//
+//        
+//        switch (username, password, passwordConfirmation) {
+//        case (username == "", password == "", passwordConfirmation == "" :
+//            <#code#>
+//        default:
+//            <#code#>
+//        }
+//        
         
         print("🔥inside the register btn and it was pressed")
  
@@ -110,7 +120,7 @@ class RegisterViewController: UIViewController {
         if password != passwordConfirmation {
             
             confirmPasswordField.backgroundColor = UIColor.red
-            
+            //animate field also
         }else{
             
  
@@ -118,8 +128,8 @@ class RegisterViewController: UIViewController {
             
             if error != nil {
                 print("🔥successfully created new user")
-                //self.performSegue(withIdentifier: "newToAdviceHome", sender: self)
-                
+                let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "identifier") as? ViewController
+                self.navigationController?.pushViewController(vc!, animated: true)
             
             }else{
                 print("🔥failure to create new user")

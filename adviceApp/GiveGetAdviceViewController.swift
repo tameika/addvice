@@ -199,8 +199,8 @@ class ViewController: UIViewController {
         if segue.identifier == "myAdviceListSegue" {
             print("going to saved adivce list table")
         } else  {
-            let dest = segue.destination as! LoginViewController
-            dest.skipDelegate = self
+            let dest = segue.destination as? LoginViewController
+            dest?.skipDelegate = self
         }
     }
     
