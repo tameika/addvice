@@ -91,6 +91,12 @@
                                         <barButtonItem key="backBarButtonItem" title="back" id="DXz-7O-HbG">
                                             <color key="tintColor" red="0.73333333329999995" green="0.79215686269999996" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
                                         </barButtonItem>
+                                        <barButtonItem key="leftBarButtonItem" title="logout" id="yns-JG-7CF">
+                                            <color key="tintColor" red="0.85625608519999996" green="0.79896208000000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="logoutPressed:" destination="BYZ-38-t0r" id="9Qg-AL-4y6"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="sav❥d" id="sJl-pS-67c">
                                             <color key="tintColor" red="0.73333333329999995" green="0.79215686269999996" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
@@ -130,6 +136,7 @@
                         <outlet property="getAdviceBtnOutlet" destination="o30-GB-no8" id="jYy-ec-d0T"/>
                         <outlet property="giveAdviceBtnOutlet" destination="gaj-ul-fPQ" id="1oB-9h-7EI"/>
                         <outlet property="giveAdviceTextField" destination="3At-HA-PmI" id="LPv-Ee-jLn"/>
+                        <outlet property="logoutBarBtn" destination="yns-JG-7CF" id="0NZ-N0-Uep"/>
                         <outlet property="savedAdviceBarBtn" destination="sJl-pS-67c" id="5k7-sZ-USp"/>
                         <outlet property="savedAdviceBtn" destination="KkZ-Iu-Yee" id="S33-m7-fFT"/>
                     </connections>
@@ -153,7 +160,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" tableViewCell="GZh-FK-z1x" id="9uK-Y7-uf1">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <color key="tintColor" red="0.42884615380000002" green="0.42884615380000002" blue="0.42884615380000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -382,6 +389,6 @@
         <image name="positive-725842_1920.jpg" width="1920" height="1482"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="QC4-18-FUe"/>
+        <segue reference="xBb-8U-7HT"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -43,15 +43,6 @@ class LoginViewController: UIViewController {
     
     
     
-
-//    @IBAction func skipBtnPressed(_ sender: UIButton) {
-//        
-//        print("🎉i am in the skip button")
-//        
-//        skipDelegate?.disableSavedAdviceList()
-//        
-//    }
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: UIViewController {
     
@@ -23,6 +24,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var savedAdviceBtn: UIButton!
     
     @IBOutlet weak var giveAdviceBtnOutlet: UIButton!
+    
+    @IBOutlet weak var logoutBarBtn: UIBarButtonItem!
+    
     
     var userHasSkippedLogin: Bool = false
     
@@ -43,6 +47,7 @@ class ViewController: UIViewController {
         if userHasSkippedLogin {
             
             disableSaveButton()
+            disableLogoutButton()
         }
         
                 
@@ -116,7 +121,7 @@ class ViewController: UIViewController {
         
         //TODO: Receiving own advice. Fix that.
         
-        //savedAdviceBtn.isEnabled = true
+        savedAdviceBtn.isEnabled = true
         
         var randomAdviceIndex = Int(arc4random_uniform(UInt32(store.adviceArray.count)))
         
@@ -156,6 +161,15 @@ class ViewController: UIViewController {
         savedAdviceBarBtn.isEnabled = false
     }
     
+    func disableLogoutButton() {
+        logoutBarBtn.isEnabled = false
+    }
+    
+    
+    @IBAction func logoutPressed(_ sender: UIBarButtonItem) {
+        
+        try! FIRAuth.auth()?.signOut()
+    }
     
     
     
@@ -210,7 +224,7 @@ extension ViewController: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
-        // TODO: Bug. If user hits space bar, it thinks that it qualifies as a String (where it thinks it's NOT empty) which enables the button. Soemthign to thing about.
+        // TODO: Bug. If user hits space bar, it thinks that it qualifies as a String (where it thinks it's NOT empty) which enables the button. Soemthign to thing about. (1.1)
         
         let currentText = textField.text ?? ""
         
@@ -232,7 +246,7 @@ extension ViewController: UITextFieldDelegate {
 
 // Todo: animate alert controller
 // Todo: implement logout feature
-// Todo: FLAG BAD ADVICE
+// Todo: FLAG BAD ADVICE (1.1)
 
 
 
