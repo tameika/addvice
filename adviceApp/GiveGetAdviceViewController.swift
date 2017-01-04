@@ -168,10 +168,24 @@ class ViewController: UIViewController {
     
     @IBAction func logoutPressed(_ sender: UIBarButtonItem) {
         
+        do {
+        
         try! FIRAuth.auth()?.signOut()
+        
+        self.performSegue(withIdentifier: "logoutIdentifier", sender: self)
+            
+            print("Successfully logged out \(FIRAuth.auth()?.currentUser?.email).")
+        
+        
+        } catch {
+    
+        print("Error logging out user \(FIRAuth.auth()?.currentUser?.email).")
+    
+        }
     }
-    
-    
+   
+
+
     
     
     func badWordFilter() -> Bool {
@@ -208,8 +222,15 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        segue.identifier == "myAdviceListSegue"
+        
+        if segue.identifier == "myAdviceListSegue" {
             print("going to saved adivce list table")
+
+        }else if segue.identifier == "showSavedAdvice" {
+            print("going to showSavedAdvice")
+        }
+       // segue.identifier == "myAdviceListSegue"
+         //   print("going to saved adivce list table")
 
     }
     

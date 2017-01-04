@@ -44,7 +44,7 @@ class LoginViewController: UIViewController {
     
     
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     func prepare(for segue: UIStoryboardSegue) {
         
         if segue.identifier == "skipToAdviceHome" {
             

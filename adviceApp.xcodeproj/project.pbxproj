@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC1493C41E1C4B4D0067678F /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1493C31E1C4B4D0067678F /* AppController.swift */; };
 		BC20D3FE1E09BB46000DD097 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC20D3FD1E09BB46000DD097 /* GoogleService-Info.plist */; };
 		BC2917E81DFF6EE30016B511 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2917E71DFF6EE30016B511 /* RegisterViewController.swift */; };
 		BC43C33D1DDBA157000994ED /* APIClient .swift in Sources */ = {isa = PBXBuildFile; fileRef = BC43C33C1DDBA157000994ED /* APIClient .swift */; };
@@ -49,6 +50,7 @@
 /* Begin PBXFileReference section */
 		454989B972D947CDAF6E2A96 /* Pods_adviceApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_adviceApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92BEE6EC578CFF2EBC635D56 /* Pods-adviceApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-adviceApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-adviceApp/Pods-adviceApp.release.xcconfig"; sourceTree = "<group>"; };
+		BC1493C31E1C4B4D0067678F /* AppController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
 		BC20D3FA1E09B8F3000DD097 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC20D3FD1E09BB46000DD097 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BC2917E71DFF6EE30016B511 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				BC99798B1D981513004A572C /* AppDelegate.swift */,
+				BC1493C31E1C4B4D0067678F /* AppController.swift */,
 				BC2917E71DFF6EE30016B511 /* RegisterViewController.swift */,
 				BC4B661B1E0A3988003EEEC0 /* LoginViewController.swift */,
 				BC99798D1D981513004A572C /* GiveGetAdviceViewController.swift */,
@@ -375,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC4B661C1E0A3988003EEEC0 /* LoginViewController.swift in Sources */,
+				BC1493C41E1C4B4D0067678F /* AppController.swift in Sources */,
 				BC99798E1D981513004A572C /* GiveGetAdviceViewController.swift in Sources */,
 				BCB17C611DE8BD54004CA1DF /* BadWordsList.swift in Sources */,
 				BC6244C41DDA2E0C00AE6523 /* DataStore.swift in Sources */,

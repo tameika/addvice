@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="adviceApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addvice-home-view-controller" id="BYZ-38-t0r" customClass="ViewController" customModule="adviceApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -255,7 +255,7 @@
         <!--Login View Controller-->
         <scene sceneID="KU3-rr-Oz3">
             <objects>
-                <viewController id="3oO-kB-e8R" customClass="LoginViewController" customModule="adviceApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login-view-controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3oO-kB-e8R" customClass="LoginViewController" customModule="adviceApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2b0-ak-DDc"/>
                         <viewControllerLayoutGuide type="bottom" id="pm3-kg-zBq"/>
@@ -313,7 +313,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.823385526378976" green="0.88982371794871795" blue="0.86413584460382198" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="48"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.11904106590000001" green="0.057622839289999998" blue="0.18086939099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9R5-xp-dxL">
@@ -384,11 +384,42 @@
             </objects>
             <point key="canvasLocation" x="4447" y="139"/>
         </scene>
+        <!--App Controller-->
+        <scene sceneID="mdE-rO-9hd">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="11t-Ai-9Kf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="drG-66-3lA" customClass="AppController" customModule="adviceApp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ylp-8e-NC0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="59e-10-C1q">
+                                <rect key="frame" x="0.0" y="-21" width="375" height="668"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="668" id="nnM-Ud-Ltq"/>
+                                    <constraint firstAttribute="width" constant="375" id="qLe-gj-303"/>
+                                </constraints>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="59e-10-C1q" firstAttribute="leading" secondItem="ylp-8e-NC0" secondAttribute="leading" id="7Vt-Pj-Hj0"/>
+                            <constraint firstAttribute="trailing" secondItem="59e-10-C1q" secondAttribute="trailing" id="EFT-aW-20G"/>
+                            <constraint firstAttribute="bottom" secondItem="59e-10-C1q" secondAttribute="bottom" constant="20" id="fCg-3d-lCv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="59e-10-C1q" id="bsT-JW-OSA"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1423" y="838"/>
+        </scene>
     </scenes>
     <resources>
         <image name="positive-725842_1920.jpg" width="1920" height="1482"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xBb-8U-7HT"/>
+        <segue reference="QC4-18-FUe"/>
     </inferredMetricsTieBreakers>
 </document>
