@@ -183,7 +183,7 @@ class ViewController: UIViewController {
 //    
 //        }
         
-        NotificationCenter.default.post(name: Notification.Name.closeLoginVC, object: nil)
+        //NotificationCenter.default.post(name: Notification.Name.closeLoginVC, object: nil)
     }
    
 

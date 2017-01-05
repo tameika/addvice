@@ -302,10 +302,7 @@
                                     <color key="titleColor" red="0.11904106590000001" green="0.057622839289999998" blue="0.18086939099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="skipBtnPressed:" destination="3oO-kB-e8R" eventType="touchUpInside" id="0Dh-lL-X80"/>
-                                    <segue destination="ceF-89-aov" kind="popoverPresentation" identifier="skipToAdviceHome" popoverAnchorView="GDQ-jJ-1dW" id="xBb-8U-7HT">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <segue destination="ceF-89-aov" kind="show" identifier="skipToAdviceHome" id="xBb-8U-7HT"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Addvice" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJd-tJ-6vQ">
@@ -387,8 +384,11 @@
         <!--App Controller-->
         <scene sceneID="mdE-rO-9hd">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="11t-Ai-9Kf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="drG-66-3lA" customClass="AppController" customModule="adviceApp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MXX-9S-6qZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="IZp-uc-EAM"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ylp-8e-NC0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -412,6 +412,7 @@
                         <outlet property="containerView" destination="59e-10-C1q" id="bsT-JW-OSA"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="11t-Ai-9Kf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1423" y="838"/>
         </scene>
@@ -420,6 +421,6 @@
         <image name="positive-725842_1920.jpg" width="1920" height="1482"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="QC4-18-FUe"/>
+        <segue reference="xBb-8U-7HT"/>
     </inferredMetricsTieBreakers>
 </document>
