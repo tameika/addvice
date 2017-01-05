@@ -168,20 +168,22 @@ class ViewController: UIViewController {
     
     @IBAction func logoutPressed(_ sender: UIBarButtonItem) {
         
-        do {
+//        do {
+//        
+//        try! FIRAuth.auth()?.signOut()
+//        
+//        self.performSegue(withIdentifier: "logoutIdentifier", sender: self)
+//            
+//            print("Successfully logged out \(FIRAuth.auth()?.currentUser?.email).")
+//        
+//        
+//        } catch {
+//    
+//        print("Error logging out user \(FIRAuth.auth()?.currentUser?.email).")
+//    
+//        }
         
-        try! FIRAuth.auth()?.signOut()
-        
-        self.performSegue(withIdentifier: "logoutIdentifier", sender: self)
-            
-            print("Successfully logged out \(FIRAuth.auth()?.currentUser?.email).")
-        
-        
-        } catch {
-    
-        print("Error logging out user \(FIRAuth.auth()?.currentUser?.email).")
-    
-        }
+        NotificationCenter.default.post(name: Notification.Name.closeLoginVC, object: nil)
     }
    
 
