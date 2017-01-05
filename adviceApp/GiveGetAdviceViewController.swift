@@ -45,9 +45,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         if userHasSkippedLogin {
-            
+            print("🍻inside userHasSkipped if statement")
             disableSaveButton()
-            disableLogoutButton()
+            
         }
         
                 
@@ -158,12 +158,13 @@ class ViewController: UIViewController {
     
     
     func disableSaveButton() {
+        print("🎈inside disable save button method")
         savedAdviceBarBtn.isEnabled = false
     }
     
-    func disableLogoutButton() {
-        logoutBarBtn.isEnabled = false
-    }
+//    func disableLogoutButton() {
+//        logoutBarBtn.isEnabled = false
+//    }
     
     
     @IBAction func logoutPressed(_ sender: UIBarButtonItem) {

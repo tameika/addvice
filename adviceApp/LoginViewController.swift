@@ -17,7 +17,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     
     @IBOutlet weak var skipBtn: UIButton!
-    
+    //not using skipBtn outlet
     //var skipDelegate: disableSavedAdviceList?
 
     override func viewDidLoad() {
@@ -42,23 +42,20 @@ class LoginViewController: UIViewController {
     }
     
     
-    
-    
-     func prepare(for segue: UIStoryboardSegue) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("😡inside the skip segue to home")
         
         if segue.identifier == "skipToAdviceHome" {
             
             let destNavController = segue.destination as! UINavigationController
             
             let firstVC = destNavController.viewControllers.first! as! ViewController
-            
+            print("💕inside segue passing skipped bool value")
             firstVC.userHasSkippedLogin = true
-            
         }
-        
-        
     }
     
+        
     
     
     
