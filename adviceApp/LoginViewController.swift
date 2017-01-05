@@ -34,7 +34,7 @@ class LoginViewController: UIViewController {
             if let error = error {
                 print(error.localizedDescription)
             } else {
-                print("🔥successfully logged in")
+                print("🔥successfully logged in \(FIRAuth.auth()?.currentUser?.uid).")
                 self.performSegue(withIdentifier: "loginToAdviceHome", sender: self)
             }
             
@@ -43,7 +43,6 @@ class LoginViewController: UIViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("😡inside the skip segue to home")
         
         if segue.identifier == "skipToAdviceHome" {
             

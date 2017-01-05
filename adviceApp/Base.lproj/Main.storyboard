@@ -95,6 +95,9 @@
                                             <color key="tintColor" red="0.85625608519999996" green="0.79896208000000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="logoutPressed:" destination="BYZ-38-t0r" id="9Qg-AL-4y6"/>
+                                                <segue destination="3oO-kB-e8R" kind="popoverPresentation" identifier="logoutIdentifier" popoverAnchorBarButtonItem="yns-JG-7CF" id="8yF-dg-AgD">
+                                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                </segue>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="sav❥d" id="sJl-pS-67c">
@@ -422,5 +425,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="xBb-8U-7HT"/>
+        <segue reference="8yF-dg-AgD"/>
     </inferredMetricsTieBreakers>
 </document>

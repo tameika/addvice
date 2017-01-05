@@ -169,7 +169,7 @@ class ViewController: UIViewController {
     
     @IBAction func logoutPressed(_ sender: UIBarButtonItem) {
         
-//        do {
+        
 //        
 //        try! FIRAuth.auth()?.signOut()
 //        
@@ -177,14 +177,9 @@ class ViewController: UIViewController {
 //            
 //            print("Successfully logged out \(FIRAuth.auth()?.currentUser?.email).")
 //        
-//        
-//        } catch {
-//    
-//        print("Error logging out user \(FIRAuth.auth()?.currentUser?.email).")
-//    
-//        }
         
-        //NotificationCenter.default.post(name: Notification.Name.closeLoginVC, object: nil)
+        
+       
     }
    
 
@@ -226,15 +221,15 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         
-        if segue.identifier == "myAdviceListSegue" {
-            print("going to saved adivce list table")
-
+        if segue.identifier == "logoutIdentifier" {
+            print("🍇 the current user is \(FIRAuth.auth()?.currentUser?.uid)")
+            try! FIRAuth.auth()?.signOut()
+            print("🎉Successfully logged out \(FIRAuth.auth()?.currentUser?.uid).")
+            
         }else if segue.identifier == "showSavedAdvice" {
             print("going to showSavedAdvice")
         }
-       // segue.identifier == "myAdviceListSegue"
-         //   print("going to saved adivce list table")
-
+       
     }
     
     
