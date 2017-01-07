@@ -99,7 +99,7 @@ class MyAdviceTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let delete = UITableViewRowAction(style: .destructive, title: "Delete") { action, index in
+        let delete = UITableViewRowAction(style: .normal, title: "Delete") { action, index in
             
             self.savedAdviceList.remove(at: index.row)
 
