@@ -40,6 +40,10 @@ class ViewController: UIViewController {
     var savedAdvice = [Advice]()
     var displayedAdvice: Advice!
     
+    @IBAction func logout(_ sender: Any) {
+        
+        NotificationCenter.default.post(name: .closeAddviceVC, object: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

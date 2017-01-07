@@ -10,6 +10,7 @@
 		BC1493C41E1C4B4D0067678F /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1493C31E1C4B4D0067678F /* AppController.swift */; };
 		BC20D3FE1E09BB46000DD097 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC20D3FD1E09BB46000DD097 /* GoogleService-Info.plist */; };
 		BC2917E81DFF6EE30016B511 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2917E71DFF6EE30016B511 /* RegisterViewController.swift */; };
+		BC3389591E202B3900DA9341 /* StoryboardID.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3389581E202B3900DA9341 /* StoryboardID.swift */; };
 		BC43C33D1DDBA157000994ED /* APIClient .swift in Sources */ = {isa = PBXBuildFile; fileRef = BC43C33C1DDBA157000994ED /* APIClient .swift */; };
 		BC4B661C1E0A3988003EEEC0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4B661B1E0A3988003EEEC0 /* LoginViewController.swift */; };
 		BC4B661E1E0B53E9003EEEC0 /* balloon-898682_1920.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC4B661D1E0B53E9003EEEC0 /* balloon-898682_1920.jpg */; };
@@ -54,6 +55,7 @@
 		BC20D3FA1E09B8F3000DD097 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC20D3FD1E09BB46000DD097 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BC2917E71DFF6EE30016B511 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		BC3389581E202B3900DA9341 /* StoryboardID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardID.swift; sourceTree = "<group>"; };
 		BC43C33C1DDBA157000994ED /* APIClient .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APIClient .swift"; sourceTree = "<group>"; };
 		BC4B661B1E0A3988003EEEC0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BC4B661D1E0B53E9003EEEC0 /* balloon-898682_1920.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "balloon-898682_1920.jpg"; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				BC4B661F1E0B5653003EEEC0 /* positive-725842_1920.jpg */,
 				BC9979921D981513004A572C /* Assets.xcassets */,
 				BC9979941D981513004A572C /* LaunchScreen.storyboard */,
+				BC3389581E202B3900DA9341 /* StoryboardID.swift */,
 			);
 			path = adviceApp;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 			files = (
 				BC4B661C1E0A3988003EEEC0 /* LoginViewController.swift in Sources */,
 				BC1493C41E1C4B4D0067678F /* AppController.swift in Sources */,
+				BC3389591E202B3900DA9341 /* StoryboardID.swift in Sources */,
 				BC99798E1D981513004A572C /* GiveGetAdviceViewController.swift in Sources */,
 				BCB17C611DE8BD54004CA1DF /* BadWordsList.swift in Sources */,
 				BC6244C41DDA2E0C00AE6523 /* DataStore.swift in Sources */,

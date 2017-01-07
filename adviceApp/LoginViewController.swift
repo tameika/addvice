@@ -27,6 +27,11 @@ class LoginViewController: UIViewController {
     }
 
     
+    @IBAction func skip(_ sender: Any) {
+        
+        NotificationCenter.default.post(name: .closeLoginVC, object: true)
+
+    }
     @IBAction func loginBtnPressed(_ sender: UIButton) {
         
         guard let username = usernameField.text, let password = passwordField.text else { return }
@@ -35,7 +40,10 @@ class LoginViewController: UIViewController {
                 print(error.localizedDescription)
             } else {
                 print("🔥successfully logged in \(FIRAuth.auth()?.currentUser?.uid).")
-                self.performSegue(withIdentifier: "loginToAdviceHome", sender: self)
+                
+                NotificationCenter.default.post(name: .closeLoginVC, object: false)
+                
+                //self.performSegue(withIdentifier: "loginToAdviceHome", sender: self)
             }
             
         })

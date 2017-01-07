@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OVm-qa-Fjp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="drG-66-3lA">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -94,10 +94,7 @@
                                         <barButtonItem key="leftBarButtonItem" title="logout" id="yns-JG-7CF">
                                             <color key="tintColor" red="0.85625608519999996" green="0.79896208000000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <action selector="logoutPressed:" destination="BYZ-38-t0r" id="9Qg-AL-4y6"/>
-                                                <segue destination="3oO-kB-e8R" kind="popoverPresentation" identifier="logoutIdentifier" popoverAnchorBarButtonItem="yns-JG-7CF" id="8yF-dg-AgD">
-                                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                                </segue>
+                                                <action selector="logout:" destination="BYZ-38-t0r" id="hHK-G7-w9r"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="sav❥d" id="sJl-pS-67c">
@@ -146,7 +143,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5206" y="139"/>
+            <point key="canvasLocation" x="2857" y="403"/>
         </scene>
         <!--Saved Advice-->
         <scene sceneID="t9W-Sq-Uks">
@@ -178,7 +175,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BON-aU-B1l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5937" y="139"/>
+            <point key="canvasLocation" x="3644" y="403"/>
         </scene>
         <!--Title-->
         <scene sceneID="AZw-AT-U01">
@@ -248,12 +245,11 @@
                         <outlet property="passwordField" destination="TFd-EF-jzD" id="UVx-za-bbo"/>
                         <outlet property="registerBtn" destination="l1v-c5-uAd" id="YwC-0l-ydq"/>
                         <outlet property="usernameField" destination="fMG-ab-cd0" id="4e7-aR-Ker"/>
-                        <segue destination="ceF-89-aov" kind="show" identifier="getGiveSegue" id="pzh-rZ-kHf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uhM-hG-uT2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3714" y="508"/>
+            <point key="canvasLocation" x="3644" y="-400"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="KU3-rr-Oz3">
@@ -305,7 +301,7 @@
                                     <color key="titleColor" red="0.11904106590000001" green="0.057622839289999998" blue="0.18086939099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ceF-89-aov" kind="show" identifier="skipToAdviceHome" id="xBb-8U-7HT"/>
+                                    <action selector="skip:" destination="3oO-kB-e8R" eventType="touchUpInside" id="jh1-ZZ-PwV"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Addvice" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJd-tJ-6vQ">
@@ -324,9 +320,7 @@
                                     <color key="titleColor" red="0.11904106590000001" green="0.057622839289999998" blue="0.18086939099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="cUX-ht-yrv" kind="popoverPresentation" popoverAnchorView="9R5-xp-dxL" id="v2v-3L-4DV">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <segue destination="cUX-ht-yrv" kind="show" id="v2v-3L-4DV"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -337,17 +331,16 @@
                         <outlet property="passwordField" destination="jy5-Iz-Gkl" id="ckf-CY-Nim"/>
                         <outlet property="skipBtn" destination="GDQ-jJ-1dW" id="lA9-sP-GNJ"/>
                         <outlet property="usernameField" destination="0yK-RN-iM2" id="8Au-Pg-e33"/>
-                        <segue destination="ceF-89-aov" kind="show" identifier="loginToAdviceHome" id="QC4-18-FUe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3xq-ty-2oC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2984.8000000000002" y="138.98050974512745"/>
+            <point key="canvasLocation" x="2857" y="-401"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dhQ-Yk-B8U">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OVm-qa-Fjp" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="login-nav-controller" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OVm-qa-Fjp" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8na-Og-JxW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -360,12 +353,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o0U-dj-D3t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2042" y="139"/>
+            <point key="canvasLocation" x="2033" y="-402"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Md8-Tg-B0y">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ceF-89-aov" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="addvice-nav-controller" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ceF-89-aov" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="z5J-rd-WFd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -382,7 +375,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uBk-TZ-vlX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4447" y="139"/>
+            <point key="canvasLocation" x="2033" y="403"/>
         </scene>
         <!--App Controller-->
         <scene sceneID="mdE-rO-9hd">
@@ -397,18 +390,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="59e-10-C1q">
-                                <rect key="frame" x="0.0" y="-21" width="375" height="668"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="668" id="nnM-Ud-Ltq"/>
-                                    <constraint firstAttribute="width" constant="375" id="qLe-gj-303"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="59e-10-C1q" firstAttribute="leading" secondItem="ylp-8e-NC0" secondAttribute="leading" id="7Vt-Pj-Hj0"/>
-                            <constraint firstAttribute="trailing" secondItem="59e-10-C1q" secondAttribute="trailing" id="EFT-aW-20G"/>
-                            <constraint firstAttribute="bottom" secondItem="59e-10-C1q" secondAttribute="bottom" constant="20" id="fCg-3d-lCv"/>
+                            <constraint firstItem="59e-10-C1q" firstAttribute="top" secondItem="ylp-8e-NC0" secondAttribute="top" id="B8J-tT-9OZ"/>
+                            <constraint firstAttribute="trailing" secondItem="59e-10-C1q" secondAttribute="trailing" id="CPr-S6-XMQ"/>
+                            <constraint firstItem="59e-10-C1q" firstAttribute="leading" secondItem="ylp-8e-NC0" secondAttribute="leading" id="WDm-qS-1rc"/>
+                            <constraint firstItem="IZp-uc-EAM" firstAttribute="top" secondItem="59e-10-C1q" secondAttribute="bottom" id="hog-RX-i95"/>
                         </constraints>
                     </view>
                     <connections>
@@ -417,14 +407,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="11t-Ai-9Kf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1423" y="838"/>
+            <point key="canvasLocation" x="919" y="161"/>
         </scene>
     </scenes>
     <resources>
         <image name="positive-725842_1920.jpg" width="1920" height="1482"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="xBb-8U-7HT"/>
-        <segue reference="8yF-dg-AgD"/>
-    </inferredMetricsTieBreakers>
 </document>

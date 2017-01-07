@@ -30,6 +30,7 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBar.isHidden = true
         
         //registerBtn.layer.borderWidth = 0
         //registerBtn.clipsToBounds = true
@@ -105,7 +106,7 @@ class RegisterViewController: UIViewController {
             if error != nil {
                 print("🔥successfully created new user")
                 
-                self.performSegue(withIdentifier: "getGiveSegue", sender: nil)
+                NotificationCenter.default.post(name: .closeLoginVC, object: nil)
         
             }else{
                 print("🔥failure to create new user")
@@ -119,8 +120,11 @@ class RegisterViewController: UIViewController {
     
     @IBAction func cancelBtnPressed(_ sender: UIButton) {
         
-        self.dismiss(animated: true) {
-        }
+        
+        _ = navigationController?.popViewController(animated: true)
+        
+        //self.dismiss(animated: true) {
+        
     }
  
     

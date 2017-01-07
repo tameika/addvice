@@ -16,55 +16,45 @@ class AppController: UIViewController {
     @IBOutlet weak var containerView: UIView!
     var actingVC: UIViewController!
     
-}
-
-
-
-// create a notif name for your vc
-
-extension Notification.Name {
-    
-    static let closeAddviceHomeVC = Notification.Name("login-view-controller")
-    static let closeLoginVC = Notification.Name("addvice-home-view-controller")
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        addNotificationObservers()
+        loadInitialViewController()
+    }
     
 }
 
-enum StoryboardID: String {
-    case addviceHomeVC = "addvice-home-view-controller"
-    case loginVC = "login-view-controller"
-}
 
-//create a notification observer to listen for the name
+
+// MARK: - Notficiation Observers
 extension AppController {
     
-    func addNotificationObserver() {
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(switchViewController(with:)), name: .closeAddviceHomeVC, object: nil)
+    func addNotificationObservers() {
         NotificationCenter.default.addObserver(self, selector: #selector(switchViewController(with:)), name: .closeLoginVC, object: nil)
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(switchViewController(with:)), name: .closeAddviceVC, object: nil)
     }
+    
 }
-// load vc
+
+
+// MARK: - Loading VC's
 extension AppController {
     
     func loadInitialViewController() {
-        
-        let id: StoryboardID = FIRAuth.auth()?.currentUser != nil ? .addviceHomeVC : .loginVC
+        let id: StoryboardID = FIRAuth.auth()?.currentUser != nil ? .addviceVC : .loginVC
         self.actingVC = self.loadViewController(withID: id)
         self.add(viewController: self.actingVC, animated: true)
-        
-        
     }
     
     func loadViewController(withID id: StoryboardID) -> UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         return storyboard.instantiateViewController(withIdentifier: id.rawValue)
     }
+    
 }
 
-    
 
-
+// MARK: - Displaying VC's
 extension AppController {
     
     func add(viewController: UIViewController, animated: Bool = false) {
@@ -83,19 +73,57 @@ extension AppController {
     }
     
     func switchViewController(with notification: Notification) {
-        
         switch notification.name {
-        case Notification.Name.closeAddviceHomeVC:
-            switchViewController(with: (StoryboardID.loginVC as? Notification)!)
+        case Notification.Name.closeLoginVC:
+            switchToViewController(with: .addviceVC)
+        case Notification.Name.closeAddviceVC:
+            switchToViewController(with: .loginVC)
         default:
-            print("🔥Unable to match notification name!")
+            fatalError("\(#function) - Unable to match notficiation name.")
         }
         
+    }
+    
+    private func switchToViewController(with id: StoryboardID) {
+        let existingVC = actingVC
+        existingVC?.willMove(toParentViewController: nil)
+        actingVC = loadViewController(withID: id)
+        add(viewController: actingVC)
+        actingVC.view.alpha = 0.0
+        
+        UIView.animate(withDuration: 0.8, animations: {
+            self.actingVC.view.alpha = 1.0
+            existingVC?.view.alpha = 0.0
+        }) { success in
+            existingVC?.view.removeFromSuperview()
+            existingVC?.removeFromParentViewController()
+            self.actingVC.didMove(toParentViewController: self)
+        }
         
     }
     
     
+}
+
+
+// MARK: - Notification Extension
+extension Notification.Name {
     
+    static let closeLoginVC = Notification.Name("close-login-view-controller")
+    static let closeAddviceVC = Notification.Name("close-addvice-view-controller")
+    
+}
+
+
+// MARK: - UIView Extension
+extension UIView {
+    
+    func constrainEdges(to view: UIView) {
+        translatesAutoresizingMaskIntoConstraints = false
+        leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+    }
     
 }
 
