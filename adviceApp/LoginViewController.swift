@@ -17,12 +17,35 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     
     @IBOutlet weak var skipBtn: UIButton!
+    
+    @IBOutlet weak var loginBtn: UIButton!
+    
+    @IBOutlet weak var registerPageBtn: UIButton!
+    
+    
     //not using skipBtn outlet
     //var skipDelegate: disableSavedAdviceList?
+    
+    var white = UIColor(red:1.00, green:1.00, blue:1.00, alpha:0.70)
+    var lilac = UIColor(red:0.93, green:0.87, blue:0.95, alpha:1.0)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loginBtn.layer.borderWidth = 0.0
+        loginBtn.layer.borderColor = lilac.cgColor
+        loginBtn.clipsToBounds = true
+        loginBtn.backgroundColor = UIColor.clear
+        
+        skipBtn.layer.borderWidth = 2.0
+        skipBtn.layer.borderColor = white.cgColor
+        skipBtn.clipsToBounds = true
+        skipBtn.backgroundColor = UIColor.clear
+        
+        registerPageBtn.layer.borderWidth = 2.0
+        registerPageBtn.layer.borderColor = white.cgColor
+        registerPageBtn.clipsToBounds = true
+        registerPageBtn.backgroundColor = UIColor.clear
 
     }
 
