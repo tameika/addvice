@@ -30,7 +30,9 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.navigationBar.isHidden = true
+        //navigationController?.navigationBar.isHidden = true
+        navigationItem.hidesBackButton = true 
+        
         
         registerBtn.layer.borderWidth = 2.0
         registerBtn.layer.borderColor = white.cgColor
