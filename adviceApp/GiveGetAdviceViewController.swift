@@ -98,8 +98,8 @@ class ViewController: UIViewController {
     
     func buttonPressedAnimations() {
         
-        if giveAdviceBtnOutlet
-        UITapGestureRecognizer.giveAdviceBtnOutlet.
+//        if giveAdviceBtnOutlet
+//        UITapGestureRecognizer.giveAdviceBtnOutlet.
     }
     
     
