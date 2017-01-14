@@ -45,6 +45,8 @@ class ViewController: UIViewController {
         NotificationCenter.default.post(name: .closeAddviceVC, object: nil)
     }
     
+    let seafoamGreen = UIColor(red:0.82, green:0.94, blue:0.87, alpha:1.0)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -56,25 +58,24 @@ class ViewController: UIViewController {
         
                 
         giveAdviceTextField.delegate = self
-        //self.giveAdviceBtnOutlet.layer.borderWidth = 0
-        //self.giveAdviceBtnOutlet.clipsToBounds = true
-        //self.giveAdviceBtnOutlet.layer.cornerRadius = giveAdviceBtnOutlet.bounds.height * 0.5
-        //self.giveAdviceBtnOutlet.layer.borderColor = UIColor.white.cgColor
-        //self.giveAdviceBtnOutlet.backgroundColor = UIColor.gray.withAlphaComponent(0.5)
+        self.giveAdviceBtnOutlet.layer.borderWidth = 2.0
+        self.giveAdviceBtnOutlet.clipsToBounds = true
+        self.giveAdviceBtnOutlet.layer.cornerRadius = giveAdviceBtnOutlet.bounds.height * 0.5
+        self.giveAdviceBtnOutlet.layer.borderColor = seafoamGreen.cgColor
+        self.giveAdviceBtnOutlet.backgroundColor = UIColor.clear
         
         
-//        self.getAdviceBtnOutlet.layer.borderWidth = 0
-//        self.getAdviceBtnOutlet.clipsToBounds = true
-//        self.getAdviceBtnOutlet.layer.cornerRadius = getAdviceBtnOutlet.bounds.height * 0.5
-//        self.getAdviceBtnOutlet.layer.borderColor = UIColor.white.cgColor
-//        self.getAdviceBtnOutlet.backgroundColor = UIColor.gray.withAlphaComponent(0.5)
-//
-//        self.savedAdviceBtn.layer.borderWidth = 0
-//        self.savedAdviceBtn.clipsToBounds = true
-//        self.savedAdviceBtn.layer.cornerRadius = 10
-//        self.savedAdviceBtn.layer.cornerRadius = savedAdviceBtn.bounds.height * 0.5
-//        self.savedAdviceBtn.layer.borderColor = UIColor.white.cgColor
-//        self.savedAdviceBtn.backgroundColor = UIColor.gray.withAlphaComponent(0.5)
+        self.getAdviceBtnOutlet.layer.borderWidth = 2.0
+        self.getAdviceBtnOutlet.clipsToBounds = true
+        self.getAdviceBtnOutlet.layer.cornerRadius = getAdviceBtnOutlet.bounds.height * 0.5
+        self.getAdviceBtnOutlet.layer.borderColor = seafoamGreen.cgColor
+        self.getAdviceBtnOutlet.backgroundColor = UIColor.clear
+
+        self.savedAdviceBtn.layer.borderWidth = 2.0
+        self.savedAdviceBtn.clipsToBounds = true
+        self.savedAdviceBtn.layer.cornerRadius = savedAdviceBtn.bounds.height * 0.5
+        self.savedAdviceBtn.layer.borderColor = UIColor.white.cgColor
+        self.savedAdviceBtn.backgroundColor = UIColor.clear
         
         self.displayAdviceTextLabel.clipsToBounds = true 
         self.displayAdviceTextLabel.layer.cornerRadius = 5
@@ -93,6 +94,12 @@ class ViewController: UIViewController {
         navigationController?.navigationBar.isHidden = true
 
         
+    }
+    
+    func buttonPressedAnimations() {
+        
+        if giveAdviceBtnOutlet
+        UITapGestureRecognizer.giveAdviceBtnOutlet.
     }
     
     
@@ -171,21 +178,6 @@ class ViewController: UIViewController {
 //    }
     
     
-    @IBAction func logoutPressed(_ sender: UIBarButtonItem) {
-        
-        
-//        
-//        try! FIRAuth.auth()?.signOut()
-//        
-//        self.performSegue(withIdentifier: "logoutIdentifier", sender: self)
-//            
-//            print("Successfully logged out \(FIRAuth.auth()?.currentUser?.email).")
-//        
-        
-        
-       
-    }
-   
 
 
     
