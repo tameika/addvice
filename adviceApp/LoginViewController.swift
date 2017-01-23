@@ -26,7 +26,6 @@ class LoginViewController: UIViewController {
     //not using skipBtn outlet
     //var skipDelegate: disableSavedAdviceList?
     
-    //var white = UIColor(red:1.00, green:1.00, blue:1.00, alpha:0.70)
     
 
     override func viewDidLoad() {
@@ -66,7 +65,6 @@ class LoginViewController: UIViewController {
                 
                 NotificationCenter.default.post(name: .closeLoginVC, object: false)
                 
-                //self.performSegue(withIdentifier: "loginToAdviceHome", sender: self)
             }
             
         })
