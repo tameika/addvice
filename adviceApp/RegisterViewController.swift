@@ -128,10 +128,7 @@ class RegisterViewController: UIViewController {
     
     @IBAction func cancelBtnPressed(_ sender: UIButton) {
         
-        
         _ = navigationController?.popViewController(animated: true)
-        
-        //self.dismiss(animated: true) {
         
     }
  

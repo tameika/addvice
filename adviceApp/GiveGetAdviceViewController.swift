@@ -74,7 +74,7 @@ class ViewController: UIViewController {
         self.savedAdviceBtn.layer.borderWidth = 2.0
         self.savedAdviceBtn.clipsToBounds = true
         self.savedAdviceBtn.layer.cornerRadius = savedAdviceBtn.bounds.height * 0.5
-        self.savedAdviceBtn.layer.borderColor = UIColor.white.cgColor
+        self.savedAdviceBtn.layer.borderColor = seafoamGreen.cgColor
         self.savedAdviceBtn.backgroundColor = UIColor.clear
         
         self.displayAdviceTextLabel.clipsToBounds = true 
