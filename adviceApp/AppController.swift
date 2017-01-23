@@ -106,26 +106,9 @@ extension AppController {
 }
 
 
-// MARK: - Notification Extension
-extension Notification.Name {
-    
-    static let closeLoginVC = Notification.Name("close-login-view-controller")
-    static let closeAddviceVC = Notification.Name("close-addvice-view-controller")
-    
-}
 
 
-// MARK: - UIView Extension
-extension UIView {
-    
-    func constrainEdges(to view: UIView) {
-        translatesAutoresizingMaskIntoConstraints = false
-        leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-    }
-    
-}
+
 
 
 

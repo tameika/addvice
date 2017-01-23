@@ -235,27 +235,6 @@ class ViewController: UIViewController {
 
 
 
-extension ViewController: UITextFieldDelegate {
-    
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
-        // TODO: Bug. If user hits space bar, it thinks that it qualifies as a String (where it thinks it's NOT empty) which enables the button. Soemthign to thing about. (1.1)
-        
-        let currentText = textField.text ?? ""
-        
-        if !(string + currentText).isEmpty {
-            
-            giveAdviceBtnOutlet.isEnabled = true
-            
-        }
-        
-        
-        
-        
-        
-        return true
-    }
-}
 
 
 

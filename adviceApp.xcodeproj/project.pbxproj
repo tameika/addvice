@@ -16,6 +16,7 @@
 		BC4B66201E0B5653003EEEC0 /* positive-725842_1920.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC4B661F1E0B5653003EEEC0 /* positive-725842_1920.jpg */; };
 		BC6244C41DDA2E0C00AE6523 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6244C31DDA2E0C00AE6523 /* DataStore.swift */; };
 		BC6244C71DDA308500AE6523 /* adviceApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC6244C51DDA308500AE6523 /* adviceApp.xcdatamodeld */; };
+		BC7EA1941E35A3B700FEDC6C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7EA1931E35A3B700FEDC6C /* Extensions.swift */; };
 		BC9470C71E086AA500E2F21D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC9470C61E086AA500E2F21D /* Default-568h@2x.png */; };
 		BC99798C1D981513004A572C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC99798B1D981513004A572C /* AppDelegate.swift */; };
 		BC99798E1D981513004A572C /* GiveGetAdviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC99798D1D981513004A572C /* GiveGetAdviceViewController.swift */; };
@@ -60,6 +61,7 @@
 		BC4B661F1E0B5653003EEEC0 /* positive-725842_1920.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "positive-725842_1920.jpg"; sourceTree = "<group>"; };
 		BC6244C31DDA2E0C00AE6523 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		BC6244C61DDA308500AE6523 /* adviceApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = adviceApp.xcdatamodel; sourceTree = "<group>"; };
+		BC7EA1931E35A3B700FEDC6C /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		BC9470C61E086AA500E2F21D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BC9979881D981513004A572C /* adviceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = adviceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC99798B1D981513004A572C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 		BC99798A1D981513004A572C /* adviceApp */ = {
 			isa = PBXGroup;
 			children = (
+				BC7EA1931E35A3B700FEDC6C /* Extensions.swift */,
 				BC99798B1D981513004A572C /* AppDelegate.swift */,
 				BC1493C31E1C4B4D0067678F /* AppController.swift */,
 				BC2917E71DFF6EE30016B511 /* RegisterViewController.swift */,
@@ -387,6 +390,7 @@
 				BC43C33D1DDBA157000994ED /* APIClient .swift in Sources */,
 				BCBAF3691DEBE59E00B714B5 /* MyAdviceTableViewController.swift in Sources */,
 				BC6244C71DDA308500AE6523 /* adviceApp.xcdatamodeld in Sources */,
+				BC7EA1941E35A3B700FEDC6C /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -22,7 +22,7 @@ class RegisterViewController: UIViewController {
     
     @IBOutlet weak var cancelBtn: UIButton!
     
-    var white = UIColor(red:1.00, green:1.00, blue:1.00, alpha:0.70)
+    
     
     
 
@@ -35,13 +35,13 @@ class RegisterViewController: UIViewController {
         
         
         registerBtn.layer.borderWidth = 2.0
-        registerBtn.layer.borderColor = white.cgColor
+        registerBtn.layer.borderColor = CGColor.white.cgColor
         registerBtn.clipsToBounds = true
         //registerBtn.layer.cornerRadius = registerBtn.bounds.height * 0.5
         registerBtn.backgroundColor = UIColor.clear
         
         cancelBtn.layer.borderWidth = 2.0
-        cancelBtn.layer.borderColor = white.cgColor
+        cancelBtn.layer.borderColor = CGColor.white.cgColor
         cancelBtn.clipsToBounds = true
         cancelBtn.backgroundColor = UIColor.clear
         
