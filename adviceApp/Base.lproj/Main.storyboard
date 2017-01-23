@@ -222,7 +222,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1v-c5-uAd">
-                                <rect key="frame" x="49" y="379" width="277" height="36"/>
+                                <rect key="frame" x="49" y="371" width="277" height="51"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                 <state key="normal" title="register">
                                     <color key="titleColor" red="0.11904106590000001" green="0.057622839289999998" blue="0.18086939099999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -232,7 +232,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4T3-3G-HiE">
-                                <rect key="frame" x="49" y="422" width="277" height="36"/>
+                                <rect key="frame" x="49" y="426" width="277" height="50.5"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                 <state key="normal" title="cancel">
                                     <color key="titleColor" red="0.11904106590000001" green="0.057622839289999998" blue="0.18086939099999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -254,20 +254,22 @@
                             <constraint firstItem="VrR-dD-WC9" firstAttribute="leading" secondItem="oJh-LN-CtV" secondAttribute="leadingMargin" constant="33" id="53x-mN-ORR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4T3-3G-HiE" secondAttribute="trailing" constant="33" id="5m0-zo-GTQ"/>
                             <constraint firstItem="4T3-3G-HiE" firstAttribute="centerX" secondItem="oJh-LN-CtV" secondAttribute="centerX" id="7t9-Hz-5bj"/>
-                            <constraint firstItem="lRB-em-ce0" firstAttribute="top" secondItem="4T3-3G-HiE" secondAttribute="bottom" constant="209" id="8LE-1m-q7v"/>
+                            <constraint firstItem="lRB-em-ce0" firstAttribute="top" secondItem="4T3-3G-HiE" secondAttribute="bottom" constant="190.5" id="8LE-1m-q7v"/>
                             <constraint firstAttribute="trailingMargin" secondItem="l1v-c5-uAd" secondAttribute="trailing" constant="33" id="Cn9-3v-9JA"/>
                             <constraint firstItem="TFd-EF-jzD" firstAttribute="centerY" secondItem="oJh-LN-CtV" secondAttribute="centerY" constant="-49.5" id="Fsj-e4-NeX"/>
                             <constraint firstItem="fMG-ab-cd0" firstAttribute="leading" secondItem="oJh-LN-CtV" secondAttribute="leadingMargin" constant="33" id="GPA-cn-qG0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="TFd-EF-jzD" secondAttribute="trailing" constant="33" id="JxE-Gu-Lva"/>
                             <constraint firstAttribute="leadingMargin" secondItem="4T3-3G-HiE" secondAttribute="leading" constant="-33" id="LV0-sc-reo"/>
-                            <constraint firstItem="4T3-3G-HiE" firstAttribute="top" secondItem="l1v-c5-uAd" secondAttribute="bottom" constant="7" id="Mma-I1-Z3v"/>
+                            <constraint firstItem="4T3-3G-HiE" firstAttribute="top" secondItem="l1v-c5-uAd" secondAttribute="bottom" constant="4" id="Mma-I1-Z3v"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fMG-ab-cd0" secondAttribute="trailing" constant="33" id="O8l-5P-rA8"/>
                             <constraint firstItem="JcI-5P-z0t" firstAttribute="bottom" secondItem="7FK-Ct-HiU" secondAttribute="top" constant="-15" id="Ogm-9a-vDY"/>
                             <constraint firstItem="VrR-dD-WC9" firstAttribute="centerY" secondItem="oJh-LN-CtV" secondAttribute="centerY" constant="-17.5" id="TXv-FC-8HY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7FK-Ct-HiU" secondAttribute="trailing" constant="40" id="TZA-Sh-64B"/>
                             <constraint firstItem="l1v-c5-uAd" firstAttribute="height" secondItem="4T3-3G-HiE" secondAttribute="height" id="VRE-WD-lVl"/>
+                            <constraint firstItem="l1v-c5-uAd" firstAttribute="width" secondItem="4T3-3G-HiE" secondAttribute="width" id="WUZ-7W-BLe"/>
                             <constraint firstItem="TFd-EF-jzD" firstAttribute="height" secondItem="VrR-dD-WC9" secondAttribute="height" id="anz-Dt-5Uq"/>
                             <constraint firstItem="7FK-Ct-HiU" firstAttribute="leading" secondItem="oJh-LN-CtV" secondAttribute="leadingMargin" constant="40" id="ecr-y0-yhx"/>
+                            <constraint firstItem="l1v-c5-uAd" firstAttribute="top" secondItem="VrR-dD-WC9" secondAttribute="bottom" constant="40" id="ggF-iK-2cd"/>
                             <constraint firstItem="l1v-c5-uAd" firstAttribute="centerX" secondItem="oJh-LN-CtV" secondAttribute="centerX" id="hF1-G7-MWe"/>
                             <constraint firstItem="TFd-EF-jzD" firstAttribute="width" secondItem="VrR-dD-WC9" secondAttribute="width" id="iCa-T5-cUx"/>
                             <constraint firstItem="fMG-ab-cd0" firstAttribute="centerY" secondItem="oJh-LN-CtV" secondAttribute="centerY" constant="-81.5" id="ocw-33-3Sk"/>
@@ -330,8 +332,8 @@
                                     <action selector="loginBtnPressed:" destination="3oO-kB-e8R" eventType="touchUpInside" id="Eos-ut-nw9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9R5-xp-dxL">
-                                <rect key="frame" x="51" y="539" width="265" height="74"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9R5-xp-dxL">
+                                <rect key="frame" x="51" y="539" width="265" height="50"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                 <state key="normal" title="register">
                                     <color key="titleColor" red="0.11904106590000001" green="0.057622839289999998" blue="0.18086939099999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -340,8 +342,8 @@
                                     <segue destination="cUX-ht-yrv" kind="show" id="v2v-3L-4DV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GDQ-jJ-1dW">
-                                <rect key="frame" x="51" y="592.5" width="265" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GDQ-jJ-1dW">
+                                <rect key="frame" x="51" y="592.5" width="265" height="50"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                 <state key="normal" title="skip">
                                     <color key="titleColor" red="0.11904106590000001" green="0.057622839289999998" blue="0.18086939099999999" alpha="1" colorSpace="calibratedRGB"/>
