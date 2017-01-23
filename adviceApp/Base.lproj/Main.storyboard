@@ -397,20 +397,12 @@
                                     <segue destination="cUX-ht-yrv" kind="show" id="v2v-3L-4DV"/>
                                 </connections>
                             </button>
-                            <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0P0-Sa-Vpy">
-                                <rect key="frame" x="23" y="233" width="366" height="271"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.85625608519999996" green="0.79896208000000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="9R5-xp-dxL" firstAttribute="width" secondItem="GDQ-jJ-1dW" secondAttribute="width" id="0TN-aj-cRZ"/>
-                            <constraint firstItem="0P0-Sa-Vpy" firstAttribute="leading" secondItem="emT-qX-cfo" secondAttribute="leadingMargin" constant="3" id="0To-HZ-zG7"/>
-                            <constraint firstItem="0P0-Sa-Vpy" firstAttribute="top" secondItem="2b0-ak-DDc" secondAttribute="bottom" constant="169" id="40r-GQ-xEu"/>
                             <constraint firstItem="jy5-Iz-Gkl" firstAttribute="centerY" secondItem="emT-qX-cfo" secondAttribute="centerY" constant="-30" id="6R4-VA-3ed"/>
-                            <constraint firstItem="0P0-Sa-Vpy" firstAttribute="centerY" secondItem="emT-qX-cfo" secondAttribute="centerY" id="7tg-0q-uBz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YRl-7x-zw1" secondAttribute="trailing" constant="33" id="8a4-fL-kSB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="0P0-Sa-Vpy" secondAttribute="trailing" constant="5" id="Fcg-ZH-yRg"/>
                             <constraint firstItem="0yK-RN-iM2" firstAttribute="height" secondItem="jy5-Iz-Gkl" secondAttribute="height" id="Fhx-IJ-pkR"/>
                             <constraint firstItem="pm3-kg-zBq" firstAttribute="top" secondItem="GDQ-jJ-1dW" secondAttribute="bottom" constant="20" id="JTQ-B3-AYp"/>
                             <constraint firstItem="sG1-ac-NP5" firstAttribute="centerX" secondItem="emT-qX-cfo" secondAttribute="centerX" id="JwK-OK-Z9E"/>
@@ -430,7 +422,6 @@
                             <constraint firstItem="sG1-ac-NP5" firstAttribute="centerY" secondItem="emT-qX-cfo" secondAttribute="centerY" constant="28.5" id="iXp-kC-RSi"/>
                             <constraint firstItem="jy5-Iz-Gkl" firstAttribute="top" secondItem="0yK-RN-iM2" secondAttribute="bottom" constant="1" id="j6a-us-hlc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="U7B-0H-NSH" secondAttribute="trailing" constant="40" id="ljg-ZY-hJA"/>
-                            <constraint firstItem="0P0-Sa-Vpy" firstAttribute="centerX" secondItem="emT-qX-cfo" secondAttribute="centerX" constant="-1" id="qPt-dL-Snc"/>
                             <constraint firstItem="9R5-xp-dxL" firstAttribute="height" secondItem="GDQ-jJ-1dW" secondAttribute="height" id="sDE-fI-zIh"/>
                             <constraint firstItem="U7B-0H-NSH" firstAttribute="leading" secondItem="emT-qX-cfo" secondAttribute="leadingMargin" constant="40" id="vxr-z5-OfK"/>
                             <constraint firstItem="GDQ-jJ-1dW" firstAttribute="leading" secondItem="emT-qX-cfo" secondAttribute="leadingMargin" constant="33" id="wBo-7b-VhL"/>
@@ -450,7 +441,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3xq-ty-2oC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2855.072463768116" y="-402.71739130434787"/>
+            <point key="canvasLocation" x="2853.6231884057975" y="-402.71739130434787"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dhQ-Yk-B8U">

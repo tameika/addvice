@@ -26,10 +26,7 @@
 		BC9979A11D981513004A572C /* adviceAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9979A01D981513004A572C /* adviceAppTests.swift */; };
 		BC9979AC1D981513004A572C /* adviceAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9979AB1D981513004A572C /* adviceAppUITests.swift */; };
 		BCB17C611DE8BD54004CA1DF /* BadWordsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB17C601DE8BD54004CA1DF /* BadWordsList.swift */; };
-		BCB858CE1E360EEE0022139B /* graffiti-1450798_1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCB858CD1E360EEE0022139B /* graffiti-1450798_1280.jpg */; };
 		BCB858D01E3611050022139B /* love-1449763_1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCB858CF1E3611050022139B /* love-1449763_1280.jpg */; };
-		BCB858D21E3612E30022139B /* quote-723073_1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCB858D11E3612E30022139B /* quote-723073_1280.jpg */; };
-		BCB858D81E3616DF0022139B /* less-is-more-791109_1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCB858D71E3616DF0022139B /* less-is-more-791109_1280.jpg */; };
 		BCB858DA1E3619F20022139B /* open-door-1254709_1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCB858D91E3619F20022139B /* open-door-1254709_1280.jpg */; };
 		BCBAF3691DEBE59E00B714B5 /* MyAdviceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBAF3681DEBE59E00B714B5 /* MyAdviceTableViewController.swift */; };
 		BCEB89DC1E28843B003A9801 /* background-1339119_1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCEB89DB1E28843B003A9801 /* background-1339119_1280.jpg */; };
@@ -80,10 +77,7 @@
 		BC9979A71D981513004A572C /* adviceAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = adviceAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC9979AB1D981513004A572C /* adviceAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adviceAppUITests.swift; sourceTree = "<group>"; };
 		BCB17C601DE8BD54004CA1DF /* BadWordsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadWordsList.swift; sourceTree = "<group>"; };
-		BCB858CD1E360EEE0022139B /* graffiti-1450798_1280.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "graffiti-1450798_1280.jpg"; sourceTree = "<group>"; };
 		BCB858CF1E3611050022139B /* love-1449763_1280.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "love-1449763_1280.jpg"; sourceTree = "<group>"; };
-		BCB858D11E3612E30022139B /* quote-723073_1280.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "quote-723073_1280.jpg"; sourceTree = "<group>"; };
-		BCB858D71E3616DF0022139B /* less-is-more-791109_1280.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "less-is-more-791109_1280.jpg"; sourceTree = "<group>"; };
 		BCB858D91E3619F20022139B /* open-door-1254709_1280.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "open-door-1254709_1280.jpg"; sourceTree = "<group>"; };
 		BCBAF3681DEBE59E00B714B5 /* MyAdviceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAdviceTableViewController.swift; sourceTree = "<group>"; };
 		BCEB89DB1E28843B003A9801 /* background-1339119_1280.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background-1339119_1280.jpg"; sourceTree = "<group>"; };
@@ -173,13 +167,10 @@
 				BC6244C51DDA308500AE6523 /* adviceApp.xcdatamodeld */,
 				BC6244C31DDA2E0C00AE6523 /* DataStore.swift */,
 				BC20D3FD1E09BB46000DD097 /* GoogleService-Info.plist */,
-				BCB858D71E3616DF0022139B /* less-is-more-791109_1280.jpg */,
 				BC4B661F1E0B5653003EEEC0 /* positive-725842_1920.jpg */,
 				BCB858D91E3619F20022139B /* open-door-1254709_1280.jpg */,
 				BCEB89DB1E28843B003A9801 /* background-1339119_1280.jpg */,
 				BCB858CF1E3611050022139B /* love-1449763_1280.jpg */,
-				BCB858D11E3612E30022139B /* quote-723073_1280.jpg */,
-				BCB858CD1E360EEE0022139B /* graffiti-1450798_1280.jpg */,
 				BC9979921D981513004A572C /* Assets.xcassets */,
 				BC9979941D981513004A572C /* LaunchScreen.storyboard */,
 				BC3389581E202B3900DA9341 /* StoryboardID.swift */,
@@ -321,9 +312,6 @@
 				BC9979931D981513004A572C /* Assets.xcassets in Resources */,
 				BC9979911D981513004A572C /* Main.storyboard in Resources */,
 				BC4B66201E0B5653003EEEC0 /* positive-725842_1920.jpg in Resources */,
-				BCB858CE1E360EEE0022139B /* graffiti-1450798_1280.jpg in Resources */,
-				BCB858D81E3616DF0022139B /* less-is-more-791109_1280.jpg in Resources */,
-				BCB858D21E3612E30022139B /* quote-723073_1280.jpg in Resources */,
 				BC20D3FE1E09BB46000DD097 /* GoogleService-Info.plist in Resources */,
 				BCEB89DC1E28843B003A9801 /* background-1339119_1280.jpg in Resources */,
 				BCB858DA1E3619F20022139B /* open-door-1254709_1280.jpg in Resources */,
