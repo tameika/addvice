@@ -330,7 +330,7 @@
                                 <color key="backgroundColor" red="0.73333333329999995" green="0.79215686269999996" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Addvice" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7B-0H-NSH">
-                                <rect key="frame" x="60" y="84" width="294" height="180"/>
+                                <rect key="frame" x="60" y="84" width="294" height="81"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="54"/>
                                 <color key="textColor" red="0.83074919869999997" green="0.37155271200000001" blue="0.084338300869999994" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -411,7 +411,7 @@
                             <constraint firstItem="9R5-xp-dxL" firstAttribute="height" secondItem="GDQ-jJ-1dW" secondAttribute="height" id="sDE-fI-zIh"/>
                             <constraint firstItem="U7B-0H-NSH" firstAttribute="leading" secondItem="emT-qX-cfo" secondAttribute="leadingMargin" constant="40" id="vxr-z5-OfK"/>
                             <constraint firstItem="GDQ-jJ-1dW" firstAttribute="leading" secondItem="emT-qX-cfo" secondAttribute="leadingMargin" constant="33" id="wBo-7b-VhL"/>
-                            <constraint firstItem="0yK-RN-iM2" firstAttribute="top" secondItem="U7B-0H-NSH" secondAttribute="bottom" constant="28" id="wbf-QZ-mwX"/>
+                            <constraint firstItem="0yK-RN-iM2" firstAttribute="top" secondItem="U7B-0H-NSH" secondAttribute="bottom" constant="127" id="wbf-QZ-mwX"/>
                             <constraint firstItem="U7B-0H-NSH" firstAttribute="top" secondItem="2b0-ak-DDc" secondAttribute="bottom" constant="20" id="x8m-bj-tAB"/>
                             <constraint firstItem="0yK-RN-iM2" firstAttribute="leading" secondItem="emT-qX-cfo" secondAttribute="leadingMargin" constant="33" id="ycW-5Z-dvV"/>
                         </constraints>
