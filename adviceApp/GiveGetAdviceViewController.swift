@@ -58,6 +58,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        connectToDatabase()
+        
         if userHasSkippedLogin {
             print("🍻inside userHasSkipped if statement")
             disableSaveButton()
@@ -137,12 +139,15 @@ class ViewController: UIViewController {
     
     func connectToDatabase() {
         
+        let advice = giveAdviceTextField.text
         let ref = FIRDatabase.database().reference()
-        let adviceSubmittedRef = ref.child("Advice").childByAutoId()
-        adviceSubmittedRef.observe(.childAdded, with: { (snapshot) in
-            let adviceArray = snapshot.value as! [String]
-            print("Advice Array: \(adviceArray)")
-        })
+        ref.child("Advice").childByAutoId().setValue([advice])
+        
+//        adviceSubmittedRef.observe(.childAdded, with: { (snapshot) in
+//            let adviceArray = snapshot.value as! [String]
+//            print("Advice Array: \(adviceArray)")
+//        })
+        
     }
     
     
