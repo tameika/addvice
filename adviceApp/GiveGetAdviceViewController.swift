@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
 import QuartzCore
 
 
@@ -45,7 +46,7 @@ class ViewController: UIViewController {
     var currentAdviceIndex: Int?
     var savedAdvice = [Advice]()
     var displayedAdvice: Advice!
-    //var ref:
+    var ref: FIRDatabaseReference!
     
 //    @IBAction func logout(_ sender: Any) {
 //        
@@ -136,7 +137,7 @@ class ViewController: UIViewController {
     
     func connectToDatabase() {
         
-        //let ref = FIRDatabase.database().reference()
+        let ref = FIRDatabase.database().reference()
     }
     
     
