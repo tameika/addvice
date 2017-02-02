@@ -138,6 +138,11 @@ class ViewController: UIViewController {
     func connectToDatabase() {
         
         let ref = FIRDatabase.database().reference()
+        let adviceSubmittedRef = ref.child("Advice").childByAutoId()
+        adviceSubmittedRef.observe(.childAdded, with: { (snapshot) in
+            let adviceArray = snapshot.value as! [String]
+            print("Advice Array: \(adviceArray)")
+        })
     }
     
     
