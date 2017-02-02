@@ -58,7 +58,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        connectToDatabase()
+        //connectToDatabase()
         
         if userHasSkippedLogin {
             print("🍻inside userHasSkipped if statement")
@@ -137,18 +137,15 @@ class ViewController: UIViewController {
 //    }
     
     
-    func connectToDatabase() {
-        
-        let advice = giveAdviceTextField.text
-        let ref = FIRDatabase.database().reference()
-        ref.child("Advice").childByAutoId().setValue([advice])
-        
-//        adviceSubmittedRef.observe(.childAdded, with: { (snapshot) in
-//            let adviceArray = snapshot.value as! [String]
-//            print("Advice Array: \(adviceArray)")
-//        })
-        
-    }
+//    func connectToDatabase() {
+//        
+//        let advice = giveAdviceTextField.text
+//        let ref = FIRDatabase.database().reference()
+//        ref.child("Advice").childByAutoId().setValue([advice])
+//        
+//
+//        
+//    }
     
     
     
@@ -174,6 +171,10 @@ class ViewController: UIViewController {
         giveAdviceBtnOutlet.isEnabled = false
 
         store.saveContext()
+        
+    
+        let ref = FIRDatabase.database().reference()
+        ref.child("Advice").childByAutoId().setValue([adviceReceived])
     }
     
     
