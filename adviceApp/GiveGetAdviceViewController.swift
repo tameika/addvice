@@ -100,35 +100,35 @@ class ViewController: UIViewController {
         
     }
     
-    
-    func buttonPressedAnimation() {
-        
-        UIView.animateKeyframes(withDuration: 1.0,
-                                delay: 0.0,
-                                options: .calculationModeCubic,
-                                animations: {
-                                    
-            UIView.addKeyframe(withRelativeStartTime: 0.0,
-                               relativeDuration: 0.3,
-                               animations: {
-                                
-                self.giveAdviceBtnOutlet.transform = CGAffineTransform.init(scaleX: 1.0, y: 0.75)
-            })
-        
-           UIView.addKeyframe(withRelativeStartTime: 0.5,
-                              relativeDuration: 0.5,
-                              animations: { 
-                self.giveAdviceBtnOutlet.transform = CGAffineTransform.init(scaleX: 1.0, y: 2.0)
-           })
-        
-        })
-    }
+//    
+//    func buttonPressedAnimation() {
+//        
+//        UIView.animateKeyframes(withDuration: 1.0,
+//                                delay: 0.0,
+//                                options: .calculationModeCubic,
+//                                animations: {
+//                                    
+//            UIView.addKeyframe(withRelativeStartTime: 0.0,
+//                               relativeDuration: 0.3,
+//                               animations: {
+//                                
+//                self.giveAdviceBtnOutlet.transform = CGAffineTransform.init(scaleX: 1.0, y: 0.75)
+//            })
+//        
+//           UIView.addKeyframe(withRelativeStartTime: 0.5,
+//                              relativeDuration: 0.5,
+//                              animations: { 
+//                self.giveAdviceBtnOutlet.transform = CGAffineTransform.init(scaleX: 1.0, y: 2.0)
+//           })
+//        
+//        })
+//    }
     
     
     
     @IBAction func submitAdviceBtnPressed(_ sender: UIButton) {
         
-        buttonPressedAnimation()
+        //buttonPressedAnimation()
         
         guard !badWordFilter() else { return }
         
