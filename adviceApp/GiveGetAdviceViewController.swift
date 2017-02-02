@@ -29,9 +29,11 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var logoutBarBtn: UIBarButtonItem!
     
+    @IBOutlet weak var textField: UITextField!
+    
     
     var userHasSkippedLogin: Bool = false
-    
+   
    
     
     
@@ -43,11 +45,12 @@ class ViewController: UIViewController {
     var currentAdviceIndex: Int?
     var savedAdvice = [Advice]()
     var displayedAdvice: Advice!
+    //var ref:
     
-    @IBAction func logout(_ sender: Any) {
-        
-        NotificationCenter.default.post(name: .closeAddviceVC, object: nil)
-    }
+//    @IBAction func logout(_ sender: Any) {
+//        
+//        NotificationCenter.default.post(name: .closeAddviceVC, object: nil)
+//    }
     
     let seafoamGreen = UIColor(red:0.82, green:0.94, blue:0.87, alpha:1.0)
     
@@ -91,6 +94,12 @@ class ViewController: UIViewController {
         store.fetchData()
         
         
+        self.textField.borderStyle = .roundedRect
+        self.textField.layer.borderColor = seafoamGreen.cgColor
+        self.textField.layer.borderWidth = 2.0
+        self.textField.textColor = seafoamGreen
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -123,6 +132,13 @@ class ViewController: UIViewController {
 //        
 //        })
 //    }
+    
+    
+    func connectToDatabase() {
+        
+        //let ref = FIRDatabase.database().reference()
+    }
+    
     
     
     

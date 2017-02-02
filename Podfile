@@ -7,5 +7,6 @@ use_frameworks!
 target "adviceApp" do
 pod 'Firebase'
 pod 'Firebase/Auth'
+pod 'Firebase/Database'
 end
 
