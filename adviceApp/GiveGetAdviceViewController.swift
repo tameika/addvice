@@ -21,12 +21,29 @@ class ViewController: UIViewController {
     @IBOutlet weak var displayAdviceTextLabel: UILabel!
     
     @IBOutlet weak var getAdviceBtnOutlet: UIButton!
- 
+    
     @IBOutlet weak var savedAdviceBarBtn: UIBarButtonItem!
     
     @IBOutlet weak var savedAdviceBtn: UIButton!
     
-    @IBOutlet weak var giveAdviceBtnOutlet: UIButton!
+    @IBOutlet weak var giveAdviceBtnOutlet: UIButton! {
+        
+        didSet {
+            
+            giveAdviceBtnOutlet.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
+            UIView.animate(withDuration: 1.0,
+                           delay: 0.5,
+                           usingSpringWithDamping: 0.5,
+                           initialSpringVelocity: 10.0,
+                           options: .curveLinear,
+                           animations: {
+                            self.giveAdviceBtnOutlet.transform = CGAffineTransform.identity
+                            print("successfully animated button")
+            })
+            
+        }
+    }
+
     
     @IBOutlet weak var logoutBarBtn: UIBarButtonItem!
     
@@ -34,8 +51,8 @@ class ViewController: UIViewController {
     
     
     var userHasSkippedLogin: Bool = false
-   
-   
+    
+    
     
     
     // MARK: Logic Properties
@@ -44,19 +61,23 @@ class ViewController: UIViewController {
     let store = DataStore.sharedInstance
     var badWordFlag = false
     var currentAdviceIndex: Int?
+    var currentFIRAdviceIndex: Int?
     var savedAdvice = [Advice]()
     var displayedAdvice: Advice!
+    var displayedFIRAdvice: String = ""
     var ref: FIRDatabaseReference!
+    var firAdviceArray = [String]()
     
-//    @IBAction func logout(_ sender: Any) {
-//        
-//        NotificationCenter.default.post(name: .closeAddviceVC, object: nil)
-//    }
+    //    @IBAction func logout(_ sender: Any) {
+    //
+    //        NotificationCenter.default.post(name: .closeAddviceVC, object: nil)
+    //    }
     
     let seafoamGreen = UIColor(red:0.82, green:0.94, blue:0.87, alpha:1.0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         //connectToDatabase()
         
@@ -66,7 +87,7 @@ class ViewController: UIViewController {
             
         }
         
-                
+        
         giveAdviceTextField.delegate = self
         self.giveAdviceBtnOutlet.layer.borderWidth = 2.0
         self.giveAdviceBtnOutlet.clipsToBounds = true
@@ -80,14 +101,14 @@ class ViewController: UIViewController {
         self.getAdviceBtnOutlet.layer.cornerRadius = getAdviceBtnOutlet.bounds.height * 0.5
         self.getAdviceBtnOutlet.layer.borderColor = seafoamGreen.cgColor
         self.getAdviceBtnOutlet.backgroundColor = UIColor.clear
-
+        
         self.savedAdviceBtn.layer.borderWidth = 2.0
         self.savedAdviceBtn.clipsToBounds = true
         self.savedAdviceBtn.layer.cornerRadius = savedAdviceBtn.bounds.height * 0.5
         self.savedAdviceBtn.layer.borderColor = seafoamGreen.cgColor
         self.savedAdviceBtn.backgroundColor = UIColor.clear
         
-        self.displayAdviceTextLabel.clipsToBounds = true 
+        self.displayAdviceTextLabel.clipsToBounds = true
         self.displayAdviceTextLabel.layer.cornerRadius = 5
         
         getAdviceBtnOutlet.isEnabled = false
@@ -108,51 +129,74 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         
         navigationController?.navigationBar.isHidden = true
-
+        
         
     }
     
-//    
-//    func buttonPressedAnimation() {
+//    func buttonAnimationTest() {
 //        
-//        UIView.animateKeyframes(withDuration: 1.0,
-//                                delay: 0.0,
-//                                options: .calculationModeCubic,
-//                                animations: {
-//                                    
-//            UIView.addKeyframe(withRelativeStartTime: 0.0,
-//                               relativeDuration: 0.3,
-//                               animations: {
-//                                
-//                self.giveAdviceBtnOutlet.transform = CGAffineTransform.init(scaleX: 1.0, y: 0.75)
-//            })
-//        
-//           UIView.addKeyframe(withRelativeStartTime: 0.5,
-//                              relativeDuration: 0.5,
-//                              animations: { 
-//                self.giveAdviceBtnOutlet.transform = CGAffineTransform.init(scaleX: 1.0, y: 2.0)
-//           })
-//        
+//        UIView.animate(withDuration: 1.0,
+//                       delay: 0.5,
+//                       usingSpringWithDamping: 0.5,
+//                       initialSpringVelocity: 10.0,
+//                       options: .curveLinear,
+//                       animations: { 
+//                        self.giveAdviceBtnOutlet.transform = CGAffineTransform.identity
+//                        print("successfully animated button")
 //        })
+//        
+//        
 //    }
     
     
-//    func connectToDatabase() {
-//        
-//        let advice = giveAdviceTextField.text
-//        let ref = FIRDatabase.database().reference()
-//        ref.child("Advice").childByAutoId().setValue([advice])
-//        
-//
-//        
-//    }
+    
+    
+    //
+    //    func buttonPressedAnimation() {
+    //
+    //        UIView.animateKeyframes(withDuration: 1.0,
+    //                                delay: 0.0,
+    //                                options: .calculationModeCubic,
+    //                                animations: {
+    //
+    //            UIView.addKeyframe(withRelativeStartTime: 0.0,
+    //                               relativeDuration: 0.3,
+    //                               animations: {
+    //
+    //                self.giveAdviceBtnOutlet.transform = CGAffineTransform.init(scaleX: 1.0, y: 0.75)
+    //            })
+    //
+    //           UIView.addKeyframe(withRelativeStartTime: 0.5,
+    //                              relativeDuration: 0.5,
+    //                              animations: {
+    //                self.giveAdviceBtnOutlet.transform = CGAffineTransform.init(scaleX: 1.0, y: 2.0)
+    //           })
+    //
+    //        })
+    //    }
+    
+    
+    //    func connectToDatabase() {
+    //
+    //        let advice = giveAdviceTextField.text
+    //        let ref = FIRDatabase.database().reference()
+    //        ref.child("Advice").childByAutoId().setValue([advice])
+    //
+    //
+    //
+    //    }
     
     
     
     
     @IBAction func submitAdviceBtnPressed(_ sender: UIButton) {
         
-        //buttonPressedAnimation()
+        giveAdviceBtnOutlet.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI * 6 / 5))
+        
+        UIView.animate(withDuration: 0.2) {
+            self.giveAdviceBtnOutlet.transform = CGAffineTransform.identity
+        }
+        
         
         guard !badWordFilter() else { return }
         
@@ -169,13 +213,16 @@ class ViewController: UIViewController {
         getAdviceBtnOutlet.isEnabled = true
         
         giveAdviceBtnOutlet.isEnabled = false
-
+        
         store.saveContext()
         
-    
+        
         let ref = FIRDatabase.database().reference()
-        ref.child("Advice").childByAutoId().setValue([adviceReceived])
+        
+        ref.child("Advice").childByAutoId().setValue(["content": adviceReceived])
     }
+    
+    
     
     
     
@@ -185,21 +232,79 @@ class ViewController: UIViewController {
         
         savedAdviceBtn.isEnabled = true
         
-        var randomAdviceIndex = Int(arc4random_uniform(UInt32(store.adviceArray.count)))
+        //        var randomAdviceIndex = Int(arc4random_uniform(UInt32(store.adviceArray.count)))
+        //
+        //        if let currentAdviceIndex = currentAdviceIndex, store.adviceArray.count > 1 {
+        //
+        //            while randomAdviceIndex == currentAdviceIndex {
+        //
+        //                randomAdviceIndex = Int(arc4random_uniform(UInt32(store.adviceArray.count)))
+        //            }
+        //        }
+        //
+        //        currentAdviceIndex = randomAdviceIndex
+        //
+        //        displayedAdvice = store.adviceArray[randomAdviceIndex]
+        //
+        //        displayAdviceTextLabel.text = displayedAdvice.content
         
-        if let currentAdviceIndex = currentAdviceIndex, store.adviceArray.count > 1 {
+        
+        let ref = FIRDatabase.database().reference()
+        
+        let receivedRef = ref.child("Advice")
+        
+        receivedRef.observeSingleEvent(of: .value, with: { snapshot in
             
-            while randomAdviceIndex == currentAdviceIndex {
+            if let firAdvice = snapshot.value as? [String : Any] {
                 
-                randomAdviceIndex = Int(arc4random_uniform(UInt32(store.adviceArray.count)))
+                for (_, value) in firAdvice {
+                    if let contentsDictionary = value as? [String : String] {
+                        let content = contentsDictionary["content"] ?? "NO CONTENT"
+                        print("\n\(content)")
+                    }
+                }
+                
+                
+                
+                
+                
+                // print("👙from FIREBASE \(firAdvice)")
+                
+                guard let firAdviceString = firAdvice["content"] else { return }
+                
+                self.firAdviceArray.append(firAdviceString as! String)
+                
+                // print("👻 \(self.firAdviceArray)")
+                
+                
+                
+                var randomFIRAdviceIndex = Int(arc4random_uniform(UInt32(self.firAdviceArray.count)))
+                
+                
+                if let currentFIRAdviceIndex = self.currentFIRAdviceIndex, self.firAdviceArray.count > 1 {
+                    
+                    while randomFIRAdviceIndex == currentFIRAdviceIndex {
+                        
+                        randomFIRAdviceIndex = Int(arc4random_uniform(UInt32(self.firAdviceArray.count)))
+                        
+                    }
+                    
+                    self.currentFIRAdviceIndex = randomFIRAdviceIndex
+                    
+                    self.displayedFIRAdvice = self.firAdviceArray[randomFIRAdviceIndex]
+                    
+                    print("🐼 \(self.displayedFIRAdvice)")
+                    
+                    self.displayAdviceTextLabel.text = self.displayedFIRAdvice
+                }
+                
+                
+                
             }
-        }
+            
+        })
         
-        currentAdviceIndex = randomAdviceIndex
         
-        displayedAdvice = store.adviceArray[randomAdviceIndex]
-        
-        displayAdviceTextLabel.text = displayedAdvice.content
     }
     
     
@@ -213,7 +318,7 @@ class ViewController: UIViewController {
             
             // TODO: Let the user know that it was saved (display something to them)
             // TODO: Also, should we then immediately display a new piece of advice after we save one?
-
+            
         }
         
     }
@@ -224,13 +329,13 @@ class ViewController: UIViewController {
         savedAdviceBarBtn.isEnabled = false
     }
     
-//    func disableLogoutButton() {
-//        logoutBarBtn.isEnabled = false
-//    }
+    //    func disableLogoutButton() {
+    //        logoutBarBtn.isEnabled = false
+    //    }
     
     
-
-
+    
+    
     
     
     func badWordFilter() -> Bool {
@@ -276,11 +381,11 @@ class ViewController: UIViewController {
         }else if segue.identifier == "showSavedAdvice" {
             print("going to showSavedAdvice")
         }
-       
+        
     }
     
     
- //end
+    //end
     
 }
 
