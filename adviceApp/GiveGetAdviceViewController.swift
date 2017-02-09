@@ -43,7 +43,7 @@ class ViewController: UIViewController {
             
         }
     }
-
+    
     
     @IBOutlet weak var logoutBarBtn: UIBarButtonItem!
     
@@ -79,7 +79,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         
-        //connectToDatabase()
         
         if userHasSkippedLogin {
             print("🍻inside userHasSkipped if statement")
@@ -133,20 +132,20 @@ class ViewController: UIViewController {
         
     }
     
-//    func buttonAnimationTest() {
-//        
-//        UIView.animate(withDuration: 1.0,
-//                       delay: 0.5,
-//                       usingSpringWithDamping: 0.5,
-//                       initialSpringVelocity: 10.0,
-//                       options: .curveLinear,
-//                       animations: { 
-//                        self.giveAdviceBtnOutlet.transform = CGAffineTransform.identity
-//                        print("successfully animated button")
-//        })
-//        
-//        
-//    }
+    //    func buttonAnimationTest() {
+    //
+    //        UIView.animate(withDuration: 1.0,
+    //                       delay: 0.5,
+    //                       usingSpringWithDamping: 0.5,
+    //                       initialSpringVelocity: 10.0,
+    //                       options: .curveLinear,
+    //                       animations: {
+    //                        self.giveAdviceBtnOutlet.transform = CGAffineTransform.identity
+    //                        print("successfully animated button")
+    //        })
+    //
+    //
+    //    }
     
     
     
@@ -175,16 +174,6 @@ class ViewController: UIViewController {
     //        })
     //    }
     
-    
-    //    func connectToDatabase() {
-    //
-    //        let advice = giveAdviceTextField.text
-    //        let ref = FIRDatabase.database().reference()
-    //        ref.child("Advice").childByAutoId().setValue([advice])
-    //
-    //
-    //
-    //    }
     
     
     
@@ -232,7 +221,7 @@ class ViewController: UIViewController {
         
         savedAdviceBtn.isEnabled = true
         
-        var content = String()
+        
         
         //        var randomAdviceIndex = Int(arc4random_uniform(UInt32(store.adviceArray.count)))
         //
@@ -257,92 +246,81 @@ class ViewController: UIViewController {
         
         receivedRef.observeSingleEvent(of: .value, with: { snapshot in
             
-                                                //[uids : any]
+            //            print("\(snapshot.value)")
+            //
+            //            guard let firAdvice = snapshot.value as? [String : [String : String]] else {
+            //
+            //                print("ERROR UNWRAPPING FIRADVICE")
+            //
+            //                return
+            //            }
+            //
+            //            print(firAdvice)
+            //
+            //            for adviceDict in firAdvice.values {
+            ////                let advice = adviceDict.values.first!
+            //                let advice = adviceDict["content"]!
+            //
+            //                self.firAdviceArray.append(advice)
+            //            }
+            //
+            //            print(self.firAdviceArray)
+            
+            
+            
             if let firAdvice = snapshot.value as? [String : Any] {
                 
                 
-                for each in firAdvice {
+                for (_, value) in firAdvice {
                     
-                    self.firAdviceArray.append(String(describing: each.value["content"]))
-                }
-                
-                print(self.firAdviceArray)
-                
-                for advice in self.firAdviceArray {
                     
-                    self.displayAdviceTextLabel.text = advice
+                    if let contentsDictionary = value as? [String : String] {
+                        
+                        let content = contentsDictionary["content"] ?? "NO CONTENT"
+                        
+                        print("\n🍚\(content)")
+                        
+                        self.firAdviceArray.append(content)
+                        
+                        
+                    }
+                    
                 }
-                
-                
-//                for (_, value) in firAdvice {
-//                    
-//                     var contentArray = [String]()
-//
-//                    if let contentsDictionary = value as? [String : String] {
-//                        
-//                        
-//                         content = contentsDictionary["content"] ?? "NO CONTENT"
-//                        
-//                        
-//                        contentArray.append(content)
-//
-//                            contentArray.append(content)
-//
-//                        print("\n🐔\(content)")
-//                        print("\(contentArray)")
-//                    }
-//                }
-                
-                
-         
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-//                // print("👙from FIREBASE \(firAdvice)")
-//                
-//                //guard let firAdviceString = firAdvice["content"] else { return }
-//                
-//                self.firAdviceArray.append(firAdviceString as! String)
-//                
-//                // print("👻 \(self.firAdviceArray)")
-//                
-//                
-//                
-//                var randomFIRAdviceIndex = Int(arc4random_uniform(UInt32(self.firAdviceArray.count)))
-//                
-//                
-//                if let currentFIRAdviceIndex = self.currentFIRAdviceIndex, self.firAdviceArray.count > 1 {
-//                    
-//                    while randomFIRAdviceIndex == currentFIRAdviceIndex {
-//                        
-//                        randomFIRAdviceIndex = Int(arc4random_uniform(UInt32(self.firAdviceArray.count)))
-//                        
-//                    }
-//                    
-//                    self.currentFIRAdviceIndex = randomFIRAdviceIndex
-//                    
-//                    self.displayedFIRAdvice = self.firAdviceArray[randomFIRAdviceIndex]
-//                    
-//                    print("🐼 \(self.displayedFIRAdvice)")
-//                    
-//                    self.displayAdviceTextLabel.text = self.displayedFIRAdvice
-//                }
-//                
-                
-                
             }
-            
+            print(self.firAdviceArray)
         })
         
         
+    
+        
+    
+    
+    
+        
+    var randomFIRAdviceIndex =  Int(arc4random_uniform(UInt32(self.firAdviceArray.count)))
+    
+    if let currentFIRAdviceIndex = self.currentFIRAdviceIndex, self.firAdviceArray.count > 1 {
+    
+    while randomFIRAdviceIndex == currentFIRAdviceIndex {
+    
+    randomFIRAdviceIndex = Int(arc4random_uniform(UInt32(self.firAdviceArray.count)))
+    
     }
+    
+    self.currentFIRAdviceIndex = randomFIRAdviceIndex
+    
+    self.displayedFIRAdvice = self.firAdviceArray[randomFIRAdviceIndex]
+    
+    print("🐼 \(self.displayedFIRAdvice)")
+    
+    self.displayAdviceTextLabel.text = self.displayedFIRAdvice
+    }
+    
+    }
+    
+    
+    
+    
     
     
     @IBAction func saveAdvicePressed(_ sender: Any) {
