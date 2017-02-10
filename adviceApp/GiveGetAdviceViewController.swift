@@ -126,8 +126,10 @@ class ViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         navigationController?.navigationBar.isHidden = true
+        
         
         
     }
@@ -217,28 +219,9 @@ class ViewController: UIViewController {
     
     @IBAction func receiveAdviceBtnPressed(_ sender: UIButton) {
         
-        //TODO: Receiving own advice. Fix that.
+        //TODO: Receiving own advice. Fix dat.
         
         savedAdviceBtn.isEnabled = true
-        
-        
-        
-        //        var randomAdviceIndex = Int(arc4random_uniform(UInt32(store.adviceArray.count)))
-        //
-        //        if let currentAdviceIndex = currentAdviceIndex, store.adviceArray.count > 1 {
-        //
-        //            while randomAdviceIndex == currentAdviceIndex {
-        //
-        //                randomAdviceIndex = Int(arc4random_uniform(UInt32(store.adviceArray.count)))
-        //            }
-        //        }
-        //
-        //        currentAdviceIndex = randomAdviceIndex
-        //
-        //        displayedAdvice = store.adviceArray[randomAdviceIndex]
-        //
-        //        displayAdviceTextLabel.text = displayedAdvice.content
-        
         
         let ref = FIRDatabase.database().reference()
         
@@ -278,7 +261,7 @@ class ViewController: UIViewController {
                         
                         let content = contentsDictionary["content"] ?? "NO CONTENT"
                         
-                        print("\n🍚\(content)")
+                        //print("\n🍚\(content)")
                         
                         self.firAdviceArray.append(content)
                         
@@ -287,35 +270,40 @@ class ViewController: UIViewController {
                     
                 }
             }
-            print(self.firAdviceArray)
+            print("🌽\(self.firAdviceArray.count)")
+            //print("🍐\(self.firAdviceArray)")
+//            self.willIsBadAndWrong()
         })
         
-        
-    
-        
-    
-    
-    
-        
-    var randomFIRAdviceIndex =  Int(arc4random_uniform(UInt32(self.firAdviceArray.count)))
-    
-    if let currentFIRAdviceIndex = self.currentFIRAdviceIndex, self.firAdviceArray.count > 1 {
-    
-    while randomFIRAdviceIndex == currentFIRAdviceIndex {
-    
-    randomFIRAdviceIndex = Int(arc4random_uniform(UInt32(self.firAdviceArray.count)))
-    
     }
-    
-    self.currentFIRAdviceIndex = randomFIRAdviceIndex
-    
-    self.displayedFIRAdvice = self.firAdviceArray[randomFIRAdviceIndex]
-    
-    print("🐼 \(self.displayedFIRAdvice)")
-    
-    self.displayAdviceTextLabel.text = self.displayedFIRAdvice
-    }
-    
+        
+    func willIsBadAndWrong() {
+        
+        var randomFIRAdviceIndex = Int(arc4random_uniform(UInt32(self.firAdviceArray.count)))
+        
+        print("🌮\(randomFIRAdviceIndex)")
+        print("🍿\(self.firAdviceArray.count)")
+        
+        if let currentFIRAdviceIndex = self.currentFIRAdviceIndex, self.firAdviceArray.count > 1 {
+            
+            while randomFIRAdviceIndex == currentFIRAdviceIndex {
+                
+                randomFIRAdviceIndex = Int(arc4random_uniform(UInt32(self.firAdviceArray.count)))
+                
+            }
+            print("🌯\(randomFIRAdviceIndex)")
+            
+            self.currentFIRAdviceIndex = randomFIRAdviceIndex
+            
+            self.displayedFIRAdvice = self.firAdviceArray[randomFIRAdviceIndex]
+            
+            print("🐼\(self.displayedFIRAdvice)")
+            
+            self.displayAdviceTextLabel.text = self.displayedFIRAdvice
+            
+            print(self.displayedFIRAdvice)
+        }
+        
     }
     
     
@@ -327,16 +315,16 @@ class ViewController: UIViewController {
         
         //TODO: fix save!!!!
         
-        if displayAdviceTextLabel.text != nil {
-            
-            displayedAdvice.isFavorited = true
-            
-            store.saveContext()
-            
-            // TODO: Let the user know that it was saved (display something to them)
-            // TODO: Also, should we then immediately display a new piece of advice after we save one?
-            
-        }
+        //        if displayAdviceTextLabel.text != nil {
+        //
+        //            displayedAdvice.isFavorited = true
+        //
+        //            store.saveContext()
+        
+        // TODO: Let the user know that it was saved (display something to them)
+        // TODO: Also, should we then immediately display a new piece of advice after we save one?
+        
+        //        }
         
     }
     
