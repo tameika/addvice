@@ -60,8 +60,6 @@ class ViewController: UIViewController {
     let badWordsArray = BadWords.sharedInstance
     let store = DataStore.sharedInstance
     var badWordFlag = false
-    var currentAdviceIndex: Int?
-    var currentFIRAdviceIndex: Int?
     var savedAdvice = [Advice]()
     var displayedAdvice: Advice!
     var displayedFIRAdvice: String = ""
@@ -128,10 +126,69 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        getFIRAdvice()
+        
         navigationController?.navigationBar.isHidden = true
         
         
         
+    }
+    
+    
+    func getFIRAdvice() {
+        
+        let ref = FIRDatabase.database().reference()
+        
+        let receivedRef = ref.child("Advice")
+        
+        receivedRef.observeSingleEvent(of: .value, with: { snapshot in
+            
+            //            print("\(snapshot.value)")
+            //
+            //            guard let firAdvice = snapshot.value as? [String : [String : String]] else {
+            //
+            //                print("ERROR UNWRAPPING FIRADVICE")
+            //
+            //                return
+            //            }
+            //
+            //            print(firAdvice)
+            //
+            //            for adviceDict in firAdvice.values {
+            ////                let advice = adviceDict.values.first!
+            //                let advice = adviceDict["content"]!
+            //
+            //                self.firAdviceArray.append(advice)
+            //            }
+            //
+            //            print(self.firAdviceArray)
+            
+            
+            
+            if let firAdvice = snapshot.value as? [String : Any] {
+                
+                
+                for (_, value) in firAdvice {
+                    
+                    
+                    if let contentsDictionary = value as? [String : String] {
+                        
+                        let content = contentsDictionary["content"] ?? "NO CONTENT"
+                        
+                        //print("\n🍚\(content)")
+                        
+                        self.firAdviceArray.append(content)
+                        
+                        
+                    }
+                    
+                }
+            }
+            print("🌽\(self.firAdviceArray.count)")
+            //print("🍐\(self.firAdviceArray)")
+            //            self.willIsBadAndWrong()
+        })
+
     }
     
     //    func buttonAnimationTest() {
@@ -221,88 +278,54 @@ class ViewController: UIViewController {
         
         //TODO: Receiving own advice. Fix dat.
         
+        guard firAdviceArray.count > 1 else {
+            
+            displayAdviceTextLabel.textColor = UIColor.red
+            displayAdviceTextLabel.text = "no advice available 😭"
+            return
+        }
+        
         savedAdviceBtn.isEnabled = true
         
-        let ref = FIRDatabase.database().reference()
-        
-        let receivedRef = ref.child("Advice")
-        
-        receivedRef.observeSingleEvent(of: .value, with: { snapshot in
-            
-            //            print("\(snapshot.value)")
-            //
-            //            guard let firAdvice = snapshot.value as? [String : [String : String]] else {
-            //
-            //                print("ERROR UNWRAPPING FIRADVICE")
-            //
-            //                return
-            //            }
-            //
-            //            print(firAdvice)
-            //
-            //            for adviceDict in firAdvice.values {
-            ////                let advice = adviceDict.values.first!
-            //                let advice = adviceDict["content"]!
-            //
-            //                self.firAdviceArray.append(advice)
-            //            }
-            //
-            //            print(self.firAdviceArray)
-            
-            
-            
-            if let firAdvice = snapshot.value as? [String : Any] {
-                
-                
-                for (_, value) in firAdvice {
-                    
-                    
-                    if let contentsDictionary = value as? [String : String] {
-                        
-                        let content = contentsDictionary["content"] ?? "NO CONTENT"
-                        
-                        //print("\n🍚\(content)")
-                        
-                        self.firAdviceArray.append(content)
-                        
-                        
-                    }
-                    
-                }
-            }
-            print("🌽\(self.firAdviceArray.count)")
-            //print("🍐\(self.firAdviceArray)")
-//            self.willIsBadAndWrong()
-        })
-        
-    }
-        
-    func willIsBadAndWrong() {
-        
-        var randomFIRAdviceIndex = Int(arc4random_uniform(UInt32(self.firAdviceArray.count)))
+        let randomFIRAdviceIndex = Int(arc4random_uniform(UInt32(firAdviceArray.count)))
         
         print("🌮\(randomFIRAdviceIndex)")
         print("🍿\(self.firAdviceArray.count)")
         
-        if let currentFIRAdviceIndex = self.currentFIRAdviceIndex, self.firAdviceArray.count > 1 {
-            
-            while randomFIRAdviceIndex == currentFIRAdviceIndex {
-                
-                randomFIRAdviceIndex = Int(arc4random_uniform(UInt32(self.firAdviceArray.count)))
-                
-            }
-            print("🌯\(randomFIRAdviceIndex)")
-            
-            self.currentFIRAdviceIndex = randomFIRAdviceIndex
-            
-            self.displayedFIRAdvice = self.firAdviceArray[randomFIRAdviceIndex]
-            
-            print("🐼\(self.displayedFIRAdvice)")
-            
-            self.displayAdviceTextLabel.text = self.displayedFIRAdvice
-            
-            print(self.displayedFIRAdvice)
-        }
+        let removedAdvice = firAdviceArray.remove(at: randomFIRAdviceIndex)
+        
+        displayAdviceTextLabel.text = removedAdvice
+        
+        
+        
+        print("🍧", removedAdvice)
+        
+        
+        
+        
+        
+        
+        
+        
+//        if let currentFIRAdviceIndex = self.currentFIRAdviceIndex, self.firAdviceArray.count > 1 {
+//            
+//            while randomFIRAdviceIndex == currentFIRAdviceIndex {
+//                
+//                randomFIRAdviceIndex = Int(arc4random_uniform(UInt32(self.firAdviceArray.count)))
+//                
+//            }
+//            print("🌯\(randomFIRAdviceIndex)")
+//            
+//            self.currentFIRAdviceIndex = randomFIRAdviceIndex
+//            
+//            self.displayedFIRAdvice = self.firAdviceArray[randomFIRAdviceIndex]
+//            
+//            print("🐼\(self.displayedFIRAdvice)")
+//            
+//            self.displayAdviceTextLabel.text = self.displayedFIRAdvice
+//            
+//            print(self.displayedFIRAdvice)
+//        }
         
     }
     
