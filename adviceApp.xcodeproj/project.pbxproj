@@ -17,6 +17,7 @@
 		BC6244C41DDA2E0C00AE6523 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6244C31DDA2E0C00AE6523 /* DataStore.swift */; };
 		BC6244C71DDA308500AE6523 /* adviceApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC6244C51DDA308500AE6523 /* adviceApp.xcdatamodeld */; };
 		BC7249A91E4E7599002A7D5B /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7249A81E4E7599002A7D5B /* LaunchScreenViewController.swift */; };
+		BC7249AB1E4EC539002A7D5B /* addvicelogo0.png in Resources */ = {isa = PBXBuildFile; fileRef = BC7249AA1E4EC539002A7D5B /* addvicelogo0.png */; };
 		BC7EA1941E35A3B700FEDC6C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7EA1931E35A3B700FEDC6C /* Extensions.swift */; };
 		BC9470C71E086AA500E2F21D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC9470C61E086AA500E2F21D /* Default-568h@2x.png */; };
 		BC99798C1D981513004A572C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC99798B1D981513004A572C /* AppDelegate.swift */; };
@@ -65,6 +66,7 @@
 		BC6244C31DDA2E0C00AE6523 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		BC6244C61DDA308500AE6523 /* adviceApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = adviceApp.xcdatamodel; sourceTree = "<group>"; };
 		BC7249A81E4E7599002A7D5B /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		BC7249AA1E4EC539002A7D5B /* addvicelogo0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addvicelogo0.png; sourceTree = "<group>"; };
 		BC7EA1931E35A3B700FEDC6C /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		BC9470C61E086AA500E2F21D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BC9979881D981513004A572C /* adviceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = adviceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,6 +172,7 @@
 				BC20D3FA1E09B8F3000DD097 /* Info.plist */,
 				BC6244C51DDA308500AE6523 /* adviceApp.xcdatamodeld */,
 				BC6244C31DDA2E0C00AE6523 /* DataStore.swift */,
+				BC7249AA1E4EC539002A7D5B /* addvicelogo0.png */,
 				BC20D3FD1E09BB46000DD097 /* GoogleService-Info.plist */,
 				BC4B661F1E0B5653003EEEC0 /* positive-725842_1920.jpg */,
 				BCB858D91E3619F20022139B /* open-door-1254709_1280.jpg */,
@@ -317,6 +320,7 @@
 				BC4B66201E0B5653003EEEC0 /* positive-725842_1920.jpg in Resources */,
 				BC20D3FE1E09BB46000DD097 /* GoogleService-Info.plist in Resources */,
 				BCEB89DC1E28843B003A9801 /* background-1339119_1280.jpg in Resources */,
+				BC7249AB1E4EC539002A7D5B /* addvicelogo0.png in Resources */,
 				BCB858DA1E3619F20022139B /* open-door-1254709_1280.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

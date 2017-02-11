@@ -14,7 +14,10 @@ class MyAdviceTableViewController: UITableViewController {
     
     var savedAdviceList = [Advice]()
     
-        
+    
+    let yellowGold = UIColor(red:1.00, green:0.78, blue:0.00, alpha:1.0)
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

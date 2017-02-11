@@ -21,16 +21,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="positive-725842_1920.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="MA9-iI-l40">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="positive-725842_1920.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="MA9-iI-l40">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8OW-pS-dbw">
-                                <rect key="frame" x="35" y="12" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.73875731366334851" green="0.85882352936666662" blue="0.79350566063899819" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="MA9-iI-l40" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="0F9-Hm-9K7"/>
+                            <constraint firstItem="MA9-iI-l40" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="6vj-8Q-LrS"/>
+                            <constraint firstItem="MA9-iI-l40" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="ZWf-kK-6jM"/>
+                            <constraint firstItem="MA9-iI-l40" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" id="c24-ro-6If"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
