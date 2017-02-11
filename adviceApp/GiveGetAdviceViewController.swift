@@ -49,11 +49,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var textField: UITextField!
     
-    
-    var userHasSkippedLogin: Bool = false
-    
-    
-    
+  
     
     // MARK: Logic Properties
     
@@ -61,7 +57,6 @@ class ViewController: UIViewController {
     let store = DataStore.sharedInstance
     var badWordFlag = false
     var savedAdvice = [Advice]()
-    var displayedAdvice: Advice!
     var displayedFIRAdvice: String = ""
     var ref: FIRDatabaseReference!
     var firAdviceArray = [String]()
@@ -75,14 +70,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
-        if userHasSkippedLogin {
-            print("🍻inside userHasSkipped if statement")
-            disableSaveButton()
-            
-        }
         
         
         giveAdviceTextField.delegate = self
@@ -129,9 +116,7 @@ class ViewController: UIViewController {
         getFIRAdvice()
         
         navigationController?.navigationBar.isHidden = true
-        
-        
-        
+ 
     }
     
     
@@ -280,7 +265,7 @@ class ViewController: UIViewController {
         
         guard firAdviceArray.count > 1 else {
             
-            displayAdviceTextLabel.textColor = UIColor.red
+            displayAdviceTextLabel.textColor = UIColor.black
             displayAdviceTextLabel.text = "no advice available 😭"
             return
         }
@@ -296,74 +281,28 @@ class ViewController: UIViewController {
         
         displayAdviceTextLabel.text = removedAdvice
         
-        
-        
         print("🍧", removedAdvice)
-        
-        
-        
-        
-        
-        
-        
-        
-//        if let currentFIRAdviceIndex = self.currentFIRAdviceIndex, self.firAdviceArray.count > 1 {
-//            
-//            while randomFIRAdviceIndex == currentFIRAdviceIndex {
-//                
-//                randomFIRAdviceIndex = Int(arc4random_uniform(UInt32(self.firAdviceArray.count)))
-//                
-//            }
-//            print("🌯\(randomFIRAdviceIndex)")
-//            
-//            self.currentFIRAdviceIndex = randomFIRAdviceIndex
-//            
-//            self.displayedFIRAdvice = self.firAdviceArray[randomFIRAdviceIndex]
-//            
-//            print("🐼\(self.displayedFIRAdvice)")
-//            
-//            self.displayAdviceTextLabel.text = self.displayedFIRAdvice
-//            
-//            print(self.displayedFIRAdvice)
-//        }
         
     }
     
-    
-    
-    
+
     
     
     @IBAction func saveAdvicePressed(_ sender: Any) {
         
-        //TODO: fix save!!!!
         
-        //        if displayAdviceTextLabel.text != nil {
-        //
-        //            displayedAdvice.isFavorited = true
-        //
-        //            store.saveContext()
+                if displayAdviceTextLabel.text != nil {
+                    
+                    
+                    
+                    store.saveContext()
         
-        // TODO: Let the user know that it was saved (display something to them)
-        // TODO: Also, should we then immediately display a new piece of advice after we save one?
+//         TODO: Let the user know that it was saved (display something to them)
         
-        //        }
+                }
         
     }
-    
-    
-    func disableSaveButton() {
-        print("🎈inside disable save button method")
-        savedAdviceBarBtn.isEnabled = false
-    }
-    
-    //    func disableLogoutButton() {
-    //        logoutBarBtn.isEnabled = false
-    //    }
-    
-    
-    
-    
+
     
     
     func badWordFilter() -> Bool {
@@ -398,21 +337,6 @@ class ViewController: UIViewController {
     }
     
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        
-        if segue.identifier == "logoutIdentifier" {
-            print("🍇 the current user is \(FIRAuth.auth()?.currentUser?.uid)")
-            try! FIRAuth.auth()?.signOut()
-            print("🎉Successfully logged out \(FIRAuth.auth()?.currentUser?.uid).")
-            
-        }else if segue.identifier == "showSavedAdvice" {
-            print("going to showSavedAdvice")
-        }
-        
-    }
-    
-    
     //end
     
 }
@@ -423,7 +347,6 @@ class ViewController: UIViewController {
 
 
 // Todo: animate alert controller
-// Todo: implement logout feature
 // Todo: FLAG BAD ADVICE (1.1)
 
 

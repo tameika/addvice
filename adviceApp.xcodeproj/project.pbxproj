@@ -16,6 +16,7 @@
 		BC4B66201E0B5653003EEEC0 /* positive-725842_1920.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC4B661F1E0B5653003EEEC0 /* positive-725842_1920.jpg */; };
 		BC6244C41DDA2E0C00AE6523 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6244C31DDA2E0C00AE6523 /* DataStore.swift */; };
 		BC6244C71DDA308500AE6523 /* adviceApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC6244C51DDA308500AE6523 /* adviceApp.xcdatamodeld */; };
+		BC7249A91E4E7599002A7D5B /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7249A81E4E7599002A7D5B /* LaunchScreenViewController.swift */; };
 		BC7EA1941E35A3B700FEDC6C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7EA1931E35A3B700FEDC6C /* Extensions.swift */; };
 		BC9470C71E086AA500E2F21D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC9470C61E086AA500E2F21D /* Default-568h@2x.png */; };
 		BC99798C1D981513004A572C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC99798B1D981513004A572C /* AppDelegate.swift */; };
@@ -63,6 +64,7 @@
 		BC4B661F1E0B5653003EEEC0 /* positive-725842_1920.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "positive-725842_1920.jpg"; sourceTree = "<group>"; };
 		BC6244C31DDA2E0C00AE6523 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		BC6244C61DDA308500AE6523 /* adviceApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = adviceApp.xcdatamodel; sourceTree = "<group>"; };
+		BC7249A81E4E7599002A7D5B /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		BC7EA1931E35A3B700FEDC6C /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		BC9470C61E086AA500E2F21D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BC9979881D981513004A572C /* adviceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = adviceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,12 +157,14 @@
 			children = (
 				BC7EA1931E35A3B700FEDC6C /* Extensions.swift */,
 				BC99798B1D981513004A572C /* AppDelegate.swift */,
+				BC7249A81E4E7599002A7D5B /* LaunchScreenViewController.swift */,
 				BC1493C31E1C4B4D0067678F /* AppController-dep.swift */,
 				BC2917E71DFF6EE30016B511 /* RegisterViewController-dep.swift */,
 				BC4B661B1E0A3988003EEEC0 /* LoginViewController-dep.swift */,
 				BC99798D1D981513004A572C /* GiveGetAdviceViewController.swift */,
 				BCBAF3681DEBE59E00B714B5 /* MyAdviceTableViewController.swift */,
 				BC99798F1D981513004A572C /* Main.storyboard */,
+				BC9979941D981513004A572C /* LaunchScreen.storyboard */,
 				BCB17C601DE8BD54004CA1DF /* BadWordsList.swift */,
 				BC43C33C1DDBA157000994ED /* APIClient .swift */,
 				BC20D3FA1E09B8F3000DD097 /* Info.plist */,
@@ -172,7 +176,6 @@
 				BCEB89DB1E28843B003A9801 /* background-1339119_1280.jpg */,
 				BCB858CF1E3611050022139B /* love-1449763_1280.jpg */,
 				BC9979921D981513004A572C /* Assets.xcassets */,
-				BC9979941D981513004A572C /* LaunchScreen.storyboard */,
 				BC3389581E202B3900DA9341 /* StoryboardID.swift */,
 			);
 			path = adviceApp;
@@ -388,6 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC4B661C1E0A3988003EEEC0 /* LoginViewController-dep.swift in Sources */,
+				BC7249A91E4E7599002A7D5B /* LaunchScreenViewController.swift in Sources */,
 				BC1493C41E1C4B4D0067678F /* AppController-dep.swift in Sources */,
 				BC3389591E202B3900DA9341 /* StoryboardID.swift in Sources */,
 				BC99798E1D981513004A572C /* GiveGetAdviceViewController.swift in Sources */,
