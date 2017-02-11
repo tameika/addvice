@@ -30,14 +30,6 @@ extension UIView {
 }
 
 
-// MARK: - Notification Extension
-extension Notification.Name {
-    
-    static let closeLoginVC = Notification.Name("close-login-view-controller")
-    static let closeAddviceVC = Notification.Name("close-addvice-view-controller")
-    
-}
-
 
 extension ViewController: UITextFieldDelegate {
     

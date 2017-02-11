@@ -66,7 +66,7 @@ class MyAdviceTableViewController: UITableViewController {
         
      let pieceOfAdvice = savedAdviceList[indexPath.row]
       
-        cell.textLabel?.text = pieceOfAdvice.content as! String?
+        cell.textLabel?.text = pieceOfAdvice.content
         
         cell.backgroundColor = UIColor.clear
         
