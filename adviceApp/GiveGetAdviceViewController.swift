@@ -105,7 +105,37 @@ class ViewController: UIViewController {
         
     }
     
-    
+    func animateInLogoTitle() {
+        
+        UIView.animate(withDuration: 0.6,
+                       delay: 0.0,
+                       usingSpringWithDamping: 0.50, initialSpringVelocity: CGFloat(1.0),
+                       options: .curveLinear,
+                       animations: {
+                        self.logoTitle.center.x += self.view.bounds.width
+        })
+        
+        UIView.animate(withDuration: 0.6,
+                       delay: 0.1, usingSpringWithDamping: 0.50,
+                       initialSpringVelocity: CGFloat(1.0),
+                       options: .curveLinear,
+                       animations: {
+                        self.logoA.center.x += self.view.bounds.width
+        })
+        
+        logoA.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
+        UIView.animate(withDuration: 1.0,
+                       delay: 0.5,
+                       usingSpringWithDamping: 0.5,
+                       initialSpringVelocity: 10.0,
+                       options: .curveLinear,
+                       animations: {
+                        self.logoA.transform = CGAffineTransform.identity
+        })
+        
+        
+    }
+
     
     
     func getFIRAdvice() {
@@ -158,42 +188,10 @@ class ViewController: UIViewController {
                 }
             }
             print("🌽\(self.firAdviceArray.count)")
-            //print("🍐\(self.firAdviceArray)")
-            //            self.willIsBadAndWrong()
         })
         
     }
     
-    func animateInLogoTitle() {
-        
-        UIView.animate(withDuration: 0.6,
-                       delay: 0.0,
-                       usingSpringWithDamping: 0.50, initialSpringVelocity: CGFloat(1.0),
-                       options: .curveLinear,
-                       animations: {
-                        self.logoTitle.center.x += self.view.bounds.width
-        })
-        
-        UIView.animate(withDuration: 0.6,
-                       delay: 0.1, usingSpringWithDamping: 0.50,
-                       initialSpringVelocity: CGFloat(1.0),
-                       options: .curveLinear,
-                       animations: {
-                        self.logoA.center.x += self.view.bounds.width
-        })
-        
-        logoA.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
-        UIView.animate(withDuration: 1.0,
-                       delay: 0.5,
-                       usingSpringWithDamping: 0.5,
-                       initialSpringVelocity: 10.0,
-                       options: .curveLinear,
-                       animations: {
-                        self.logoA.transform = CGAffineTransform.identity
-        })
-        
-        
-    }
     
     
     
