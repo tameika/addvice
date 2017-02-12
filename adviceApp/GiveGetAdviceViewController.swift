@@ -102,7 +102,7 @@ class ViewController: UIViewController {
         
         logoA.center.x -= view.bounds.width
         logoTitle.center.x -= view.bounds.width
-        
+
     }
     
     func animateInLogoTitle() {
