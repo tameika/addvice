@@ -28,6 +28,8 @@
 		BCB858DA1E3619F20022139B /* open-door-1254709_1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCB858D91E3619F20022139B /* open-door-1254709_1280.jpg */; };
 		BCBAF3691DEBE59E00B714B5 /* MyAdviceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBAF3681DEBE59E00B714B5 /* MyAdviceTableViewController.swift */; };
 		BCEB89DC1E28843B003A9801 /* background-1339119_1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCEB89DB1E28843B003A9801 /* background-1339119_1280.jpg */; };
+		BCEF6B911E50050800DEF771 /* addvicelogo4.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEF6B901E50050800DEF771 /* addvicelogo4.png */; };
+		BCEF6B931E5005AE00DEF771 /* logoBubbleA05.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEF6B921E5005AE00DEF771 /* logoBubbleA05.png */; };
 		DEDF40680BA8508F0D702D53 /* Pods_adviceApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 454989B972D947CDAF6E2A96 /* Pods_adviceApp.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
@@ -77,6 +79,8 @@
 		BCB858D91E3619F20022139B /* open-door-1254709_1280.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "open-door-1254709_1280.jpg"; sourceTree = "<group>"; };
 		BCBAF3681DEBE59E00B714B5 /* MyAdviceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAdviceTableViewController.swift; sourceTree = "<group>"; };
 		BCEB89DB1E28843B003A9801 /* background-1339119_1280.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background-1339119_1280.jpg"; sourceTree = "<group>"; };
+		BCEF6B901E50050800DEF771 /* addvicelogo4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addvicelogo4.png; sourceTree = "<group>"; };
+		BCEF6B921E5005AE00DEF771 /* logoBubbleA05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoBubbleA05.png; sourceTree = "<group>"; };
 		EA392F6288A6574087F33774 /* Pods-adviceApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-adviceApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-adviceApp/Pods-adviceApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -161,6 +165,8 @@
 				BC6244C51DDA308500AE6523 /* adviceApp.xcdatamodeld */,
 				BC6244C31DDA2E0C00AE6523 /* DataStore.swift */,
 				BC7249AA1E4EC539002A7D5B /* addvicelogo0.png */,
+				BCEF6B921E5005AE00DEF771 /* logoBubbleA05.png */,
+				BCEF6B901E50050800DEF771 /* addvicelogo4.png */,
 				BC20D3FD1E09BB46000DD097 /* GoogleService-Info.plist */,
 				BC4B661F1E0B5653003EEEC0 /* positive-725842_1920.jpg */,
 				BCB858D91E3619F20022139B /* open-door-1254709_1280.jpg */,
@@ -260,7 +266,7 @@
 				TargetAttributes = {
 					BC9979871D981512004A572C = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = KXY9EDFTF5;
+						DevelopmentTeam = GXEX28B97C;
 						ProvisioningStyle = Automatic;
 					};
 					BC99799B1D981513004A572C = {
@@ -303,11 +309,13 @@
 				BC9979961D981513004A572C /* LaunchScreen.storyboard in Resources */,
 				BCB858D01E3611050022139B /* love-1449763_1280.jpg in Resources */,
 				BC9470C71E086AA500E2F21D /* Default-568h@2x.png in Resources */,
+				BCEF6B931E5005AE00DEF771 /* logoBubbleA05.png in Resources */,
 				BC9979931D981513004A572C /* Assets.xcassets in Resources */,
 				BC9979911D981513004A572C /* Main.storyboard in Resources */,
 				BC4B66201E0B5653003EEEC0 /* positive-725842_1920.jpg in Resources */,
 				BC20D3FE1E09BB46000DD097 /* GoogleService-Info.plist in Resources */,
 				BCEB89DC1E28843B003A9801 /* background-1339119_1280.jpg in Resources */,
+				BCEF6B911E50050800DEF771 /* addvicelogo4.png in Resources */,
 				BC7249AB1E4EC539002A7D5B /* addvicelogo0.png in Resources */,
 				BCB858DA1E3619F20022139B /* open-door-1254709_1280.jpg in Resources */,
 			);
@@ -543,7 +551,7 @@
 			baseConfigurationReference = EA392F6288A6574087F33774 /* Pods-adviceApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = KXY9EDFTF5;
+				DEVELOPMENT_TEAM = GXEX28B97C;
 				INFOPLIST_FILE = adviceApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
@@ -558,7 +566,7 @@
 			baseConfigurationReference = 92BEE6EC578CFF2EBC635D56 /* Pods-adviceApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = KXY9EDFTF5;
+				DEVELOPMENT_TEAM = GXEX28B97C;
 				INFOPLIST_FILE = adviceApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
