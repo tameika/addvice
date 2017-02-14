@@ -286,11 +286,24 @@ class ViewController: UIViewController {
             print("🔮", removedAdvice)
             
             store.saveContext()
+            
+            adviceIsSavedAlert()
         }
         
         
     }
     
+    
+    func adviceIsSavedAlert() {
+        
+        let alert = UIAlertController(title: "Advice Saved!", message: "Click sav❥d Up Top To See", preferredStyle: UIAlertControllerStyle.alert)
+        print("advice is saved alert")
+        
+        let okAction = UIAlertAction(title: "Great", style: .destructive, handler: nil)
+            alert.addAction(okAction)
+            self.present(alert, animated: true, completion: nil)
+        
+    }
     
     
     func badWordFilter() -> Bool {
@@ -302,8 +315,8 @@ class ViewController: UIViewController {
                 if adviceText.contains(word) {
                     print(word)
                     
-                    let alert = UIAlertController(title: "Wait A Fucking Minute", message: "You can't curse here.", preferredStyle: UIAlertControllerStyle.alert)
-                    print("alert")
+                    let alert = UIAlertController(title: "Chill, chill, chill", message: "You can't curse here.", preferredStyle: UIAlertControllerStyle.alert)
+                    print("bad word alert")
                     
                     let okAction = UIAlertAction(title: "OK Cool", style: .default, handler: nil)
                     
@@ -338,9 +351,7 @@ class ViewController: UIViewController {
  - animate alert controller?
  - displayed saved advice confirmation
  - animate all buttons
- - FIXED SAVED ADVICE
  - adjust button edge insets
- - set length of advice
 
 
 /*
