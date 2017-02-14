@@ -267,6 +267,8 @@ class ViewController: UIViewController {
         
         advice.content = selectedAdvice
         
+        advice.isFavorited = true 
+        
         print("📢selected advice is now of type Advice")
         
     }
