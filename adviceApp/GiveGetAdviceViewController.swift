@@ -349,7 +349,7 @@ class ViewController: UIViewController {
 
 /* Todo:
  - animate all buttons
- - adjust button edge insets
+ - adjust button edge insets?
  - prevent saving same advice multiple times: 1.1
 
 

@@ -13,7 +13,6 @@
 		BC6244C41DDA2E0C00AE6523 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6244C31DDA2E0C00AE6523 /* DataStore.swift */; };
 		BC6244C71DDA308500AE6523 /* adviceApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC6244C51DDA308500AE6523 /* adviceApp.xcdatamodeld */; };
 		BC7EA1941E35A3B700FEDC6C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7EA1931E35A3B700FEDC6C /* Extensions.swift */; };
-		BC9470C71E086AA500E2F21D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC9470C61E086AA500E2F21D /* Default-568h@2x.png */; };
 		BC99798C1D981513004A572C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC99798B1D981513004A572C /* AppDelegate.swift */; };
 		BC99798E1D981513004A572C /* GiveGetAdviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC99798D1D981513004A572C /* GiveGetAdviceViewController.swift */; };
 		BC9979911D981513004A572C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC99798F1D981513004A572C /* Main.storyboard */; };
@@ -55,7 +54,6 @@
 		BC6244C31DDA2E0C00AE6523 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		BC6244C61DDA308500AE6523 /* adviceApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = adviceApp.xcdatamodel; sourceTree = "<group>"; };
 		BC7EA1931E35A3B700FEDC6C /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		BC9470C61E086AA500E2F21D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BC9979881D981513004A572C /* addvice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = addvice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC99798B1D981513004A572C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC99798D1D981513004A572C /* GiveGetAdviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiveGetAdviceViewController.swift; sourceTree = "<group>"; };
@@ -120,7 +118,6 @@
 		BC99797F1D981512004A572C = {
 			isa = PBXGroup;
 			children = (
-				BC9470C61E086AA500E2F21D /* Default-568h@2x.png */,
 				BC99798A1D981513004A572C /* adviceApp */,
 				BC99799F1D981513004A572C /* adviceAppTests */,
 				BC9979AA1D981513004A572C /* adviceAppUITests */,
@@ -143,6 +140,7 @@
 		BC99798A1D981513004A572C /* adviceApp */ = {
 			isa = PBXGroup;
 			children = (
+				BC6244C31DDA2E0C00AE6523 /* DataStore.swift */,
 				BC7EA1931E35A3B700FEDC6C /* Extensions.swift */,
 				BC99798B1D981513004A572C /* AppDelegate.swift */,
 				BC99798D1D981513004A572C /* GiveGetAdviceViewController.swift */,
@@ -154,7 +152,6 @@
 				BC20D3FA1E09B8F3000DD097 /* Info.plist */,
 				BC20D3FD1E09BB46000DD097 /* GoogleService-Info.plist */,
 				BC6244C51DDA308500AE6523 /* adviceApp.xcdatamodeld */,
-				BC6244C31DDA2E0C00AE6523 /* DataStore.swift */,
 				BCEF6B9E1E5307CE00DEF771 /* logoBubble-a.png */,
 				BCEF6B9A1E52F16400DEF771 /* star2.png */,
 				BC4B661F1E0B5653003EEEC0 /* positive-725842_1920.jpg */,
@@ -293,7 +290,6 @@
 			files = (
 				BC9979961D981513004A572C /* LaunchScreen.storyboard in Resources */,
 				BCEF6B9F1E5307CE00DEF771 /* logoBubble-a.png in Resources */,
-				BC9470C71E086AA500E2F21D /* Default-568h@2x.png in Resources */,
 				BC9979931D981513004A572C /* Assets.xcassets in Resources */,
 				BC9979911D981513004A572C /* Main.storyboard in Resources */,
 				BCEF6B9B1E52F16400DEF771 /* star2.png in Resources */,
