@@ -336,11 +336,12 @@ class ViewController: UIViewController {
 
 
 /* Todo:
- animate alert controller?
- displayed saved advice confirmation
- animate all buttons
- FIXED SAVED ADVICE
- adjust button edge insets
+ - animate alert controller?
+ - displayed saved advice confirmation
+ - animate all buttons
+ - FIXED SAVED ADVICE
+ - adjust button edge insets
+ - set length of advice
 
 
 /*
