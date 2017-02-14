@@ -1,0 +1,206 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+provides-nominal:
+provides-member:
+- ["C9adviceApp6Advice", ""]
+- ["C9adviceApp6Advice", "fetchRequest"]
+- ["C9adviceApp6Advice", "content"]
+- ["C9adviceApp6Advice", "isFavorited"]
+provides-dynamic-lookup:
+- "isFavorited"
+- "content"
+depends-top-level:
+- "Advice"
+- "Bool"
+- "String"
+- !private "StringLiteralType"
+- "NSFetchRequest"
+depends-member:
+- ["C9adviceApp6Advice", "Advice"]
+- ["C9adviceApp6Advice", "Bool"]
+- ["C9adviceApp6Advice", "NSFetchRequest"]
+- ["C9adviceApp6Advice", "String"]
+- ["C9adviceApp6Advice", "content"]
+- ["C9adviceApp6Advice", "deinit"]
+- ["C9adviceApp6Advice", "fetchRequest"]
+- ["C9adviceApp6Advice", "isFavorited"]
+- !private ["Ps9AnyObject", "NSFetchRequest"]
+- ["Ps9AnyObject", "content"]
+- ["Ps9AnyObject", "fetchRequest"]
+- !private ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "isFavorited"]
+- !private ["Ps7CVarArg", "NSFetchRequest"]
+- ["Ps7CVarArg", "content"]
+- ["Ps7CVarArg", "fetchRequest"]
+- !private ["Ps7CVarArg", "init"]
+- ["Ps7CVarArg", "isFavorited"]
+- !private ["Ps10Comparable", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "NSFetchRequest"]
+- ["Ps28CustomDebugStringConvertible", "content"]
+- ["Ps28CustomDebugStringConvertible", "fetchRequest"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "isFavorited"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps17CustomReflectable", "init"]
+- !private ["Ps23CustomStringConvertible", "NSFetchRequest"]
+- ["Ps23CustomStringConvertible", "content"]
+- ["Ps23CustomStringConvertible", "fetchRequest"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "isFavorited"]
+- !private ["Ps9Equatable", "NSFetchRequest"]
+- ["Ps9Equatable", "content"]
+- ["Ps9Equatable", "fetchRequest"]
+- !private ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "isFavorited"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps32ExpressibleByStringInterpolation", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- !private ["Ps8Hashable", "NSFetchRequest"]
+- ["Ps8Hashable", "content"]
+- ["Ps8Hashable", "fetchRequest"]
+- !private ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "isFavorited"]
+- !private ["Ps25LosslessStringConvertible", "init"]
+- !private ["Ps10MirrorPath", "init"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo9NSCopying", "init"]
+- ["CSo14NSFetchRequest", "deinit"]
+- !private ["CSo14NSFetchRequest", "init"]
+- !private ["PSo20NSFetchRequestResult", "NSFetchRequest"]
+- ["PSo20NSFetchRequestResult", "content"]
+- ["PSo20NSFetchRequestResult", "fetchRequest"]
+- ["PSo20NSFetchRequestResult", "isFavorited"]
+- ["CSo15NSManagedObject", "Advice"]
+- ["CSo15NSManagedObject", "Bool"]
+- ["CSo15NSManagedObject", "NSFetchRequest"]
+- ["CSo15NSManagedObject", "String"]
+- ["CSo15NSManagedObject", "content"]
+- ["CSo15NSManagedObject", "fetchRequest"]
+- ["CSo15NSManagedObject", "isFavorited"]
+- !private ["PSo16NSMutableCopying", "init"]
+- ["CSo8NSObject", "Advice"]
+- ["CSo8NSObject", "Bool"]
+- ["CSo8NSObject", "NSFetchRequest"]
+- ["CSo8NSObject", "String"]
+- ["CSo8NSObject", "content"]
+- ["CSo8NSObject", "fetchRequest"]
+- !private ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "isFavorited"]
+- !private ["PSo16NSObjectProtocol", "NSFetchRequest"]
+- ["PSo16NSObjectProtocol", "content"]
+- ["PSo16NSObjectProtocol", "fetchRequest"]
+- !private ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "isFavorited"]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["CSo8NSString", "init"]
+- ["SS", "deinit"]
+- !private ["SS", "init"]
+- !private ["Ps16TextOutputStream", "init"]
+- !private ["Ps20TextOutputStreamable", "init"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- !private ["Ps9_Hashable", "NSFetchRequest"]
+- ["Ps9_Hashable", "content"]
+- ["Ps9_Hashable", "fetchRequest"]
+- !private ["Ps9_Hashable", "init"]
+- ["Ps9_Hashable", "isFavorited"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+depends-nominal:
+- "C9adviceApp6Advice"
+- "Ps9AnyObject"
+- "Ps7CVarArg"
+- !private "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- !private "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- !private "Ps32ExpressibleByStringInterpolation"
+- !private "Ps26ExpressibleByStringLiteral"
+- !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- "Ps8Hashable"
+- !private "Ps25LosslessStringConvertible"
+- !private "Ps10MirrorPath"
+- !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- "CSo14NSFetchRequest"
+- "PSo20NSFetchRequestResult"
+- "CSo15NSManagedObject"
+- !private "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- "SS"
+- !private "Ps16TextOutputStream"
+- !private "Ps20TextOutputStreamable"
+- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps34_ExpressibleByBuiltinStringLiteral"
+- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps35_HasCustomAnyHashableRepresentation"
+- "Ps9_Hashable"
+- !private "Ps21_ObjectiveCBridgeable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/Firebase/Core/Sources/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/FirebaseCore/Frameworks/frameworks/FirebaseCore.framework/Headers/FIROptions.h"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/FirebaseCore/Frameworks/frameworks/FirebaseCore.framework/Headers/FIRConfiguration.h"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/FirebaseCore/Frameworks/frameworks/FirebaseCore.framework/Headers/FIRApp.h"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/FirebaseCore/Frameworks/frameworks/FirebaseCore.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/FirebaseCore/Frameworks/frameworks/FirebaseCore.framework/Headers/FirebaseCore.h"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/FirebaseCore/Frameworks/frameworks/FirebaseCore.framework/Modules/module.modulemap"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIROptions.h"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRConfiguration.h"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRApp.h"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRUserInfo.h"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRUser.h"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRAuth.h"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRGoogleAuthProvider.h"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRGitHubAuthProvider.h"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIREmailPasswordAuthProvider.h"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FirebaseAuth.h"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRServerValue.h"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRMutableData.h"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataSnapshot.h"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataEventType.h"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseQuery.h"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseReference.h"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabase.h"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FirebaseDatabase.h"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Modules/module.modulemap"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/FirebaseInstanceID/Frameworks/frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/FirebaseInstanceID/Frameworks/frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/FirebaseInstanceID/Frameworks/frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/tameikalawrence/Desktop/APPS/adviceApp/Pods/Firebase/Core/Sources/Firebase.h"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
+interface-hash: "d5ea5798e661ede8cbd636b50b4689fa"
