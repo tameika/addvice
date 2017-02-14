@@ -81,7 +81,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" allowsEditingTextAttributes="YES" borderStyle="roundedRect" placeholder="give a piece of advice to get advice " clearsOnBeginEditing="YES" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3At-HA-PmI">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" allowsEditingTextAttributes="YES" borderStyle="roundedRect" placeholder="give a piece of advice to get advice " clearsOnBeginEditing="YES" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3At-HA-PmI">
                                 <rect key="frame" x="20" y="313.66666666666674" width="374" height="80.333333333333314"/>
                                 <color key="backgroundColor" red="0.69297444649999995" green="0.68386715490000005" blue="0.92139423080000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" red="0.1766522073" green="0.085576671539999996" blue="0.27283653839999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -179,7 +179,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.71501713140000001" green="0.81443250379999999" blue="0.75520653959999995" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" red="0.45416412160000003" green="0.3576885568" blue="0.60204326919999995" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="sectionIndexColor" red="0.11904106590000001" green="0.057622839289999998" blue="0.18086939099999999" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="adviceCell" id="GZh-FK-z1x">
