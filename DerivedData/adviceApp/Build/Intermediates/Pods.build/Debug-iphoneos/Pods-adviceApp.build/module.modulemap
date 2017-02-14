@@ -1,0 +1,6 @@
+framework module Pods_adviceApp {
+  umbrella header "Pods-adviceApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

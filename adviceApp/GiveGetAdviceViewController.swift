@@ -55,7 +55,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        animateInLogoTitle()
         
         giveAdviceTextField.delegate = self
         self.giveAdviceBtnOutlet.layer.borderWidth = 2.0
@@ -63,6 +62,7 @@ class ViewController: UIViewController {
         self.giveAdviceBtnOutlet.layer.cornerRadius = giveAdviceBtnOutlet.bounds.height * 0.5
         self.giveAdviceBtnOutlet.layer.borderColor = seafoamGreen.cgColor
         self.giveAdviceBtnOutlet.backgroundColor = UIColor.clear
+        giveAdviceBtnOutlet.titleEdgeInsets = UIEdgeInsetsMake(0.0, -5.0, 0.0, -5.0)
         
         
         self.getAdviceBtnOutlet.layer.borderWidth = 2.0
@@ -70,24 +70,27 @@ class ViewController: UIViewController {
         self.getAdviceBtnOutlet.layer.cornerRadius = getAdviceBtnOutlet.bounds.height * 0.5
         self.getAdviceBtnOutlet.layer.borderColor = seafoamGreen.cgColor
         self.getAdviceBtnOutlet.backgroundColor = UIColor.clear
+        self.giveAdviceBtnOutlet.titleEdgeInsets = UIEdgeInsets.zero
         
         self.savedAdviceBtn.layer.borderWidth = 2.0
         self.savedAdviceBtn.clipsToBounds = true
         self.savedAdviceBtn.layer.cornerRadius = savedAdviceBtn.bounds.height * 0.5
         self.savedAdviceBtn.layer.borderColor = seafoamGreen.cgColor
         self.savedAdviceBtn.backgroundColor = UIColor.clear
+        self.savedAdviceBtn.titleEdgeInsets = UIEdgeInsets.zero
         
         self.displayAdviceTextLabel.clipsToBounds = true
-        self.displayAdviceTextLabel.layer.cornerRadius = 5
+        self.displayAdviceTextLabel.layer.cornerRadius = 5.0
         
         getAdviceBtnOutlet.isEnabled = false
         savedAdviceBtn.isEnabled = false
         giveAdviceBtnOutlet.isEnabled = false
         
-        self.textField.borderStyle = .roundedRect
-        self.textField.layer.borderColor = seafoamGreen.cgColor
-        self.textField.layer.borderWidth = 2.0
-        self.textField.textColor = UIColor.black
+//        self.textField.borderStyle = .roundedRect
+//        self.textField.layer.borderColor = UIColor.clear.cgColor
+//        self.textField.layer.borderWidth = 2.0
+//        self.textField.textColor = UIColor.black
+        self.textField.useUnderline()
         
         print(savedAdvice)
         store.fetchData()
@@ -96,6 +99,8 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        animateInLogoTitle()
+
         getFIRAdvice()
         
         navigationController?.navigationBar.isHidden = true

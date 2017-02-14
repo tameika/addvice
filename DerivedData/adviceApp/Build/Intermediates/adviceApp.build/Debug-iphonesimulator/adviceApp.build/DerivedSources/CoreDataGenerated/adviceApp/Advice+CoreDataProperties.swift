@@ -2,7 +2,7 @@
 //  Advice+CoreDataProperties.swift
 //  
 //
-//  Created by Tameika Lawrence on 2/11/17.
+//  Created by Tameika Lawrence on 2/13/17.
 //
 //  This file was automatically generated and should not be edited.
 //

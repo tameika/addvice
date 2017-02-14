@@ -1,0 +1,15 @@
+version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
+options: "ea9f8eb9eb1a6f9e33935517076f9f53"
+build_time: [540193331, 31683000]
+inputs:
+  "/Users/tameikalawrence/Desktop/APPS/adviceApp/adviceApp/StoryboardID.swift": [539144293, 0]
+  "/Users/tameikalawrence/Desktop/APPS/adviceApp/adviceApp/GiveGetAdviceViewController.swift": [540192599, 0]
+  "/Users/tameikalawrence/Desktop/APPS/adviceApp/adviceApp/BadWordsList.swift": [536917299, 0]
+  "/Users/tameikalawrence/Desktop/APPS/adviceApp/adviceApp/DataStore.swift": [535575879, 0]
+  "/Users/tameikalawrence/Desktop/APPS/adviceApp/adviceApp/AppDelegate.swift": [536917299, 0]
+  "/Users/tameikalawrence/Desktop/APPS/adviceApp/adviceApp/APIClient .swift": [535575879, 0]
+  "/Users/tameikalawrence/Desktop/APPS/adviceApp/adviceApp/MyAdviceTableViewController.swift": [540107304, 0]
+  "/Users/tameikalawrence/Desktop/APPS/adviceApp/adviceApp/Extensions.swift": [540193330, 0]
+  "/Users/tameikalawrence/Desktop/APPS/adviceApp/DerivedData/adviceApp/Build/Intermediates/adviceApp.build/Debug-iphoneos/adviceApp.build/DerivedSources/CoreDataGenerated/adviceApp/Advice+CoreDataClass.swift": [540189112, 0]
+  "/Users/tameikalawrence/Desktop/APPS/adviceApp/DerivedData/adviceApp/Build/Intermediates/adviceApp.build/Debug-iphoneos/adviceApp.build/DerivedSources/CoreDataGenerated/adviceApp/Advice+CoreDataProperties.swift": [540189112, 0]
+  "/Users/tameikalawrence/Desktop/APPS/adviceApp/DerivedData/adviceApp/Build/Intermediates/adviceApp.build/Debug-iphoneos/adviceApp.build/DerivedSources/CoreDataGenerated/adviceApp/adviceApp+CoreDataModel.swift": [540189112, 0]
