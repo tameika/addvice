@@ -40,7 +40,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
                                 <state key="normal" title="give">
-                                    <color key="titleColor" red="0.71501713140000001" green="0.81443250379999999" blue="0.75520653959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.66875411620000003" green="0.8527644231" blue="0.72492828210000004" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="submitAdviceBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mb8-gK-UcN"/>
@@ -55,7 +55,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
                                 <state key="normal" title="save">
-                                    <color key="titleColor" red="0.71501713140000001" green="0.81443250379999999" blue="0.75520653959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.66875411620000003" green="0.8527644231" blue="0.72492828210000004" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="saveAdvicePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0gU-xy-7ug"/>
@@ -97,25 +97,25 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
                                 <state key="normal" title="get ">
-                                    <color key="titleColor" red="0.71501713140000001" green="0.81443250379999999" blue="0.75520653959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.66875411620000003" green="0.8527644231" blue="0.72492828210000004" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="receiveAdviceBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sZI-6b-foB"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoBubbleA05.png" translatesAutoresizingMaskIntoConstraints="NO" id="uHq-qP-f4z">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoBubble-a.png" translatesAutoresizingMaskIntoConstraints="NO" id="uHq-qP-f4z">
                                 <rect key="frame" x="0.0" y="538" width="205" height="178"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="205" id="s5U-Tq-z38"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ddvice" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8n-jT-EkW">
-                                <rect key="frame" x="142" y="607" width="227" height="63"/>
+                                <rect key="frame" x="144" y="607" width="227" height="63"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="63" id="sJi-Np-2ir"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="54"/>
-                                <color key="textColor" red="0.1577418609" green="0.076415820780000004" blue="0.2436298076" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.66875411620000003" green="0.8527644231" blue="0.72492828210000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -131,7 +131,7 @@
                             <constraint firstItem="Exi-Dr-ish" firstAttribute="centerX" secondItem="yFv-1J-CLp" secondAttribute="centerX" id="M2I-Vd-21a"/>
                             <constraint firstItem="cw4-C6-EzN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ndm-oR-UfK"/>
                             <constraint firstItem="KkZ-Iu-Yee" firstAttribute="height" secondItem="gaj-ul-fPQ" secondAttribute="height" id="QHd-8w-Jch"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="P8n-jT-EkW" secondAttribute="trailing" constant="25" id="QzO-QP-eyJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="P8n-jT-EkW" secondAttribute="trailing" constant="23" id="QzO-QP-eyJ"/>
                             <constraint firstItem="yFv-1J-CLp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RTS-JH-eoJ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uHq-qP-f4z" secondAttribute="bottom" constant="20" id="SM6-w9-L57"/>
                             <constraint firstAttribute="trailingMargin" secondItem="o30-GB-no8" secondAttribute="trailing" id="VRW-Is-oJy"/>
@@ -142,7 +142,7 @@
                             <constraint firstItem="KkZ-Iu-Yee" firstAttribute="top" secondItem="3At-HA-PmI" secondAttribute="bottom" constant="26" id="jXB-nb-Vrc"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KkZ-Iu-Yee" secondAttribute="bottom" constant="278" id="l2A-gg-Tg5"/>
                             <constraint firstItem="3At-HA-PmI" firstAttribute="width" secondItem="yFv-1J-CLp" secondAttribute="width" id="leF-Q9-bPC"/>
-                            <constraint firstItem="P8n-jT-EkW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="48.5" id="mf7-Fh-Kzi"/>
+                            <constraint firstItem="P8n-jT-EkW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="50.5" id="mf7-Fh-Kzi"/>
                             <constraint firstItem="3At-HA-PmI" firstAttribute="top" secondItem="yFv-1J-CLp" secondAttribute="bottom" constant="10" id="paT-Gp-dcr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yFv-1J-CLp" secondAttribute="trailing" id="pel-Ts-C1w"/>
                             <constraint firstItem="3At-HA-PmI" firstAttribute="leading" secondItem="yFv-1J-CLp" secondAttribute="leading" id="pev-Jg-WHc"/>
@@ -226,7 +226,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logoBubbleA05.png" width="428" height="362"/>
+        <image name="logoBubble-a.png" width="428" height="362"/>
         <image name="star2.png" width="1400" height="980"/>
     </resources>
 </document>

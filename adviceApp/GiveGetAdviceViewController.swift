@@ -244,8 +244,8 @@ class ViewController: UIViewController {
         
         guard firAdviceArray.count > 1 else {
             
-            displayAdviceTextLabel.textColor = UIColor.black
-            displayAdviceTextLabel.text = "no advice available 😭"
+            displayAdviceTextLabel.textColor = seafoamGreen
+            displayAdviceTextLabel.text = "no more advice available"
             return
         }
         
@@ -262,6 +262,17 @@ class ViewController: UIViewController {
         
         print("🍧", removedAdvice)
         
+        saveThisAdvice(selectedAdvice: removedAdvice)
+    }
+    
+    
+    func saveThisAdvice(selectedAdvice: String) -> Advice {
+        
+        let advice = Advice()
+        
+        advice.content = selectedAdvice
+        
+        return advice
     }
     
     
@@ -272,11 +283,10 @@ class ViewController: UIViewController {
         
         if displayAdviceTextLabel.text != nil {
             
-            
+            //saveThisAdvice(selectedAdvice: <#T##String#>)
             
             store.saveContext()
             
-            //         TODO: Let the user know that it was saved (display something to them)
             
         }
         
