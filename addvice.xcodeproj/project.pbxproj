@@ -56,16 +56,16 @@
 		BC6244C61DDA308500AE6523 /* adviceApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = adviceApp.xcdatamodel; sourceTree = "<group>"; };
 		BC7EA1931E35A3B700FEDC6C /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		BC9470C61E086AA500E2F21D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		BC9979881D981513004A572C /* adviceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = adviceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC9979881D981513004A572C /* addvice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = addvice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC99798B1D981513004A572C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC99798D1D981513004A572C /* GiveGetAdviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiveGetAdviceViewController.swift; sourceTree = "<group>"; };
 		BC9979901D981513004A572C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BC9979921D981513004A572C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC9979951D981513004A572C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BC99799C1D981513004A572C /* adviceAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = adviceAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC99799C1D981513004A572C /* addviceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = addviceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC9979A01D981513004A572C /* adviceAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adviceAppTests.swift; sourceTree = "<group>"; };
 		BC9979A21D981513004A572C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BC9979A71D981513004A572C /* adviceAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = adviceAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC9979A71D981513004A572C /* addviceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = addviceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC9979AB1D981513004A572C /* adviceAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adviceAppUITests.swift; sourceTree = "<group>"; };
 		BCB17C601DE8BD54004CA1DF /* BadWordsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadWordsList.swift; sourceTree = "<group>"; };
 		BCBAF3681DEBE59E00B714B5 /* MyAdviceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAdviceTableViewController.swift; sourceTree = "<group>"; };
@@ -133,9 +133,9 @@
 		BC9979891D981513004A572C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BC9979881D981513004A572C /* adviceApp.app */,
-				BC99799C1D981513004A572C /* adviceAppTests.xctest */,
-				BC9979A71D981513004A572C /* adviceAppUITests.xctest */,
+				BC9979881D981513004A572C /* addvice.app */,
+				BC99799C1D981513004A572C /* addviceTests.xctest */,
+				BC9979A71D981513004A572C /* addviceUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -183,9 +183,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BC9979871D981512004A572C /* adviceApp */ = {
+		BC9979871D981512004A572C /* addvice */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BC9979B01D981514004A572C /* Build configuration list for PBXNativeTarget "adviceApp" */;
+			buildConfigurationList = BC9979B01D981514004A572C /* Build configuration list for PBXNativeTarget "addvice" */;
 			buildPhases = (
 				D4A17D8BA46C6E8027D48052 /* [CP] Check Pods Manifest.lock */,
 				BC9979841D981512004A572C /* Sources */,
@@ -198,14 +198,14 @@
 			);
 			dependencies = (
 			);
-			name = adviceApp;
+			name = addvice;
 			productName = adviceApp;
-			productReference = BC9979881D981513004A572C /* adviceApp.app */;
+			productReference = BC9979881D981513004A572C /* addvice.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BC99799B1D981513004A572C /* adviceAppTests */ = {
+		BC99799B1D981513004A572C /* addviceTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BC9979B31D981514004A572C /* Build configuration list for PBXNativeTarget "adviceAppTests" */;
+			buildConfigurationList = BC9979B31D981514004A572C /* Build configuration list for PBXNativeTarget "addviceTests" */;
 			buildPhases = (
 				BC9979981D981513004A572C /* Sources */,
 				BC9979991D981513004A572C /* Frameworks */,
@@ -216,14 +216,14 @@
 			dependencies = (
 				BC99799E1D981513004A572C /* PBXTargetDependency */,
 			);
-			name = adviceAppTests;
+			name = addviceTests;
 			productName = adviceAppTests;
-			productReference = BC99799C1D981513004A572C /* adviceAppTests.xctest */;
+			productReference = BC99799C1D981513004A572C /* addviceTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		BC9979A61D981513004A572C /* adviceAppUITests */ = {
+		BC9979A61D981513004A572C /* addviceUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BC9979B61D981514004A572C /* Build configuration list for PBXNativeTarget "adviceAppUITests" */;
+			buildConfigurationList = BC9979B61D981514004A572C /* Build configuration list for PBXNativeTarget "addviceUITests" */;
 			buildPhases = (
 				BC9979A31D981513004A572C /* Sources */,
 				BC9979A41D981513004A572C /* Frameworks */,
@@ -234,9 +234,9 @@
 			dependencies = (
 				BC9979A91D981513004A572C /* PBXTargetDependency */,
 			);
-			name = adviceAppUITests;
+			name = addviceUITests;
 			productName = adviceAppUITests;
-			productReference = BC9979A71D981513004A572C /* adviceAppUITests.xctest */;
+			productReference = BC9979A71D981513004A572C /* addviceUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -266,7 +266,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BC9979831D981512004A572C /* Build configuration list for PBXProject "adviceApp" */;
+			buildConfigurationList = BC9979831D981512004A572C /* Build configuration list for PBXProject "addvice" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -279,9 +279,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BC9979871D981512004A572C /* adviceApp */,
-				BC99799B1D981513004A572C /* adviceAppTests */,
-				BC9979A61D981513004A572C /* adviceAppUITests */,
+				BC9979871D981512004A572C /* addvice */,
+				BC99799B1D981513004A572C /* addviceTests */,
+				BC9979A61D981513004A572C /* addviceUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -403,12 +403,12 @@
 /* Begin PBXTargetDependency section */
 		BC99799E1D981513004A572C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BC9979871D981512004A572C /* adviceApp */;
+			target = BC9979871D981512004A572C /* addvice */;
 			targetProxy = BC99799D1D981513004A572C /* PBXContainerItemProxy */;
 		};
 		BC9979A91D981513004A572C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BC9979871D981512004A572C /* adviceApp */;
+			target = BC9979871D981512004A572C /* addvice */;
 			targetProxy = BC9979A81D981513004A572C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -566,7 +566,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.flatironschool.adviceAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/adviceApp.app/adviceApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/addvice.app/addvice";
 			};
 			name = Debug;
 		};
@@ -580,7 +580,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.flatironschool.adviceAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/adviceApp.app/adviceApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/addvice.app/addvice";
 			};
 			name = Release;
 		};
@@ -613,7 +613,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BC9979831D981512004A572C /* Build configuration list for PBXProject "adviceApp" */ = {
+		BC9979831D981512004A572C /* Build configuration list for PBXProject "addvice" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BC9979AE1D981514004A572C /* Debug */,
@@ -622,7 +622,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BC9979B01D981514004A572C /* Build configuration list for PBXNativeTarget "adviceApp" */ = {
+		BC9979B01D981514004A572C /* Build configuration list for PBXNativeTarget "addvice" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BC9979B11D981514004A572C /* Debug */,
@@ -631,7 +631,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BC9979B31D981514004A572C /* Build configuration list for PBXNativeTarget "adviceAppTests" */ = {
+		BC9979B31D981514004A572C /* Build configuration list for PBXNativeTarget "addviceTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BC9979B41D981514004A572C /* Debug */,
@@ -640,7 +640,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BC9979B61D981514004A572C /* Build configuration list for PBXNativeTarget "adviceAppUITests" */ = {
+		BC9979B61D981514004A572C /* Build configuration list for PBXNativeTarget "addviceUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BC9979B71D981514004A572C /* Debug */,
