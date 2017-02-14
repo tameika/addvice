@@ -35,7 +35,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			l9IHq29U0gpjuEHKBCquEWh6y0M=
+			BWjqk6/2CwIXxrmxrd96LPHdG30=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -53,7 +53,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			XENMdbafjZ708ad5MikKPZ269/k=
+			VFxw/woqd+P/Qbt/7ouIYlF6eR8=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -62,7 +62,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LUDvDyyFs8fBaKx2kU8io1nlQck=
+			Luga0ptFQLC9fdm+5xCrxoshihU=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -71,7 +71,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			bw35kMLIYZf+nsSPn9HG7EgL4S0=
+			wj0JKhKbG0QoIoJsTflLiz1QQw8=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -80,7 +80,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			eM4KdKgwdO3IGe/klYeUGgUMFiY=
+			PG6xy473YXrmTlqYRA2ESExmNog=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -91,7 +91,7 @@
 		</data>
 		<key>Frameworks/GTMSessionFetcher.framework/GTMSessionFetcher</key>
 		<data>
-		O1ane4O+qezDr8UXZXQJw8odxUU=
+		pm4Qw4blK4ZrKznUxwK2yK3xmQ8=
 		</data>
 		<key>Frameworks/GTMSessionFetcher.framework/Info.plist</key>
 		<data>
@@ -103,7 +103,7 @@
 		</data>
 		<key>Frameworks/GoogleToolboxForMac.framework/GoogleToolboxForMac</key>
 		<data>
-		AmQ5qYUfpNKkvc5j7WjuGGrE1Lo=
+		zb3b1BYckdiWPW0oMcFt10IjBwU=
 		</data>
 		<key>Frameworks/GoogleToolboxForMac.framework/Info.plist</key>
 		<data>
@@ -169,14 +169,6 @@
 		<data>
 		n57qDP4tZfLD1rCS43W0B4LQjzE=
 		</data>
-		<key>addvicelogo0.png</key>
-		<data>
-		MyxhSBEHIYQhNF4kGUtwJKh9gLk=
-		</data>
-		<key>addvicelogo4.png</key>
-		<data>
-		eQyb95VXZTnxnCyqpS4c1A2TaBQ=
-		</data>
 		<key>adviceApp.momd/VersionInfo.plist</key>
 		<data>
 		w1B5zYHdi7VuwLqJRshjv1a8hRU=
@@ -212,10 +204,6 @@
 		<key>positive-725842_1920.jpg</key>
 		<data>
 		74liHXAoFa9s3HNUooJsqAgkRR4=
-		</data>
-		<key>star.ai</key>
-		<data>
-		HbXVI7HD7t8vubu0tUus+e3V9QQ=
 		</data>
 		<key>starry-sky.png</key>
 		<data>
@@ -267,11 +255,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			l9IHq29U0gpjuEHKBCquEWh6y0M=
+			BWjqk6/2CwIXxrmxrd96LPHdG30=
 			</data>
 			<key>hash2</key>
 			<data>
-			l+GzxNHeywNrN0BWl/TpQ7NsNoH9WOJeAo1o80JMWUQ=
+			X1CGKg1b3wnFzmsM7z5U9WmdIFMpNRFxhTXK0PBQQgI=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -293,11 +281,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			XENMdbafjZ708ad5MikKPZ269/k=
+			VFxw/woqd+P/Qbt/7ouIYlF6eR8=
 			</data>
 			<key>hash2</key>
 			<data>
-			WgMsCX4FZnejykzGrS0ePwIkQSkfveSIVGIevH4dkCs=
+			PecKjHrFpMyKJbbGiW9V5jqTcRFZKaRYDCsvAVfBGX8=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -306,11 +294,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LUDvDyyFs8fBaKx2kU8io1nlQck=
+			Luga0ptFQLC9fdm+5xCrxoshihU=
 			</data>
 			<key>hash2</key>
 			<data>
-			P1k5iLGkT8JxiPUyRAVMCJdF90Da9w1XPHOanxOhvbE=
+			JPZoVFrw7NI/wXO0n8TZb4qjLbFd6wRpkbpT7JQyIQ8=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -319,11 +307,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			bw35kMLIYZf+nsSPn9HG7EgL4S0=
+			wj0JKhKbG0QoIoJsTflLiz1QQw8=
 			</data>
 			<key>hash2</key>
 			<data>
-			N3PdphXXz0v9KBCcSVuGMxvVJfXPgfB7VDZ59cwWHaQ=
+			AIP0Da7J24qjAc7HIADKKtApQJBiRxG6qoMy4mMWZ5o=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -332,11 +320,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			eM4KdKgwdO3IGe/klYeUGgUMFiY=
+			PG6xy473YXrmTlqYRA2ESExmNog=
 			</data>
 			<key>hash2</key>
 			<data>
-			o7MG+IIdcTM9ikdZ3aeeODseiKT3iq+Sjn496vFBBlQ=
+			19xWqpFNmFZ80qhgNCMxYSpWwKxgcg4a02bjW3aZVFM=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -356,11 +344,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			O1ane4O+qezDr8UXZXQJw8odxUU=
+			pm4Qw4blK4ZrKznUxwK2yK3xmQ8=
 			</data>
 			<key>hash2</key>
 			<data>
-			+leLvEl2mRID4M8kg/1AlvMnCsnsL4lebhwSnlmibOY=
+			HM0liplVmJoogI6Rl3vtRjDogI8C99Yl5aQVMClsVXE=
 			</data>
 		</dict>
 		<key>Frameworks/GTMSessionFetcher.framework/Info.plist</key>
@@ -389,11 +377,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			AmQ5qYUfpNKkvc5j7WjuGGrE1Lo=
+			zb3b1BYckdiWPW0oMcFt10IjBwU=
 			</data>
 			<key>hash2</key>
 			<data>
-			OEpGVqCI5X/yQcA1aU/ZpWl6ahuLBaE/ryEsL/mv2lI=
+			6N+a9qOInSfVGlJZXUF62giQ5yoQKNTDh64NnYbazCA=
 			</data>
 		</dict>
 		<key>Frameworks/GoogleToolboxForMac.framework/Info.plist</key>
@@ -550,28 +538,6 @@
 			yf1QGcdjt3kKz2gV85Ev8YDzUGfZRtMBX2MSAfta9qs=
 			</data>
 		</dict>
-		<key>addvicelogo0.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			MyxhSBEHIYQhNF4kGUtwJKh9gLk=
-			</data>
-			<key>hash2</key>
-			<data>
-			4aWo9ntnU36tZzFtVTfqx35Q2G2TB1lOGEhP0yJdv8s=
-			</data>
-		</dict>
-		<key>addvicelogo4.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			eQyb95VXZTnxnCyqpS4c1A2TaBQ=
-			</data>
-			<key>hash2</key>
-			<data>
-			jjrE6OW4FkTAgbJn9vc4EBUPAmbAg7yM3dH9LDPos90=
-			</data>
-		</dict>
 		<key>adviceApp.momd/VersionInfo.plist</key>
 		<dict>
 			<key>hash</key>
@@ -669,17 +635,6 @@
 			<key>hash2</key>
 			<data>
 			yS1YJ8Fs9E+d46Hd9TRE6sszYS9mcnMhpxOiVLPum1U=
-			</data>
-		</dict>
-		<key>star.ai</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			HbXVI7HD7t8vubu0tUus+e3V9QQ=
-			</data>
-			<key>hash2</key>
-			<data>
-			/2NOl5k99I1GOcoB00m4xQ/hPhIvjWwO6JdYQrdzSt8=
 			</data>
 		</dict>
 		<key>starry-sky.png</key>

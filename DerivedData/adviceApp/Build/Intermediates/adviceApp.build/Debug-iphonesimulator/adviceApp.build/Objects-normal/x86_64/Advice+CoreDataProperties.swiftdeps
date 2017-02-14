@@ -11,10 +11,10 @@ provides-dynamic-lookup:
 - "isFavorited"
 depends-top-level:
 - "Bool"
-- "Advice"
 - "NSFetchRequest"
 - !private "StringLiteralType"
 - "String"
+- "Advice"
 depends-member:
 - ["C9adviceApp6Advice", "Advice"]
 - ["C9adviceApp6Advice", "Bool"]
