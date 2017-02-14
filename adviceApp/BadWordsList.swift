@@ -444,7 +444,6 @@ var badWordsList = [
     "tittywank",
     "titwank",
     "tosser",
-    "turd",
     "tw4t",
     "twat",
     "twathead",
