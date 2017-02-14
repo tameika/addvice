@@ -7,9 +7,15 @@ provides-member:
 - ["V9adviceApp8BadWords", ""]
 provides-dynamic-lookup:
 depends-top-level:
+<<<<<<< HEAD
 - "Array"
 - "StringLiteralType"
 - "BadWords"
+=======
+- "BadWords"
+- "Array"
+- "StringLiteralType"
+>>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
 depends-member:
 - ["Ps9AnyObject", "init"]
 - ["Sa", "Element"]

@@ -306,6 +306,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCEF6B8D1E4FF6ED00DEF771 /* logoBubbleA02.png in Resources */,
 				BC9979961D981513004A572C /* LaunchScreen.storyboard in Resources */,
 				BCB858D01E3611050022139B /* love-1449763_1280.jpg in Resources */,
 				BC9470C71E086AA500E2F21D /* Default-568h@2x.png in Resources */,
@@ -314,7 +315,9 @@
 				BC9979931D981513004A572C /* Assets.xcassets in Resources */,
 				BC9979911D981513004A572C /* Main.storyboard in Resources */,
 				BC4B66201E0B5653003EEEC0 /* positive-725842_1920.jpg in Resources */,
+				BCEF6B8F1E4FF7D300DEF771 /* logoBubbleA04.png in Resources */,
 				BC20D3FE1E09BB46000DD097 /* GoogleService-Info.plist in Resources */,
+				BCEF6B8B1E4FF6DD00DEF771 /* logoBubbleA01.png in Resources */,
 				BCEB89DC1E28843B003A9801 /* background-1339119_1280.jpg in Resources */,
 				BCEF6B951E5013E800DEF771 /* logoBubbleA06.png in Resources */,
 				BCB858DA1E3619F20022139B /* open-door-1254709_1280.jpg in Resources */,

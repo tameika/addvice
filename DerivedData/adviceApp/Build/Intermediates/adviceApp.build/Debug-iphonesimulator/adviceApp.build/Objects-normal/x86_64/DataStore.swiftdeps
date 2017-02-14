@@ -7,6 +7,7 @@ provides-member:
 - ["C9adviceApp9DataStore", ""]
 provides-dynamic-lookup:
 depends-top-level:
+<<<<<<< HEAD
 - "StringLiteralType"
 - "DataStore"
 - "NSPersistentContainer"
@@ -20,6 +21,21 @@ depends-top-level:
 - "NSError"
 - "CastingPrecedence"
 - "AssignmentPrecedence"
+=======
+- "NSPersistentContainer"
+- !private "NSFetchRequest"
+- !private "print"
+- "AssignmentPrecedence"
+- "CastingPrecedence"
+- "DataStore"
+- "fatalError"
+- "NSError"
+- "StringLiteralType"
+- !private "NSPredicate"
+- !private "BooleanLiteralType"
+- "Advice"
+- !private "NSNumber"
+>>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
 depends-member:
 - ["C9adviceApp6Advice", "deinit"]
 - ["Ps9AnyObject", "Advice"]

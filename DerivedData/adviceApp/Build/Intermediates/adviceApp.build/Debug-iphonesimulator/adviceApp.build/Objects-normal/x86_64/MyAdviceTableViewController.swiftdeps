@@ -6,16 +6,25 @@ provides-nominal:
 provides-member:
 - ["C9adviceApp27MyAdviceTableViewController", ""]
 provides-dynamic-lookup:
+<<<<<<< HEAD
 - "savedAdviceList"
 - "viewDidLoad"
 - "animateTableView"
 - "numberOfSections"
 - "yellowGold"
+=======
+- "didReceiveMemoryWarning"
+- "savedAdviceList"
+- "viewWillAppear"
+- "viewDidAppear"
+- "numberOfSections"
+>>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
 - "tableView"
 - "tableView"
 - "tableView"
 - "tableView"
 - "tableView"
+<<<<<<< HEAD
 - "viewDidAppear"
 - "viewWillAppear"
 - "didReceiveMemoryWarning"
@@ -45,6 +54,37 @@ depends-top-level:
 - "Int"
 - !private "BooleanLiteralType"
 - !private "CGAffineTransform"
+=======
+- "yellowGold"
+- "viewDidLoad"
+- "animateTableView"
+depends-top-level:
+- !private "UIFont"
+- "Bool"
+- "UIColor"
+- !private "print"
+- !private "+="
+- !private "StringLiteralType"
+- "UITableView"
+- !private "UIView"
+- "Array"
+- "Int"
+- "MyAdviceTableViewController"
+- !private "*"
+- !private "Double"
+- !private "UITableViewAutomaticDimension"
+- !private "BooleanLiteralType"
+- "UITableViewCell"
+- "CGFloat"
+- "UITableViewRowAction"
+- !private "DataStore"
+- !private "CGAffineTransform"
+- "UITableViewController"
+- "AssignmentPrecedence"
+- "CastingPrecedence"
+- "Advice"
+- "IndexPath"
+>>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
 depends-member:
 - !private ["Ps16AbsoluteValuable", "init"]
 - !private ["C9adviceApp6Advice", "content"]

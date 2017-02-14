@@ -180,17 +180,24 @@ SWIFT_CLASS("_TtC9adviceApp27MyAdviceTableViewController")
 @end
 
 
+<<<<<<< HEAD
 @interface UITextField (SWIFT_EXTENSION(adviceApp))
 - (void)useUnderline;
 @end
 
 
+=======
+>>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
 @interface UIView (SWIFT_EXTENSION(adviceApp))
 - (void)constrainEdgesTo:(UIView * _Nonnull)view;
 @end
 
 @class FIRDatabaseReference;
 @class UIButton;
+<<<<<<< HEAD
+=======
+@class UITextField;
+>>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
 @class UILabel;
 @class UIBarButtonItem;
 @class UIImageView;

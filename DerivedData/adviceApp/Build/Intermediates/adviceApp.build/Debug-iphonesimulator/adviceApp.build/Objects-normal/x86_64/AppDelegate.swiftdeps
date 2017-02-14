@@ -6,6 +6,7 @@ provides-nominal:
 provides-member:
 - ["C9adviceApp11AppDelegate", ""]
 provides-dynamic-lookup:
+<<<<<<< HEAD
 - "applicationWillEnterForeground"
 - "window"
 - "applicationWillResignActive"
@@ -24,6 +25,26 @@ depends-top-level:
 - "Bool"
 - "UIApplication"
 - "UIResponder"
+=======
+- "window"
+- "applicationWillResignActive"
+- "applicationWillTerminate"
+- "application"
+- "applicationDidEnterBackground"
+- "applicationDidBecomeActive"
+- "applicationWillEnterForeground"
+depends-top-level:
+- "UIApplicationDelegate"
+- "UIApplicationLaunchOptionsKey"
+- !private "BooleanLiteralType"
+- "AppDelegate"
+- !private "FIRAuth"
+- !private "FIRApp"
+- "UIResponder"
+- "Bool"
+- "UIApplication"
+- "UIWindow"
+>>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
 depends-member:
 - !private ["Ps9AnyObject", "FIRApp"]
 - !private ["Ps9AnyObject", "FIRAuth"]

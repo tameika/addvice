@@ -4,12 +4,20 @@
   'roots': [
     {
       'type': 'directory',
+<<<<<<< HEAD
       'name': "/Users/tameikalawrence/Desktop/APPS/adviceApp/DerivedData/adviceApp/Build/Products/Debug-iphonesimulator/GTMSessionFetcher/GTMSessionFetcher.framework/Headers",
+=======
+      'name': "/Users/tameikalawrence/Desktop/APPS/adviceApp/DerivedData/adviceApp/Build/Products/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/Headers",
+>>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
       'contents': [
         {
           'type': 'file',
           'name': "GTMSessionFetcher-Swift.h",
+<<<<<<< HEAD
           'external-contents': "/Users/tameikalawrence/Desktop/APPS/adviceApp/DerivedData/adviceApp/Build/Products/Debug-iphonesimulator/GTMSessionFetcher/GTMSessionFetcher.framework/Headers/GTMSessionFetcher-Swift.h"
+=======
+          'external-contents': "/Users/tameikalawrence/Desktop/APPS/adviceApp/DerivedData/adviceApp/Build/Products/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/Headers/GTMSessionFetcher-Swift.h"
+>>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
         },
         {
           'type': 'file',
@@ -40,18 +48,30 @@
     },
     {
       'type': 'directory',
+<<<<<<< HEAD
       'name': "/Users/tameikalawrence/Desktop/APPS/adviceApp/DerivedData/adviceApp/Build/Products/Debug-iphonesimulator/GTMSessionFetcher/GTMSessionFetcher.framework/Modules",
+=======
+      'name': "/Users/tameikalawrence/Desktop/APPS/adviceApp/DerivedData/adviceApp/Build/Products/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/Modules",
+>>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
+<<<<<<< HEAD
           'external-contents': "/Users/tameikalawrence/Desktop/APPS/adviceApp/DerivedData/adviceApp/Build/Intermediates/Pods.build/Debug-iphonesimulator/GTMSessionFetcher.build/module.modulemap"
+=======
+          'external-contents': "/Users/tameikalawrence/Desktop/APPS/adviceApp/DerivedData/adviceApp/Build/Intermediates/Pods.build/Debug-iphoneos/GTMSessionFetcher.build/module.modulemap"
+>>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
         }
       ]
     },
     {
       'type': 'directory',
+<<<<<<< HEAD
       'name': "/Users/tameikalawrence/Desktop/APPS/adviceApp/DerivedData/adviceApp/Build/Products/Debug-iphonesimulator/GoogleToolboxForMac/GoogleToolboxForMac.framework/Headers",
+=======
+      'name': "/Users/tameikalawrence/Desktop/APPS/adviceApp/DerivedData/adviceApp/Build/Products/Debug-iphoneos/GoogleToolboxForMac/GoogleToolboxForMac.framework/Headers",
+>>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
       'contents': [
         {
           'type': 'file',
@@ -91,7 +111,11 @@
         {
           'type': 'file',
           'name': "GoogleToolboxForMac-Swift.h",
+<<<<<<< HEAD
           'external-contents': "/Users/tameikalawrence/Desktop/APPS/adviceApp/DerivedData/adviceApp/Build/Products/Debug-iphonesimulator/GoogleToolboxForMac/GoogleToolboxForMac.framework/Headers/GoogleToolboxForMac-Swift.h"
+=======
+          'external-contents': "/Users/tameikalawrence/Desktop/APPS/adviceApp/DerivedData/adviceApp/Build/Products/Debug-iphoneos/GoogleToolboxForMac/GoogleToolboxForMac.framework/Headers/GoogleToolboxForMac-Swift.h"
+>>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
         },
         {
           'type': 'file',
@@ -102,18 +126,30 @@
     },
     {
       'type': 'directory',
+<<<<<<< HEAD
       'name': "/Users/tameikalawrence/Desktop/APPS/adviceApp/DerivedData/adviceApp/Build/Products/Debug-iphonesimulator/GoogleToolboxForMac/GoogleToolboxForMac.framework/Modules",
+=======
+      'name': "/Users/tameikalawrence/Desktop/APPS/adviceApp/DerivedData/adviceApp/Build/Products/Debug-iphoneos/GoogleToolboxForMac/GoogleToolboxForMac.framework/Modules",
+>>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
+<<<<<<< HEAD
           'external-contents': "/Users/tameikalawrence/Desktop/APPS/adviceApp/DerivedData/adviceApp/Build/Intermediates/Pods.build/Debug-iphonesimulator/GoogleToolboxForMac.build/module.modulemap"
+=======
+          'external-contents': "/Users/tameikalawrence/Desktop/APPS/adviceApp/DerivedData/adviceApp/Build/Intermediates/Pods.build/Debug-iphoneos/GoogleToolboxForMac.build/module.modulemap"
+>>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
         }
       ]
     },
     {
       'type': 'directory',
+<<<<<<< HEAD
       'name': "/Users/tameikalawrence/Desktop/APPS/adviceApp/DerivedData/adviceApp/Build/Products/Debug-iphonesimulator/Pods_adviceApp.framework/Headers",
+=======
+      'name': "/Users/tameikalawrence/Desktop/APPS/adviceApp/DerivedData/adviceApp/Build/Products/Debug-iphoneos/Pods_adviceApp.framework/Headers",
+>>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
       'contents': [
         {
           'type': 'file',
@@ -123,18 +159,30 @@
         {
           'type': 'file',
           'name': "Pods_adviceApp-Swift.h",
+<<<<<<< HEAD
           'external-contents': "/Users/tameikalawrence/Desktop/APPS/adviceApp/DerivedData/adviceApp/Build/Products/Debug-iphonesimulator/Pods_adviceApp.framework/Headers/Pods_adviceApp-Swift.h"
+=======
+          'external-contents': "/Users/tameikalawrence/Desktop/APPS/adviceApp/DerivedData/adviceApp/Build/Products/Debug-iphoneos/Pods_adviceApp.framework/Headers/Pods_adviceApp-Swift.h"
+>>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
         }
       ]
     },
     {
       'type': 'directory',
+<<<<<<< HEAD
       'name': "/Users/tameikalawrence/Desktop/APPS/adviceApp/DerivedData/adviceApp/Build/Products/Debug-iphonesimulator/Pods_adviceApp.framework/Modules",
+=======
+      'name': "/Users/tameikalawrence/Desktop/APPS/adviceApp/DerivedData/adviceApp/Build/Products/Debug-iphoneos/Pods_adviceApp.framework/Modules",
+>>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
+<<<<<<< HEAD
           'external-contents': "/Users/tameikalawrence/Desktop/APPS/adviceApp/DerivedData/adviceApp/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-adviceApp.build/module.modulemap"
+=======
+          'external-contents': "/Users/tameikalawrence/Desktop/APPS/adviceApp/DerivedData/adviceApp/Build/Intermediates/Pods.build/Debug-iphoneos/Pods-adviceApp.build/module.modulemap"
+>>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
         }
       ]
     }
