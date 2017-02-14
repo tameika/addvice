@@ -7,8 +7,13 @@ provides-member:
 - ["C9adviceApp6Advice", ""]
 provides-dynamic-lookup:
 depends-top-level:
+<<<<<<< HEAD
 - "NSManagedObject"
 - "Advice"
+=======
+- "Advice"
+- "NSManagedObject"
+>>>>>>> master
 depends-member:
 - ["C9adviceApp6Advice", "deinit"]
 - ["C9adviceApp6Advice", "init"]

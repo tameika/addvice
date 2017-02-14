@@ -8,6 +8,7 @@ provides-member:
 provides-dynamic-lookup:
 depends-top-level:
 <<<<<<< HEAD
+<<<<<<< HEAD
 - "StoryboardID"
 - "StringLiteralType"
 - "String"
@@ -20,6 +21,13 @@ depends-top-level:
 - !private "~="
 - "StoryboardID"
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- "String"
+- "StringLiteralType"
+- "StoryboardID"
+- "=="
+- !private "~="
+>>>>>>> master
 depends-member:
 - ["Ps9AnyObject", "init"]
 - !private ["Ps17BitwiseOperations", "hashValue"]

@@ -6,8 +6,13 @@ provides-nominal:
 provides-member:
 provides-dynamic-lookup:
 depends-top-level:
+<<<<<<< HEAD
 - "apiClient"
 - "StringLiteralType"
+=======
+- "StringLiteralType"
+- "apiClient"
+>>>>>>> master
 - "apiKey"
 depends-member:
 - ["Ps9AnyObject", "init"]

@@ -8,6 +8,7 @@ provides-member:
 provides-dynamic-lookup:
 depends-top-level:
 <<<<<<< HEAD
+<<<<<<< HEAD
 - "StringLiteralType"
 - "DataStore"
 - "NSPersistentContainer"
@@ -36,6 +37,21 @@ depends-top-level:
 - "Advice"
 - !private "NSNumber"
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private "NSNumber"
+- !private "NSPredicate"
+- "NSPersistentContainer"
+- "DataStore"
+- "fatalError"
+- "CastingPrecedence"
+- "Advice"
+- "AssignmentPrecedence"
+- "NSError"
+- "StringLiteralType"
+- !private "print"
+- !private "NSFetchRequest"
+- !private "BooleanLiteralType"
+>>>>>>> master
 depends-member:
 - ["C9adviceApp6Advice", "deinit"]
 - ["Ps9AnyObject", "Advice"]

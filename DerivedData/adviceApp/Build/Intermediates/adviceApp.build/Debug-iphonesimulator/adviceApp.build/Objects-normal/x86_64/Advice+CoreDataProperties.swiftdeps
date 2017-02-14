@@ -7,6 +7,7 @@ provides-member:
 - ["C9adviceApp6Advice", "content"]
 - ["C9adviceApp6Advice", "isFavorited"]
 provides-dynamic-lookup:
+<<<<<<< HEAD
 - "content"
 - "isFavorited"
 depends-top-level:
@@ -23,6 +24,16 @@ depends-top-level:
 - "NSFetchRequest"
 - !private "StringLiteralType"
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- "isFavorited"
+- "content"
+depends-top-level:
+- "Advice"
+- "Bool"
+- "String"
+- !private "StringLiteralType"
+- "NSFetchRequest"
+>>>>>>> master
 depends-member:
 - ["C9adviceApp6Advice", "Advice"]
 - ["C9adviceApp6Advice", "Bool"]

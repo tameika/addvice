@@ -7,6 +7,7 @@ provides-member:
 - ["C9adviceApp14ViewController", ""]
 provides-dynamic-lookup:
 <<<<<<< HEAD
+<<<<<<< HEAD
 - "ref"
 - "receiveAdviceBtnPressed"
 - "badWordFlag"
@@ -140,6 +141,73 @@ depends-top-level:
 - "UIImageView"
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
 - !private "FIRDatabase"
+=======
+- "savedAdvice"
+- "savedAdviceBtn"
+- "animateInLogoTitle"
+- "getAdviceBtnOutlet"
+- "firAdviceArray"
+- "viewDidLoad"
+- "badWordFlag"
+- "displayedFIRAdvice"
+- "textField"
+- "saveAdvicePressed"
+- "logoTitle"
+- "viewWillAppear"
+- "eggplant"
+- "submitAdviceBtnPressed"
+- "displayAdviceTextLabel"
+- "savedAdviceBarBtn"
+- "seafoamGreen"
+- "getFIRAdvice"
+- "giveAdviceTextField"
+- "giveAdviceBtnOutlet"
+- "ref"
+- "receiveAdviceBtnPressed"
+- "badWordFilter"
+- "logoA"
+depends-top-level:
+- "BooleanLiteralType"
+- !private "FIRDatabase"
+- !private "UIAlertAction"
+- "FIRDatabaseReference"
+- "Advice"
+- !private "Dictionary"
+- "UIViewController"
+- !private ">"
+- !private "!"
+- !private "UIAlertControllerStyle"
+- "UILabel"
+- !private "Int"
+- "ViewController"
+- !private "*"
+- !private "arc4random_uniform"
+- "UIBarButtonItem"
+- "StringLiteralType"
+- !private "UInt32"
+- !private "-="
+- !private "!="
+- !private "??"
+- !private "CGAffineTransform"
+- "DataStore"
+- "UnicodeScalarType"
+- !private "M_PI"
+- "AssignmentPrecedence"
+- !private "/"
+- "String"
+- !private "CastingPrecedence"
+- "UIImageView"
+- !private "+="
+- "UIColor"
+- !private "CGFloat"
+- "Bool"
+- !private "print"
+- !private "UIView"
+- "UIButton"
+- "BadWords"
+- "UITextField"
+- !private "UIAlertController"
+>>>>>>> master
 depends-member:
 - !private ["Ps16AbsoluteValuable", "init"]
 - !private ["C9adviceApp6Advice", "content"]
@@ -159,10 +227,13 @@ depends-member:
 - !private ["Ps9AnyObject", "UIAlertControllerStyle"]
 - ["Ps9AnyObject", "UIColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["Ps9AnyObject", "UIEdgeInsets"]
 - !private ["Ps9AnyObject", "UIEdgeInsetsMake"]
 =======
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+>>>>>>> master
 - !private ["Ps9AnyObject", "UIView"]
 - !private ["Ps9AnyObject", "UInt32"]
 - !private ["Ps9AnyObject", "addAction"]
@@ -177,9 +248,13 @@ depends-member:
 - !private ["Ps9AnyObject", "black"]
 - !private ["Ps9AnyObject", "borderColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - !private ["Ps9AnyObject", "borderStyle"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["Ps9AnyObject", "borderStyle"]
+>>>>>>> master
 - !private ["Ps9AnyObject", "borderWidth"]
 - !private ["Ps9AnyObject", "bounds"]
 - !private ["Ps9AnyObject", "center"]
@@ -231,12 +306,16 @@ depends-member:
 - !private ["Ps9AnyObject", "textColor"]
 - ["Ps9AnyObject", "textField"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["Ps9AnyObject", "titleEdgeInsets"]
 - !private ["Ps9AnyObject", "transform"]
 - !private ["Ps9AnyObject", "useUnderline"]
 =======
 - !private ["Ps9AnyObject", "transform"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["Ps9AnyObject", "transform"]
+>>>>>>> master
 - !private ["Ps9AnyObject", "value"]
 - !private ["Ps9AnyObject", "view"]
 - !private ["Ps9AnyObject", "viewContext"]
@@ -282,9 +361,13 @@ depends-member:
 - !private ["PSo15CALayerDelegate", "animate"]
 - !private ["PSo15CALayerDelegate", "backgroundColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - !private ["PSo15CALayerDelegate", "borderStyle"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["PSo15CALayerDelegate", "borderStyle"]
+>>>>>>> master
 - !private ["PSo15CALayerDelegate", "bounds"]
 - !private ["PSo15CALayerDelegate", "center"]
 - !private ["PSo15CALayerDelegate", "clipsToBounds"]
@@ -295,12 +378,16 @@ depends-member:
 - !private ["PSo15CALayerDelegate", "text"]
 - !private ["PSo15CALayerDelegate", "textColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["PSo15CALayerDelegate", "titleEdgeInsets"]
 - !private ["PSo15CALayerDelegate", "transform"]
 - !private ["PSo15CALayerDelegate", "useUnderline"]
 =======
 - !private ["PSo15CALayerDelegate", "transform"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["PSo15CALayerDelegate", "transform"]
+>>>>>>> master
 - !private ["PSo13CAMediaTiming", "borderColor"]
 - !private ["PSo13CAMediaTiming", "borderWidth"]
 - !private ["PSo13CAMediaTiming", "cornerRadius"]
@@ -332,10 +419,13 @@ depends-member:
 - !private ["Ps7CVarArg", "UIAlertControllerStyle"]
 - ["Ps7CVarArg", "UIColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["Ps7CVarArg", "UIEdgeInsets"]
 - !private ["Ps7CVarArg", "UIEdgeInsetsMake"]
 =======
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+>>>>>>> master
 - !private ["Ps7CVarArg", "UIView"]
 - !private ["Ps7CVarArg", "UInt32"]
 - !private ["Ps7CVarArg", "Value"]
@@ -352,9 +442,13 @@ depends-member:
 - !private ["Ps7CVarArg", "black"]
 - !private ["Ps7CVarArg", "borderColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - !private ["Ps7CVarArg", "borderStyle"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["Ps7CVarArg", "borderStyle"]
+>>>>>>> master
 - !private ["Ps7CVarArg", "borderWidth"]
 - !private ["Ps7CVarArg", "bounds"]
 - !private ["Ps7CVarArg", "center"]
@@ -405,12 +499,16 @@ depends-member:
 - !private ["Ps7CVarArg", "textColor"]
 - ["Ps7CVarArg", "textField"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["Ps7CVarArg", "titleEdgeInsets"]
 - !private ["Ps7CVarArg", "transform"]
 - !private ["Ps7CVarArg", "useUnderline"]
 =======
 - !private ["Ps7CVarArg", "transform"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["Ps7CVarArg", "transform"]
+>>>>>>> master
 - !private ["Ps7CVarArg", "value"]
 - !private ["Ps7CVarArg", "view"]
 - !private ["Ps7CVarArg", "viewContext"]
@@ -451,10 +549,13 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "UIAlertControllerStyle"]
 - ["Ps28CustomDebugStringConvertible", "UIColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["Ps28CustomDebugStringConvertible", "UIEdgeInsets"]
 - !private ["Ps28CustomDebugStringConvertible", "UIEdgeInsetsMake"]
 =======
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+>>>>>>> master
 - !private ["Ps28CustomDebugStringConvertible", "UIView"]
 - !private ["Ps28CustomDebugStringConvertible", "UInt32"]
 - !private ["Ps28CustomDebugStringConvertible", "Value"]
@@ -471,9 +572,13 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "black"]
 - !private ["Ps28CustomDebugStringConvertible", "borderColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - !private ["Ps28CustomDebugStringConvertible", "borderStyle"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["Ps28CustomDebugStringConvertible", "borderStyle"]
+>>>>>>> master
 - !private ["Ps28CustomDebugStringConvertible", "borderWidth"]
 - !private ["Ps28CustomDebugStringConvertible", "bounds"]
 - !private ["Ps28CustomDebugStringConvertible", "center"]
@@ -525,12 +630,16 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "textColor"]
 - ["Ps28CustomDebugStringConvertible", "textField"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["Ps28CustomDebugStringConvertible", "titleEdgeInsets"]
 - !private ["Ps28CustomDebugStringConvertible", "transform"]
 - !private ["Ps28CustomDebugStringConvertible", "useUnderline"]
 =======
 - !private ["Ps28CustomDebugStringConvertible", "transform"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["Ps28CustomDebugStringConvertible", "transform"]
+>>>>>>> master
 - !private ["Ps28CustomDebugStringConvertible", "value"]
 - !private ["Ps28CustomDebugStringConvertible", "view"]
 - !private ["Ps28CustomDebugStringConvertible", "viewContext"]
@@ -582,10 +691,13 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "UIAlertControllerStyle"]
 - ["Ps23CustomStringConvertible", "UIColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["Ps23CustomStringConvertible", "UIEdgeInsets"]
 - !private ["Ps23CustomStringConvertible", "UIEdgeInsetsMake"]
 =======
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+>>>>>>> master
 - !private ["Ps23CustomStringConvertible", "UIView"]
 - !private ["Ps23CustomStringConvertible", "UInt32"]
 - !private ["Ps23CustomStringConvertible", "Value"]
@@ -603,9 +715,13 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "black"]
 - !private ["Ps23CustomStringConvertible", "borderColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - !private ["Ps23CustomStringConvertible", "borderStyle"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["Ps23CustomStringConvertible", "borderStyle"]
+>>>>>>> master
 - !private ["Ps23CustomStringConvertible", "borderWidth"]
 - !private ["Ps23CustomStringConvertible", "bounds"]
 - !private ["Ps23CustomStringConvertible", "center"]
@@ -656,12 +772,16 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "textColor"]
 - ["Ps23CustomStringConvertible", "textField"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["Ps23CustomStringConvertible", "titleEdgeInsets"]
 - !private ["Ps23CustomStringConvertible", "transform"]
 - !private ["Ps23CustomStringConvertible", "useUnderline"]
 =======
 - !private ["Ps23CustomStringConvertible", "transform"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["Ps23CustomStringConvertible", "transform"]
+>>>>>>> master
 - !private ["Ps23CustomStringConvertible", "value"]
 - !private ["Ps23CustomStringConvertible", "view"]
 - !private ["Ps23CustomStringConvertible", "viewContext"]
@@ -697,10 +817,13 @@ depends-member:
 - !private ["Ps9Equatable", "UIAlertControllerStyle"]
 - ["Ps9Equatable", "UIColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["Ps9Equatable", "UIEdgeInsets"]
 - !private ["Ps9Equatable", "UIEdgeInsetsMake"]
 =======
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+>>>>>>> master
 - !private ["Ps9Equatable", "UIView"]
 - !private ["Ps9Equatable", "UInt32"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
@@ -716,9 +839,13 @@ depends-member:
 - !private ["Ps9Equatable", "black"]
 - !private ["Ps9Equatable", "borderColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - !private ["Ps9Equatable", "borderStyle"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["Ps9Equatable", "borderStyle"]
+>>>>>>> master
 - !private ["Ps9Equatable", "borderWidth"]
 - !private ["Ps9Equatable", "bounds"]
 - !private ["Ps9Equatable", "center"]
@@ -759,9 +886,13 @@ depends-member:
 - ["Ps9Equatable", "ref"]
 - !private ["Ps9Equatable", "reference"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - !private ["Ps9Equatable", "roundedRect"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["Ps9Equatable", "roundedRect"]
+>>>>>>> master
 - ["Ps9Equatable", "saveAdvicePressed"]
 - ["Ps9Equatable", "savedAdvice"]
 - ["Ps9Equatable", "savedAdviceBarBtn"]
@@ -774,12 +905,16 @@ depends-member:
 - !private ["Ps9Equatable", "textColor"]
 - ["Ps9Equatable", "textField"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["Ps9Equatable", "titleEdgeInsets"]
 - !private ["Ps9Equatable", "transform"]
 - !private ["Ps9Equatable", "useUnderline"]
 =======
 - !private ["Ps9Equatable", "transform"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["Ps9Equatable", "transform"]
+>>>>>>> master
 - !private ["Ps9Equatable", "value"]
 - !private ["Ps9Equatable", "view"]
 - !private ["Ps9Equatable", "viewContext"]
@@ -788,9 +923,12 @@ depends-member:
 - !private ["Ps9Equatable", "width"]
 - !private ["Ps9Equatable", "x"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["Ps9Equatable", "zero"]
 =======
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+>>>>>>> master
 - ["Ps9Equatable", ""]
 - !private ["Ps25ExpressibleByArrayLiteral", "Index"]
 - !private ["Ps25ExpressibleByArrayLiteral", "IndexDistance"]
@@ -850,10 +988,13 @@ depends-member:
 - !private ["Ps8Hashable", "UIAlertControllerStyle"]
 - ["Ps8Hashable", "UIColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["Ps8Hashable", "UIEdgeInsets"]
 - !private ["Ps8Hashable", "UIEdgeInsetsMake"]
 =======
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+>>>>>>> master
 - !private ["Ps8Hashable", "UIView"]
 - !private ["Ps8Hashable", "UInt32"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
@@ -869,9 +1010,13 @@ depends-member:
 - !private ["Ps8Hashable", "black"]
 - !private ["Ps8Hashable", "borderColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - !private ["Ps8Hashable", "borderStyle"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["Ps8Hashable", "borderStyle"]
+>>>>>>> master
 - !private ["Ps8Hashable", "borderWidth"]
 - !private ["Ps8Hashable", "bounds"]
 - !private ["Ps8Hashable", "center"]
@@ -909,9 +1054,13 @@ depends-member:
 - ["Ps8Hashable", "ref"]
 - !private ["Ps8Hashable", "reference"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - !private ["Ps8Hashable", "roundedRect"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["Ps8Hashable", "roundedRect"]
+>>>>>>> master
 - ["Ps8Hashable", "saveAdvicePressed"]
 - ["Ps8Hashable", "savedAdvice"]
 - ["Ps8Hashable", "savedAdviceBarBtn"]
@@ -924,12 +1073,16 @@ depends-member:
 - !private ["Ps8Hashable", "textColor"]
 - ["Ps8Hashable", "textField"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["Ps8Hashable", "titleEdgeInsets"]
 - !private ["Ps8Hashable", "transform"]
 - !private ["Ps8Hashable", "useUnderline"]
 =======
 - !private ["Ps8Hashable", "transform"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["Ps8Hashable", "transform"]
+>>>>>>> master
 - !private ["Ps8Hashable", "value"]
 - !private ["Ps8Hashable", "view"]
 - !private ["Ps8Hashable", "viewContext"]
@@ -1007,10 +1160,13 @@ depends-member:
 - !private ["PSo8NSCoding", "UIAlertControllerStyle"]
 - ["PSo8NSCoding", "UIColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["PSo8NSCoding", "UIEdgeInsets"]
 - !private ["PSo8NSCoding", "UIEdgeInsetsMake"]
 =======
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+>>>>>>> master
 - !private ["PSo8NSCoding", "UIView"]
 - !private ["PSo8NSCoding", "UInt32"]
 - !private ["PSo8NSCoding", "addAction"]
@@ -1024,9 +1180,13 @@ depends-member:
 - !private ["PSo8NSCoding", "black"]
 - !private ["PSo8NSCoding", "borderColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - !private ["PSo8NSCoding", "borderStyle"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["PSo8NSCoding", "borderStyle"]
+>>>>>>> master
 - !private ["PSo8NSCoding", "borderWidth"]
 - !private ["PSo8NSCoding", "bounds"]
 - !private ["PSo8NSCoding", "center"]
@@ -1067,12 +1227,16 @@ depends-member:
 - !private ["PSo8NSCoding", "textColor"]
 - ["PSo8NSCoding", "textField"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["PSo8NSCoding", "titleEdgeInsets"]
 - !private ["PSo8NSCoding", "transform"]
 - !private ["PSo8NSCoding", "useUnderline"]
 =======
 - !private ["PSo8NSCoding", "transform"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["PSo8NSCoding", "transform"]
+>>>>>>> master
 - !private ["PSo8NSCoding", "view"]
 - ["PSo8NSCoding", "viewDidLoad"]
 - ["PSo8NSCoding", "viewWillAppear"]
@@ -1096,10 +1260,13 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "UIAlertControllerStyle"]
 - ["PSo26NSExtensionRequestHandling", "UIColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["PSo26NSExtensionRequestHandling", "UIEdgeInsets"]
 - !private ["PSo26NSExtensionRequestHandling", "UIEdgeInsetsMake"]
 =======
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+>>>>>>> master
 - !private ["PSo26NSExtensionRequestHandling", "UIView"]
 - !private ["PSo26NSExtensionRequestHandling", "UInt32"]
 - !private ["PSo26NSExtensionRequestHandling", "addAction"]
@@ -1162,10 +1329,13 @@ depends-member:
 - ["CSo8NSObject", "UIButton"]
 - ["CSo8NSObject", "UIColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["CSo8NSObject", "UIEdgeInsets"]
 - !private ["CSo8NSObject", "UIEdgeInsetsMake"]
 =======
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+>>>>>>> master
 - ["CSo8NSObject", "UIImageView"]
 - ["CSo8NSObject", "UILabel"]
 - ["CSo8NSObject", "UITextField"]
@@ -1182,9 +1352,13 @@ depends-member:
 - !private ["CSo8NSObject", "black"]
 - !private ["CSo8NSObject", "borderColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - !private ["CSo8NSObject", "borderStyle"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["CSo8NSObject", "borderStyle"]
+>>>>>>> master
 - !private ["CSo8NSObject", "borderWidth"]
 - !private ["CSo8NSObject", "bounds"]
 - !private ["CSo8NSObject", "center"]
@@ -1232,12 +1406,16 @@ depends-member:
 - !private ["CSo8NSObject", "textColor"]
 - ["CSo8NSObject", "textField"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["CSo8NSObject", "titleEdgeInsets"]
 - !private ["CSo8NSObject", "transform"]
 - !private ["CSo8NSObject", "useUnderline"]
 =======
 - !private ["CSo8NSObject", "transform"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["CSo8NSObject", "transform"]
+>>>>>>> master
 - !private ["CSo8NSObject", "value"]
 - !private ["CSo8NSObject", "view"]
 - !private ["CSo8NSObject", "viewContext"]
@@ -1257,10 +1435,13 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "UIAlertControllerStyle"]
 - ["PSo16NSObjectProtocol", "UIColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["PSo16NSObjectProtocol", "UIEdgeInsets"]
 - !private ["PSo16NSObjectProtocol", "UIEdgeInsetsMake"]
 =======
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+>>>>>>> master
 - !private ["PSo16NSObjectProtocol", "UIView"]
 - !private ["PSo16NSObjectProtocol", "UInt32"]
 - !private ["PSo16NSObjectProtocol", "addAction"]
@@ -1274,9 +1455,13 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "black"]
 - !private ["PSo16NSObjectProtocol", "borderColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - !private ["PSo16NSObjectProtocol", "borderStyle"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["PSo16NSObjectProtocol", "borderStyle"]
+>>>>>>> master
 - !private ["PSo16NSObjectProtocol", "borderWidth"]
 - !private ["PSo16NSObjectProtocol", "bounds"]
 - !private ["PSo16NSObjectProtocol", "center"]
@@ -1324,12 +1509,16 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "textColor"]
 - ["PSo16NSObjectProtocol", "textField"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["PSo16NSObjectProtocol", "titleEdgeInsets"]
 - !private ["PSo16NSObjectProtocol", "transform"]
 - !private ["PSo16NSObjectProtocol", "useUnderline"]
 =======
 - !private ["PSo16NSObjectProtocol", "transform"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["PSo16NSObjectProtocol", "transform"]
+>>>>>>> master
 - !private ["PSo16NSObjectProtocol", "value"]
 - !private ["PSo16NSObjectProtocol", "view"]
 - !private ["PSo16NSObjectProtocol", "viewContext"]
@@ -1382,9 +1571,13 @@ depends-member:
 - !private ["Ps16RawRepresentable", "curveLinear"]
 - !private ["Ps16RawRepresentable", "default"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - !private ["Ps16RawRepresentable", "roundedRect"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["Ps16RawRepresentable", "roundedRect"]
+>>>>>>> master
 - !private ["Ps16RawRepresentable", "value"]
 - !private ["Ps8Sequence", "Element"]
 - !private ["Ps8Sequence", "Index"]
@@ -1417,9 +1610,13 @@ depends-member:
 - !private ["PSo29UIAccessibilityIdentification", "animate"]
 - !private ["PSo29UIAccessibilityIdentification", "backgroundColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - !private ["PSo29UIAccessibilityIdentification", "borderStyle"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["PSo29UIAccessibilityIdentification", "borderStyle"]
+>>>>>>> master
 - !private ["PSo29UIAccessibilityIdentification", "bounds"]
 - !private ["PSo29UIAccessibilityIdentification", "center"]
 - !private ["PSo29UIAccessibilityIdentification", "clipsToBounds"]
@@ -1430,12 +1627,16 @@ depends-member:
 - !private ["PSo29UIAccessibilityIdentification", "text"]
 - !private ["PSo29UIAccessibilityIdentification", "textColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["PSo29UIAccessibilityIdentification", "titleEdgeInsets"]
 - !private ["PSo29UIAccessibilityIdentification", "transform"]
 - !private ["PSo29UIAccessibilityIdentification", "useUnderline"]
 =======
 - !private ["PSo29UIAccessibilityIdentification", "transform"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["PSo29UIAccessibilityIdentification", "transform"]
+>>>>>>> master
 - ["CSo13UIAlertAction", "deinit"]
 - !private ["CSo13UIAlertAction", "init"]
 - !private ["OSC18UIAlertActionStyle", "default"]
@@ -1448,9 +1649,13 @@ depends-member:
 - !private ["PSo12UIAppearance", "animate"]
 - !private ["PSo12UIAppearance", "backgroundColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - !private ["PSo12UIAppearance", "borderStyle"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["PSo12UIAppearance", "borderStyle"]
+>>>>>>> master
 - !private ["PSo12UIAppearance", "bounds"]
 - !private ["PSo12UIAppearance", "center"]
 - !private ["PSo12UIAppearance", "clipsToBounds"]
@@ -1461,12 +1666,16 @@ depends-member:
 - !private ["PSo12UIAppearance", "text"]
 - !private ["PSo12UIAppearance", "textColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["PSo12UIAppearance", "titleEdgeInsets"]
 - !private ["PSo12UIAppearance", "transform"]
 - !private ["PSo12UIAppearance", "useUnderline"]
 =======
 - !private ["PSo12UIAppearance", "transform"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["PSo12UIAppearance", "transform"]
+>>>>>>> master
 - ["PSo21UIAppearanceContainer", "Advice"]
 - ["PSo21UIAppearanceContainer", "BadWords"]
 - !private ["PSo21UIAppearanceContainer", "CGAffineTransform"]
@@ -1481,10 +1690,13 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "UIAlertControllerStyle"]
 - ["PSo21UIAppearanceContainer", "UIColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["PSo21UIAppearanceContainer", "UIEdgeInsets"]
 - !private ["PSo21UIAppearanceContainer", "UIEdgeInsetsMake"]
 =======
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+>>>>>>> master
 - !private ["PSo21UIAppearanceContainer", "UIView"]
 - !private ["PSo21UIAppearanceContainer", "UInt32"]
 - !private ["PSo21UIAppearanceContainer", "addAction"]
@@ -1496,9 +1708,13 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "badWordFlag"]
 - ["PSo21UIAppearanceContainer", "badWordsArray"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - !private ["PSo21UIAppearanceContainer", "borderStyle"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["PSo21UIAppearanceContainer", "borderStyle"]
+>>>>>>> master
 - !private ["PSo21UIAppearanceContainer", "bounds"]
 - !private ["PSo21UIAppearanceContainer", "center"]
 - !private ["PSo21UIAppearanceContainer", "clipsToBounds"]
@@ -1534,12 +1750,16 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "textColor"]
 - ["PSo21UIAppearanceContainer", "textField"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["PSo21UIAppearanceContainer", "titleEdgeInsets"]
 - !private ["PSo21UIAppearanceContainer", "transform"]
 - !private ["PSo21UIAppearanceContainer", "useUnderline"]
 =======
 - !private ["PSo21UIAppearanceContainer", "transform"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["PSo21UIAppearanceContainer", "transform"]
+>>>>>>> master
 - !private ["PSo21UIAppearanceContainer", "view"]
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
 - ["PSo21UIAppearanceContainer", "viewWillAppear"]
@@ -1551,9 +1771,12 @@ depends-member:
 - !private ["CSo8UIButton", "isEnabled"]
 - !private ["CSo8UIButton", "layer"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["CSo8UIButton", "titleEdgeInsets"]
 =======
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+>>>>>>> master
 - !private ["CSo8UIButton", "transform"]
 - !private ["CSo7UIColor", "black"]
 - !private ["CSo7UIColor", "cgColor"]
@@ -1574,10 +1797,13 @@ depends-member:
 - !private ["PSo18UIContentContainer", "UIAlertControllerStyle"]
 - ["PSo18UIContentContainer", "UIColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["PSo18UIContentContainer", "UIEdgeInsets"]
 - !private ["PSo18UIContentContainer", "UIEdgeInsetsMake"]
 =======
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+>>>>>>> master
 - !private ["PSo18UIContentContainer", "UIView"]
 - !private ["PSo18UIContentContainer", "UInt32"]
 - !private ["PSo18UIContentContainer", "addAction"]
@@ -1616,9 +1842,13 @@ depends-member:
 - ["PSo18UIContentContainer", "viewWillAppear"]
 - ["PSo18UIContentContainer", ""]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - !private ["PSo30UIContentSizeCategoryAdjusting", "borderStyle"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["PSo30UIContentSizeCategoryAdjusting", "borderStyle"]
+>>>>>>> master
 - !private ["PSo30UIContentSizeCategoryAdjusting", "center"]
 - !private ["PSo30UIContentSizeCategoryAdjusting", "clipsToBounds"]
 - !private ["PSo30UIContentSizeCategoryAdjusting", "delegate"]
@@ -1626,12 +1856,17 @@ depends-member:
 - !private ["PSo30UIContentSizeCategoryAdjusting", "text"]
 - !private ["PSo30UIContentSizeCategoryAdjusting", "textColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["PSo30UIContentSizeCategoryAdjusting", "useUnderline"]
 - !private ["CSo9UIControl", "backgroundColor"]
 =======
 - !private ["CSo9UIControl", "backgroundColor"]
 - !private ["CSo9UIControl", "borderStyle"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["CSo9UIControl", "backgroundColor"]
+- !private ["CSo9UIControl", "borderStyle"]
+>>>>>>> master
 - !private ["CSo9UIControl", "bounds"]
 - !private ["CSo9UIControl", "clipsToBounds"]
 - !private ["CSo9UIControl", "delegate"]
@@ -1639,18 +1874,24 @@ depends-member:
 - !private ["CSo9UIControl", "layer"]
 - !private ["CSo9UIControl", "text"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["CSo9UIControl", "titleEdgeInsets"]
 - !private ["CSo9UIControl", "transform"]
 - !private ["CSo9UIControl", "useUnderline"]
 - !private ["PSo17UICoordinateSpace", "animate"]
 - !private ["PSo17UICoordinateSpace", "backgroundColor"]
 =======
+=======
+>>>>>>> master
 - !private ["CSo9UIControl", "textColor"]
 - !private ["CSo9UIControl", "transform"]
 - !private ["PSo17UICoordinateSpace", "animate"]
 - !private ["PSo17UICoordinateSpace", "backgroundColor"]
 - !private ["PSo17UICoordinateSpace", "borderStyle"]
+<<<<<<< HEAD
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+>>>>>>> master
 - !private ["PSo17UICoordinateSpace", "bounds"]
 - !private ["PSo17UICoordinateSpace", "center"]
 - !private ["PSo17UICoordinateSpace", "clipsToBounds"]
@@ -1661,17 +1902,23 @@ depends-member:
 - !private ["PSo17UICoordinateSpace", "text"]
 - !private ["PSo17UICoordinateSpace", "textColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["PSo17UICoordinateSpace", "titleEdgeInsets"]
 - !private ["PSo17UICoordinateSpace", "transform"]
 - !private ["PSo17UICoordinateSpace", "useUnderline"]
 - !private ["PSo13UIDynamicItem", "animate"]
 - !private ["PSo13UIDynamicItem", "backgroundColor"]
 =======
+=======
+>>>>>>> master
 - !private ["PSo17UICoordinateSpace", "transform"]
 - !private ["PSo13UIDynamicItem", "animate"]
 - !private ["PSo13UIDynamicItem", "backgroundColor"]
 - !private ["PSo13UIDynamicItem", "borderStyle"]
+<<<<<<< HEAD
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+>>>>>>> master
 - !private ["PSo13UIDynamicItem", "bounds"]
 - !private ["PSo13UIDynamicItem", "center"]
 - !private ["PSo13UIDynamicItem", "clipsToBounds"]
@@ -1682,6 +1929,7 @@ depends-member:
 - !private ["PSo13UIDynamicItem", "text"]
 - !private ["PSo13UIDynamicItem", "textColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["PSo13UIDynamicItem", "titleEdgeInsets"]
 - !private ["PSo13UIDynamicItem", "transform"]
 - !private ["PSo13UIDynamicItem", "useUnderline"]
@@ -1690,6 +1938,9 @@ depends-member:
 =======
 - !private ["PSo13UIDynamicItem", "transform"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["PSo13UIDynamicItem", "transform"]
+>>>>>>> master
 - ["PSo18UIFocusEnvironment", "Advice"]
 - ["PSo18UIFocusEnvironment", "BadWords"]
 - !private ["PSo18UIFocusEnvironment", "CGAffineTransform"]
@@ -1704,10 +1955,13 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "UIAlertControllerStyle"]
 - ["PSo18UIFocusEnvironment", "UIColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["PSo18UIFocusEnvironment", "UIEdgeInsets"]
 - !private ["PSo18UIFocusEnvironment", "UIEdgeInsetsMake"]
 =======
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+>>>>>>> master
 - !private ["PSo18UIFocusEnvironment", "UIView"]
 - !private ["PSo18UIFocusEnvironment", "UInt32"]
 - !private ["PSo18UIFocusEnvironment", "addAction"]
@@ -1719,9 +1973,13 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "badWordFlag"]
 - ["PSo18UIFocusEnvironment", "badWordsArray"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - !private ["PSo18UIFocusEnvironment", "borderStyle"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["PSo18UIFocusEnvironment", "borderStyle"]
+>>>>>>> master
 - !private ["PSo18UIFocusEnvironment", "bounds"]
 - !private ["PSo18UIFocusEnvironment", "center"]
 - !private ["PSo18UIFocusEnvironment", "clipsToBounds"]
@@ -1757,12 +2015,16 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "textColor"]
 - ["PSo18UIFocusEnvironment", "textField"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["PSo18UIFocusEnvironment", "titleEdgeInsets"]
 - !private ["PSo18UIFocusEnvironment", "transform"]
 - !private ["PSo18UIFocusEnvironment", "useUnderline"]
 =======
 - !private ["PSo18UIFocusEnvironment", "transform"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["PSo18UIFocusEnvironment", "transform"]
+>>>>>>> master
 - !private ["PSo18UIFocusEnvironment", "view"]
 - ["PSo18UIFocusEnvironment", "viewDidLoad"]
 - ["PSo18UIFocusEnvironment", "viewWillAppear"]
@@ -1770,9 +2032,13 @@ depends-member:
 - !private ["PSo11UIFocusItem", "animate"]
 - !private ["PSo11UIFocusItem", "backgroundColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - !private ["PSo11UIFocusItem", "borderStyle"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["PSo11UIFocusItem", "borderStyle"]
+>>>>>>> master
 - !private ["PSo11UIFocusItem", "bounds"]
 - !private ["PSo11UIFocusItem", "center"]
 - !private ["PSo11UIFocusItem", "clipsToBounds"]
@@ -1783,6 +2049,7 @@ depends-member:
 - !private ["PSo11UIFocusItem", "text"]
 - !private ["PSo11UIFocusItem", "textColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["PSo11UIFocusItem", "titleEdgeInsets"]
 - !private ["PSo11UIFocusItem", "transform"]
 - !private ["PSo11UIFocusItem", "useUnderline"]
@@ -1792,6 +2059,8 @@ depends-member:
 - !private ["PSo10UIKeyInput", "text"]
 - !private ["PSo10UIKeyInput", "useUnderline"]
 =======
+=======
+>>>>>>> master
 - !private ["PSo11UIFocusItem", "transform"]
 - !private ["CSo11UIImageView", "center"]
 - !private ["CSo11UIImageView", "transform"]
@@ -1800,7 +2069,10 @@ depends-member:
 - !private ["PSo10UIKeyInput", "layer"]
 - !private ["PSo10UIKeyInput", "text"]
 - !private ["PSo10UIKeyInput", "textColor"]
+<<<<<<< HEAD
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+>>>>>>> master
 - !private ["CSo7UILabel", "center"]
 - !private ["CSo7UILabel", "clipsToBounds"]
 - !private ["CSo7UILabel", "layer"]
@@ -1828,10 +2100,13 @@ depends-member:
 - ["CSo11UIResponder", "UIButton"]
 - ["CSo11UIResponder", "UIColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["CSo11UIResponder", "UIEdgeInsets"]
 - !private ["CSo11UIResponder", "UIEdgeInsetsMake"]
 =======
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+>>>>>>> master
 - ["CSo11UIResponder", "UIImageView"]
 - ["CSo11UIResponder", "UILabel"]
 - ["CSo11UIResponder", "UITextField"]
@@ -1846,9 +2121,13 @@ depends-member:
 - ["CSo11UIResponder", "badWordFlag"]
 - ["CSo11UIResponder", "badWordsArray"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - !private ["CSo11UIResponder", "borderStyle"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["CSo11UIResponder", "borderStyle"]
+>>>>>>> master
 - !private ["CSo11UIResponder", "bounds"]
 - !private ["CSo11UIResponder", "center"]
 - !private ["CSo11UIResponder", "clipsToBounds"]
@@ -1884,12 +2163,16 @@ depends-member:
 - !private ["CSo11UIResponder", "textColor"]
 - ["CSo11UIResponder", "textField"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["CSo11UIResponder", "titleEdgeInsets"]
 - !private ["CSo11UIResponder", "transform"]
 - !private ["CSo11UIResponder", "useUnderline"]
 =======
 - !private ["CSo11UIResponder", "transform"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["CSo11UIResponder", "transform"]
+>>>>>>> master
 - !private ["CSo11UIResponder", "view"]
 - ["CSo11UIResponder", "viewDidLoad"]
 - ["CSo11UIResponder", "viewWillAppear"]
@@ -1907,10 +2190,13 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "UIAlertControllerStyle"]
 - ["PSo30UIResponderStandardEditActions", "UIColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["PSo30UIResponderStandardEditActions", "UIEdgeInsets"]
 - !private ["PSo30UIResponderStandardEditActions", "UIEdgeInsetsMake"]
 =======
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+>>>>>>> master
 - !private ["PSo30UIResponderStandardEditActions", "UIView"]
 - !private ["PSo30UIResponderStandardEditActions", "UInt32"]
 - !private ["PSo30UIResponderStandardEditActions", "addAction"]
@@ -1922,9 +2208,13 @@ depends-member:
 - ["PSo30UIResponderStandardEditActions", "badWordFlag"]
 - ["PSo30UIResponderStandardEditActions", "badWordsArray"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - !private ["PSo30UIResponderStandardEditActions", "borderStyle"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["PSo30UIResponderStandardEditActions", "borderStyle"]
+>>>>>>> master
 - !private ["PSo30UIResponderStandardEditActions", "bounds"]
 - !private ["PSo30UIResponderStandardEditActions", "center"]
 - !private ["PSo30UIResponderStandardEditActions", "clipsToBounds"]
@@ -1960,12 +2250,16 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "textColor"]
 - ["PSo30UIResponderStandardEditActions", "textField"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["PSo30UIResponderStandardEditActions", "titleEdgeInsets"]
 - !private ["PSo30UIResponderStandardEditActions", "transform"]
 - !private ["PSo30UIResponderStandardEditActions", "useUnderline"]
 =======
 - !private ["PSo30UIResponderStandardEditActions", "transform"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["PSo30UIResponderStandardEditActions", "transform"]
+>>>>>>> master
 - !private ["PSo30UIResponderStandardEditActions", "view"]
 - ["PSo30UIResponderStandardEditActions", "viewDidLoad"]
 - ["PSo30UIResponderStandardEditActions", "viewWillAppear"]
@@ -1984,10 +2278,13 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "UIAlertControllerStyle"]
 - ["PSo16UIStateRestoring", "UIColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["PSo16UIStateRestoring", "UIEdgeInsets"]
 - !private ["PSo16UIStateRestoring", "UIEdgeInsetsMake"]
 =======
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+>>>>>>> master
 - !private ["PSo16UIStateRestoring", "UIView"]
 - !private ["PSo16UIStateRestoring", "UInt32"]
 - !private ["PSo16UIStateRestoring", "addAction"]
@@ -2026,10 +2323,13 @@ depends-member:
 - ["PSo16UIStateRestoring", "viewWillAppear"]
 - ["PSo16UIStateRestoring", ""]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["CSo11UITextField", "delegate"]
 - !private ["CSo11UITextField", "text"]
 - !private ["CSo11UITextField", "useUnderline"]
 =======
+=======
+>>>>>>> master
 - ["OSC17UITextBorderStyle", "deinit"]
 - !private ["OSC17UITextBorderStyle", "roundedRect"]
 - !private ["CSo11UITextField", "borderStyle"]
@@ -2037,7 +2337,10 @@ depends-member:
 - !private ["CSo11UITextField", "layer"]
 - !private ["CSo11UITextField", "text"]
 - !private ["CSo11UITextField", "textColor"]
+<<<<<<< HEAD
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+>>>>>>> master
 - ["PSo19UITextFieldDelegate", "Advice"]
 - ["PSo19UITextFieldDelegate", "BadWords"]
 - !private ["PSo19UITextFieldDelegate", "CGAffineTransform"]
@@ -2052,10 +2355,13 @@ depends-member:
 - !private ["PSo19UITextFieldDelegate", "UIAlertControllerStyle"]
 - ["PSo19UITextFieldDelegate", "UIColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["PSo19UITextFieldDelegate", "UIEdgeInsets"]
 - !private ["PSo19UITextFieldDelegate", "UIEdgeInsetsMake"]
 =======
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+>>>>>>> master
 - !private ["PSo19UITextFieldDelegate", "UIView"]
 - !private ["PSo19UITextFieldDelegate", "UInt32"]
 - !private ["PSo19UITextFieldDelegate", "animateInLogoTitle"]
@@ -2080,6 +2386,7 @@ depends-member:
 - !private ["PSo19UITextFieldDelegate", "textField"]
 - !private ["PSo19UITextFieldDelegate", "view"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["PSo11UITextInput", "delegate"]
 - !private ["PSo11UITextInput", "text"]
 - !private ["PSo11UITextInput", "useUnderline"]
@@ -2087,6 +2394,8 @@ depends-member:
 - !private ["PSo17UITextInputTraits", "text"]
 - !private ["PSo17UITextInputTraits", "useUnderline"]
 =======
+=======
+>>>>>>> master
 - !private ["PSo11UITextInput", "borderStyle"]
 - !private ["PSo11UITextInput", "delegate"]
 - !private ["PSo11UITextInput", "layer"]
@@ -2097,7 +2406,10 @@ depends-member:
 - !private ["PSo17UITextInputTraits", "layer"]
 - !private ["PSo17UITextInputTraits", "text"]
 - !private ["PSo17UITextInputTraits", "textColor"]
+<<<<<<< HEAD
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+>>>>>>> master
 - ["PSo18UITraitEnvironment", "Advice"]
 - ["PSo18UITraitEnvironment", "BadWords"]
 - !private ["PSo18UITraitEnvironment", "CGAffineTransform"]
@@ -2112,10 +2424,13 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "UIAlertControllerStyle"]
 - ["PSo18UITraitEnvironment", "UIColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["PSo18UITraitEnvironment", "UIEdgeInsets"]
 - !private ["PSo18UITraitEnvironment", "UIEdgeInsetsMake"]
 =======
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+>>>>>>> master
 - !private ["PSo18UITraitEnvironment", "UIView"]
 - !private ["PSo18UITraitEnvironment", "UInt32"]
 - !private ["PSo18UITraitEnvironment", "addAction"]
@@ -2127,9 +2442,13 @@ depends-member:
 - ["PSo18UITraitEnvironment", "badWordFlag"]
 - ["PSo18UITraitEnvironment", "badWordsArray"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - !private ["PSo18UITraitEnvironment", "borderStyle"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["PSo18UITraitEnvironment", "borderStyle"]
+>>>>>>> master
 - !private ["PSo18UITraitEnvironment", "bounds"]
 - !private ["PSo18UITraitEnvironment", "center"]
 - !private ["PSo18UITraitEnvironment", "clipsToBounds"]
@@ -2165,12 +2484,16 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "textColor"]
 - ["PSo18UITraitEnvironment", "textField"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["PSo18UITraitEnvironment", "titleEdgeInsets"]
 - !private ["PSo18UITraitEnvironment", "transform"]
 - !private ["PSo18UITraitEnvironment", "useUnderline"]
 =======
 - !private ["PSo18UITraitEnvironment", "transform"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["PSo18UITraitEnvironment", "transform"]
+>>>>>>> master
 - !private ["PSo18UITraitEnvironment", "view"]
 - ["PSo18UITraitEnvironment", "viewDidLoad"]
 - ["PSo18UITraitEnvironment", "viewWillAppear"]
@@ -2178,9 +2501,13 @@ depends-member:
 - !private ["CSo6UIView", "animate"]
 - !private ["CSo6UIView", "backgroundColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - !private ["CSo6UIView", "borderStyle"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["CSo6UIView", "borderStyle"]
+>>>>>>> master
 - !private ["CSo6UIView", "bounds"]
 - !private ["CSo6UIView", "center"]
 - !private ["CSo6UIView", "clipsToBounds"]
@@ -2191,12 +2518,16 @@ depends-member:
 - !private ["CSo6UIView", "text"]
 - !private ["CSo6UIView", "textColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["CSo6UIView", "titleEdgeInsets"]
 - !private ["CSo6UIView", "transform"]
 - !private ["CSo6UIView", "useUnderline"]
 =======
 - !private ["CSo6UIView", "transform"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["CSo6UIView", "transform"]
+>>>>>>> master
 - !private ["VSC22UIViewAnimationOptions", "curveLinear"]
 - ["VSC22UIViewAnimationOptions", "deinit"]
 - ["CSo16UIViewController", "Advice"]
@@ -2217,10 +2548,13 @@ depends-member:
 - ["CSo16UIViewController", "UIButton"]
 - ["CSo16UIViewController", "UIColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["CSo16UIViewController", "UIEdgeInsets"]
 - !private ["CSo16UIViewController", "UIEdgeInsetsMake"]
 =======
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+>>>>>>> master
 - ["CSo16UIViewController", "UIImageView"]
 - ["CSo16UIViewController", "UILabel"]
 - ["CSo16UIViewController", "UITextField"]
@@ -2288,10 +2622,13 @@ depends-member:
 - ["C9adviceApp14ViewController", "UIButton"]
 - ["C9adviceApp14ViewController", "UIColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["C9adviceApp14ViewController", "UIEdgeInsets"]
 - !private ["C9adviceApp14ViewController", "UIEdgeInsetsMake"]
 =======
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+>>>>>>> master
 - ["C9adviceApp14ViewController", "UIImageView"]
 - ["C9adviceApp14ViewController", "UILabel"]
 - ["C9adviceApp14ViewController", "UITextField"]
@@ -2343,9 +2680,13 @@ depends-member:
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "animate"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "backgroundColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "borderStyle"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "borderStyle"]
+>>>>>>> master
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "bounds"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "center"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "clipsToBounds"]
@@ -2356,12 +2697,16 @@ depends-member:
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "text"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "textColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "titleEdgeInsets"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "transform"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "useUnderline"]
 =======
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "transform"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "transform"]
+>>>>>>> master
 - !private ["Ps24_DestructorSafeContainer", "Index"]
 - !private ["Ps24_DestructorSafeContainer", "IndexDistance"]
 - !private ["Ps24_DestructorSafeContainer", "Iterator"]
@@ -2401,10 +2746,13 @@ depends-member:
 - !private ["Ps9_Hashable", "UIAlertControllerStyle"]
 - ["Ps9_Hashable", "UIColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["Ps9_Hashable", "UIEdgeInsets"]
 - !private ["Ps9_Hashable", "UIEdgeInsetsMake"]
 =======
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+>>>>>>> master
 - !private ["Ps9_Hashable", "UIView"]
 - !private ["Ps9_Hashable", "UInt32"]
 - !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
@@ -2420,9 +2768,13 @@ depends-member:
 - !private ["Ps9_Hashable", "black"]
 - !private ["Ps9_Hashable", "borderColor"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - !private ["Ps9_Hashable", "borderStyle"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["Ps9_Hashable", "borderStyle"]
+>>>>>>> master
 - !private ["Ps9_Hashable", "borderWidth"]
 - !private ["Ps9_Hashable", "bounds"]
 - !private ["Ps9_Hashable", "center"]
@@ -2460,9 +2812,13 @@ depends-member:
 - ["Ps9_Hashable", "ref"]
 - !private ["Ps9_Hashable", "reference"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - !private ["Ps9_Hashable", "roundedRect"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["Ps9_Hashable", "roundedRect"]
+>>>>>>> master
 - ["Ps9_Hashable", "saveAdvicePressed"]
 - ["Ps9_Hashable", "savedAdvice"]
 - ["Ps9_Hashable", "savedAdviceBarBtn"]
@@ -2475,12 +2831,16 @@ depends-member:
 - !private ["Ps9_Hashable", "textColor"]
 - ["Ps9_Hashable", "textField"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["Ps9_Hashable", "titleEdgeInsets"]
 - !private ["Ps9_Hashable", "transform"]
 - !private ["Ps9_Hashable", "useUnderline"]
 =======
 - !private ["Ps9_Hashable", "transform"]
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- !private ["Ps9_Hashable", "transform"]
+>>>>>>> master
 - !private ["Ps9_Hashable", "value"]
 - !private ["Ps9_Hashable", "view"]
 - !private ["Ps9_Hashable", "viewContext"]
@@ -2509,9 +2869,12 @@ depends-member:
 - !private ["Ps21_ObjectiveCBridgeable", "width"]
 - !private ["Ps21_ObjectiveCBridgeable", "x"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 - !private ["Ps21_ObjectiveCBridgeable", "zero"]
 =======
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+>>>>>>> master
 - !private ["Vs26_OptionalNilComparisonType", "deinit"]
 - !private ["Ps14_SignedInteger", "init"]
 - !private ["Ps11_Strideable", "init"]
@@ -2625,9 +2988,12 @@ depends-nominal:
 - !private "PSo17UICoordinateSpace"
 - !private "PSo13UIDynamicItem"
 <<<<<<< HEAD
+<<<<<<< HEAD
 - "VSC12UIEdgeInsets"
 =======
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+>>>>>>> master
 - "PSo18UIFocusEnvironment"
 - !private "PSo11UIFocusItem"
 - !private "CSo11UIImageView"
@@ -2639,9 +3005,13 @@ depends-nominal:
 - "PSo30UIResponderStandardEditActions"
 - "PSo16UIStateRestoring"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - "OSC17UITextBorderStyle"
 >>>>>>> 7ce786103cce040ca31c776e6ad13140c446a391
+=======
+- "OSC17UITextBorderStyle"
+>>>>>>> master
 - !private "CSo11UITextField"
 - "PSo19UITextFieldDelegate"
 - !private "PSo11UITextInput"
