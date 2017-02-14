@@ -11,7 +11,6 @@ import UIKit
 
 extension UIColor {
     
-    //static let white = UIColor.init(red:1.00, green:1.00, blue:1.00, alpha:0.70)
     static let lilac = UIColor(red:0.86, green:0.73, blue:0.94, alpha:1.0)
     
 }
