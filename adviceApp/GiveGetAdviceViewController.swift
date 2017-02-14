@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 import QuartzCore
+import CoreData
 
 
 class ViewController: UIViewController {
@@ -45,6 +46,7 @@ class ViewController: UIViewController {
     var displayedFIRAdvice: String = ""
     var ref: FIRDatabaseReference!
     var firAdviceArray = [String]()
+    var removedAdvice = String()
     
     
     let seafoamGreen = UIColor(red:0.82, green:0.94, blue:0.87, alpha:1.0)
@@ -57,25 +59,19 @@ class ViewController: UIViewController {
         
         giveAdviceTextField.delegate = self
         
-        //self.giveAdviceBtnOutlet.layer.borderWidth = 2.0
         self.giveAdviceBtnOutlet.clipsToBounds = true
         self.giveAdviceBtnOutlet.layer.cornerRadius = giveAdviceBtnOutlet.bounds.height * 0.5
-        //self.giveAdviceBtnOutlet.layer.borderColor = eggplant.cgColor
         self.giveAdviceBtnOutlet.backgroundColor = eggplant
         self.giveAdviceBtnOutlet.titleEdgeInsets = UIEdgeInsetsMake(0.0, -5.0, 0.0, -5.0)
         
         
-        //self.getAdviceBtnOutlet.layer.borderWidth = 2.0
         self.getAdviceBtnOutlet.clipsToBounds = true
         self.getAdviceBtnOutlet.layer.cornerRadius = getAdviceBtnOutlet.bounds.height * 0.5
-        //self.getAdviceBtnOutlet.layer.borderColor = eggplant.cgColor
         self.getAdviceBtnOutlet.backgroundColor = eggplant
         self.giveAdviceBtnOutlet.titleEdgeInsets = UIEdgeInsets.zero
         
-        //self.savedAdviceBtn.layer.borderWidth = 2.0
         self.savedAdviceBtn.clipsToBounds = true
         self.savedAdviceBtn.layer.cornerRadius = savedAdviceBtn.bounds.height * 0.5
-        //self.savedAdviceBtn.layer.borderColor = eggplant.cgColor
         self.savedAdviceBtn.backgroundColor = eggplant
         self.savedAdviceBtn.titleEdgeInsets = UIEdgeInsets.zero
         
@@ -256,23 +252,23 @@ class ViewController: UIViewController {
         print("🌮\(randomFIRAdviceIndex)")
         print("🍿\(self.firAdviceArray.count)")
         
-        let removedAdvice = firAdviceArray.remove(at: randomFIRAdviceIndex)
+        removedAdvice = firAdviceArray.remove(at: randomFIRAdviceIndex)
         
         displayAdviceTextLabel.text = removedAdvice
         
         print("🍧", removedAdvice)
         
-        saveThisAdvice(selectedAdvice: removedAdvice)
     }
     
     
-    func saveThisAdvice(selectedAdvice: String) -> Advice {
+    func saveThisAdvice(selectedAdvice: String) {
         
-        let advice = Advice()
+        let advice = Advice(context: store.persistentContainer.viewContext)
         
         advice.content = selectedAdvice
         
-        return advice
+        print("📢selected advice is now of type Advice")
+        
     }
     
     
@@ -283,12 +279,13 @@ class ViewController: UIViewController {
         
         if displayAdviceTextLabel.text != nil {
             
-            //saveThisAdvice(selectedAdvice: <#T##String#>)
+            saveThisAdvice(selectedAdvice: removedAdvice)
+            
+            print("🔮", removedAdvice)
             
             store.saveContext()
-            
-            
         }
+        
         
     }
     
