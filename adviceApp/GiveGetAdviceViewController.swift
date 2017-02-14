@@ -48,7 +48,7 @@ class ViewController: UIViewController {
     
     
     let seafoamGreen = UIColor(red:0.82, green:0.94, blue:0.87, alpha:1.0)
-    let eggplant = UIColor(red:0.17, green:0.03, blue:0.25, alpha:1.0)
+    let eggplant = UIColor(red:0.17, green:0.03, blue:0.25, alpha:0.5)
     
     
     
@@ -61,7 +61,7 @@ class ViewController: UIViewController {
         self.giveAdviceBtnOutlet.clipsToBounds = true
         self.giveAdviceBtnOutlet.layer.cornerRadius = giveAdviceBtnOutlet.bounds.height * 0.5
         self.giveAdviceBtnOutlet.layer.borderColor = seafoamGreen.cgColor
-        self.giveAdviceBtnOutlet.backgroundColor = UIColor.clear
+        self.giveAdviceBtnOutlet.backgroundColor = eggplant
         giveAdviceBtnOutlet.titleEdgeInsets = UIEdgeInsetsMake(0.0, -5.0, 0.0, -5.0)
         
         
@@ -69,28 +69,29 @@ class ViewController: UIViewController {
         self.getAdviceBtnOutlet.clipsToBounds = true
         self.getAdviceBtnOutlet.layer.cornerRadius = getAdviceBtnOutlet.bounds.height * 0.5
         self.getAdviceBtnOutlet.layer.borderColor = seafoamGreen.cgColor
-        self.getAdviceBtnOutlet.backgroundColor = UIColor.clear
+        self.getAdviceBtnOutlet.backgroundColor = eggplant
         self.giveAdviceBtnOutlet.titleEdgeInsets = UIEdgeInsets.zero
         
         self.savedAdviceBtn.layer.borderWidth = 2.0
         self.savedAdviceBtn.clipsToBounds = true
         self.savedAdviceBtn.layer.cornerRadius = savedAdviceBtn.bounds.height * 0.5
         self.savedAdviceBtn.layer.borderColor = seafoamGreen.cgColor
-        self.savedAdviceBtn.backgroundColor = UIColor.clear
+        self.savedAdviceBtn.backgroundColor = eggplant
         self.savedAdviceBtn.titleEdgeInsets = UIEdgeInsets.zero
         
         self.displayAdviceTextLabel.clipsToBounds = true
         self.displayAdviceTextLabel.layer.cornerRadius = 5.0
+        self.displayAdviceTextLabel.layer.borderWidth = 1.0
+        self.displayAdviceTextLabel.layer.borderColor = eggplant.cgColor
         
         getAdviceBtnOutlet.isEnabled = false
         savedAdviceBtn.isEnabled = false
         giveAdviceBtnOutlet.isEnabled = false
         
-//        self.textField.borderStyle = .roundedRect
-//        self.textField.layer.borderColor = UIColor.clear.cgColor
-//        self.textField.layer.borderWidth = 2.0
-//        self.textField.textColor = UIColor.black
-        self.textField.useUnderline()
+        self.textField.borderStyle = .roundedRect
+        self.textField.layer.borderColor = UIColor.clear.cgColor
+        self.textField.layer.borderWidth = 2.0
+        self.textField.textColor = UIColor.black
         
         print(savedAdvice)
         store.fetchData()

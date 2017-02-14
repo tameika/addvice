@@ -30,6 +30,7 @@
 		BCEF6B931E5005AE00DEF771 /* logoBubbleA05.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEF6B921E5005AE00DEF771 /* logoBubbleA05.png */; };
 		BCEF6B951E5013E800DEF771 /* logoBubbleA06.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEF6B941E5013E800DEF771 /* logoBubbleA06.png */; };
 		BCEF6B991E52B42F00DEF771 /* starry-sky.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEF6B981E52B42F00DEF771 /* starry-sky.png */; };
+		BCEF6B9B1E52F16400DEF771 /* star2.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEF6B9A1E52F16400DEF771 /* star2.png */; };
 		DEDF40680BA8508F0D702D53 /* Pods_adviceApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 454989B972D947CDAF6E2A96 /* Pods_adviceApp.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		BCEF6B921E5005AE00DEF771 /* logoBubbleA05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoBubbleA05.png; sourceTree = "<group>"; };
 		BCEF6B941E5013E800DEF771 /* logoBubbleA06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoBubbleA06.png; sourceTree = "<group>"; };
 		BCEF6B981E52B42F00DEF771 /* starry-sky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "starry-sky.png"; sourceTree = "<group>"; };
+		BCEF6B9A1E52F16400DEF771 /* star2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star2.png; sourceTree = "<group>"; };
 		EA392F6288A6574087F33774 /* Pods-adviceApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-adviceApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-adviceApp/Pods-adviceApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,6 +169,7 @@
 				BC6244C31DDA2E0C00AE6523 /* DataStore.swift */,
 				BCEF6B921E5005AE00DEF771 /* logoBubbleA05.png */,
 				BCEF6B941E5013E800DEF771 /* logoBubbleA06.png */,
+				BCEF6B9A1E52F16400DEF771 /* star2.png */,
 				BCEF6B981E52B42F00DEF771 /* starry-sky.png */,
 				BC4B661F1E0B5653003EEEC0 /* positive-725842_1920.jpg */,
 				BCB858D91E3619F20022139B /* open-door-1254709_1280.jpg */,
@@ -306,7 +309,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCEF6B8D1E4FF6ED00DEF771 /* logoBubbleA02.png in Resources */,
 				BC9979961D981513004A572C /* LaunchScreen.storyboard in Resources */,
 				BCB858D01E3611050022139B /* love-1449763_1280.jpg in Resources */,
 				BC9470C71E086AA500E2F21D /* Default-568h@2x.png in Resources */,
@@ -314,10 +316,9 @@
 				BCEF6B931E5005AE00DEF771 /* logoBubbleA05.png in Resources */,
 				BC9979931D981513004A572C /* Assets.xcassets in Resources */,
 				BC9979911D981513004A572C /* Main.storyboard in Resources */,
+				BCEF6B9B1E52F16400DEF771 /* star2.png in Resources */,
 				BC4B66201E0B5653003EEEC0 /* positive-725842_1920.jpg in Resources */,
-				BCEF6B8F1E4FF7D300DEF771 /* logoBubbleA04.png in Resources */,
 				BC20D3FE1E09BB46000DD097 /* GoogleService-Info.plist in Resources */,
-				BCEF6B8B1E4FF6DD00DEF771 /* logoBubbleA01.png in Resources */,
 				BCEB89DC1E28843B003A9801 /* background-1339119_1280.jpg in Resources */,
 				BCEF6B951E5013E800DEF771 /* logoBubbleA06.png in Resources */,
 				BCB858DA1E3619F20022139B /* open-door-1254709_1280.jpg in Resources */,
