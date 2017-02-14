@@ -32,13 +32,14 @@
                                 <color key="textColor" red="0.73875731369999997" green="0.85882352939999995" blue="0.79350566060000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaj-ul-fPQ">
-                                <rect key="frame" x="20" y="420" width="53" height="38"/>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaj-ul-fPQ">
+                                <rect key="frame" x="20" y="419.33333333333331" width="53" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="MOh-lV-UMI"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="53" id="ica-7N-Aic"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <inset key="titleEdgeInsets" minX="-5" minY="1" maxX="-5" maxY="1"/>
                                 <state key="normal" title="give">
                                     <color key="titleColor" red="0.66875411620000003" green="0.8527644231" blue="0.72492828210000004" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -46,7 +47,7 @@
                                     <action selector="submitAdviceBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mb8-gK-UcN"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KkZ-Iu-Yee">
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KkZ-Iu-Yee">
                                 <rect key="frame" x="177" y="420" width="61" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="61" id="Il7-Pd-s9P"/>
@@ -54,6 +55,7 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="53" id="z7E-4d-VDM"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <inset key="titleEdgeInsets" minX="-5" minY="1" maxX="-5" maxY="1"/>
                                 <state key="normal" title="save">
                                     <color key="titleColor" red="0.66875411620000003" green="0.8527644231" blue="0.72492828210000004" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -88,7 +90,7 @@
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" spellCheckingType="yes" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o30-GB-no8">
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o30-GB-no8">
                                 <rect key="frame" x="341" y="420" width="53" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="7ft-wC-qiv"/>
@@ -96,6 +98,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="Xjz-El-W9s"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <inset key="titleEdgeInsets" minX="-5" minY="1" maxX="-5" maxY="1"/>
                                 <state key="normal" title="get ">
                                     <color key="titleColor" red="0.66875411620000003" green="0.8527644231" blue="0.72492828210000004" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -115,7 +118,7 @@
                                     <constraint firstAttribute="height" constant="63" id="sJi-Np-2ir"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="54"/>
-                                <color key="textColor" red="0.66875411620000003" green="0.8527644231" blue="0.72492828210000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.64279128745330572" green="0.81979166668974357" blue="0.70334766064721155" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>

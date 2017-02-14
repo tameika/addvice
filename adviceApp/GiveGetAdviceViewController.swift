@@ -13,6 +13,7 @@ import QuartzCore
 import CoreData
 
 
+
 class ViewController: UIViewController {
     
     // MARK: UI Properties
@@ -47,11 +48,10 @@ class ViewController: UIViewController {
     var ref: FIRDatabaseReference!
     var firAdviceArray = [String]()
     var removedAdvice = String()
-    
+
     
     let seafoamGreen = UIColor(red:0.82, green:0.94, blue:0.87, alpha:1.0)
     let eggplant = UIColor(red:0.17, green:0.03, blue:0.25, alpha:0.5)
-    
     
     
     override func viewDidLoad() {
@@ -348,13 +348,9 @@ class ViewController: UIViewController {
 
 
 /* Todo:
- - animate alert controller?
- - displayed saved advice confirmation
  - animate all buttons
  - adjust button edge insets
+ - prevent saving same advice multiple times: 1.1
 
 
-/*
-
-
-*/*/
+*/

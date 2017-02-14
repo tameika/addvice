@@ -13,7 +13,7 @@ import UIKit
 class MyAdviceTableViewController: UITableViewController {
     
     var savedAdviceList = [Advice]()
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,6 +74,7 @@ class MyAdviceTableViewController: UITableViewController {
         cell.textLabel?.numberOfLines = 0
         
         cell.textLabel?.lineBreakMode = .byWordWrapping
+        
  
      return cell
         
