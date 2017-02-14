@@ -55,27 +55,27 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         giveAdviceTextField.delegate = self
-        self.giveAdviceBtnOutlet.layer.borderWidth = 2.0
+        
+        //self.giveAdviceBtnOutlet.layer.borderWidth = 2.0
         self.giveAdviceBtnOutlet.clipsToBounds = true
         self.giveAdviceBtnOutlet.layer.cornerRadius = giveAdviceBtnOutlet.bounds.height * 0.5
-        self.giveAdviceBtnOutlet.layer.borderColor = seafoamGreen.cgColor
+        //self.giveAdviceBtnOutlet.layer.borderColor = eggplant.cgColor
         self.giveAdviceBtnOutlet.backgroundColor = eggplant
-        giveAdviceBtnOutlet.titleEdgeInsets = UIEdgeInsetsMake(0.0, -5.0, 0.0, -5.0)
+        self.giveAdviceBtnOutlet.titleEdgeInsets = UIEdgeInsetsMake(0.0, -5.0, 0.0, -5.0)
         
         
-        self.getAdviceBtnOutlet.layer.borderWidth = 2.0
+        //self.getAdviceBtnOutlet.layer.borderWidth = 2.0
         self.getAdviceBtnOutlet.clipsToBounds = true
         self.getAdviceBtnOutlet.layer.cornerRadius = getAdviceBtnOutlet.bounds.height * 0.5
-        self.getAdviceBtnOutlet.layer.borderColor = seafoamGreen.cgColor
+        //self.getAdviceBtnOutlet.layer.borderColor = eggplant.cgColor
         self.getAdviceBtnOutlet.backgroundColor = eggplant
         self.giveAdviceBtnOutlet.titleEdgeInsets = UIEdgeInsets.zero
         
-        self.savedAdviceBtn.layer.borderWidth = 2.0
+        //self.savedAdviceBtn.layer.borderWidth = 2.0
         self.savedAdviceBtn.clipsToBounds = true
         self.savedAdviceBtn.layer.cornerRadius = savedAdviceBtn.bounds.height * 0.5
-        self.savedAdviceBtn.layer.borderColor = seafoamGreen.cgColor
+        //self.savedAdviceBtn.layer.borderColor = eggplant.cgColor
         self.savedAdviceBtn.backgroundColor = eggplant
         self.savedAdviceBtn.titleEdgeInsets = UIEdgeInsets.zero
         
@@ -325,9 +325,15 @@ class ViewController: UIViewController {
 
 
 
-// Todo: animate alert controller
-// Todo: FLAG BAD ADVICE (1.1)
+/* Todo:
+ animate alert controller?
+ displayed saved advice confirmation
+ animate all buttons
+ FIXED SAVED ADVICE
+ adjust button edge insets
 
 
+/*
 
 
+*/*/
