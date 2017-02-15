@@ -1,0 +1,6 @@
+framework module Pods_addvice {
+  umbrella header "Pods-addvice-umbrella.h"
+
+  export *
+  module * { export * }
+}
