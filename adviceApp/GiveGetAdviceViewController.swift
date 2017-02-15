@@ -57,7 +57,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let tap = UIGestureRecognizer(target: self, action: "dismissKeyboard")
+        let tap = UIGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         
         giveAdviceTextField.delegate = self
