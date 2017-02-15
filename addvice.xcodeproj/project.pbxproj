@@ -22,10 +22,11 @@
 		BC9979AC1D981513004A572C /* adviceAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9979AB1D981513004A572C /* adviceAppUITests.swift */; };
 		BCB17C611DE8BD54004CA1DF /* BadWordsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB17C601DE8BD54004CA1DF /* BadWordsList.swift */; };
 		BCBAF3691DEBE59E00B714B5 /* MyAdviceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBAF3681DEBE59E00B714B5 /* MyAdviceTableViewController.swift */; };
+		BCCE55951E543067001C6927 /* Pods_addvice.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C36E223D4CBC50EB047EBAB0 /* Pods_addvice.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BCEF6B9B1E52F16400DEF771 /* star2.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEF6B9A1E52F16400DEF771 /* star2.png */; };
 		BCEF6B9F1E5307CE00DEF771 /* logoBubble-a.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEF6B9E1E5307CE00DEF771 /* logoBubble-a.png */; };
 		DEDF40680BA8508F0D702D53 /* Pods_adviceApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 454989B972D947CDAF6E2A96 /* Pods_adviceApp.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		F65D334D99D752DBE27CC1C1 /* Pods_addvice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C36E223D4CBC50EB047EBAB0 /* Pods_addvice.framework */; };
+		DF7A4801B4C88C33D2B272CE /* Pods_addvice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C36E223D4CBC50EB047EBAB0 /* Pods_addvice.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,9 +46,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		BCCE55961E543067001C6927 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BCCE55951E543067001C6927 /* Pods_addvice.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		454989B972D947CDAF6E2A96 /* Pods_adviceApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_adviceApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		92BEE6EC578CFF2EBC635D56 /* Pods-adviceApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-adviceApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-adviceApp/Pods-adviceApp.release.xcconfig"; sourceTree = "<group>"; };
 		941B5B7644C8360D3D5630B0 /* Pods-addvice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-addvice.release.xcconfig"; path = "Pods/Target Support Files/Pods-addvice/Pods-addvice.release.xcconfig"; sourceTree = "<group>"; };
 		BC20D3FA1E09B8F3000DD097 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC20D3FD1E09BB46000DD097 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -73,7 +87,6 @@
 		BCEF6B9E1E5307CE00DEF771 /* logoBubble-a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logoBubble-a.png"; sourceTree = "<group>"; };
 		C36E223D4CBC50EB047EBAB0 /* Pods_addvice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_addvice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3C8F7CA8733FAE91164396D /* Pods-addvice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-addvice.debug.xcconfig"; path = "Pods/Target Support Files/Pods-addvice/Pods-addvice.debug.xcconfig"; sourceTree = "<group>"; };
-		EA392F6288A6574087F33774 /* Pods-adviceApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-adviceApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-adviceApp/Pods-adviceApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +95,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEDF40680BA8508F0D702D53 /* Pods_adviceApp.framework in Frameworks */,
-				F65D334D99D752DBE27CC1C1 /* Pods_addvice.framework in Frameworks */,
+				DF7A4801B4C88C33D2B272CE /* Pods_addvice.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,8 +119,6 @@
 		32AF10B12654627A4D335C66 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				EA392F6288A6574087F33774 /* Pods-adviceApp.debug.xcconfig */,
-				92BEE6EC578CFF2EBC635D56 /* Pods-adviceApp.release.xcconfig */,
 				E3C8F7CA8733FAE91164396D /* Pods-addvice.debug.xcconfig */,
 				941B5B7644C8360D3D5630B0 /* Pods-addvice.release.xcconfig */,
 			);
@@ -198,6 +209,7 @@
 				BC9979861D981512004A572C /* Resources */,
 				12CA15AFEE3BEE31BCBBDFAF /* [CP] Embed Pods Frameworks */,
 				76A7B79380BCBDC35EBB1B9B /* [CP] Copy Pods Resources */,
+				BCCE55961E543067001C6927 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
