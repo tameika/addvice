@@ -57,6 +57,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let tap = UIGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+        
         giveAdviceTextField.delegate = self
         
         self.giveAdviceBtnOutlet.clipsToBounds = true
@@ -135,9 +138,13 @@ class ViewController: UIViewController {
                         self.logoA.transform = CGAffineTransform.identity
         })
         
-        
     }
 
+    
+    func dismissKeyboard() {
+        
+        view.endEditing(true)
+    }
     
     
     func getFIRAdvice() {
