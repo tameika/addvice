@@ -49,8 +49,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let tap = UIGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
-        view.addGestureRecognizer(tap)
+//        let tap = UIGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
+//        view.addGestureRecognizer(tap)
         
         giveAdviceTextField.delegate = self
         
@@ -385,6 +385,7 @@ extension ViewController: UITextFieldDelegate {
  - prevent saving same advice multiple times
  - add timestamp to advice
  - add saved counter for each advice
+ - add character counter
  
  
  */
