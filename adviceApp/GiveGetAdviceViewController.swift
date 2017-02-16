@@ -18,22 +18,14 @@ class ViewController: UIViewController {
     
     // MARK: UI Properties
     
-    @IBOutlet weak var giveAdviceTextField: UITextField!
-    
+    @IBOutlet weak var giveAdviceTextField: UITextField! // giveAdviceTextField
     @IBOutlet weak var displayAdviceTextLabel: UILabel!
-    
-    @IBOutlet weak var getAdviceBtnOutlet: UIButton!
-    
-    @IBOutlet weak var savedAdviceBarBtn: UIBarButtonItem!
-    
+    @IBOutlet weak var getAdviceBtnOutlet: UIButton! // getAdviceButton
+    @IBOutlet weak var savedAdviceBarBtn: UIBarButtonItem! // savedAdviceButton
     @IBOutlet weak var savedAdviceBtn: UIButton!
-    
     @IBOutlet weak var giveAdviceBtnOutlet: UIButton!
-    
     @IBOutlet weak var textField: UITextField!
-    
     @IBOutlet weak var logoA: UIImageView!
-    
     @IBOutlet weak var logoTitle: UILabel!
     
     
@@ -48,7 +40,7 @@ class ViewController: UIViewController {
     var ref: FIRDatabaseReference!
     var firAdviceArray = [String]()
     var removedAdvice = String()
-
+    
     
     let seafoamGreen = UIColor(red:0.82, green:0.94, blue:0.87, alpha:1.0)
     let eggplant = UIColor(red:0.17, green:0.03, blue:0.25, alpha:0.5)
@@ -62,21 +54,7 @@ class ViewController: UIViewController {
         
         giveAdviceTextField.delegate = self
         
-        self.giveAdviceBtnOutlet.clipsToBounds = true
-        self.giveAdviceBtnOutlet.layer.cornerRadius = giveAdviceBtnOutlet.bounds.height * 0.5
-        self.giveAdviceBtnOutlet.backgroundColor = eggplant
-        self.giveAdviceBtnOutlet.titleEdgeInsets = UIEdgeInsetsMake(0.0, -5.0, 0.0, -5.0)
-        
-        
-        self.getAdviceBtnOutlet.clipsToBounds = true
-        self.getAdviceBtnOutlet.layer.cornerRadius = getAdviceBtnOutlet.bounds.height * 0.5
-        self.getAdviceBtnOutlet.backgroundColor = eggplant
-        self.giveAdviceBtnOutlet.titleEdgeInsets = UIEdgeInsets.zero
-        
-        self.savedAdviceBtn.clipsToBounds = true
-        self.savedAdviceBtn.layer.cornerRadius = savedAdviceBtn.bounds.height * 0.5
-        self.savedAdviceBtn.backgroundColor = eggplant
-        self.savedAdviceBtn.titleEdgeInsets = UIEdgeInsets.zero
+        setupAdviceButtons()
         
         self.displayAdviceTextLabel.clipsToBounds = true
         self.displayAdviceTextLabel.layer.cornerRadius = 5.0
@@ -96,18 +74,45 @@ class ViewController: UIViewController {
         store.fetchData()
     }
     
+    func setupAdviceButtons() {
+        self.giveAdviceBtnOutlet.clipsToBounds = true
+        self.giveAdviceBtnOutlet.layer.cornerRadius = giveAdviceBtnOutlet.bounds.height * 0.5
+        self.giveAdviceBtnOutlet.backgroundColor = eggplant
+        self.giveAdviceBtnOutlet.titleEdgeInsets = UIEdgeInsetsMake(0.0, -5.0, 0.0, -5.0)
+        
+        
+        self.getAdviceBtnOutlet.clipsToBounds = true
+        self.getAdviceBtnOutlet.layer.cornerRadius = getAdviceBtnOutlet.bounds.height * 0.5
+        self.getAdviceBtnOutlet.backgroundColor = eggplant
+        self.giveAdviceBtnOutlet.titleEdgeInsets = UIEdgeInsets.zero
+        
+        self.savedAdviceBtn.clipsToBounds = true
+        self.savedAdviceBtn.layer.cornerRadius = savedAdviceBtn.bounds.height * 0.5
+        self.savedAdviceBtn.backgroundColor = eggplant
+        self.savedAdviceBtn.titleEdgeInsets = UIEdgeInsets.zero
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         animateInLogoTitle()
-
-        getFIRAdvice()
+        
+        giveAdviceBtnOutlet.isUserInteractionEnabled = false
+        
+        getFIRAdvice(handler: { _ in
+            
+            DispatchQueue.main.async {
+                self.giveAdviceBtnOutlet.isUserInteractionEnabled = true
+            }
+            
+        })
+        
         
         navigationController?.navigationBar.isHidden = true
         
         logoA.center.x -= view.bounds.width
         logoTitle.center.x -= view.bounds.width
-
+        
     }
     
     func animateInLogoTitle() {
@@ -139,7 +144,7 @@ class ViewController: UIViewController {
         })
         
     }
-
+    
     
     func dismissKeyboard() {
         
@@ -147,7 +152,7 @@ class ViewController: UIViewController {
     }
     
     
-    func getFIRAdvice() {
+    func getFIRAdvice(handler: @escaping () -> Void) {
         
         let ref = FIRDatabase.database().reference()
         
@@ -195,7 +200,13 @@ class ViewController: UIViewController {
                     }
                     
                 }
+                
+                // TODO: Add a completion closure to this function and then call on it here letting the caller know all is good.
+                
             }
+            
+            handler()
+
             print("🌽\(self.firAdviceArray.count)")
         })
         
@@ -274,7 +285,7 @@ class ViewController: UIViewController {
         
         advice.content = selectedAdvice
         
-        advice.isFavorited = true 
+        advice.isFavorited = true
         
         print("📢selected advice is now of type Advice")
         
@@ -307,8 +318,8 @@ class ViewController: UIViewController {
         print("advice is saved alert")
         
         let okAction = UIAlertAction(title: "Great", style: .destructive, handler: nil)
-            alert.addAction(okAction)
-            self.present(alert, animated: true, completion: nil)
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
         
     }
     
@@ -345,11 +356,23 @@ class ViewController: UIViewController {
     }
     
     
-    //end
     
 }
 
-
+// MARK: - UITextFieldDelegate Methods
+extension ViewController: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        // TODO: Bug. If user hits space bar, it thinks that it qualifies as a String (where it thinks it's NOT empty) which enables the button. Soemthign to thing about. (1.1)
+        
+        let currentText = textField.text ?? ""
+        if !(string + currentText).isEmpty && ((string + currentText).characters.count <= 164) {
+            giveAdviceBtnOutlet.isEnabled = true
+        }
+        return true
+    }
+}
 
 
 
@@ -357,7 +380,11 @@ class ViewController: UIViewController {
 /* Todo:
  - animate all buttons
  - adjust button edge insets?
- - prevent saving same advice multiple times: 1.1
-
-
-*/
+ 
+ VERSION 1.1
+ - prevent saving same advice multiple times
+ - add timestamp to advice
+ - add saved counter for each advice
+ 
+ 
+ */

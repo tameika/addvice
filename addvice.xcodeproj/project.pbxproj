@@ -159,22 +159,10 @@
 		BC99798A1D981513004A572C /* adviceApp */ = {
 			isa = PBXGroup;
 			children = (
-				BC6244C31DDA2E0C00AE6523 /* DataStore.swift */,
-				BC7EA1931E35A3B700FEDC6C /* Extensions.swift */,
-				BC99798B1D981513004A572C /* AppDelegate.swift */,
-				BC99798D1D981513004A572C /* GiveGetAdviceViewController.swift */,
-				BCBAF3681DEBE59E00B714B5 /* MyAdviceTableViewController.swift */,
-				BC99798F1D981513004A572C /* Main.storyboard */,
-				BC9979941D981513004A572C /* LaunchScreen.storyboard */,
-				BCB17C601DE8BD54004CA1DF /* BadWordsList.swift */,
-				BC43C33C1DDBA157000994ED /* APIClient .swift */,
-				BC20D3FA1E09B8F3000DD097 /* Info.plist */,
-				BC20D3FD1E09BB46000DD097 /* GoogleService-Info.plist */,
-				BC6244C51DDA308500AE6523 /* adviceApp.xcdatamodeld */,
-				BCEF6B9E1E5307CE00DEF771 /* logoBubble-a.png */,
-				BCEF6B9A1E52F16400DEF771 /* star2.png */,
-				BC4B661F1E0B5653003EEEC0 /* positive-725842_1920.jpg */,
-				BC9979921D981513004A572C /* Assets.xcassets */,
+				BCCE55A21E55351C001C6927 /* Models */,
+				BCCE55A11E553516001C6927 /* Views */,
+				BCCE55A01E55350F001C6927 /* Controllers */,
+				BCCE55A31E553545001C6927 /* Supporting Files */,
 			);
 			path = adviceApp;
 			sourceTree = "<group>";
@@ -194,6 +182,50 @@
 				BC9979AB1D981513004A572C /* adviceAppUITests.swift */,
 			);
 			path = adviceAppUITests;
+			sourceTree = "<group>";
+		};
+		BCCE55A01E55350F001C6927 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BC99798D1D981513004A572C /* GiveGetAdviceViewController.swift */,
+				BCBAF3681DEBE59E00B714B5 /* MyAdviceTableViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		BCCE55A11E553516001C6927 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BC99798F1D981513004A572C /* Main.storyboard */,
+				BC9979941D981513004A572C /* LaunchScreen.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		BCCE55A21E55351C001C6927 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BCB17C601DE8BD54004CA1DF /* BadWordsList.swift */,
+				BC43C33C1DDBA157000994ED /* APIClient .swift */,
+				BC6244C31DDA2E0C00AE6523 /* DataStore.swift */,
+				BC7EA1931E35A3B700FEDC6C /* Extensions.swift */,
+				BC99798B1D981513004A572C /* AppDelegate.swift */,
+				BC6244C51DDA308500AE6523 /* adviceApp.xcdatamodeld */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		BCCE55A31E553545001C6927 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BC9979921D981513004A572C /* Assets.xcassets */,
+				BC20D3FA1E09B8F3000DD097 /* Info.plist */,
+				BC20D3FD1E09BB46000DD097 /* GoogleService-Info.plist */,
+				BCEF6B9E1E5307CE00DEF771 /* logoBubble-a.png */,
+				BCEF6B9A1E52F16400DEF771 /* star2.png */,
+				BC4B661F1E0B5653003EEEC0 /* positive-725842_1920.jpg */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -549,6 +581,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KXY9EDFTF5;
 				INFOPLIST_FILE = adviceApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.flatironschool.adviceApp;
@@ -564,6 +597,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KXY9EDFTF5;
 				INFOPLIST_FILE = adviceApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.flatironschool.adviceApp;
