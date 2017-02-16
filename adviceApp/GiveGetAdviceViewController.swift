@@ -49,8 +49,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let tap = UIGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
-        view.addGestureRecognizer(tap)
+//        let tap = UIGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
+//        view.addGestureRecognizer(tap)
         
         giveAdviceTextField.delegate = self
         
@@ -92,18 +92,19 @@ class ViewController: UIViewController {
         self.savedAdviceBtn.titleEdgeInsets = UIEdgeInsets.zero
     }
     
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         animateInLogoTitle()
         
-        giveAdviceBtnOutlet.isUserInteractionEnabled = false
         
         getFIRAdvice(handler: { _ in
             
-            DispatchQueue.main.async {
-                self.giveAdviceBtnOutlet.isUserInteractionEnabled = true
-            }
+                print("Coming back!")
+               self.giveAdviceBtnOutlet.isUserInteractionEnabled = true
+            
             
         })
         
@@ -213,9 +214,19 @@ class ViewController: UIViewController {
     }
     
     
+
     
-    
-    @IBAction func submitAdviceBtnPressed(_ sender: UIButton) {
+    @IBAction func giveAdviceBtnPressed(_ sender: UIButton) {
+        
+        print("\n")
+        print("CALLED!!!!")
+        
+        // TODO: Let the user know that this is being sent up to the internet, maybe a loading screen very fast or a spinner or something?
+        
+        print("Getting called.")
+        
+        
+       sender.isUserInteractionEnabled = false
         
         giveAdviceBtnOutlet.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI * 6 / 5))
         
@@ -223,10 +234,13 @@ class ViewController: UIViewController {
             self.giveAdviceBtnOutlet.transform = CGAffineTransform.identity
         }
         
+        print("About to enter guard statements.")
         
-        guard !badWordFilter() else { return }
+        guard !badWordFilter()
+            else { print("didnt pass bad word"); sender.isUserInteractionEnabled = true; return }
         
-        guard let adviceReceived = giveAdviceTextField.text else { return }
+        guard let adviceReceived = giveAdviceTextField.text
+            else { print("no text in text field"); sender.isUserInteractionEnabled = true; return }
         
         let newAdvice = Advice(context: store.persistentContainer.viewContext)
         
@@ -238,14 +252,28 @@ class ViewController: UIViewController {
         
         getAdviceBtnOutlet.isEnabled = true
         
-        giveAdviceBtnOutlet.isEnabled = false
         
         store.saveContext()
         
         
         let ref = FIRDatabase.database().reference()
+        let content = ["content" : adviceReceived]
         
-        ref.child("Advice").childByAutoId().setValue(["content": adviceReceived])
+        print(content)
+        
+        ref.child("Advice").childByAutoId().setValue(content, withCompletionBlock: { error, ref in
+            
+            print("HEY!!!!")
+            print(error)
+            
+            sender.isUserInteractionEnabled = true
+            
+            // TODO: Let user know all is good. If all WAS good? Error might not be nil (which would be bad)
+            // TODO: Clear the text in the textfield we're using because the user then would have at this point had it submitted to firebase.
+            
+        })
+        
+        
     }
     
     
@@ -368,7 +396,7 @@ extension ViewController: UITextFieldDelegate {
         
         let currentText = textField.text ?? ""
         if !(string + currentText).isEmpty && ((string + currentText).characters.count <= 164) {
-            giveAdviceBtnOutlet.isEnabled = true
+           giveAdviceBtnOutlet.isEnabled = true
         }
         return true
     }

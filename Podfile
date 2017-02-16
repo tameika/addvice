@@ -1,13 +1,24 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
 
-project 'addvice.xcodeproj'
-swift_version="3"
-use_frameworks!
+target 'addvice' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
 
+  # Pods for addvice
 
-target "addvice" do
 pod 'Firebase'
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
 
-end
+  target 'addviceTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
 
+  target 'addviceUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
