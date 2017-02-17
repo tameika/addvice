@@ -13,7 +13,6 @@ import QuartzCore
 import CoreData
 
 
-
 class ViewController: UIViewController {
     
     // MARK: UI Properties
@@ -55,6 +54,8 @@ class ViewController: UIViewController {
         store.fetchData()
     }
     
+    // MARK: Setting Up UI Objects
+    
     func setUpAdviceTextLabel() {
         
         self.displayAdviceTextLabel.clipsToBounds = true
@@ -81,7 +82,6 @@ class ViewController: UIViewController {
         self.giveAdviceBtnOutlet.layer.cornerRadius = giveAdviceBtnOutlet.bounds.height * 0.5
         self.giveAdviceBtnOutlet.backgroundColor = eggplant
         self.giveAdviceBtnOutlet.titleEdgeInsets = UIEdgeInsetsMake(0.0, -5.0, 0.0, -5.0)
-        
         
         self.getAdviceBtnOutlet.clipsToBounds = true
         self.getAdviceBtnOutlet.layer.cornerRadius = getAdviceBtnOutlet.bounds.height * 0.5
@@ -142,7 +142,7 @@ class ViewController: UIViewController {
         })
     }
     
-    // MARK: Button Animations
+    // MARK: Button Animation
     
     func animateGiveButtonPress() {
         UIView.animate(withDuration: 0.1, animations: {
@@ -209,15 +209,9 @@ class ViewController: UIViewController {
         })
     }
 
+    // MARK: Giving Advice Logic
     
     @IBAction func submitAdviceBtnPressed(_ sender: UIButton) {
-        
-        //        giveAdviceBtnOutlet.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI * 6 / 5))
-        //
-        //        UIView.animate(withDuration: 0.2) {
-        //            self.giveAdviceBtnOutlet.transform = CGAffineTransform.identity
-        //        }
-        
         animateGiveButtonPress()
         guard !badWordFilter() else { return }
         guard let adviceReceived = giveAdviceTextField.text else { return }
@@ -234,12 +228,9 @@ class ViewController: UIViewController {
     
     
     
-    
+    //MARK: Getting Advice Logic
     
     @IBAction func receiveAdviceBtnPressed(_ sender: UIButton) {
-        
-        //TODO: Receiving own advice. Fix dat.
-        
         animateGetButtonPress()
         guard firAdviceArray.count > 1 else {
             displayAdviceTextLabel.textColor = seafoamGreen
@@ -255,6 +246,8 @@ class ViewController: UIViewController {
         print("🍧", removedAdvice)
     }
     
+    
+    // MARK: Saving Advice 
     
     func saveThisAdvice(selectedAdvice: String) {
         let advice = Advice(context: store.persistentContainer.viewContext)
@@ -281,9 +274,10 @@ class ViewController: UIViewController {
         let okAction = UIAlertAction(title: "Great", style: .destructive, handler: nil)
         alert.addAction(okAction)
         self.present(alert, animated: true, completion: nil)
-        
     }
     
+    
+    // MARK: Filter Bad Words
     
     func badWordFilter() -> Bool {
         for word in badWordsArray.badWordsList {
@@ -326,12 +320,14 @@ extension ViewController: UITextFieldDelegate {
 
 /* Todo:
  - include tutorial??
+ //TODO: Receiving own advice. Fix dat.
+
  
  VERSION 1.1
  - prevent saving same advice multiple times
  - add timestamp to advice
  - add saved counter for each advice
  - add character counter
- 
+ - button to clear the screen?
  
  */

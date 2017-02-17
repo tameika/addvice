@@ -23,7 +23,8 @@
 		BC9979961D981513004A572C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC9979941D981513004A572C /* LaunchScreen.storyboard */; };
 		BC9979A11D981513004A572C /* adviceAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9979A01D981513004A572C /* adviceAppTests.swift */; };
 		BC9979AC1D981513004A572C /* adviceAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9979AB1D981513004A572C /* adviceAppUITests.swift */; };
-		BCB17C611DE8BD54004CA1DF /* BadWordsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB17C601DE8BD54004CA1DF /* BadWordsList.swift */; };
+		BCA10E4E1E57B1E4007E3DE6 /* Logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA10E4D1E57B1E4007E3DE6 /* Logic.swift */; };
+		BCB17C611DE8BD54004CA1DF /* BadWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB17C601DE8BD54004CA1DF /* BadWords.swift */; };
 		BCBAF3691DEBE59E00B714B5 /* MyAdviceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBAF3681DEBE59E00B714B5 /* MyAdviceTableViewController.swift */; };
 		BCEF6B9B1E52F16400DEF771 /* star2.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEF6B9A1E52F16400DEF771 /* star2.png */; };
 		BCEF6B9F1E5307CE00DEF771 /* logoBubble-a.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEF6B9E1E5307CE00DEF771 /* logoBubble-a.png */; };
@@ -86,7 +87,8 @@
 		BC9979A21D981513004A572C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC9979A71D981513004A572C /* addviceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = addviceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC9979AB1D981513004A572C /* adviceAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adviceAppUITests.swift; sourceTree = "<group>"; };
-		BCB17C601DE8BD54004CA1DF /* BadWordsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadWordsList.swift; sourceTree = "<group>"; };
+		BCA10E4D1E57B1E4007E3DE6 /* Logic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logic.swift; sourceTree = "<group>"; };
+		BCB17C601DE8BD54004CA1DF /* BadWords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadWords.swift; sourceTree = "<group>"; };
 		BCBAF3681DEBE59E00B714B5 /* MyAdviceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAdviceTableViewController.swift; sourceTree = "<group>"; };
 		BCEF6B9A1E52F16400DEF771 /* star2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star2.png; sourceTree = "<group>"; };
 		BCEF6B9E1E5307CE00DEF771 /* logoBubble-a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logoBubble-a.png"; sourceTree = "<group>"; };
@@ -215,12 +217,13 @@
 		BCCE55A21E55351C001C6927 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BCB17C601DE8BD54004CA1DF /* BadWordsList.swift */,
+				BCB17C601DE8BD54004CA1DF /* BadWords.swift */,
 				BC43C33C1DDBA157000994ED /* APIClient .swift */,
 				BC6244C31DDA2E0C00AE6523 /* DataStore.swift */,
 				BC7EA1931E35A3B700FEDC6C /* Extensions.swift */,
 				BC99798B1D981513004A572C /* AppDelegate.swift */,
 				BC6244C51DDA308500AE6523 /* adviceApp.xcdatamodeld */,
+				BCA10E4D1E57B1E4007E3DE6 /* Logic.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -526,7 +529,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC99798E1D981513004A572C /* GiveGetAdviceViewController.swift in Sources */,
-				BCB17C611DE8BD54004CA1DF /* BadWordsList.swift in Sources */,
+				BCA10E4E1E57B1E4007E3DE6 /* Logic.swift in Sources */,
+				BCB17C611DE8BD54004CA1DF /* BadWords.swift in Sources */,
 				BC6244C41DDA2E0C00AE6523 /* DataStore.swift in Sources */,
 				BC99798C1D981513004A572C /* AppDelegate.swift in Sources */,
 				BC43C33D1DDBA157000994ED /* APIClient .swift in Sources */,
