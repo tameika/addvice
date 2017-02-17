@@ -76,7 +76,7 @@ class ViewController: UIViewController {
         self.getAdviceBtnOutlet.isEnabled = false
         self.savedAdviceBtn.isEnabled = false
         self.giveAdviceBtnOutlet.isEnabled = false
-
+        
         self.giveAdviceBtnOutlet.clipsToBounds = true
         self.giveAdviceBtnOutlet.layer.cornerRadius = giveAdviceBtnOutlet.bounds.height * 0.5
         self.giveAdviceBtnOutlet.backgroundColor = eggplant
@@ -86,12 +86,10 @@ class ViewController: UIViewController {
         self.getAdviceBtnOutlet.clipsToBounds = true
         self.getAdviceBtnOutlet.layer.cornerRadius = getAdviceBtnOutlet.bounds.height * 0.5
         self.getAdviceBtnOutlet.backgroundColor = eggplant
-        self.giveAdviceBtnOutlet.titleEdgeInsets = UIEdgeInsets.zero
         
         self.savedAdviceBtn.clipsToBounds = true
         self.savedAdviceBtn.layer.cornerRadius = savedAdviceBtn.bounds.height * 0.5
         self.savedAdviceBtn.backgroundColor = eggplant
-        self.savedAdviceBtn.titleEdgeInsets = UIEdgeInsets.zero
     }
     
     
@@ -112,6 +110,8 @@ class ViewController: UIViewController {
         })
     }
     
+    
+    // MARK: Logo Animation
     
     func animateInLogoTitle() {
         
@@ -142,7 +142,46 @@ class ViewController: UIViewController {
         })
     }
     
-
+    // MARK: Button Animations
+    
+    func animateGiveButtonPress() {
+        UIView.animate(withDuration: 0.1, animations: {
+            self.giveAdviceBtnOutlet.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
+            
+        },
+                       completion: { _ in
+                        UIView.animate(withDuration: 0.1, animations: {
+                            self.giveAdviceBtnOutlet.transform = CGAffineTransform.identity
+                        })
+        })
+    }
+    
+    func animateGetButtonPress() {
+        UIView.animate(withDuration: 0.1, animations: {
+            self.getAdviceBtnOutlet.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
+            
+        },
+                       completion: { _ in
+                        UIView.animate(withDuration: 0.1, animations: {
+                            self.getAdviceBtnOutlet.transform = CGAffineTransform.identity
+                        })
+        })
+    }
+    
+    func animateSaveButtonPress() {
+        UIView.animate(withDuration: 0.1, animations: {
+            self.savedAdviceBtn.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
+            
+        },
+                       completion: { _ in
+                        UIView.animate(withDuration: 0.1, animations: {
+                            self.savedAdviceBtn.transform = CGAffineTransform.identity
+                        })
+        })
+        
+    }
+    
+    // MARK: Dismiss Keyboard
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
@@ -151,71 +190,45 @@ class ViewController: UIViewController {
     
     
     func getFIRAdvice(handler: @escaping () -> Void) {
-        
         let ref = FIRDatabase.database().reference()
-        
         let receivedRef = ref.child("Advice")
-        
         receivedRef.observeSingleEvent(of: .value, with: { snapshot in
-            
             if let firAdvice = snapshot.value as? [String : Any] {
-                
-                
                 for (_, value) in firAdvice {
-                    
-                    
                     if let contentsDictionary = value as? [String : String] {
-                        
                         let content = contentsDictionary["content"] ?? "NO CONTENT"
-                        
                         self.firAdviceArray.append(content)
-                        
-                        
                     }
-                    
                 }
                 
                 // TODO: Add a completion closure to this function and then call on it here letting the caller know all is good.
                 
             }
-            
             handler()
-
             print("🌽\(self.firAdviceArray.count)")
         })
     }
-    
-    
-    
+
     
     @IBAction func submitAdviceBtnPressed(_ sender: UIButton) {
         
-        giveAdviceBtnOutlet.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI * 6 / 5))
+        //        giveAdviceBtnOutlet.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI * 6 / 5))
+        //
+        //        UIView.animate(withDuration: 0.2) {
+        //            self.giveAdviceBtnOutlet.transform = CGAffineTransform.identity
+        //        }
         
-        UIView.animate(withDuration: 0.2) {
-            self.giveAdviceBtnOutlet.transform = CGAffineTransform.identity
-        }
-        
+        animateGiveButtonPress()
         guard !badWordFilter() else { return }
-        
         guard let adviceReceived = giveAdviceTextField.text else { return }
-        
         let newAdvice = Advice(context: store.persistentContainer.viewContext)
-        
         newAdvice.content = adviceReceived
-        
         store.adviceArray.append(newAdvice)
-        
         giveAdviceTextField.text = ""
-        
         getAdviceBtnOutlet.isEnabled = true
-        
         giveAdviceBtnOutlet.isEnabled = false
-        
         store.saveContext()
-        
         let ref = FIRDatabase.database().reference()
-        
         ref.child("Advice").childByAutoId().setValue(["content": adviceReceived])
     }
     
@@ -227,64 +240,44 @@ class ViewController: UIViewController {
         
         //TODO: Receiving own advice. Fix dat.
         
+        animateGetButtonPress()
         guard firAdviceArray.count > 1 else {
-            
             displayAdviceTextLabel.textColor = seafoamGreen
             displayAdviceTextLabel.text = "no more advice available"
             return
         }
-        
         savedAdviceBtn.isEnabled = true
-        
         let randomFIRAdviceIndex = Int(arc4random_uniform(UInt32(firAdviceArray.count)))
-        
         print("🌮\(randomFIRAdviceIndex)")
         print("🍿\(self.firAdviceArray.count)")
-        
         removedAdvice = firAdviceArray.remove(at: randomFIRAdviceIndex)
-        
         displayAdviceTextLabel.text = removedAdvice
-        
         print("🍧", removedAdvice)
-        
     }
     
     
     func saveThisAdvice(selectedAdvice: String) {
-        
         let advice = Advice(context: store.persistentContainer.viewContext)
-        
         advice.content = selectedAdvice
-        
         advice.isFavorited = true
-        
         print("📢selected advice is now of type Advice")
-        
     }
     
-    
-    
-    
+ 
     @IBAction func saveAdvicePressed(_ sender: Any) {
-        
+        animateSaveButtonPress()
         if displayAdviceTextLabel.text != nil {
-            
             saveThisAdvice(selectedAdvice: removedAdvice)
-            
             print("🔮", removedAdvice)
-            
             store.saveContext()
-            
             adviceIsSavedAlert()
         }
     }
     
     
     func adviceIsSavedAlert() {
-        
         let alert = UIAlertController(title: "Advice Saved!", message: "Click sav❥d Up Top To See", preferredStyle: UIAlertControllerStyle.alert)
         print("advice is saved alert")
-        
         let okAction = UIAlertAction(title: "Great", style: .destructive, handler: nil)
         alert.addAction(okAction)
         self.present(alert, animated: true, completion: nil)
@@ -293,33 +286,20 @@ class ViewController: UIViewController {
     
     
     func badWordFilter() -> Bool {
-        
         for word in badWordsArray.badWordsList {
-            
             if let adviceText = giveAdviceTextField.text {
-                
                 if adviceText.contains(word) {
                     print(word)
-                    
                     let alert = UIAlertController(title: "Chill, chill, chill", message: "You can't curse here.", preferredStyle: UIAlertControllerStyle.alert)
                     print("bad word alert")
-                    
                     let okAction = UIAlertAction(title: "OK Cool", style: .default, handler: nil)
-                    
                     alert.addAction(okAction)
-                    
                     self.present(alert, animated: true, completion: nil)
-                    
                     return true
-                    
                 } else {
-                    
-                    
                 }
             }
-            
         }
-        
         return false
     }
     
@@ -345,8 +325,7 @@ extension ViewController: UITextFieldDelegate {
 
 
 /* Todo:
- - animate all buttons
- - adjust button edge insets?
+ - include tutorial??
  
  VERSION 1.1
  - prevent saving same advice multiple times
