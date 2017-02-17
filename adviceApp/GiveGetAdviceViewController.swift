@@ -48,33 +48,35 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //let tap = UIGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
-        //tap.cancelsTouchesInView = false
-        //view.addGestureRecognizer(tap)
-        
         giveAdviceTextField.delegate = self
-        
+        setUpAdviceTextLabel()
+        setUpAdviceTextField()
         setupAdviceButtons()
+        store.fetchData()
+    }
+    
+    func setUpAdviceTextLabel() {
         
         self.displayAdviceTextLabel.clipsToBounds = true
         self.displayAdviceTextLabel.layer.cornerRadius = 5.0
         self.displayAdviceTextLabel.layer.borderWidth = 1.0
         self.displayAdviceTextLabel.layer.borderColor = eggplant.cgColor
-        
-        self.getAdviceBtnOutlet.isEnabled = false
-        self.savedAdviceBtn.isEnabled = false
-        self.giveAdviceBtnOutlet.isEnabled = false
+    }
+    
+    func setUpAdviceTextField() {
         
         self.giveAdviceTextField.borderStyle = .roundedRect
         self.giveAdviceTextField.layer.borderColor = UIColor.clear.cgColor
         self.giveAdviceTextField.layer.borderWidth = 2.0
         self.giveAdviceTextField.textColor = UIColor.black
-        
-        print(savedAdvice)
-        store.fetchData()
     }
     
     func setupAdviceButtons() {
+        
+        self.getAdviceBtnOutlet.isEnabled = false
+        self.savedAdviceBtn.isEnabled = false
+        self.giveAdviceBtnOutlet.isEnabled = false
+
         self.giveAdviceBtnOutlet.clipsToBounds = true
         self.giveAdviceBtnOutlet.layer.cornerRadius = giveAdviceBtnOutlet.bounds.height * 0.5
         self.giveAdviceBtnOutlet.backgroundColor = eggplant
@@ -92,28 +94,24 @@ class ViewController: UIViewController {
         self.savedAdviceBtn.titleEdgeInsets = UIEdgeInsets.zero
     }
     
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        navigationController?.navigationBar.isHidden = true
+        logoA.center.x -= view.bounds.width
+        logoTitle.center.x -= view.bounds.width
         animateInLogoTitle()
-        
         giveAdviceBtnOutlet.isUserInteractionEnabled = false
         
         getFIRAdvice(handler: { _ in
-            
             DispatchQueue.main.async {
                 self.giveAdviceBtnOutlet.isUserInteractionEnabled = true
             }
-            
         })
-        
-        
-        navigationController?.navigationBar.isHidden = true
-        
-        logoA.center.x -= view.bounds.width
-        logoTitle.center.x -= view.bounds.width
-        
     }
+    
     
     func animateInLogoTitle() {
         
@@ -142,15 +140,9 @@ class ViewController: UIViewController {
                        animations: {
                         self.logoA.transform = CGAffineTransform.identity
         })
-        
     }
     
-//    
-//    func dismissKeyboard() {
-//        
-//        view.endEditing(true)
-//    
-//    }
+
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
@@ -166,28 +158,6 @@ class ViewController: UIViewController {
         
         receivedRef.observeSingleEvent(of: .value, with: { snapshot in
             
-            //            print("\(snapshot.value)")
-            //
-            //            guard let firAdvice = snapshot.value as? [String : [String : String]] else {
-            //
-            //                print("ERROR UNWRAPPING FIRADVICE")
-            //
-            //                return
-            //            }
-            //
-            //            print(firAdvice)
-            //
-            //            for adviceDict in firAdvice.values {
-            ////                let advice = adviceDict.values.first!
-            //                let advice = adviceDict["content"]!
-            //
-            //                self.firAdviceArray.append(advice)
-            //            }
-            //
-            //            print(self.firAdviceArray)
-            
-            
-            
             if let firAdvice = snapshot.value as? [String : Any] {
                 
                 
@@ -197,8 +167,6 @@ class ViewController: UIViewController {
                     if let contentsDictionary = value as? [String : String] {
                         
                         let content = contentsDictionary["content"] ?? "NO CONTENT"
-                        
-                        //print("\n🍚\(content)")
                         
                         self.firAdviceArray.append(content)
                         
@@ -215,7 +183,6 @@ class ViewController: UIViewController {
 
             print("🌽\(self.firAdviceArray.count)")
         })
-        
     }
     
     
@@ -228,7 +195,6 @@ class ViewController: UIViewController {
         UIView.animate(withDuration: 0.2) {
             self.giveAdviceBtnOutlet.transform = CGAffineTransform.identity
         }
-        
         
         guard !badWordFilter() else { return }
         
@@ -247,7 +213,6 @@ class ViewController: UIViewController {
         giveAdviceBtnOutlet.isEnabled = false
         
         store.saveContext()
-        
         
         let ref = FIRDatabase.database().reference()
         
@@ -302,7 +267,6 @@ class ViewController: UIViewController {
     
     @IBAction func saveAdvicePressed(_ sender: Any) {
         
-        
         if displayAdviceTextLabel.text != nil {
             
             saveThisAdvice(selectedAdvice: removedAdvice)
@@ -313,8 +277,6 @@ class ViewController: UIViewController {
             
             adviceIsSavedAlert()
         }
-        
-        
     }
     
     
@@ -361,9 +323,8 @@ class ViewController: UIViewController {
         return false
     }
     
-    
-    
 }
+
 
 // MARK: - UITextFieldDelegate Methods
 extension ViewController: UITextFieldDelegate {
@@ -386,7 +347,6 @@ extension ViewController: UITextFieldDelegate {
 /* Todo:
  - animate all buttons
  - adjust button edge insets?
- - dismiss keyboard
  
  VERSION 1.1
  - prevent saving same advice multiple times
