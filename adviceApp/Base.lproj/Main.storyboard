@@ -113,10 +113,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ddvice" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8n-jT-EkW">
-                                <rect key="frame" x="149" y="538" width="230" height="63"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="63" id="sJi-Np-2ir"/>
-                                </constraints>
+                                <rect key="frame" x="149" y="538" width="230" height="79"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="54"/>
                                 <color key="textColor" red="0.64279128745330572" green="0.81979166668974357" blue="0.70334766064721155" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -127,7 +124,7 @@
                             <constraint firstItem="o30-GB-no8" firstAttribute="top" secondItem="3At-HA-PmI" secondAttribute="bottom" constant="26" id="3yv-Ri-JeQ"/>
                             <constraint firstItem="Exi-Dr-ish" firstAttribute="height" secondItem="yFv-1J-CLp" secondAttribute="height" id="6cC-LG-PVb"/>
                             <constraint firstItem="cw4-C6-EzN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8Sx-OF-zkH"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="P8n-jT-EkW" secondAttribute="bottom" constant="66" id="AZZ-aW-udQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="P8n-jT-EkW" secondAttribute="bottom" constant="50" id="AZZ-aW-udQ"/>
                             <constraint firstItem="3At-HA-PmI" firstAttribute="height" secondItem="yFv-1J-CLp" secondAttribute="height" constant="-129" id="AuT-t9-QDP"/>
                             <constraint firstItem="yFv-1J-CLp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="DPx-I0-kIw"/>
                             <constraint firstItem="P8n-jT-EkW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="474" id="DWN-dy-5hJ"/>
@@ -168,7 +165,6 @@
                         <outlet property="logoTitle" destination="P8n-jT-EkW" id="fwO-te-q6M"/>
                         <outlet property="savedAdviceBarBtn" destination="sJl-pS-67c" id="5k7-sZ-USp"/>
                         <outlet property="savedAdviceBtn" destination="KkZ-Iu-Yee" id="S33-m7-fFT"/>
-                        <outlet property="textField" destination="3At-HA-PmI" id="RRq-hw-hc0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -190,7 +186,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" tableViewCell="GZh-FK-z1x" id="9uK-Y7-uf1">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>

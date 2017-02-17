@@ -24,7 +24,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var savedAdviceBarBtn: UIBarButtonItem! // savedAdviceButton
     @IBOutlet weak var savedAdviceBtn: UIButton!
     @IBOutlet weak var giveAdviceBtnOutlet: UIButton!
-    @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var logoA: UIImageView!
     @IBOutlet weak var logoTitle: UILabel!
     
@@ -49,8 +48,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let tap = UIGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
-//        view.addGestureRecognizer(tap)
+        //let tap = UIGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
+        //tap.cancelsTouchesInView = false
+        //view.addGestureRecognizer(tap)
         
         giveAdviceTextField.delegate = self
         
@@ -61,14 +61,14 @@ class ViewController: UIViewController {
         self.displayAdviceTextLabel.layer.borderWidth = 1.0
         self.displayAdviceTextLabel.layer.borderColor = eggplant.cgColor
         
-        getAdviceBtnOutlet.isEnabled = false
-        savedAdviceBtn.isEnabled = false
-        giveAdviceBtnOutlet.isEnabled = false
+        self.getAdviceBtnOutlet.isEnabled = false
+        self.savedAdviceBtn.isEnabled = false
+        self.giveAdviceBtnOutlet.isEnabled = false
         
-        self.textField.borderStyle = .roundedRect
-        self.textField.layer.borderColor = UIColor.clear.cgColor
-        self.textField.layer.borderWidth = 2.0
-        self.textField.textColor = UIColor.black
+        self.giveAdviceTextField.borderStyle = .roundedRect
+        self.giveAdviceTextField.layer.borderColor = UIColor.clear.cgColor
+        self.giveAdviceTextField.layer.borderWidth = 2.0
+        self.giveAdviceTextField.textColor = UIColor.black
         
         print(savedAdvice)
         store.fetchData()
@@ -145,10 +145,16 @@ class ViewController: UIViewController {
         
     }
     
+//    
+//    func dismissKeyboard() {
+//        
+//        view.endEditing(true)
+//    
+//    }
     
-    func dismissKeyboard() {
-        
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
+        super.touchesBegan(touches, with: event)
     }
     
     
@@ -380,6 +386,7 @@ extension ViewController: UITextFieldDelegate {
 /* Todo:
  - animate all buttons
  - adjust button edge insets?
+ - dismiss keyboard
  
  VERSION 1.1
  - prevent saving same advice multiple times
