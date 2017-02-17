@@ -208,7 +208,7 @@ class ViewController: UIViewController {
             print("🌽\(self.firAdviceArray.count)")
         })
     }
-
+    
     // MARK: Giving Advice Logic
     
     @IBAction func submitAdviceBtnPressed(_ sender: UIButton) {
@@ -247,7 +247,7 @@ class ViewController: UIViewController {
     }
     
     
-    // MARK: Saving Advice 
+    // MARK: Saving Advice
     
     func saveThisAdvice(selectedAdvice: String) {
         let advice = Advice(context: store.persistentContainer.viewContext)
@@ -256,7 +256,7 @@ class ViewController: UIViewController {
         print("📢selected advice is now of type Advice")
     }
     
- 
+    
     @IBAction func saveAdvicePressed(_ sender: Any) {
         animateSaveButtonPress()
         if displayAdviceTextLabel.text != nil {
@@ -321,7 +321,7 @@ extension ViewController: UITextFieldDelegate {
 /* Todo:
  - include tutorial??
  //TODO: Receiving own advice. Fix dat.
-
+ 
  
  VERSION 1.1
  - prevent saving same advice multiple times
