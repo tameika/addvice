@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -116,6 +117,13 @@
                                     <action selector="receiveAdviceBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sZI-6b-foB"/>
                                 </connections>
                             </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EQI-4W-D5A">
+                                <rect key="frame" x="69" y="105" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="w7d-ci-CE1" kind="embed" id="mDl-ri-cld"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" red="0.45416412160000003" green="0.3576885568" blue="0.60204326919999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -167,7 +175,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2855.1999999999998" y="400.74962518740631"/>
+            <point key="canvasLocation" x="2853.5999999999999" y="399.85007496251876"/>
         </scene>
         <!--Saved Advice-->
         <scene sceneID="t9W-Sq-Uks">
@@ -184,7 +192,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" tableViewCell="GZh-FK-z1x" id="9uK-Y7-uf1">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -198,7 +206,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BON-aU-B1l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3644" y="403"/>
+            <point key="canvasLocation" x="5386" y="427"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Md8-Tg-B0y">
@@ -221,6 +229,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uBk-TZ-vlX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2033" y="403"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="L1n-NH-bFL">
+            <objects>
+                <viewController id="w7d-ci-CE1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xzd-JE-7eb">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Grh-pW-LqV">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2t2-09-Bcu">
+                                        <rect key="frame" x="20" y="9" width="680" height="110"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="2t2-09-Bcu" secondAttribute="bottom" constant="9" id="Bdu-iG-FGA"/>
+                                    <constraint firstItem="2t2-09-Bcu" firstAttribute="top" secondItem="Grh-pW-LqV" secondAttribute="top" constant="9" id="Ew6-Ba-L7v"/>
+                                    <constraint firstItem="2t2-09-Bcu" firstAttribute="leading" secondItem="Grh-pW-LqV" secondAttribute="leading" constant="20" id="Nfd-Tc-oMX"/>
+                                    <constraint firstAttribute="trailing" secondItem="2t2-09-Bcu" secondAttribute="trailing" constant="20" id="mhr-lG-N3U"/>
+                                    <constraint firstItem="2t2-09-Bcu" firstAttribute="width" secondItem="Grh-pW-LqV" secondAttribute="width" multiplier="3" constant="-40" id="ngL-ip-Gl1"/>
+                                    <constraint firstItem="2t2-09-Bcu" firstAttribute="height" secondItem="Grh-pW-LqV" secondAttribute="height" constant="-18" id="oCl-fu-U98"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Grh-pW-LqV" firstAttribute="leading" secondItem="Xzd-JE-7eb" secondAttribute="leadingMargin" constant="-16" id="1QH-uf-s5C"/>
+                            <constraint firstAttribute="topMargin" secondItem="Grh-pW-LqV" secondAttribute="top" id="H07-n9-Xz9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Grh-pW-LqV" secondAttribute="trailing" constant="-16" id="e2W-N3-3UW"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Grh-pW-LqV" secondAttribute="bottom" id="fmq-fO-Bg6"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jxy-q0-0IL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3710" y="274"/>
         </scene>
     </scenes>
     <resources>

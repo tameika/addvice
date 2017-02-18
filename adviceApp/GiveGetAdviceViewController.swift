@@ -52,6 +52,7 @@ class ViewController: UIViewController {
         setUpAdviceTextField()
         setupAdviceButtons()
         store.fetchData()
+        
     }
     
     // MARK: Setting Up UI Objects
@@ -300,13 +301,11 @@ class ViewController: UIViewController {
 }
 
 
-// MARK: - UITextFieldDelegate Methods
+// MARK: UITextFieldDelegate Methods
+
 extension ViewController: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
-        // TODO: Bug. If user hits space bar, it thinks that it qualifies as a String (where it thinks it's NOT empty) which enables the button. Soemthign to thing about. (1.1)
-        
         let currentText = textField.text ?? ""
         if !(string + currentText).isEmpty && ((string + currentText).characters.count <= 164) {
             giveAdviceBtnOutlet.isEnabled = true
@@ -329,5 +328,6 @@ extension ViewController: UITextFieldDelegate {
  - add saved counter for each advice
  - add character counter
  - button to clear the screen?
+ - If user hits space bar, it thinks that it qualifies as a String (where it thinks it's NOT empty) which enables the button. Soemthign to thing about
  
  */
