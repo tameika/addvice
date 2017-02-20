@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var giveAdviceBtnOutlet: UIButton!
     @IBOutlet weak var logoA: UIImageView!
     @IBOutlet weak var logoTitle: UILabel!
+
     
     
     
