@@ -31,12 +31,6 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="addvice" id="sUC-l3-TiR" userLabel="addvice">
-                                        <barButtonItem key="leftBarButtonItem" title="?" id="skd-Ie-q0s">
-                                            <color key="tintColor" red="0.71501713140000001" green="0.81443250379999999" blue="0.75520653959999995" alpha="1" colorSpace="calibratedRGB"/>
-                                            <connections>
-                                                <action selector="infoButtonPressed:" destination="BYZ-38-t0r" id="7Lw-dW-Kcv"/>
-                                            </connections>
-                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="sav❥d" id="sJl-pS-67c">
                                             <color key="tintColor" red="0.73333333329999995" green="0.79215686269999996" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
@@ -64,7 +58,7 @@
                                 <textInputTraits key="textInputTraits" spellCheckingType="yes" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaj-ul-fPQ" userLabel="Give Advice Btn ">
-                                <rect key="frame" x="16" y="338" width="65" height="45"/>
+                                <rect key="frame" x="16" y="337.5" width="65" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="65" id="26t-Na-qKh"/>
                                     <constraint firstAttribute="height" constant="45" id="MOh-lV-UMI"/>
@@ -209,7 +203,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BON-aU-B1l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5386" y="427"/>
+            <point key="canvasLocation" x="4516" y="400"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Md8-Tg-B0y">
@@ -337,7 +331,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jxy-q0-0IL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3708.8000000000002" y="273.4632683658171"/>
+            <point key="canvasLocation" x="3605" y="318"/>
         </scene>
     </scenes>
     <resources>
