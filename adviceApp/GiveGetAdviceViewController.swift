@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     
     // MARK: UI Properties
     
+    
     @IBOutlet weak var giveAdviceTextField: UITextField! // giveAdviceTextField
     @IBOutlet weak var displayAdviceTextLabel: UILabel!
     @IBOutlet weak var getAdviceBtnOutlet: UIButton! // getAdviceButton
@@ -52,7 +53,7 @@ class ViewController: UIViewController {
         setUpAdviceTextField()
         setupAdviceButtons()
         store.fetchData()
-        
+        //self.childViewControllers.first?.isModalInPopover = true
     }
     
     // MARK: Setting Up UI Objects
@@ -111,6 +112,7 @@ class ViewController: UIViewController {
         })
     }
     
+        
     
     // MARK: Logo Animation
     
@@ -212,6 +214,12 @@ class ViewController: UIViewController {
     
     // MARK: Giving Advice Logic
     
+    @IBAction func infoButtonPressed(_ sender: UIBarButtonItem) {
+        
+        performSegue(withIdentifier: "tutorialSegue", sender: self)
+    }
+    
+    
     @IBAction func submitAdviceBtnPressed(_ sender: UIButton) {
         animateGiveButtonPress()
         guard !badWordFilter() else { return }
@@ -298,7 +306,11 @@ class ViewController: UIViewController {
         return false
     }
     
+    
+ 
+    
 }
+
 
 
 // MARK: UITextFieldDelegate Methods

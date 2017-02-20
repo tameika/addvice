@@ -26,6 +26,7 @@
 		BCA10E4E1E57B1E4007E3DE6 /* Logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA10E4D1E57B1E4007E3DE6 /* Logic.swift */; };
 		BCB17C611DE8BD54004CA1DF /* BadWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB17C601DE8BD54004CA1DF /* BadWords.swift */; };
 		BCBAF3691DEBE59E00B714B5 /* MyAdviceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBAF3681DEBE59E00B714B5 /* MyAdviceTableViewController.swift */; };
+		BCC28E6B1E5A37280051C6FB /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC28E6A1E5A37280051C6FB /* ContainerViewController.swift */; };
 		BCEF6B9B1E52F16400DEF771 /* star2.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEF6B9A1E52F16400DEF771 /* star2.png */; };
 		BCEF6B9F1E5307CE00DEF771 /* logoBubble-a.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEF6B9E1E5307CE00DEF771 /* logoBubble-a.png */; };
 /* End PBXBuildFile section */
@@ -90,6 +91,7 @@
 		BCA10E4D1E57B1E4007E3DE6 /* Logic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logic.swift; sourceTree = "<group>"; };
 		BCB17C601DE8BD54004CA1DF /* BadWords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadWords.swift; sourceTree = "<group>"; };
 		BCBAF3681DEBE59E00B714B5 /* MyAdviceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAdviceTableViewController.swift; sourceTree = "<group>"; };
+		BCC28E6A1E5A37280051C6FB /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		BCEF6B9A1E52F16400DEF771 /* star2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star2.png; sourceTree = "<group>"; };
 		BCEF6B9E1E5307CE00DEF771 /* logoBubble-a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logoBubble-a.png"; sourceTree = "<group>"; };
 		F7ED18A2D5D4C1F898CFE204 /* Pods-addviceUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-addviceUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-addviceUITests/Pods-addviceUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 			children = (
 				BC99798D1D981513004A572C /* GiveGetAdviceViewController.swift */,
 				BCBAF3681DEBE59E00B714B5 /* MyAdviceTableViewController.swift */,
+				BCC28E6A1E5A37280051C6FB /* ContainerViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -530,6 +533,7 @@
 			files = (
 				BC99798E1D981513004A572C /* GiveGetAdviceViewController.swift in Sources */,
 				BCA10E4E1E57B1E4007E3DE6 /* Logic.swift in Sources */,
+				BCC28E6B1E5A37280051C6FB /* ContainerViewController.swift in Sources */,
 				BCB17C611DE8BD54004CA1DF /* BadWords.swift in Sources */,
 				BC6244C41DDA2E0C00AE6523 /* DataStore.swift in Sources */,
 				BC99798C1D981513004A572C /* AppDelegate.swift in Sources */,
