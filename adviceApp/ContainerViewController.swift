@@ -15,8 +15,17 @@ class ContainerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        userDefaults.set(true, forKey: "isFirstLaunch")
         isUsersFirstTime()
+        //blurBackground()
     }
+    
+    
+    func setupContainerView() {
+        
+        self
+    }
+    
     
     
     func isUsersFirstTime() {
@@ -33,6 +42,13 @@ class ContainerViewController: UIViewController {
         
     }
     
-    
+    func blurBackground() {
+        
+        let blurEffect = UIBlurEffect.init(style: UIBlurEffectStyle.dark)
+        let blurEffectView = UIVisualEffectView.init(effect: blurEffect)
+        blurEffectView.frame = view.bounds
+        blurEffectView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        view.addSubview(blurEffectView)
+    }
     
 }

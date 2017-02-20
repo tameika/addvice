@@ -47,13 +47,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        blurBackground()
         giveAdviceTextField.delegate = self
         setUpAdviceTextLabel()
         setUpAdviceTextField()
         setupAdviceButtons()
         store.fetchData()
-        //self.childViewControllers.first?.isModalInPopover = true
+        
     }
     
     // MARK: Setting Up UI Objects
@@ -182,6 +182,16 @@ class ViewController: UIViewController {
                         })
         })
         
+    }
+    
+    func blurBackground() {
+        
+        let blurEffect = UIBlurEffect.init(style: UIBlurEffectStyle.dark)
+        let blurEffectView = UIVisualEffectView.init(effect: blurEffect)
+        blurEffectView.frame = view.bounds
+        blurEffectView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        view.addSubview(blurEffectView)
+        blurEffectView.contentView.addSubview((self.childViewControllers.first?.view)!)
     }
     
     // MARK: Dismiss Keyboard
@@ -331,7 +341,6 @@ extension ViewController: UITextFieldDelegate {
 
 /* Todo:
  - include tutorial??
- //TODO: Receiving own advice. Fix dat.
  
  
  VERSION 1.1
