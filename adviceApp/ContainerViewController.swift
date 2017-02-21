@@ -10,45 +10,85 @@ import UIKit
 
 class ContainerViewController: UIViewController {
     
+    @IBOutlet weak var blurView: UIVisualEffectView!
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    
+    @IBOutlet var numberLabels: [UILabel]!
+    
+    
     var userDefaults = UserDefaults.standard
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         userDefaults.set(true, forKey: "isFirstLaunch")
-        isUsersFirstTime()
-        //blurBackground()
+        hideContainerView()
+        setUpContainer()
     }
     
     
-    func setupContainerView() {
+    func hideContainerView() {
+        blurView.effect = nil
+        scrollView.alpha = 0.0
+    }
+    
+    func setUpContainer() {
         
-        self
+        self.scrollView.clipsToBounds = true
+        self.scrollView.layer.cornerRadius = 20.0
+
+        for label in numberLabels {
+            label.clipsToBounds = true
+            label.layer.cornerRadius = 20.0
+            print("edited number labels")
+        }
     }
-    
     
     
     func isUsersFirstTime() {
         print(userDefaults.bool(forKey: "isFirstLaunch"))
         
         if userDefaults.bool(forKey: "isFirstLaunch") == true {
-            self.view.isHidden = false
             userDefaults.set(false, forKey: "isFirstLaunch")
             userDefaults.synchronize()
+            UIView.animate(withDuration: 0.8,
+                           delay: 0.6,
+                           options: .curveEaseInOut,
+                           animations: {
+                            self.blurView.effect = UIBlurEffect(style: .dark)
+                            self.scrollView.alpha = 1.0
+            })
             
         } else if userDefaults.bool(forKey: "isFirstLaunch") == false {
-            self.view.isHidden = true
+            (self.parent as? ViewController)?.containerView.isHidden = true
         }
         
     }
     
-    func blurBackground() {
+    //    func blurBackground() {
+    //
+    //        let blurEffect = UIBlurEffect(style: .dark)
+    //        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+    //        blurEffectView.effect = nil
+    //        blurEffectView.frame = view.bounds
+    //        blurEffectView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+    //        view.addSubview(blurEffectView)
+    //    }
+    
+    @IBAction func dismissTutorialView(_ sender: UITapGestureRecognizer) {
         
-        let blurEffect = UIBlurEffect.init(style: UIBlurEffectStyle.dark)
-        let blurEffectView = UIVisualEffectView.init(effect: blurEffect)
-        blurEffectView.frame = view.bounds
-        blurEffectView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        view.addSubview(blurEffectView)
+        UIView.animate(withDuration: 0.6,
+                       delay: 0.0,
+                       options: .curveEaseInOut,
+                       animations: {
+                        self.hideContainerView()
+        }) { _ in
+            (self.parent as? ViewController)?.containerView.isHidden = true
+        }
+        
+        
     }
     
 }

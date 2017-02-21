@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     
     // MARK: UI Properties
     
+    @IBOutlet weak var containerView: UIView!
     
     @IBOutlet weak var giveAdviceTextField: UITextField! // giveAdviceTextField
     @IBOutlet weak var displayAdviceTextLabel: UILabel!
@@ -47,7 +48,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        blurBackground()
+        //blurBackground()
         giveAdviceTextField.delegate = self
         setUpAdviceTextLabel()
         setUpAdviceTextField()
@@ -83,7 +84,6 @@ class ViewController: UIViewController {
         self.giveAdviceBtnOutlet.clipsToBounds = true
         self.giveAdviceBtnOutlet.layer.cornerRadius = giveAdviceBtnOutlet.bounds.height * 0.5
         self.giveAdviceBtnOutlet.backgroundColor = eggplant
-        self.giveAdviceBtnOutlet.titleEdgeInsets = UIEdgeInsetsMake(0.0, -5.0, 0.0, -5.0)
         
         self.getAdviceBtnOutlet.clipsToBounds = true
         self.getAdviceBtnOutlet.layer.cornerRadius = getAdviceBtnOutlet.bounds.height * 0.5
@@ -112,7 +112,7 @@ class ViewController: UIViewController {
         })
     }
     
-        
+    
     
     // MARK: Logo Animation
     
@@ -126,13 +126,6 @@ class ViewController: UIViewController {
                         self.logoTitle.center.x += self.view.bounds.width
         })
         
-        UIView.animate(withDuration: 0.6,
-                       delay: 0.1, usingSpringWithDamping: 0.50,
-                       initialSpringVelocity: CGFloat(1.0),
-                       options: .curveLinear,
-                       animations: {
-                        self.logoA.center.x += self.view.bounds.width
-        })
         
         logoA.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
         UIView.animate(withDuration: 1.0,
@@ -143,6 +136,18 @@ class ViewController: UIViewController {
                        animations: {
                         self.logoA.transform = CGAffineTransform.identity
         })
+        
+        
+        UIView.animate(withDuration: 0.6,
+                       delay: 0.1, usingSpringWithDamping: 0.50,
+                       initialSpringVelocity: CGFloat(1.0),
+                       options: .curveLinear,
+                       animations: {
+                        self.logoA.center.x += self.view.bounds.width
+        }) { _ in
+            (self.childViewControllers.first as? ContainerViewController)?.isUsersFirstTime()
+        }
+        
     }
     
     // MARK: Button Animation
@@ -184,15 +189,15 @@ class ViewController: UIViewController {
         
     }
     
-    func blurBackground() {
-        
-        let blurEffect = UIBlurEffect.init(style: UIBlurEffectStyle.dark)
-        let blurEffectView = UIVisualEffectView.init(effect: blurEffect)
-        blurEffectView.frame = view.bounds
-        blurEffectView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        view.addSubview(blurEffectView)
-        blurEffectView.contentView.addSubview((self.childViewControllers.first?.view)!)
-    }
+    //    func blurBackground() {
+    //
+    //        let blurEffect = UIBlurEffect.init(style: UIBlurEffectStyle.dark)
+    //        let blurEffectView = UIVisualEffectView.init(effect: blurEffect)
+    //        blurEffectView.frame = view.bounds
+    //        blurEffectView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+    //        view.addSubview(blurEffectView)
+    //        blurEffectView.contentView.addSubview((self.childViewControllers.first?.view)!)
+    //    }
     
     // MARK: Dismiss Keyboard
     
@@ -317,7 +322,7 @@ class ViewController: UIViewController {
     }
     
     
- 
+    
     
 }
 
