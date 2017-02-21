@@ -20,14 +20,6 @@ class MyAdviceTableViewController: UITableViewController {
         
         navigationController?.navigationBar.isHidden = false
         tableView.estimatedRowHeight = 50.0
-        
-        
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,35 +45,21 @@ class MyAdviceTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
         return savedAdviceList.count
     }
     
     
      override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
      let cell = tableView.dequeueReusableCell(withIdentifier: "adviceCell", for: indexPath)
-        
      let pieceOfAdvice = savedAdviceList[indexPath.row]
-      
         cell.textLabel?.text = pieceOfAdvice.content
-        
         cell.backgroundColor = UIColor.clear
-        
         cell.textLabel?.font = UIFont(name: "Avenir-Light", size: 22)
-        
         cell.textLabel?.sizeToFit()
-        
         cell.textLabel?.numberOfLines = 0
-        
         cell.textLabel?.lineBreakMode = .byWordWrapping
-        
- 
      return cell
-        
      }
-    
-   
-    
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
@@ -89,24 +67,16 @@ class MyAdviceTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let delete = UITableViewRowAction(style: .normal, title: "Delete") { action, index in
-            
             self.savedAdviceList.remove(at: index.row)
-
             tableView.deleteRows(at: [index], with: .fade)
-            
             DataStore.sharedInstance.favorites[index.row].isFavorited = false
-            
             DataStore.sharedInstance.saveContext()
-            
             DataStore.sharedInstance.fetchFavorites()
-            
             self.tableView.reloadData()
-            
             print("delete")
         }
 
         delete.backgroundColor = UIColor.darkGray
-        
         return [delete]
     }
   
@@ -131,7 +101,6 @@ class MyAdviceTableViewController: UITableViewController {
             index += 1
         }
     }
-    
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
        return UITableViewAutomaticDimension

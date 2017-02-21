@@ -27,12 +27,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" red="0.78047772699999995" green="0.8404647435" blue="0.82452279809999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" red="0.71501713140000001" green="0.81443250379999999" blue="0.75520653959999995" alpha="1" colorSpace="calibratedRGB"/>
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="addvice" id="sUC-l3-TiR" userLabel="addvice">
                                         <barButtonItem key="rightBarButtonItem" title="sav❥d" id="sJl-pS-67c">
-                                            <color key="tintColor" red="0.73333333329999995" green="0.79215686269999996" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="tintColor" red="0.71501713140000001" green="0.81443250379999999" blue="0.75520653959999995" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <segue destination="zin-4q-VQY" kind="show" identifier="showSavedAdvice" id="FFQ-ht-xyh"/>
                                             </connections>
@@ -72,6 +72,20 @@
                                     <action selector="submitAdviceBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mb8-gK-UcN"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o30-GB-no8" userLabel="Get Advice Btn">
+                                <rect key="frame" x="157" y="350" width="65" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="53" id="KjH-S8-dXC"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="Xjz-El-W9s"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <state key="normal" title="get ">
+                                    <color key="titleColor" red="0.66875411620000003" green="0.8527644231" blue="0.72492828210000004" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="receiveAdviceBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sZI-6b-foB"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KkZ-Iu-Yee">
                                 <rect key="frame" x="294" y="350" width="65" height="45"/>
                                 <constraints>
@@ -99,20 +113,6 @@
                                 <color key="textColor" red="0.64279128745330572" green="0.81979166668974357" blue="0.70334766064721155" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o30-GB-no8" userLabel="Get Advice Btn">
-                                <rect key="frame" x="157" y="350" width="65" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="53" id="KjH-S8-dXC"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="Xjz-El-W9s"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
-                                <state key="normal" title="get ">
-                                    <color key="titleColor" red="0.66875411620000003" green="0.8527644231" blue="0.72492828210000004" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="receiveAdviceBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sZI-6b-foB"/>
-                                </connections>
-                            </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EQI-4W-D5A">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <connections>
@@ -192,7 +192,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" tableViewCell="GZh-FK-z1x" id="9uK-Y7-uf1">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -408,7 +408,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3604" y="317.99100449775113"/>
+            <point key="canvasLocation" x="3799" y="400"/>
         </scene>
     </scenes>
     <resources>

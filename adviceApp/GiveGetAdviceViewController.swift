@@ -229,11 +229,6 @@ class ViewController: UIViewController {
     
     // MARK: Giving Advice Logic
     
-    @IBAction func infoButtonPressed(_ sender: UIBarButtonItem) {
-        
-        performSegue(withIdentifier: "tutorialSegue", sender: self)
-    }
-    
     
     @IBAction func submitAdviceBtnPressed(_ sender: UIButton) {
         animateGiveButtonPress()

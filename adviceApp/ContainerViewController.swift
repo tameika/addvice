@@ -11,12 +11,8 @@ import UIKit
 class ContainerViewController: UIViewController {
     
     @IBOutlet weak var blurView: UIVisualEffectView!
-    
     @IBOutlet weak var scrollView: UIScrollView!
-    
-    
     @IBOutlet var numberLabels: [UILabel]!
-    
     
     var userDefaults = UserDefaults.standard
     
@@ -28,21 +24,18 @@ class ContainerViewController: UIViewController {
         setUpContainer()
     }
     
-    
     func hideContainerView() {
         blurView.effect = nil
         scrollView.alpha = 0.0
     }
     
     func setUpContainer() {
-        
         self.scrollView.clipsToBounds = true
         self.scrollView.layer.cornerRadius = 20.0
-
+        
         for label in numberLabels {
             label.clipsToBounds = true
             label.layer.cornerRadius = 20.0
-            print("edited number labels")
         }
     }
     
@@ -67,15 +60,6 @@ class ContainerViewController: UIViewController {
         
     }
     
-    //    func blurBackground() {
-    //
-    //        let blurEffect = UIBlurEffect(style: .dark)
-    //        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-    //        blurEffectView.effect = nil
-    //        blurEffectView.frame = view.bounds
-    //        blurEffectView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-    //        view.addSubview(blurEffectView)
-    //    }
     
     @IBAction func dismissTutorialView(_ sender: UITapGestureRecognizer) {
         
@@ -87,8 +71,6 @@ class ContainerViewController: UIViewController {
         }) { _ in
             (self.parent as? ViewController)?.containerView.isHidden = true
         }
-        
-        
     }
     
 }
