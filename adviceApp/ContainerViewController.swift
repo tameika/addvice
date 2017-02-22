@@ -33,6 +33,7 @@ class ContainerViewController: UIViewController {
         self.scrollView.clipsToBounds = true
         self.scrollView.layer.cornerRadius = 20.0
         
+        
         for label in numberLabels {
             label.clipsToBounds = true
             label.layer.cornerRadius = 20.0
