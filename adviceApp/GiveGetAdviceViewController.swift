@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     
     // MARK: UI Properties
     
+    @IBOutlet weak var containerView: UIView!
+    
     @IBOutlet weak var giveAdviceTextField: UITextField! // giveAdviceTextField
     @IBOutlet weak var displayAdviceTextLabel: UILabel!
     @IBOutlet weak var getAdviceBtnOutlet: UIButton! // getAdviceButton
@@ -47,12 +49,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //blurBackground()
         giveAdviceTextField.delegate = self
         setUpAdviceTextLabel()
         setUpAdviceTextField()
         setupAdviceButtons()
         store.fetchData()
+        
     }
     
     // MARK: Setting Up UI Objects
@@ -82,7 +85,6 @@ class ViewController: UIViewController {
         self.giveAdviceBtnOutlet.clipsToBounds = true
         self.giveAdviceBtnOutlet.layer.cornerRadius = giveAdviceBtnOutlet.bounds.height * 0.5
         self.giveAdviceBtnOutlet.backgroundColor = eggplant
-        self.giveAdviceBtnOutlet.titleEdgeInsets = UIEdgeInsetsMake(0.0, -5.0, 0.0, -5.0)
         
         self.getAdviceBtnOutlet.clipsToBounds = true
         self.getAdviceBtnOutlet.layer.cornerRadius = getAdviceBtnOutlet.bounds.height * 0.5
@@ -112,6 +114,7 @@ class ViewController: UIViewController {
     }
     
     
+    
     // MARK: Logo Animation
     
     func animateInLogoTitle() {
@@ -124,13 +127,6 @@ class ViewController: UIViewController {
                         self.logoTitle.center.x += self.view.bounds.width
         })
         
-        UIView.animate(withDuration: 0.6,
-                       delay: 0.1, usingSpringWithDamping: 0.50,
-                       initialSpringVelocity: CGFloat(1.0),
-                       options: .curveLinear,
-                       animations: {
-                        self.logoA.center.x += self.view.bounds.width
-        })
         
         logoA.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
         UIView.animate(withDuration: 1.0,
@@ -141,6 +137,18 @@ class ViewController: UIViewController {
                        animations: {
                         self.logoA.transform = CGAffineTransform.identity
         })
+        
+        
+        UIView.animate(withDuration: 0.6,
+                       delay: 0.1, usingSpringWithDamping: 0.50,
+                       initialSpringVelocity: CGFloat(1.0),
+                       options: .curveLinear,
+                       animations: {
+                        self.logoA.center.x += self.view.bounds.width
+        }) { _ in
+            (self.childViewControllers.first as? ContainerViewController)?.isUsersFirstTime()
+        }
+        
     }
     
     // MARK: Button Animation
@@ -182,6 +190,16 @@ class ViewController: UIViewController {
         
     }
     
+    //    func blurBackground() {
+    //
+    //        let blurEffect = UIBlurEffect.init(style: UIBlurEffectStyle.dark)
+    //        let blurEffectView = UIVisualEffectView.init(effect: blurEffect)
+    //        blurEffectView.frame = view.bounds
+    //        blurEffectView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+    //        view.addSubview(blurEffectView)
+    //        blurEffectView.contentView.addSubview((self.childViewControllers.first?.view)!)
+    //    }
+    
     // MARK: Dismiss Keyboard
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -211,6 +229,7 @@ class ViewController: UIViewController {
     }
     
     // MARK: Giving Advice Logic
+    
     
     @IBAction func submitAdviceBtnPressed(_ sender: UIButton) {
         animateGiveButtonPress()
@@ -298,16 +317,18 @@ class ViewController: UIViewController {
         return false
     }
     
+    
+    
+    
 }
 
 
-// MARK: - UITextFieldDelegate Methods
+
+// MARK: UITextFieldDelegate Methods
+
 extension ViewController: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
-        // TODO: Bug. If user hits space bar, it thinks that it qualifies as a String (where it thinks it's NOT empty) which enables the button. Soemthign to thing about. (1.1)
-        
         let currentText = textField.text ?? ""
         if !(string + currentText).isEmpty && ((string + currentText).characters.count <= 164) {
             giveAdviceBtnOutlet.isEnabled = true
@@ -321,7 +342,6 @@ extension ViewController: UITextFieldDelegate {
 
 /* Todo:
  - include tutorial??
- //TODO: Receiving own advice. Fix dat.
  
  
  VERSION 1.1
@@ -330,5 +350,6 @@ extension ViewController: UITextFieldDelegate {
  - add saved counter for each advice
  - add character counter
  - button to clear the screen?
+ - If user hits space bar, it thinks that it qualifies as a String (where it thinks it's NOT empty) which enables the button. Soemthign to thing about
  
  */
