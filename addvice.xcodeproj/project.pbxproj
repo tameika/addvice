@@ -10,13 +10,13 @@
 		651437D0093F773DCC561348 /* Pods_addviceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39256E03BEA34EADF8393FB6 /* Pods_addviceUITests.framework */; };
 		7CD2E2ACDA2EE30FC96FC70D /* Pods_addviceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 582D27401F6C075EFEBFDD51 /* Pods_addviceTests.framework */; };
 		B7B21081803E9341A705B8DA /* Pods_addvice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 220D17ED635BE235CB3D938C /* Pods_addvice.framework */; };
-		BC20D3FE1E09BB46000DD097 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC20D3FD1E09BB46000DD097 /* GoogleService-Info.plist */; };
 		BC43C33D1DDBA157000994ED /* APIClient .swift in Sources */ = {isa = PBXBuildFile; fileRef = BC43C33C1DDBA157000994ED /* APIClient .swift */; };
 		BC4B66201E0B5653003EEEC0 /* positive-725842_1920.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC4B661F1E0B5653003EEEC0 /* positive-725842_1920.jpg */; };
 		BC6244C41DDA2E0C00AE6523 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6244C31DDA2E0C00AE6523 /* DataStore.swift */; };
 		BC6244C71DDA308500AE6523 /* adviceApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC6244C51DDA308500AE6523 /* adviceApp.xcdatamodeld */; };
 		BC7527C31E5C0DDB00C6A08F /* ic_info_outline.png in Resources */ = {isa = PBXBuildFile; fileRef = BC7527C21E5C0DDB00C6A08F /* ic_info_outline.png */; };
 		BC7527C51E5C2D0500C6A08F /* ic_info_outline_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC7527C41E5C2D0500C6A08F /* ic_info_outline_2x.png */; };
+		BC7527C91E5EEF0B00C6A08F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC7527C81E5EEF0B00C6A08F /* GoogleService-Info.plist */; };
 		BC7EA1941E35A3B700FEDC6C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7EA1931E35A3B700FEDC6C /* Extensions.swift */; };
 		BC99798C1D981513004A572C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC99798B1D981513004A572C /* AppDelegate.swift */; };
 		BC99798E1D981513004A572C /* GiveGetAdviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC99798D1D981513004A572C /* GiveGetAdviceViewController.swift */; };
@@ -72,13 +72,13 @@
 		7C04745CF633CA5322B1A1F1 /* Pods-addvice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-addvice.debug.xcconfig"; path = "Pods/Target Support Files/Pods-addvice/Pods-addvice.debug.xcconfig"; sourceTree = "<group>"; };
 		AB660EBB11EE805F98F8A112 /* Pods-addvice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-addvice.release.xcconfig"; path = "Pods/Target Support Files/Pods-addvice/Pods-addvice.release.xcconfig"; sourceTree = "<group>"; };
 		BC20D3FA1E09B8F3000DD097 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BC20D3FD1E09BB46000DD097 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BC43C33C1DDBA157000994ED /* APIClient .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APIClient .swift"; sourceTree = "<group>"; };
 		BC4B661F1E0B5653003EEEC0 /* positive-725842_1920.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "positive-725842_1920.jpg"; sourceTree = "<group>"; };
 		BC6244C31DDA2E0C00AE6523 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		BC6244C61DDA308500AE6523 /* adviceApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = adviceApp.xcdatamodel; sourceTree = "<group>"; };
 		BC7527C21E5C0DDB00C6A08F /* ic_info_outline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_info_outline.png; sourceTree = "<group>"; };
 		BC7527C41E5C2D0500C6A08F /* ic_info_outline_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_info_outline_2x.png; sourceTree = "<group>"; };
+		BC7527C81E5EEF0B00C6A08F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BC7EA1931E35A3B700FEDC6C /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		BC9979881D981513004A572C /* addvice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = addvice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC99798B1D981513004A572C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -153,7 +153,7 @@
 		BC99797F1D981512004A572C = {
 			isa = PBXGroup;
 			children = (
-				BC99798A1D981513004A572C /* adviceApp */,
+				BC99798A1D981513004A572C /* addviceApp */,
 				BC99799F1D981513004A572C /* adviceAppTests */,
 				BC9979AA1D981513004A572C /* adviceAppUITests */,
 				BC9979891D981513004A572C /* Products */,
@@ -172,7 +172,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BC99798A1D981513004A572C /* adviceApp */ = {
+		BC99798A1D981513004A572C /* addviceApp */ = {
 			isa = PBXGroup;
 			children = (
 				BCCE55A21E55351C001C6927 /* Models */,
@@ -180,6 +180,7 @@
 				BCCE55A01E55350F001C6927 /* Controllers */,
 				BCCE55A31E553545001C6927 /* Supporting Files */,
 			);
+			name = addviceApp;
 			path = adviceApp;
 			sourceTree = "<group>";
 		};
@@ -237,7 +238,7 @@
 			children = (
 				BC9979921D981513004A572C /* Assets.xcassets */,
 				BC20D3FA1E09B8F3000DD097 /* Info.plist */,
-				BC20D3FD1E09BB46000DD097 /* GoogleService-Info.plist */,
+				BC7527C81E5EEF0B00C6A08F /* GoogleService-Info.plist */,
 				BCEF6B9E1E5307CE00DEF771 /* logoBubble-a.png */,
 				BCEF6B9A1E52F16400DEF771 /* star2.png */,
 				BC7527C21E5C0DDB00C6A08F /* ic_info_outline.png */,
@@ -321,11 +322,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
 				LastUpgradeCheck = 0820;
-				ORGANIZATIONNAME = flatiron;
+				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					BC9979871D981512004A572C = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = GXEX28B97C;
+						DevelopmentTeam = 5TKXE57N5X;
 						ProvisioningStyle = Automatic;
 					};
 					BC99799B1D981513004A572C = {
@@ -371,9 +372,9 @@
 				BC9979931D981513004A572C /* Assets.xcassets in Resources */,
 				BC9979911D981513004A572C /* Main.storyboard in Resources */,
 				BC7527C31E5C0DDB00C6A08F /* ic_info_outline.png in Resources */,
+				BC7527C91E5EEF0B00C6A08F /* GoogleService-Info.plist in Resources */,
 				BCEF6B9B1E52F16400DEF771 /* star2.png in Resources */,
 				BC4B66201E0B5653003EEEC0 /* positive-725842_1920.jpg in Resources */,
-				BC20D3FE1E09BB46000DD097 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -697,12 +698,12 @@
 			baseConfigurationReference = 7C04745CF633CA5322B1A1F1 /* Pods-addvice.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = GXEX28B97C;
+				DEVELOPMENT_TEAM = 5TKXE57N5X;
 				INFOPLIST_FILE = adviceApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.flatironschool.adviceApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tameikalawrence.addviceApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -714,12 +715,12 @@
 			baseConfigurationReference = AB660EBB11EE805F98F8A112 /* Pods-addvice.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = GXEX28B97C;
+				DEVELOPMENT_TEAM = 5TKXE57N5X;
 				INFOPLIST_FILE = adviceApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.flatironschool.adviceApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tameikalawrence.addviceApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;

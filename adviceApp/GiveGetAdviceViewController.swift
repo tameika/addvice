@@ -9,7 +9,6 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
-import QuartzCore
 import CoreData
 
 
@@ -236,8 +235,8 @@ class ViewController: UIViewController {
     
     @IBAction func receiveAdviceBtnPressed(_ sender: UIButton) {
         animateGetButtonPress()
-        guard firAdviceArray.count > 1 else {
-            displayAdviceTextLabel.textColor = UIColor.seafoamGreen
+        guard firAdviceArray.count >= 1 else {
+            displayAdviceTextLabel.textColor = UIColor.eggplant
             displayAdviceTextLabel.text = "no more advice available"
             return
         }
@@ -324,14 +323,3 @@ extension ViewController: UITextFieldDelegate {
 
 
 
-/*
- 
- VERSION 1.1
- - prevent saving same advice multiple times
- - add timestamp to advice
- - add saved counter for each advice
- - add character counter
- - button to clear the screen?
- - If user hits space bar, it thinks that it qualifies as a String (where it thinks it's NOT empty) which enables the button. Soemthign to thing about
- 
- */
