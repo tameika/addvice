@@ -48,6 +48,7 @@ var badWordsList = [
     "bi+ch",
     "biatch",
     "bitch",
+    "b*tch",
     "bitcher",
     "bitchers",
     "bitches",

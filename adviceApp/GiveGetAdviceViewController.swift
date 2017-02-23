@@ -18,16 +18,15 @@ class ViewController: UIViewController {
     // MARK: UI Properties
     
     @IBOutlet weak var containerView: UIView!
-    
-    @IBOutlet weak var giveAdviceTextField: UITextField! // giveAdviceTextField
+    @IBOutlet weak var giveAdviceTextField: UITextField!
     @IBOutlet weak var displayAdviceTextLabel: UILabel!
-    @IBOutlet weak var getAdviceBtnOutlet: UIButton! // getAdviceButton
-    @IBOutlet weak var savedAdviceBarBtn: UIBarButtonItem! // savedAdviceButton
+    @IBOutlet weak var getAdviceBtnOutlet: UIButton!
+    @IBOutlet weak var savedAdviceBarBtn: UIBarButtonItem!
     @IBOutlet weak var savedAdviceBtn: UIButton!
     @IBOutlet weak var giveAdviceBtnOutlet: UIButton!
     @IBOutlet weak var logoA: UIImageView!
     @IBOutlet weak var logoTitle: UILabel!
-
+    
     
     
     
@@ -43,19 +42,13 @@ class ViewController: UIViewController {
     var removedAdvice = String()
     
     
-    let seafoamGreen = UIColor(red:0.82, green:0.94, blue:0.87, alpha:1.0)
-    let eggplant = UIColor(red:0.17, green:0.03, blue:0.25, alpha:0.5)
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //blurBackground()
         giveAdviceTextField.delegate = self
         setUpAdviceTextLabel()
         setUpAdviceTextField()
         setupAdviceButtons()
         store.fetchData()
-        
     }
     
     // MARK: Setting Up UI Objects
@@ -65,7 +58,7 @@ class ViewController: UIViewController {
         self.displayAdviceTextLabel.clipsToBounds = true
         self.displayAdviceTextLabel.layer.cornerRadius = 5.0
         self.displayAdviceTextLabel.layer.borderWidth = 1.0
-        self.displayAdviceTextLabel.layer.borderColor = eggplant.cgColor
+        self.displayAdviceTextLabel.layer.borderColor = UIColor.eggplant.cgColor
     }
     
     func setUpAdviceTextField() {
@@ -84,15 +77,15 @@ class ViewController: UIViewController {
         
         self.giveAdviceBtnOutlet.clipsToBounds = true
         self.giveAdviceBtnOutlet.layer.cornerRadius = giveAdviceBtnOutlet.bounds.height * 0.5
-        self.giveAdviceBtnOutlet.backgroundColor = eggplant
+        self.giveAdviceBtnOutlet.backgroundColor = UIColor.eggplant
         
         self.getAdviceBtnOutlet.clipsToBounds = true
         self.getAdviceBtnOutlet.layer.cornerRadius = getAdviceBtnOutlet.bounds.height * 0.5
-        self.getAdviceBtnOutlet.backgroundColor = eggplant
+        self.getAdviceBtnOutlet.backgroundColor = UIColor.eggplant
         
         self.savedAdviceBtn.clipsToBounds = true
         self.savedAdviceBtn.layer.cornerRadius = savedAdviceBtn.bounds.height * 0.5
-        self.savedAdviceBtn.backgroundColor = eggplant
+        self.savedAdviceBtn.backgroundColor = UIColor.eggplant
     }
     
     
@@ -190,15 +183,6 @@ class ViewController: UIViewController {
         
     }
     
-    //    func blurBackground() {
-    //
-    //        let blurEffect = UIBlurEffect.init(style: UIBlurEffectStyle.dark)
-    //        let blurEffectView = UIVisualEffectView.init(effect: blurEffect)
-    //        blurEffectView.frame = view.bounds
-    //        blurEffectView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-    //        view.addSubview(blurEffectView)
-    //        blurEffectView.contentView.addSubview((self.childViewControllers.first?.view)!)
-    //    }
     
     // MARK: Dismiss Keyboard
     
@@ -207,6 +191,7 @@ class ViewController: UIViewController {
         super.touchesBegan(touches, with: event)
     }
     
+    // MARK: Retrieving Database Data
     
     func getFIRAdvice(handler: @escaping () -> Void) {
         let ref = FIRDatabase.database().reference()
@@ -228,8 +213,8 @@ class ViewController: UIViewController {
         })
     }
     
-    // MARK: Giving Advice Logic
     
+    // MARK: Giving Advice Logic
     
     @IBAction func submitAdviceBtnPressed(_ sender: UIButton) {
         animateGiveButtonPress()
@@ -247,13 +232,12 @@ class ViewController: UIViewController {
     }
     
     
-    
     //MARK: Getting Advice Logic
     
     @IBAction func receiveAdviceBtnPressed(_ sender: UIButton) {
         animateGetButtonPress()
         guard firAdviceArray.count > 1 else {
-            displayAdviceTextLabel.textColor = seafoamGreen
+            displayAdviceTextLabel.textColor = UIColor.seafoamGreen
             displayAdviceTextLabel.text = "no more advice available"
             return
         }
@@ -267,7 +251,7 @@ class ViewController: UIViewController {
     }
     
     
-    // MARK: Saving Advice
+    // MARK: Saving Advice Logic
     
     func saveThisAdvice(selectedAdvice: String) {
         let advice = Advice(context: store.persistentContainer.viewContext)
@@ -297,14 +281,14 @@ class ViewController: UIViewController {
     }
     
     
-    // MARK: Filter Bad Words
+    // MARK: Filtering Bad Words
     
     func badWordFilter() -> Bool {
         for word in badWordsArray.badWordsList {
             if let adviceText = giveAdviceTextField.text {
                 if adviceText.contains(word) {
                     print(word)
-                    let alert = UIAlertController(title: "Chill, chill, chill", message: "You can't curse here.", preferredStyle: UIAlertControllerStyle.alert)
+                    let alert = UIAlertController(title: "Chill, chill, chill", message: "Watch your language.", preferredStyle: UIAlertControllerStyle.alert)
                     print("bad word alert")
                     let okAction = UIAlertAction(title: "OK Cool", style: .default, handler: nil)
                     alert.addAction(okAction)
@@ -340,9 +324,7 @@ extension ViewController: UITextFieldDelegate {
 
 
 
-/* Todo:
- - include tutorial??
- 
+/*
  
  VERSION 1.1
  - prevent saving same advice multiple times

@@ -13,7 +13,7 @@ import UIKit
 class MyAdviceTableViewController: UITableViewController {
     
     var savedAdviceList = [Advice]()
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +31,7 @@ class MyAdviceTableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-       
+        
         
     }
     
@@ -49,22 +49,22 @@ class MyAdviceTableViewController: UITableViewController {
     }
     
     
-     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-     let cell = tableView.dequeueReusableCell(withIdentifier: "adviceCell", for: indexPath)
-     let pieceOfAdvice = savedAdviceList[indexPath.row]
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "adviceCell", for: indexPath)
+        let pieceOfAdvice = savedAdviceList[indexPath.row]
         cell.textLabel?.text = pieceOfAdvice.content
         cell.backgroundColor = UIColor.clear
         cell.textLabel?.font = UIFont(name: "Avenir-Light", size: 22)
         cell.textLabel?.sizeToFit()
         cell.textLabel?.numberOfLines = 0
         cell.textLabel?.lineBreakMode = .byWordWrapping
-     return cell
-     }
+        return cell
+    }
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
-
+    
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let delete = UITableViewRowAction(style: .normal, title: "Delete") { action, index in
             self.savedAdviceList.remove(at: index.row)
@@ -75,11 +75,11 @@ class MyAdviceTableViewController: UITableViewController {
             self.tableView.reloadData()
             print("delete")
         }
-
+        
         delete.backgroundColor = UIColor.darkGray
         return [delete]
     }
-  
+    
     
     func animateTableView() {
         
@@ -97,13 +97,13 @@ class MyAdviceTableViewController: UITableViewController {
             UIView.animate(withDuration: 1.5, delay: 0.05 * Double(index), usingSpringWithDamping: 0.8, initialSpringVelocity: 0.0, options: [], animations: {
                 cell.transform = CGAffineTransform.identity;
             }, completion: nil)
-
+            
             index += 1
         }
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-       return UITableViewAutomaticDimension
+        return UITableViewAutomaticDimension
     }
     
     

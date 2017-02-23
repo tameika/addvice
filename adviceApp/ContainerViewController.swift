@@ -19,7 +19,6 @@ class ContainerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        userDefaults.set(true, forKey: "isFirstLaunch")
         hideContainerView()
         setUpContainer()
     }
@@ -63,7 +62,6 @@ class ContainerViewController: UIViewController {
     
     
     @IBAction func dismissTutorialView(_ sender: UITapGestureRecognizer) {
-        
         UIView.animate(withDuration: 0.6,
                        delay: 0.0,
                        options: .curveEaseInOut,

@@ -25,7 +25,6 @@
 		BC9979961D981513004A572C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC9979941D981513004A572C /* LaunchScreen.storyboard */; };
 		BC9979A11D981513004A572C /* adviceAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9979A01D981513004A572C /* adviceAppTests.swift */; };
 		BC9979AC1D981513004A572C /* adviceAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9979AB1D981513004A572C /* adviceAppUITests.swift */; };
-		BCA10E4E1E57B1E4007E3DE6 /* Logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA10E4D1E57B1E4007E3DE6 /* Logic.swift */; };
 		BCB17C611DE8BD54004CA1DF /* BadWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB17C601DE8BD54004CA1DF /* BadWords.swift */; };
 		BCBAF3691DEBE59E00B714B5 /* MyAdviceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBAF3681DEBE59E00B714B5 /* MyAdviceTableViewController.swift */; };
 		BCC28E6B1E5A37280051C6FB /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC28E6A1E5A37280051C6FB /* ContainerViewController.swift */; };
@@ -92,7 +91,6 @@
 		BC9979A21D981513004A572C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC9979A71D981513004A572C /* addviceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = addviceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC9979AB1D981513004A572C /* adviceAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adviceAppUITests.swift; sourceTree = "<group>"; };
-		BCA10E4D1E57B1E4007E3DE6 /* Logic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logic.swift; sourceTree = "<group>"; };
 		BCB17C601DE8BD54004CA1DF /* BadWords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadWords.swift; sourceTree = "<group>"; };
 		BCBAF3681DEBE59E00B714B5 /* MyAdviceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAdviceTableViewController.swift; sourceTree = "<group>"; };
 		BCC28E6A1E5A37280051C6FB /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
@@ -230,7 +228,6 @@
 				BC7EA1931E35A3B700FEDC6C /* Extensions.swift */,
 				BC99798B1D981513004A572C /* AppDelegate.swift */,
 				BC6244C51DDA308500AE6523 /* adviceApp.xcdatamodeld */,
-				BCA10E4D1E57B1E4007E3DE6 /* Logic.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -540,7 +537,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC99798E1D981513004A572C /* GiveGetAdviceViewController.swift in Sources */,
-				BCA10E4E1E57B1E4007E3DE6 /* Logic.swift in Sources */,
 				BCC28E6B1E5A37280051C6FB /* ContainerViewController.swift in Sources */,
 				BCB17C611DE8BD54004CA1DF /* BadWords.swift in Sources */,
 				BC6244C41DDA2E0C00AE6523 /* DataStore.swift in Sources */,
@@ -709,6 +705,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.flatironschool.adviceApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -725,6 +722,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.flatironschool.adviceApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
