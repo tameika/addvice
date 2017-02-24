@@ -204,8 +204,6 @@ class ViewController: UIViewController {
                     }
                 }
                 
-                // TODO: Add a completion closure to this function and then call on it here letting the caller know all is good.
-                
             }
             handler()
             print("🌽\(self.firAdviceArray.count)")
