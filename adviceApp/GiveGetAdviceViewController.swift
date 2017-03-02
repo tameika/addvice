@@ -315,7 +315,7 @@ extension ViewController: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let currentText = textField.text ?? ""
-        if !(string + currentText).isEmpty && ((string + currentText).characters.count <= 164) {
+        if !(string + currentText).isEmpty && ((string + currentText).characters.count <= 160) {
             giveAdviceBtnOutlet.isEnabled = true
         }
         return true
