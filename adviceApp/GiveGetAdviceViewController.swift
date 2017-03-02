@@ -37,7 +37,7 @@ class ViewController: UIViewController {
     var savedAdvice = [Advice]()
     var displayedFIRAdvice: String = ""
     var ref: FIRDatabaseReference!
-    var firAdviceArray = [String]()
+    var firAdviceArray = Set([String]())
     var removedAdvice = String()
     
     
@@ -200,7 +200,7 @@ class ViewController: UIViewController {
                 for (_, value) in firAdvice {
                     if let contentsDictionary = value as? [String : String] {
                         let content = contentsDictionary["content"] ?? "NO CONTENT"
-                        self.firAdviceArray.append(content)
+                        self.firAdviceArray.insert(content)
                     }
                 }
                 
@@ -244,7 +244,9 @@ class ViewController: UIViewController {
         let randomFIRAdviceIndex = Int(arc4random_uniform(UInt32(firAdviceArray.count)))
         print("🌮\(randomFIRAdviceIndex)")
         print("🍿\(self.firAdviceArray.count)")
-        removedAdvice = firAdviceArray.remove(at: randomFIRAdviceIndex)
+        //removedAdvice = firAdviceArray.remove(at: randomFIRAdviceIndex)
+        //removedAdvice = firAdviceArray[firAdviceArray.index(firAdviceArray.startIndex, offsetBy: randomFIRAdviceIndex)]
+        removedAdvice = firAdviceArray.remove(at: firAdviceArray.index(firAdviceArray.startIndex, offsetBy: randomFIRAdviceIndex))
         displayAdviceTextLabel.text = removedAdvice
         print("🍧", removedAdvice)
     }
