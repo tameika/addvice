@@ -62,7 +62,7 @@ class ViewController: UIViewController {
     
     func setUpAdviceTextField() {
         
-        self.giveAdviceTextField.borderStyle = .roundedRect
+        self.giveAdviceTextField.clipsToBounds = true 
         self.giveAdviceTextField.layer.borderColor = UIColor.clear.cgColor
         self.giveAdviceTextField.layer.borderWidth = 2.0
         self.giveAdviceTextField.textColor = UIColor.black
