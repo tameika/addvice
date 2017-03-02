@@ -62,12 +62,10 @@ class ViewController: UIViewController {
     
     func setUpAdviceTextField() {
         
-        self.giveAdviceTextField.translatesAutoresizingMaskIntoConstraints = false 
-        self.giveAdviceTextField.borderStyle = .roundedRect
+        self.giveAdviceTextField.clipsToBounds = true 
         self.giveAdviceTextField.layer.borderColor = UIColor.clear.cgColor
         self.giveAdviceTextField.layer.borderWidth = 2.0
         self.giveAdviceTextField.textColor = UIColor.black
-        self.giveAdviceTextField.heightAnchor.constraint(equalTo: displayAdviceTextLabel.heightAnchor, multiplier: 0.9)
     }
     
     func setupAdviceButtons() {
