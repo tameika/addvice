@@ -25,6 +25,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var giveAdviceBtnOutlet: UIButton!
     @IBOutlet weak var logoA: UIImageView!
     @IBOutlet weak var logoTitle: UILabel!
+    @IBOutlet weak var flagAdviceBtn: UIButton!
+    
+    
     
     
     // MARK: Logic Properties
@@ -83,6 +86,11 @@ class ViewController: UIViewController {
         self.savedAdviceBtn.clipsToBounds = true
         self.savedAdviceBtn.layer.cornerRadius = savedAdviceBtn.bounds.height * 0.5
         self.savedAdviceBtn.backgroundColor = UIColor.eggplant
+        
+        self.flagAdviceBtn.clipsToBounds = true
+        self.flagAdviceBtn.layer.cornerRadius = flagAdviceBtn.bounds.height * 0.4
+        self.flagAdviceBtn.backgroundColor = UIColor.eggplantDark
+        
     }
     
     
@@ -238,7 +246,6 @@ class ViewController: UIViewController {
         let randomFIRAdviceIndex = Int(arc4random_uniform(UInt32(firAdviceCollection.count)))
         print("🌮\(randomFIRAdviceIndex)")
         print("🍿\(self.firAdviceCollection.count)")
-        //removedAdvice = firAdviceArray.remove(at: randomFIRAdviceIndex)
         removedAdvice = firAdviceCollection.remove(at: firAdviceCollection.index(firAdviceCollection.startIndex, offsetBy: randomFIRAdviceIndex))
         displayAdviceTextLabel.text = removedAdvice
         print("🍧", removedAdvice)
@@ -292,10 +299,8 @@ class ViewController: UIViewController {
                     self.present(alert, animated: true, completion: nil)
                     self.displayAdviceTextLabel.text = ""
                     break
-
                 } else {
                     print("✅ DID NOT CHANGE OBJ VALUE")
-                    
                 }
             }
         })
@@ -323,9 +328,7 @@ class ViewController: UIViewController {
         return false
     }
     
-    
 }
-
 
 
 // MARK: UITextFieldDelegate Methods
