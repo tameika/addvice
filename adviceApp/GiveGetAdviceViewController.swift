@@ -37,7 +37,7 @@ class ViewController: UIViewController {
     var savedAdvice = [Advice]()
     var displayedFIRAdvice: String = ""
     var ref: FIRDatabaseReference!
-    var firAdviceArray = Set([String]())
+    var firAdviceCollection = Set([String]()) // change var name
     var removedAdvice = String()
     
     
@@ -62,7 +62,7 @@ class ViewController: UIViewController {
     
     func setUpAdviceTextField() {
         
-        self.giveAdviceTextField.clipsToBounds = true 
+        self.giveAdviceTextField.clipsToBounds = true
         self.giveAdviceTextField.layer.borderColor = UIColor.clear.cgColor
         self.giveAdviceTextField.layer.borderWidth = 2.0
         self.giveAdviceTextField.textColor = UIColor.black
@@ -200,7 +200,9 @@ class ViewController: UIViewController {
                 for (_, value) in firAdvice {
                     if let contentsDictionary = value as? [String : String] {
                         let content = contentsDictionary["content"] ?? "NO CONTENT"
-                        self.firAdviceArray.insert(content)
+                        let isObjectionable = contentsDictionary["isObjectionable"] ?? "NO OBJECTION VALUE"
+                        self.firAdviceCollection.insert(content)
+                        self.firAdviceCollection.insert(isObjectionable)
                     }
                 }
                 
@@ -208,7 +210,7 @@ class ViewController: UIViewController {
                 
             }
             handler()
-            print("🌽\(self.firAdviceArray.count)")
+            print("🌽\(self.firAdviceCollection.count)")
         })
     }
     
@@ -217,7 +219,7 @@ class ViewController: UIViewController {
     
     @IBAction func submitAdviceBtnPressed(_ sender: UIButton) {
         animateGiveButtonPress()
-        guard !badWordFilter() else { return }
+        guard !badWordFlag else { return }
         guard let adviceReceived = giveAdviceTextField.text else { return }
         let newAdvice = Advice(context: store.persistentContainer.viewContext)
         newAdvice.content = adviceReceived
@@ -226,8 +228,10 @@ class ViewController: UIViewController {
         getAdviceBtnOutlet.isEnabled = true
         giveAdviceBtnOutlet.isEnabled = false
         store.saveContext()
-        let ref = FIRDatabase.database().reference()
-        ref.child("Advice").childByAutoId().setValue(["content": adviceReceived])
+        let newRef = FIRDatabase.database().reference().child("Advice").childByAutoId()
+        newRef.setValue(["content": adviceReceived, "isObjectionable": "false"])
+        let key = newRef.key
+        print(key)
     }
     
     
@@ -235,18 +239,17 @@ class ViewController: UIViewController {
     
     @IBAction func receiveAdviceBtnPressed(_ sender: UIButton) {
         animateGetButtonPress()
-        guard firAdviceArray.count >= 1 else {
+        guard firAdviceCollection.count >= 1 else {
             displayAdviceTextLabel.textColor = UIColor.eggplant
             displayAdviceTextLabel.text = "no more advice available"
             return
         }
         savedAdviceBtn.isEnabled = true
-        let randomFIRAdviceIndex = Int(arc4random_uniform(UInt32(firAdviceArray.count)))
+        let randomFIRAdviceIndex = Int(arc4random_uniform(UInt32(firAdviceCollection.count)))
         print("🌮\(randomFIRAdviceIndex)")
-        print("🍿\(self.firAdviceArray.count)")
+        print("🍿\(self.firAdviceCollection.count)")
         //removedAdvice = firAdviceArray.remove(at: randomFIRAdviceIndex)
-        //removedAdvice = firAdviceArray[firAdviceArray.index(firAdviceArray.startIndex, offsetBy: randomFIRAdviceIndex)]
-        removedAdvice = firAdviceArray.remove(at: firAdviceArray.index(firAdviceArray.startIndex, offsetBy: randomFIRAdviceIndex))
+        removedAdvice = firAdviceCollection.remove(at: firAdviceCollection.index(firAdviceCollection.startIndex, offsetBy: randomFIRAdviceIndex))
         displayAdviceTextLabel.text = removedAdvice
         print("🍧", removedAdvice)
     }
@@ -279,6 +282,29 @@ class ViewController: UIViewController {
         let okAction = UIAlertAction(title: "Great", style: .destructive, handler: nil)
         alert.addAction(okAction)
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func flagAdviceBtn(_ sender: Any) {
+        
+        let ref = FIRDatabase.database().reference()
+        let availableRef = ref.child("Advice")
+        availableRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let firAdvice = snapshot.value as? [String : Any] else { return }
+            for (key, value) in firAdvice {
+                guard var contentDictionary = value as? [String : String] else { print("nothing"); return }
+                print("◉", contentDictionary)
+                if contentDictionary["content"] == self.removedAdvice {
+                    availableRef.child(key).removeValue()
+                    print("❌ OBJ VALUE CHANGED TO TRUE")
+                    break
+                } else {
+                    print("✅ DID NOT CHANGE OBJ VALUE")
+                    
+                }
+            }
+        })
+        
     }
     
     

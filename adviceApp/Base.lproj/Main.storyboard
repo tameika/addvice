@@ -52,6 +52,13 @@
                                 <color key="textColor" red="0.73875731369999997" green="0.85882352939999995" blue="0.79350566060000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nGO-eL-Kzz">
+                                <rect key="frame" x="364" y="104" width="30" height="30"/>
+                                <state key="normal" title="❕"/>
+                                <connections>
+                                    <action selector="flagAdviceBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dBH-RT-LYc"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" allowsEditingTextAttributes="YES" borderStyle="roundedRect" placeholder="enter advice 164characters or less to get" clearsOnBeginEditing="YES" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3At-HA-PmI" userLabel="EnterAdviceTextField">
                                 <rect key="frame" x="20" y="343.33333333333331" width="374" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -140,9 +147,11 @@
                             <constraint firstItem="KkZ-Iu-Yee" firstAttribute="height" secondItem="gaj-ul-fPQ" secondAttribute="height" id="QHd-8w-Jch"/>
                             <constraint firstItem="yFv-1J-CLp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RTS-JH-eoJ"/>
                             <constraint firstItem="uHq-qP-f4z" firstAttribute="trailing" secondItem="P8n-jT-EkW" secondAttribute="leading" constant="50" id="WJu-19-S66"/>
+                            <constraint firstItem="nGO-eL-Kzz" firstAttribute="top" secondItem="yFv-1J-CLp" secondAttribute="top" id="Z4z-jF-tnp"/>
                             <constraint firstItem="EQI-4W-D5A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zzb-vB-121"/>
                             <constraint firstItem="3At-HA-PmI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="afY-Ru-dt2"/>
                             <constraint firstItem="o30-GB-no8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bvO-b9-Sik"/>
+                            <constraint firstItem="nGO-eL-Kzz" firstAttribute="trailing" secondItem="yFv-1J-CLp" secondAttribute="trailing" id="c5N-wT-L3D"/>
                             <constraint firstItem="uHq-qP-f4z" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="dqe-rG-lZB"/>
                             <constraint firstItem="KkZ-Iu-Yee" firstAttribute="top" secondItem="3At-HA-PmI" secondAttribute="bottom" constant="12" id="e35-Xd-DVy"/>
                             <constraint firstItem="Exi-Dr-ish" firstAttribute="centerX" secondItem="cw4-C6-EzN" secondAttribute="centerX" id="f0J-3A-Lgh"/>
