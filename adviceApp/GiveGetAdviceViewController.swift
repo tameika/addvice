@@ -25,9 +25,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var giveAdviceBtnOutlet: UIButton!
     @IBOutlet weak var logoA: UIImageView!
     @IBOutlet weak var logoTitle: UILabel!
-    @IBOutlet weak var flagAdviceBtn: UIButton!
-    
-    
+    @IBOutlet weak var flagAdviceBtn: UIButton!    
     
     
     // MARK: Logic Properties
@@ -74,6 +72,7 @@ class ViewController: UIViewController {
         self.getAdviceBtnOutlet.isEnabled = false
         self.savedAdviceBtn.isEnabled = false
         self.giveAdviceBtnOutlet.isEnabled = false
+        self.flagAdviceBtn.alpha = 0.0
         
         self.giveAdviceBtnOutlet.clipsToBounds = true
         self.giveAdviceBtnOutlet.layer.cornerRadius = giveAdviceBtnOutlet.bounds.height * 0.5
@@ -187,6 +186,14 @@ class ViewController: UIViewController {
         
     }
     
+    func animateInFlagButton() {
+        UIView.animate(withDuration: 0.8, delay: 0.6, options: .curveEaseInOut, animations: {
+            self.flagAdviceBtn.alpha = 0.9
+        })
+            
+    }
+    
+    
     
     // MARK: Dismiss Keyboard
     
@@ -237,6 +244,8 @@ class ViewController: UIViewController {
     
     @IBAction func receiveAdviceBtnPressed(_ sender: UIButton) {
         animateGetButtonPress()
+        animateInFlagButton() 
+        animateInFlagButton()
         guard firAdviceCollection.count >= 1 else {
             displayAdviceTextLabel.textColor = UIColor.eggplant
             displayAdviceTextLabel.text = "no more advice available"
