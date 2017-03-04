@@ -27,8 +27,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var logoTitle: UILabel!
     
     
-    
-    
     // MARK: Logic Properties
     
     let badWordsArray = BadWords.sharedInstance
@@ -86,7 +84,6 @@ class ViewController: UIViewController {
         self.savedAdviceBtn.layer.cornerRadius = savedAdviceBtn.bounds.height * 0.5
         self.savedAdviceBtn.backgroundColor = UIColor.eggplant
     }
-    
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -200,14 +197,9 @@ class ViewController: UIViewController {
                 for (_, value) in firAdvice {
                     if let contentsDictionary = value as? [String : String] {
                         let content = contentsDictionary["content"] ?? "NO CONTENT"
-                        let isObjectionable = contentsDictionary["isObjectionable"] ?? "NO OBJECTION VALUE"
                         self.firAdviceCollection.insert(content)
-                        self.firAdviceCollection.insert(isObjectionable)
                     }
                 }
-                
-                // TODO: Add a completion closure to this function and then call on it here letting the caller know all is good.
-                
             }
             handler()
             print("🌽\(self.firAdviceCollection.count)")
@@ -229,9 +221,7 @@ class ViewController: UIViewController {
         giveAdviceBtnOutlet.isEnabled = false
         store.saveContext()
         let newRef = FIRDatabase.database().reference().child("Advice").childByAutoId()
-        newRef.setValue(["content": adviceReceived, "isObjectionable": "false"])
-        let key = newRef.key
-        print(key)
+        newRef.setValue(["content": adviceReceived])
     }
     
     
@@ -285,19 +275,24 @@ class ViewController: UIViewController {
     }
     
     
+    // MARK : Flagging Advice Logic
+    
     @IBAction func flagAdviceBtn(_ sender: Any) {
-        
         let ref = FIRDatabase.database().reference()
         let availableRef = ref.child("Advice")
         availableRef.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let firAdvice = snapshot.value as? [String : Any] else { return }
             for (key, value) in firAdvice {
                 guard var contentDictionary = value as? [String : String] else { print("nothing"); return }
-                print("◉", contentDictionary)
                 if contentDictionary["content"] == self.removedAdvice {
                     availableRef.child(key).removeValue()
-                    print("❌ OBJ VALUE CHANGED TO TRUE")
+                    let alert = UIAlertController(title: "Flagged!", message: "This piece of advice will be removed.", preferredStyle: .alert)
+                    let action = UIAlertAction(title: "Thank You", style: .destructive, handler: nil)
+                    alert.addAction(action)
+                    self.present(alert, animated: true, completion: nil)
+                    self.displayAdviceTextLabel.text = ""
                     break
+
                 } else {
                     print("✅ DID NOT CHANGE OBJ VALUE")
                     
@@ -327,8 +322,6 @@ class ViewController: UIViewController {
         }
         return false
     }
-    
-    
     
     
 }
