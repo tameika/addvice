@@ -21,8 +21,6 @@
 		BC9979911D981513004A572C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC99798F1D981513004A572C /* Main.storyboard */; };
 		BC9979931D981513004A572C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC9979921D981513004A572C /* Assets.xcassets */; };
 		BC9979961D981513004A572C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC9979941D981513004A572C /* LaunchScreen.storyboard */; };
-		BC9979A11D981513004A572C /* adviceAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9979A01D981513004A572C /* adviceAppTests.swift */; };
-		BC9979AC1D981513004A572C /* adviceAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9979AB1D981513004A572C /* adviceAppUITests.swift */; };
 		BCB17C611DE8BD54004CA1DF /* BadWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB17C601DE8BD54004CA1DF /* BadWords.swift */; };
 		BCBAF3691DEBE59E00B714B5 /* MyAdviceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBAF3681DEBE59E00B714B5 /* MyAdviceTableViewController.swift */; };
 		BCC28E6B1E5A37280051C6FB /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC28E6A1E5A37280051C6FB /* ContainerViewController.swift */; };
@@ -84,10 +82,7 @@
 		BC9979921D981513004A572C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC9979951D981513004A572C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC99799C1D981513004A572C /* addviceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = addviceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BC9979A01D981513004A572C /* adviceAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adviceAppTests.swift; sourceTree = "<group>"; };
-		BC9979A21D981513004A572C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC9979A71D981513004A572C /* addviceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = addviceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BC9979AB1D981513004A572C /* adviceAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adviceAppUITests.swift; sourceTree = "<group>"; };
 		BCB17C601DE8BD54004CA1DF /* BadWords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadWords.swift; sourceTree = "<group>"; };
 		BCBAF3681DEBE59E00B714B5 /* MyAdviceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAdviceTableViewController.swift; sourceTree = "<group>"; };
 		BCC28E6A1E5A37280051C6FB /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
@@ -152,8 +147,6 @@
 			children = (
 				BC4C3A8A1E6005B3001BA80D /* addvice.entitlements */,
 				BC99798A1D981513004A572C /* addviceApp */,
-				BC99799F1D981513004A572C /* adviceAppTests */,
-				BC9979AA1D981513004A572C /* adviceAppUITests */,
 				BC9979891D981513004A572C /* Products */,
 				A582106572F989356FDEFEE6 /* Pods */,
 				328AB9A16CC1FED8EF616E18 /* Frameworks */,
@@ -180,23 +173,6 @@
 			);
 			name = addviceApp;
 			path = adviceApp;
-			sourceTree = "<group>";
-		};
-		BC99799F1D981513004A572C /* adviceAppTests */ = {
-			isa = PBXGroup;
-			children = (
-				BC9979A01D981513004A572C /* adviceAppTests.swift */,
-				BC9979A21D981513004A572C /* Info.plist */,
-			);
-			path = adviceAppTests;
-			sourceTree = "<group>";
-		};
-		BC9979AA1D981513004A572C /* adviceAppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				BC9979AB1D981513004A572C /* adviceAppUITests.swift */,
-			);
-			path = adviceAppUITests;
 			sourceTree = "<group>";
 		};
 		BCCE55A01E55350F001C6927 /* Controllers */ = {
@@ -554,7 +530,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC9979A11D981513004A572C /* adviceAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,7 +537,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC9979AC1D981513004A572C /* adviceAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
