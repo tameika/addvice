@@ -215,6 +215,7 @@ class ViewController: UIViewController {
                         self.firAdviceCollection.insert(content)
                     }
                 }
+                
             }
             handler()
             print("🌽\(self.firAdviceCollection.count)")
