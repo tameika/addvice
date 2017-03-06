@@ -14,7 +14,7 @@ extension UIColor {
     static let lilac = UIColor(red:0.86, green:0.73, blue:0.94, alpha:1.0)
     static let seafoamGreen = UIColor(red:0.82, green:0.94, blue:0.87, alpha:1.0)
     static let eggplant = UIColor(red:0.17, green:0.03, blue:0.25, alpha:0.5)
-    static let eggplantDark = UIColor(red:0.17, green:0.03, blue:0.25, alpha:0.8)
+    static let eggplantDark = UIColor(red:0.17, green:0.03, blue:0.25, alpha:1.0)
 }
 
 

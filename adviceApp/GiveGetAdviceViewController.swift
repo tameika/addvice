@@ -75,19 +75,19 @@ class ViewController: UIViewController {
         self.flagAdviceBtn.alpha = 0.0
         
         self.giveAdviceBtnOutlet.clipsToBounds = true
-        self.giveAdviceBtnOutlet.layer.cornerRadius = giveAdviceBtnOutlet.bounds.height * 0.5
+        self.giveAdviceBtnOutlet.layer.cornerRadius = giveAdviceBtnOutlet.bounds.height * 0.50
         self.giveAdviceBtnOutlet.backgroundColor = UIColor.eggplant
         
         self.getAdviceBtnOutlet.clipsToBounds = true
-        self.getAdviceBtnOutlet.layer.cornerRadius = getAdviceBtnOutlet.bounds.height * 0.5
+        self.getAdviceBtnOutlet.layer.cornerRadius = getAdviceBtnOutlet.bounds.height * 0.50
         self.getAdviceBtnOutlet.backgroundColor = UIColor.eggplant
         
         self.savedAdviceBtn.clipsToBounds = true
-        self.savedAdviceBtn.layer.cornerRadius = savedAdviceBtn.bounds.height * 0.5
+        self.savedAdviceBtn.layer.cornerRadius = savedAdviceBtn.bounds.height * 0.50
         self.savedAdviceBtn.backgroundColor = UIColor.eggplant
         
         self.flagAdviceBtn.clipsToBounds = true
-        self.flagAdviceBtn.layer.cornerRadius = flagAdviceBtn.bounds.height * 0.4
+        self.flagAdviceBtn.layer.cornerRadius = flagAdviceBtn.bounds.height * 0.50
         self.flagAdviceBtn.backgroundColor = UIColor.eggplantDark
         
     }

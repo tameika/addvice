@@ -19,7 +19,7 @@ class ContainerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       // userDefaults.set(true, forKey: "isFirstLaunch")
+        userDefaults.set(true, forKey: "isFirstLaunch")
         hideContainerView()
         setUpContainer()
     }
@@ -36,7 +36,7 @@ class ContainerViewController: UIViewController {
         
         for label in numberLabels {
             label.clipsToBounds = true
-            label.layer.cornerRadius = 20.0
+            label.layer.cornerRadius = label.bounds.height * 0.50
         }
     }
     
