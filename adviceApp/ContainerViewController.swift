@@ -3,7 +3,7 @@
 //  addvice
 //
 //  Created by Tameika Lawrence on 2/19/17.
-//  Copyright © 2017 flatiron. All rights reserved.
+//  Copyright © 2017 Tameika Lawrence. All rights reserved.
 //
 
 import UIKit

@@ -3,7 +3,7 @@
 //  adviceApp
 //
 //  Created by Tameika Lawrence on 9/25/16.
-//  Copyright © 2016 flatiron. All rights reserved.
+//  Copyright © 2016 Tameika Lawrence. All rights reserved.
 //
 
 import UIKit
@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var giveAdviceBtnOutlet: UIButton!
     @IBOutlet weak var logoA: UIImageView!
     @IBOutlet weak var logoTitle: UILabel!
-    @IBOutlet weak var flagAdviceBtn: UIButton!    
+    @IBOutlet weak var flagAdviceBtn: UIButton!
     
     
     // MARK: Logic Properties
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     var savedAdvice = [Advice]()
     var displayedFIRAdvice: String = ""
     var ref: FIRDatabaseReference!
-    var firAdviceCollection = Set([String]()) // change var name
+    var firAdviceCollection = Set([String]())
     var removedAdvice = String()
     
     
@@ -190,7 +190,7 @@ class ViewController: UIViewController {
         UIView.animate(withDuration: 0.8, delay: 0.6, options: .curveEaseInOut, animations: {
             self.flagAdviceBtn.alpha = 0.9
         })
-            
+        
     }
     
     
@@ -244,7 +244,7 @@ class ViewController: UIViewController {
     
     @IBAction func receiveAdviceBtnPressed(_ sender: UIButton) {
         animateGetButtonPress()
-        animateInFlagButton() 
+        animateInFlagButton()
         animateInFlagButton()
         guard firAdviceCollection.count >= 1 else {
             displayAdviceTextLabel.textColor = UIColor.eggplant
@@ -302,14 +302,14 @@ class ViewController: UIViewController {
                 guard var contentDictionary = value as? [String : String] else { print("nothing"); return }
                 if contentDictionary["content"] == self.removedAdvice {
                     availableRef.child(key).removeValue()
-                    let alert = UIAlertController(title: "Flagged!", message: "This piece of advice will be removed.", preferredStyle: .alert)
-                    let action = UIAlertAction(title: "Thank You", style: .destructive, handler: nil)
+                    let alert = UIAlertController(title: "Thank You!", message: "This piece of advice will be removed.", preferredStyle: .alert)
+                    let action = UIAlertAction(title: "OK", style: .destructive, handler: nil)
                     alert.addAction(action)
                     self.present(alert, animated: true, completion: nil)
                     self.displayAdviceTextLabel.text = ""
-                    break
+                    
                 } else {
-                    print("✅ DID NOT CHANGE OBJ VALUE")
+                    print("IS NOT OBJECTIONABLE CONTENT")
                 }
             }
         })

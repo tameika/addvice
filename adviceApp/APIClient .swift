@@ -3,7 +3,7 @@
 //  adviceApp
 //
 //  Created by Tameika Lawrence on 11/15/16.
-//  Copyright © 2016 flatiron. All rights reserved.
+//  Copyright © 2016 Tameika Lawrence. All rights reserved.
 //
 
 import Foundation

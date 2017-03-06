@@ -3,7 +3,7 @@
 //  adviceAppTests
 //
 //  Created by Tameika Lawrence on 9/25/16.
-//  Copyright © 2016 flatiron. All rights reserved.
+//  Copyright © 2016 Tameika Lawrence. All rights reserved.
 //
 
 import XCTest
