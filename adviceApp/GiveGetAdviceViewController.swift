@@ -237,7 +237,7 @@ class ViewController: UIViewController {
         giveAdviceBtnOutlet.isEnabled = false
         store.saveContext()
         let newRef = FIRDatabase.database().reference().child("Advice").childByAutoId()
-        newRef.setValue(["content": adviceReceived])
+        newRef.setValue(["user": "tameika", "content": adviceReceived])
     }
     
     

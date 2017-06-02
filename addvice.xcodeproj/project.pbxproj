@@ -21,6 +21,8 @@
 		BC9979911D981513004A572C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC99798F1D981513004A572C /* Main.storyboard */; };
 		BC9979931D981513004A572C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC9979921D981513004A572C /* Assets.xcassets */; };
 		BC9979961D981513004A572C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC9979941D981513004A572C /* LaunchScreen.storyboard */; };
+		BCA9FC471EE0A84C009E31A5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA9FC461EE0A84C009E31A5 /* User.swift */; };
+		BCA9FC491EE10ECD009E31A5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA9FC481EE10ECD009E31A5 /* LoginViewController.swift */; };
 		BCB17C611DE8BD54004CA1DF /* BadWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB17C601DE8BD54004CA1DF /* BadWords.swift */; };
 		BCBAF3691DEBE59E00B714B5 /* MyAdviceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBAF3681DEBE59E00B714B5 /* MyAdviceTableViewController.swift */; };
 		BCC28E6B1E5A37280051C6FB /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC28E6A1E5A37280051C6FB /* ContainerViewController.swift */; };
@@ -83,6 +85,8 @@
 		BC9979951D981513004A572C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC99799C1D981513004A572C /* addviceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = addviceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC9979A71D981513004A572C /* addviceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = addviceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCA9FC461EE0A84C009E31A5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BCA9FC481EE10ECD009E31A5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BCB17C601DE8BD54004CA1DF /* BadWords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadWords.swift; sourceTree = "<group>"; };
 		BCBAF3681DEBE59E00B714B5 /* MyAdviceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAdviceTableViewController.swift; sourceTree = "<group>"; };
 		BCC28E6A1E5A37280051C6FB /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
@@ -181,6 +185,7 @@
 				BCC28E6A1E5A37280051C6FB /* ContainerViewController.swift */,
 				BC99798D1D981513004A572C /* GiveGetAdviceViewController.swift */,
 				BCBAF3681DEBE59E00B714B5 /* MyAdviceTableViewController.swift */,
+				BCA9FC481EE10ECD009E31A5 /* LoginViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -197,11 +202,12 @@
 		BCCE55A21E55351C001C6927 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BC99798B1D981513004A572C /* AppDelegate.swift */,
 				BCB17C601DE8BD54004CA1DF /* BadWords.swift */,
 				BC43C33C1DDBA157000994ED /* APIClient .swift */,
 				BC6244C31DDA2E0C00AE6523 /* DataStore.swift */,
+				BCA9FC461EE0A84C009E31A5 /* User.swift */,
 				BC7EA1931E35A3B700FEDC6C /* Extensions.swift */,
-				BC99798B1D981513004A572C /* AppDelegate.swift */,
 				BC6244C51DDA308500AE6523 /* adviceApp.xcdatamodeld */,
 			);
 			name = Models;
@@ -522,7 +528,9 @@
 				BC43C33D1DDBA157000994ED /* APIClient .swift in Sources */,
 				BCBAF3691DEBE59E00B714B5 /* MyAdviceTableViewController.swift in Sources */,
 				BC6244C71DDA308500AE6523 /* adviceApp.xcdatamodeld in Sources */,
+				BCA9FC471EE0A84C009E31A5 /* User.swift in Sources */,
 				BC7EA1941E35A3B700FEDC6C /* Extensions.swift in Sources */,
+				BCA9FC491EE10ECD009E31A5 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
