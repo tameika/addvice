@@ -11,11 +11,14 @@ import UIKit
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var usernameField: UITextField!
+    @IBOutlet weak var loginView: UIView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         //setUpUsernameField()
+        //setUpLoginView()
         
     }
 
@@ -23,9 +26,17 @@ class LoginViewController: UIViewController {
     func setUpUsernameField() {
         
         usernameField.clipsToBounds = true
-        usernameField.layer.borderWidth = 2.0
-        usernameField.layer.borderColor = UIColor.clear.cgColor
+        usernameField.layer.borderWidth = 0.50
+        //usernameField.layer.borderColor = UIColor.white.cgColor
         
+    }
+    
+    func setUpLoginView() {
+        
+        loginView.clipsToBounds = true
+        //loginView.layer.cornerRadius = loginView.bounds.height * 0.05
+        loginView.layer.borderWidth = 0.50
+        loginView.layer.borderColor = UIColor.white.cgColor
     }
    
 

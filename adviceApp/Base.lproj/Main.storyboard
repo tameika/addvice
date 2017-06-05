@@ -237,24 +237,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bte-LS-Xgd">
-                                <rect key="frame" x="53" y="122" width="308" height="223"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bte-LS-Xgd">
+                                <rect key="frame" x="53" y="102" width="308" height="263"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dOu-fV-hkJ">
-                                        <rect key="frame" x="35" y="74" width="239" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dOu-fV-hkJ">
+                                        <rect key="frame" x="45.333333333333314" y="117" width="215.33333333333337" height="30"/>
                                         <color key="backgroundColor" red="0.85166169680000003" green="0.79788697909999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.11904106590000001" green="0.057622839289999998" blue="0.18086939099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="dOu-fV-hkJ" firstAttribute="centerY" secondItem="bte-LS-Xgd" secondAttribute="centerY" id="Fhv-y7-rxi"/>
+                                    <constraint firstItem="dOu-fV-hkJ" firstAttribute="width" secondItem="bte-LS-Xgd" secondAttribute="width" multiplier="0.7" id="XVf-0v-cj0"/>
+                                    <constraint firstItem="dOu-fV-hkJ" firstAttribute="centerX" secondItem="bte-LS-Xgd" secondAttribute="centerX" constant="-1" id="lab-cK-9pt"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bte-LS-Xgd" firstAttribute="centerX" secondItem="trI-3P-Gyg" secondAttribute="centerX" id="0Vq-MZ-ctC"/>
+                            <constraint firstItem="bte-LS-Xgd" firstAttribute="centerY" secondItem="trI-3P-Gyg" secondAttribute="centerY" constant="-134.5" id="57n-cM-471"/>
+                            <constraint firstItem="bte-LS-Xgd" firstAttribute="top" secondItem="K9s-4e-5QA" secondAttribute="bottom" constant="102" id="DeV-t9-IoS"/>
+                            <constraint firstItem="bte-LS-Xgd" firstAttribute="leading" secondItem="trI-3P-Gyg" secondAttribute="leadingMargin" constant="33" id="vJi-oo-ANF"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="loginView" destination="bte-LS-Xgd" id="ncU-7J-o8v"/>
                         <outlet property="usernameField" destination="dOu-fV-hkJ" id="sKQ-JZ-ZBf"/>
                     </connections>
                 </viewController>
@@ -513,6 +523,7 @@
                         <outletCollection property="numberLabels" destination="Jrf-Mo-n7q" collectionClass="NSMutableArray" id="CoN-RB-Lq5"/>
                         <outletCollection property="numberLabels" destination="WBs-cT-2Rt" collectionClass="NSMutableArray" id="PiT-7d-e8T"/>
                         <outletCollection property="numberLabels" destination="wPz-Cv-7O6" collectionClass="NSMutableArray" id="sp4-NI-prq"/>
+                        <segue destination="tHZ-bb-S0A" kind="presentation" identifier="presentLogin" id="evF-Nb-ghY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jxy-q0-0IL" userLabel="First Responder" sceneMemberID="firstResponder"/>

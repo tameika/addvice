@@ -83,8 +83,8 @@
 		BC9979901D981513004A572C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BC9979921D981513004A572C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC9979951D981513004A572C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BC99799C1D981513004A572C /* addviceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = addviceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BC9979A71D981513004A572C /* addviceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = addviceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC99799C1D981513004A572C /* addviceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = addviceTests.xctest; path = "/Users/tameikalawrence/Desktop/APPS/adviceApp/build/Debug-iphoneos/addviceTests.xctest"; sourceTree = "<absolute>"; };
+		BC9979A71D981513004A572C /* addviceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = addviceUITests.xctest; path = "/Users/tameikalawrence/Desktop/APPS/adviceApp/build/Debug-iphoneos/addviceUITests.xctest"; sourceTree = "<absolute>"; };
 		BCA9FC461EE0A84C009E31A5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BCA9FC481EE10ECD009E31A5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BCB17C601DE8BD54004CA1DF /* BadWords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadWords.swift; sourceTree = "<group>"; };
@@ -151,7 +151,6 @@
 			children = (
 				BC4C3A8A1E6005B3001BA80D /* addvice.entitlements */,
 				BC99798A1D981513004A572C /* addviceApp */,
-				BC9979891D981513004A572C /* Products */,
 				A582106572F989356FDEFEE6 /* Pods */,
 				328AB9A16CC1FED8EF616E18 /* Frameworks */,
 			);
@@ -161,10 +160,9 @@
 			isa = PBXGroup;
 			children = (
 				BC9979881D981513004A572C /* addvice.app */,
-				BC99799C1D981513004A572C /* addviceTests.xctest */,
-				BC9979A71D981513004A572C /* addviceUITests.xctest */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		BC99798A1D981513004A572C /* addviceApp */ = {
@@ -222,6 +220,7 @@
 				BCEF6B9E1E5307CE00DEF771 /* logoBubble-a.png */,
 				BCEF6B9A1E52F16400DEF771 /* star2.png */,
 				BC4B661F1E0B5653003EEEC0 /* positive-725842_1920.jpg */,
+				BC9979891D981513004A572C /* Products */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
