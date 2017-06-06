@@ -246,6 +246,9 @@
                                 <color key="textColor" red="0.64279128750000003" green="0.81979166670000003" blue="0.70334766059999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="usernameFieldAction:" destination="tHZ-bb-S0A" eventType="editingDidEnd" id="xUL-RV-Qdv"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="welcome! before you continute create a username to get started" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xnE-ab-QaC">
                                 <rect key="frame" x="47" y="253.99999999999997" width="321" height="38.333333333333286"/>

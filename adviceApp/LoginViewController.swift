@@ -19,8 +19,7 @@ class LoginViewController: UIViewController {
 
         setUpUsernameField()
         setUpEnterButton()
-        textfieldCharacterLimit()
-        self.navigationController?.navigationBar.isHidden = true 
+        self.navigationController?.navigationBar.isHidden = true
         
     }
     
@@ -48,54 +47,50 @@ class LoginViewController: UIViewController {
         enterBtn.layer.cornerRadius = enterBtn.bounds.height * 0.50
         enterBtn.layer.borderColor = UIColor.seafoamGreen.cgColor
         self.enterBtn.isEnabled = false
-        print("button is created and disabled")
+        print("🍐 button is created and disabled")
 
     }
     
-//    func makeBackgroundRed() {
-//        
-//        usernameField.layer.backgroundColor = UIColor.
-//    }
+
     
     func makeBackgroundLilac() {
-        UIView.animate(withDuration: 1.0, delay: 5.0, options: [.curveEaseIn], animations: {
+        UIView.animate(withDuration: 1.0, delay: 0.0, options: [.curveEaseIn], animations: {
             self.usernameField.layer.backgroundColor = UIColor.lilac.cgColor
+            self.usernameField.textColor = UIColor.eggplantDark
         })
         UIView.setAnimationRepeatCount(3.0)
         
     }
    
-    
-    func textfieldCharacterLimit()  {
-        guard let username = usernameField.text else { return }
-        if (username.characters.count > 4) && (username.characters.count < 13) {
-            makeBackgroundLilac()
-            enterBtn.isEnabled = true
-            print("username is right length")
-            print("button is enabled")
-        }
-        
-//        else {
-//            enterBtn.isEnabled = false
-//            print("button is still not enabled")
-//        }
-    }
-    
-//    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-//        if textField.text?.characters.count == 12 {
-//            return true
-//
-//        } else {
-//            return false
-//        }
-//    }
+
+
     
     // MARK:
     
-    @IBAction func enterBtn(_ sender: Any) {
-     
+    @IBAction func usernameFieldAction(_ sender: Any) {
+        
+        print("💦 character limit function fired")
+        guard let username = usernameField.text else { return }
+        print("🍌 passed username variable creation")
+        if (username != "") && (username.characters.count >= 5) && (username.characters.count <= 12) {
+            print("🍉 inside character limit if statement")
+            makeBackgroundLilac()
+            enterBtn.isEnabled = true
+            print("🍾 username is right length")
+            print("🎈 button is enabled")
+        } else {
+            return usernameField.layer.backgroundColor = UIColor.errorRed.cgColor
+        }
 
     }
+    
+    
+    @IBAction func enterBtn(_ sender: Any) {
+     
+       
+    }
+    
+    
     
   }
 
