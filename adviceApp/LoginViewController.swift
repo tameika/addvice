@@ -11,14 +11,15 @@ import UIKit
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var usernameField: UITextField!
-    @IBOutlet weak var loginView: UIView!
     
-
+    @IBOutlet weak var enterBtn: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //setUpUsernameField()
-        //setUpLoginView()
+        setUpUsernameField()
+        setEnterButton()
         
     }
 
@@ -26,18 +27,26 @@ class LoginViewController: UIViewController {
     func setUpUsernameField() {
         
         usernameField.clipsToBounds = true
-        usernameField.layer.borderWidth = 0.50
-        //usernameField.layer.borderColor = UIColor.white.cgColor
+        usernameField.layer.borderWidth = 0.60
+        usernameField.layer.cornerRadius = usernameField.bounds.height * 0.50
+        usernameField.layer.borderColor = UIColor.seafoamGreen.cgColor
         
     }
     
-    func setUpLoginView() {
+    func setEnterButton() {
         
-        loginView.clipsToBounds = true
-        //loginView.layer.cornerRadius = loginView.bounds.height * 0.05
-        loginView.layer.borderWidth = 0.50
-        loginView.layer.borderColor = UIColor.white.cgColor
+        enterBtn.clipsToBounds = true
+        enterBtn.layer.borderWidth = 0.60
+        enterBtn.layer.cornerRadius = enterBtn.bounds.height * 0.50
+        enterBtn.layer.borderColor = UIColor.seafoamGreen.cgColor
     }
    
+    @IBAction func enterBtn(_ sender: Any) {
+    }
 
 }
+
+
+
+
+
