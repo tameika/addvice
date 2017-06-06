@@ -77,6 +77,7 @@ class LoginViewController: UIViewController {
             makeFieldBackgroundLilac()
             enterBtn.isEnabled = true
         } else {
+            enterBtn.isEnabled = false
             return makeFieldBackgroundRed()
         }
 
