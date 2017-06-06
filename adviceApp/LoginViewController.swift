@@ -13,15 +13,34 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var enterBtn: UIButton!
     
+    var userDefaults = UserDefaults.standard
+    
+    
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-
+        userDefaults.set(false, forKey: "isFirstLaunch")
+        isUsersFirstTime()
         setUpUsernameField()
         setUpEnterButton()
         self.navigationController?.navigationBar.isHidden = true
         
     }
+    
+    func isUsersFirstTime() {
+        
+        if userDefaults.bool(forKey: "isFirstLaunch") == true {
+            userDefaults.set(false, forKey: "isFirstLaunch")
+            userDefaults.synchronize()
+            print("🍊 user is a new user")
+
+        } else if userDefaults.bool(forKey: "isFirstLaunch") == false {
+            performSegue(withIdentifier: "showAddviceIdentifier", sender: self)
+            print("🍌 user is not new")
+        }
+    }
+    
     
     // MARK: Dismiss keyboard
     
@@ -37,7 +56,7 @@ class LoginViewController: UIViewController {
         usernameField.clipsToBounds = true
         usernameField.layer.borderWidth = 0.60
         usernameField.layer.cornerRadius = usernameField.bounds.height * 0.50
-        usernameField.attributedPlaceholder = NSAttributedString(string: "create a username", attributes: [NSForegroundColorAttributeName: UIColor.seafoamGreen])
+        usernameField.attributedPlaceholder = NSAttributedString(string: "start typing here", attributes: [NSForegroundColorAttributeName: UIColor.seafoamGreen])
         usernameField.layer.borderColor = UIColor.seafoamGreen.cgColor
         
     }

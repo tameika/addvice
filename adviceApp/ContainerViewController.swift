@@ -19,7 +19,7 @@ class ContainerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        userDefaults.set(true, forKey: "isFirstLaunch")
+        //userDefaults.set(true, forKey: "isFirstLaunch")
         hideContainerView()
         setUpContainer()
     }
@@ -57,6 +57,7 @@ class ContainerViewController: UIViewController {
             
         } else if userDefaults.bool(forKey: "isFirstLaunch") == false {
             (self.parent as? ViewController)?.containerView.isHidden = true
+            
         }
         
     }
@@ -70,7 +71,6 @@ class ContainerViewController: UIViewController {
                         self.hideContainerView()
         }) { _ in
             (self.parent as? ViewController)?.containerView.isHidden = true
-        
         }
     }
     
