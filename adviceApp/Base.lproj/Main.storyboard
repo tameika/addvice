@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ceF-89-aov">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tHZ-bb-S0A">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -237,34 +237,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bte-LS-Xgd">
-                                <rect key="frame" x="53" y="102" width="308" height="263"/>
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dOu-fV-hkJ">
-                                        <rect key="frame" x="45.333333333333314" y="117" width="215.33333333333337" height="30"/>
-                                        <color key="backgroundColor" red="0.85166169680000003" green="0.79788697909999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" red="0.11904106590000001" green="0.057622839289999998" blue="0.18086939099999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="dOu-fV-hkJ" firstAttribute="centerY" secondItem="bte-LS-Xgd" secondAttribute="centerY" id="Fhv-y7-rxi"/>
-                                    <constraint firstItem="dOu-fV-hkJ" firstAttribute="width" secondItem="bte-LS-Xgd" secondAttribute="width" multiplier="0.7" id="XVf-0v-cj0"/>
-                                    <constraint firstItem="dOu-fV-hkJ" firstAttribute="centerX" secondItem="bte-LS-Xgd" secondAttribute="centerX" constant="-1" id="lab-cK-9pt"/>
-                                </constraints>
-                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dOu-fV-hkJ">
+                                <rect key="frame" x="72" y="353" width="250" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.85166169680000003" green="0.79788697909999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoBubble-a" translatesAutoresizingMaskIntoConstraints="NO" id="zCG-gH-jPm">
+                                <rect key="frame" x="142" y="118" width="110" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="addvice" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLh-Np-ZOV">
+                                <rect key="frame" x="105" y="227" width="184" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="44"/>
+                                <color key="textColor" red="0.64279128750000003" green="0.81979166670000003" blue="0.70334766059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ief-ZZ-zmM">
+                                <rect key="frame" x="112" y="481" width="153" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <state key="normal" title="start"/>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="bte-LS-Xgd" firstAttribute="centerX" secondItem="trI-3P-Gyg" secondAttribute="centerX" id="0Vq-MZ-ctC"/>
-                            <constraint firstItem="bte-LS-Xgd" firstAttribute="centerY" secondItem="trI-3P-Gyg" secondAttribute="centerY" constant="-134.5" id="57n-cM-471"/>
-                            <constraint firstItem="bte-LS-Xgd" firstAttribute="top" secondItem="K9s-4e-5QA" secondAttribute="bottom" constant="102" id="DeV-t9-IoS"/>
-                            <constraint firstItem="bte-LS-Xgd" firstAttribute="leading" secondItem="trI-3P-Gyg" secondAttribute="leadingMargin" constant="33" id="vJi-oo-ANF"/>
-                        </constraints>
+                        <color key="backgroundColor" red="0.11904106590000001" green="0.057622839289999998" blue="0.18086939099999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
-                        <outlet property="loginView" destination="bte-LS-Xgd" id="ncU-7J-o8v"/>
                         <outlet property="usernameField" destination="dOu-fV-hkJ" id="sKQ-JZ-ZBf"/>
                     </connections>
                 </viewController>
@@ -523,7 +523,6 @@
                         <outletCollection property="numberLabels" destination="Jrf-Mo-n7q" collectionClass="NSMutableArray" id="CoN-RB-Lq5"/>
                         <outletCollection property="numberLabels" destination="WBs-cT-2Rt" collectionClass="NSMutableArray" id="PiT-7d-e8T"/>
                         <outletCollection property="numberLabels" destination="wPz-Cv-7O6" collectionClass="NSMutableArray" id="sp4-NI-prq"/>
-                        <segue destination="tHZ-bb-S0A" kind="presentation" identifier="presentLogin" id="evF-Nb-ghY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jxy-q0-0IL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -537,6 +536,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="logoBubble-a" width="428" height="362"/>
         <image name="logoBubble-a.png" width="428" height="362"/>
         <image name="star2.png" width="1400" height="980"/>
     </resources>
