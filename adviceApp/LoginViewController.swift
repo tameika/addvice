@@ -37,6 +37,7 @@ class LoginViewController: UIViewController {
         usernameField.clipsToBounds = true
         usernameField.layer.borderWidth = 0.60
         usernameField.layer.cornerRadius = usernameField.bounds.height * 0.50
+        usernameField.attributedPlaceholder = NSAttributedString(string: "create a username", attributes: [NSForegroundColorAttributeName: UIColor.seafoamGreen])
         usernameField.layer.borderColor = UIColor.seafoamGreen.cgColor
         
     }
@@ -68,11 +69,11 @@ class LoginViewController: UIViewController {
 
 
     
-    // MARK: Username validation logic 
+    // MARK: Username validation logic
     
     @IBAction func usernameFieldAction(_ sender: Any) {
         guard let username = usernameField.text else { return }
-        if (username != "") && (username.characters.count >= 5) && (username.characters.count <= 12) {
+        if (username != "") && !(username.contains(" ")) && (username.characters.count >= 5) && (username.characters.count <= 12) {
             makeFieldBackgroundLilac()
             enterBtn.isEnabled = true
         } else {
