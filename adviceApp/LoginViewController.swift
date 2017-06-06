@@ -47,13 +47,13 @@ class LoginViewController: UIViewController {
         enterBtn.layer.cornerRadius = enterBtn.bounds.height * 0.50
         enterBtn.layer.borderColor = UIColor.seafoamGreen.cgColor
         self.enterBtn.isEnabled = false
-        print("🍐 button is created and disabled")
 
     }
     
 
+    // MARK: Username field validation animation
     
-    func makeBackgroundLilac() {
+    func makeFieldBackgroundLilac() {
         UIView.animate(withDuration: 1.0, delay: 0.0, options: [.curveEaseIn], animations: {
             self.usernameField.layer.backgroundColor = UIColor.lilac.cgColor
             self.usernameField.textColor = UIColor.eggplantDark
@@ -62,24 +62,21 @@ class LoginViewController: UIViewController {
         
     }
    
+    func makeFieldBackgroundRed() {
+        usernameField.layer.backgroundColor = UIColor.errorRed.cgColor
+    }
 
 
     
-    // MARK:
+    // MARK: Username validation logic 
     
     @IBAction func usernameFieldAction(_ sender: Any) {
-        
-        print("💦 character limit function fired")
         guard let username = usernameField.text else { return }
-        print("🍌 passed username variable creation")
         if (username != "") && (username.characters.count >= 5) && (username.characters.count <= 12) {
-            print("🍉 inside character limit if statement")
-            makeBackgroundLilac()
+            makeFieldBackgroundLilac()
             enterBtn.isEnabled = true
-            print("🍾 username is right length")
-            print("🎈 button is enabled")
         } else {
-            return usernameField.layer.backgroundColor = UIColor.errorRed.cgColor
+            return makeFieldBackgroundRed()
         }
 
     }
