@@ -11,7 +11,6 @@ import UIKit
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var usernameField: UITextField!
-    
     @IBOutlet weak var enterBtn: UIButton!
     
     
@@ -20,9 +19,19 @@ class LoginViewController: UIViewController {
 
         setUpUsernameField()
         setEnterButton()
+        self.navigationController?.navigationBar.isHidden = true 
         
     }
+    
+    // MARK: Dismiss keyboard
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+        super.touchesBegan(touches, with: event)
+    }
 
+    
+    // MARK: Setting up UI Objects
     
     func setUpUsernameField() {
         
@@ -41,7 +50,12 @@ class LoginViewController: UIViewController {
         enterBtn.layer.borderColor = UIColor.seafoamGreen.cgColor
     }
    
+    
+    // MARK:
+    
     @IBAction func enterBtn(_ sender: Any) {
+        
+        
     }
 
 }
