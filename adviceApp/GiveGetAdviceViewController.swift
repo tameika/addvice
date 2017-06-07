@@ -200,7 +200,6 @@ class ViewController: UIViewController {
     }
     
     
-    
     // MARK: Dismiss Keyboard
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -308,11 +307,21 @@ class ViewController: UIViewController {
                 guard var contentDictionary = value as? [String : String] else { print("nothing"); return }
                 if contentDictionary["content"] == self.removedAdvice {
                     availableRef.child(key).removeValue()
-                    let alert = UIAlertController(title: "Thank You!", message: "This piece of advice will be removed.", preferredStyle: .alert)
-                    let action = UIAlertAction(title: "OK", style: .destructive, handler: nil)
-                    alert.addAction(action)
+                    
+                    
+                    let alert = UIAlertController(title: "Choose One", message: "Some message here.", preferredStyle: .actionSheet)
+                    
+                    let block = UIAlertAction(title: "block this user", style: .destructive, handler: nil)
+                    let cancel = UIAlertAction(title: "cancel", style: .default, handler: nil)
+                    let hide = UIAlertAction(title: "hide this advice", style: .destructive, handler: nil)
+                    let actions = [hide, block, cancel]
+                    
+                    for a in actions {
+                        alert.addAction(a)
+                    }
+                    
                     self.present(alert, animated: true, completion: nil)
-                    self.displayAdviceTextLabel.text = ""
+                    //self.displayAdviceTextLabel.text = ""
                     
                 } else {
                     print("IS NOT OBJECTIONABLE CONTENT")
@@ -349,7 +358,6 @@ class ViewController: UIViewController {
 // MARK: UITextFieldDelegate Methods
 
 extension ViewController: UITextFieldDelegate {
-    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let currentText = textField.text ?? ""
         if !(string + currentText).isEmpty && ((string + currentText).characters.count <= 160) {
