@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var logoA: UIImageView!
     @IBOutlet weak var logoTitle: UILabel!
     @IBOutlet weak var flagAdviceBtn: UIButton!
+    @IBOutlet weak var navBarDisplayName: UINavigationItem!
     
     
     // MARK: Logic Properties
@@ -38,6 +39,8 @@ class ViewController: UIViewController {
     var ref: FIRDatabaseReference!
     var firAdviceCollection = Set([String]())
     var removedAdvice = String()
+    var createdUsername: User!
+    var textField: LoginViewController!
     
     
     override func viewDidLoad() {
@@ -47,12 +50,16 @@ class ViewController: UIViewController {
         setUpAdviceTextField()
         setupAdviceButtons()
         store.fetchData()
+        setUpNavBarDisplayName()
     }
+    
     
     // MARK: Setting Up UI Objects
     
-    func setUpDisplayNameLabel() {
-        self.navigationController?.navigationItem.title = "tameika"
+    func setUpNavBarDisplayName() {
+        //navBarDisplayName.title = createdUsername.username
+        
+        
     }
     
     func setUpAdviceTextLabel() {

@@ -14,7 +14,9 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var enterBtn: UIButton!
     
     var containerVC = ContainerViewController()
-    
+    //var createdUsername: User!
+    var adviceVC: ViewController!
+    //var username = String()
     
     
     override func viewDidLoad() {
@@ -27,6 +29,7 @@ class LoginViewController: UIViewController {
         
     }
     
+   
 //    func isCurrentUser() {
 //        
 //        if containerVC.userDefaults.bool(forKey: "isFirstLaunch") == false {
@@ -38,18 +41,37 @@ class LoginViewController: UIViewController {
 //        }
 //    }
     
+    
+  
+    // determines whether a segue w the indentifieer should be performed
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        print("should perform segue fired")
         if containerVC.userDefaults.bool(forKey: "isFirstLaunch") == false {
             print("🍌 user is not new; isFirstLaunch = false")
-            return true
+            
+        
+        // if is current user return true and perform
+        return true
         } else {
+    
+    //if is not current user return false and stay
+    return false
         }
-        return false
 
+   }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("prepare for segue fired")
+        if segue.identifier == "showAddviceIdentifier" {
+            print("inside prepare for segue if statement")
+            guard let username = usernameField.text else { return }
+            let dest = segue.destination as? ViewController
+            dest?.navBarDisplayName.title! = username
+            print("🌽", username)
+        }
     }
-    
-    
-    
+
     
     // MARK: Dismiss keyboard
     
@@ -67,6 +89,7 @@ class LoginViewController: UIViewController {
         usernameField.layer.cornerRadius = usernameField.bounds.height * 0.50
         usernameField.attributedPlaceholder = NSAttributedString(string: "start typing here", attributes: [NSForegroundColorAttributeName: UIColor.seafoamGreen])
         usernameField.layer.borderColor = UIColor.seafoamGreen.cgColor
+        
         
     }
     
