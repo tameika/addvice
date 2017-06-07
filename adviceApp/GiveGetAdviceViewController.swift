@@ -234,7 +234,8 @@ class ViewController: UIViewController {
     @IBAction func submitAdviceBtnPressed(_ sender: UIButton) {
         animateGiveButtonPress()
         guard !badWordFlag else { return }
-        guard let adviceReceived = giveAdviceTextField.text else { return }
+        guard var adviceReceived = giveAdviceTextField.text else { return }
+        adviceReceived += (" - " + displayName)
         let newAdvice = Advice(context: store.persistentContainer.viewContext)
         newAdvice.content = adviceReceived
         store.adviceArray.append(newAdvice)
@@ -243,7 +244,7 @@ class ViewController: UIViewController {
         giveAdviceBtnOutlet.isEnabled = false
         store.saveContext()
         let newRef = FIRDatabase.database().reference().child("Advice").childByAutoId()
-        newRef.setValue(["user": "tameika", "content": adviceReceived])
+        newRef.setValue(["user": displayName, "content": adviceReceived])
     }
     
     
@@ -277,7 +278,6 @@ class ViewController: UIViewController {
         print("📢selected advice is now of type Advice")
     }
     
-    
     @IBAction func saveAdvicePressed(_ sender: Any) {
         animateSaveButtonPress()
         if displayAdviceTextLabel.text != nil {
@@ -287,7 +287,6 @@ class ViewController: UIViewController {
             adviceIsSavedAlert()
         }
     }
-    
     
     func adviceIsSavedAlert() {
         let alert = UIAlertController(title: "Advice Saved!", message: "Click sav❥d Up Top To See", preferredStyle: UIAlertControllerStyle.alert)
