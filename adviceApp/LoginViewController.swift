@@ -14,64 +14,46 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var enterBtn: UIButton!
     
     var containerVC = ContainerViewController()
-    //var createdUsername: User!
     var adviceVC: ViewController!
-    //var username = String()
     
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        //isCurrentUser()
         setUpUsernameField()
         setUpEnterButton()
         self.navigationController?.navigationBar.isHidden = true
         
     }
     
-   
-//    func isCurrentUser() {
-//        
-//        if containerVC.userDefaults.bool(forKey: "isFirstLaunch") == false {
-//            performSegue(withIdentifier: "showAddviceIdentifier", sender: self)
-//            print("🍌 user is not new; isFirstLaunch = false")
-//        } else if containerVC.userDefaults.bool(forKey: "isFirstLaunch") == true {
-//            shouldPerformSegue(withIdentifier: "showAddviceIdentifier", sender: self)
-//
-//        }
-//    }
     
-    
-  
     // determines whether a segue w the indentifieer should be performed
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         print("should perform segue fired")
         if containerVC.userDefaults.bool(forKey: "isFirstLaunch") == false {
             print("🍌 user is not new; isFirstLaunch = false")
             
-        
-        // if is current user return true and perform
-        return true
+            
+            // if is current user return true and perform
+            return true
         } else {
-    
-    //if is not current user return false and stay
-    return false
+            
+            //if is not current user return false and stay
+            return false
         }
-
-   }
+        
+    }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("prepare for segue fired")
         if segue.identifier == "showAddviceIdentifier" {
-            print("inside prepare for segue if statement")
             guard let username = usernameField.text else { return }
-            let dest = segue.destination as? ViewController
-            dest?.navBarDisplayName.title! = username
-            print("🌽", username)
+            guard let dest = segue.destination as? ViewController else { return }
+            dest.displayName = username
+            
         }
     }
-
+    
     
     // MARK: Dismiss keyboard
     
@@ -79,7 +61,7 @@ class LoginViewController: UIViewController {
         view.endEditing(true)
         super.touchesBegan(touches, with: event)
     }
-
+    
     
     // MARK: Setting up UI Objects
     
@@ -90,7 +72,6 @@ class LoginViewController: UIViewController {
         usernameField.attributedPlaceholder = NSAttributedString(string: "start typing here", attributes: [NSForegroundColorAttributeName: UIColor.seafoamGreen])
         usernameField.layer.borderColor = UIColor.seafoamGreen.cgColor
         
-        
     }
     
     func setUpEnterButton() {
@@ -99,10 +80,10 @@ class LoginViewController: UIViewController {
         enterBtn.layer.cornerRadius = enterBtn.bounds.height * 0.50
         enterBtn.layer.borderColor = UIColor.seafoamGreen.cgColor
         self.enterBtn.isEnabled = false
-
+        
     }
     
-
+    
     // MARK: Username field validation animation
     
     func makeFieldBackgroundLilac() {
@@ -111,14 +92,13 @@ class LoginViewController: UIViewController {
             self.usernameField.textColor = UIColor.eggplantDark
         })
         UIView.setAnimationRepeatCount(3.0)
-        
     }
-   
+    
     func makeFieldBackgroundRed() {
         usernameField.layer.backgroundColor = UIColor.errorRed.cgColor
     }
-
-
+    
+    
     
     // MARK: Username validation logic
     
@@ -131,23 +111,23 @@ class LoginViewController: UIViewController {
             enterBtn.isEnabled = false
             return makeFieldBackgroundRed()
         }
-
+        
     }
     
     
     @IBAction func enterBtn(_ sender: Any) {
-     
-       
+        
+        
     }
     
     
     
-  }
+}
 
 
 
 
-    
+
 
 
 

@@ -39,28 +39,23 @@ class ViewController: UIViewController {
     var ref: FIRDatabaseReference!
     var firAdviceCollection = Set([String]())
     var removedAdvice = String()
-    var createdUsername: User!
-    var textField: LoginViewController!
+    var displayName = String()
+    
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         giveAdviceTextField.delegate = self
+        navBarDisplayName.title! = displayName
         setUpAdviceTextLabel()
         setUpAdviceTextField()
         setupAdviceButtons()
         store.fetchData()
-        setUpNavBarDisplayName()
     }
     
     
     // MARK: Setting Up UI Objects
-    
-    func setUpNavBarDisplayName() {
-        //navBarDisplayName.title = createdUsername.username
-        
-        
-    }
     
     func setUpAdviceTextLabel() {
         
