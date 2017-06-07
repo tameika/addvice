@@ -13,33 +13,42 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var enterBtn: UIButton!
     
-    var userDefaults = UserDefaults.standard
+    var containerVC = ContainerViewController()
     
     
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        userDefaults.set(false, forKey: "isFirstLaunch")
-        isUsersFirstTime()
+        //isCurrentUser()
         setUpUsernameField()
         setUpEnterButton()
         self.navigationController?.navigationBar.isHidden = true
         
     }
     
-    func isUsersFirstTime() {
-        
-        if userDefaults.bool(forKey: "isFirstLaunch") == true {
-            userDefaults.set(false, forKey: "isFirstLaunch")
-            userDefaults.synchronize()
-            print("🍊 user is a new user")
-
-        } else if userDefaults.bool(forKey: "isFirstLaunch") == false {
-            performSegue(withIdentifier: "showAddviceIdentifier", sender: self)
-            print("🍌 user is not new")
+//    func isCurrentUser() {
+//        
+//        if containerVC.userDefaults.bool(forKey: "isFirstLaunch") == false {
+//            performSegue(withIdentifier: "showAddviceIdentifier", sender: self)
+//            print("🍌 user is not new; isFirstLaunch = false")
+//        } else if containerVC.userDefaults.bool(forKey: "isFirstLaunch") == true {
+//            shouldPerformSegue(withIdentifier: "showAddviceIdentifier", sender: self)
+//
+//        }
+//    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if containerVC.userDefaults.bool(forKey: "isFirstLaunch") == false {
+            print("🍌 user is not new; isFirstLaunch = false")
+            return true
+        } else {
         }
+        return false
+
     }
+    
+    
     
     
     // MARK: Dismiss keyboard
@@ -63,7 +72,7 @@ class LoginViewController: UIViewController {
     
     func setUpEnterButton() {
         enterBtn.clipsToBounds = true
-        enterBtn.layer.borderWidth = 0.60
+        enterBtn.layer.borderWidth = 0.50
         enterBtn.layer.cornerRadius = enterBtn.bounds.height * 0.50
         enterBtn.layer.borderColor = UIColor.seafoamGreen.cgColor
         self.enterBtn.isEnabled = false

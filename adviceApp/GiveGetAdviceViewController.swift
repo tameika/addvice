@@ -51,6 +51,10 @@ class ViewController: UIViewController {
     
     // MARK: Setting Up UI Objects
     
+    func setUpDisplayNameLabel() {
+        self.navigationController?.navigationItem.title = "tameika"
+    }
+    
     func setUpAdviceTextLabel() {
         
         self.displayAdviceTextLabel.clipsToBounds = true
