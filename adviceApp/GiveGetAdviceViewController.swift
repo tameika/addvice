@@ -255,6 +255,16 @@ class ViewController: UIViewController {
         animateGetButtonPress()
         animateInFlagButton()
         animateInFlagButton()
+        
+        for advice in firAdviceCollection{
+            for user in blockedUsers {
+                if advice.contains(user) {
+                    guard let index = firAdviceCollection.index(of: advice) else { return }
+                    print("🍧", index)
+                    firAdviceCollection.remove(at: index)
+                }
+            }
+        }
         guard firAdviceCollection.count >= 1 else {
             displayAdviceTextLabel.textColor = UIColor.eggplant
             displayAdviceTextLabel.text = "no more advice available"
