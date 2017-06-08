@@ -311,9 +311,18 @@ class ViewController: UIViewController {
                     
                     let alert = UIAlertController(title: "Choose One", message: "Some message here.", preferredStyle: .actionSheet)
                     
-                    let block = UIAlertAction(title: "block this user", style: .destructive, handler: nil)
-                    let cancel = UIAlertAction(title: "cancel", style: .default, handler: nil)
-                    let hide = UIAlertAction(title: "hide this advice", style: .destructive, handler: nil)
+                    let block = UIAlertAction(title: "block this user", style: .destructive, handler: { (action) in
+                        //some action
+                    })
+
+                    let cancel = UIAlertAction(title: "cancel", style: .cancel, handler: { (action) in
+                        print("cancel button tapped")
+                    })
+
+                    let hide = UIAlertAction(title: "hide this advice", style: .destructive, handler: { (action) in
+                        //soe actino
+                    })
+
                     let actions = [hide, block, cancel]
                     
                     for a in actions {
