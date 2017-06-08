@@ -39,6 +39,7 @@ class ViewController: UIViewController {
     var ref: FIRDatabaseReference!
     var firAdviceCollection = Set([String]())
     var removedAdvice = String()
+    var blockedUsers = [String]()
     var displayName = String()
     
     
@@ -217,6 +218,7 @@ class ViewController: UIViewController {
                 for (_, value) in firAdvice {
                     if let contentsDictionary = value as? [String : String] {
                         let content = contentsDictionary["content"] ?? "NO CONTENT"
+                        print("☔️", content)
                         self.firAdviceCollection.insert(content)
                     }
                 }
@@ -306,13 +308,23 @@ class ViewController: UIViewController {
             for (key, value) in firAdvice {
                 guard var contentDictionary = value as? [String : String] else { print("nothing"); return }
                 if contentDictionary["content"] == self.removedAdvice {
-                    availableRef.child(key).removeValue()
+                    //availableRef.child(key).removeValue()
+                    print("🍕", self.removedAdvice)
                     
                     
-                    let alert = UIAlertController(title: "Choose One", message: "Some message here.", preferredStyle: .actionSheet)
+                    
+                    let alert = UIAlertController(title: "Choose One", message: "Some message here.", preferredStyle: .alert)
                     
                     let block = UIAlertAction(title: "block this user", style: .destructive, handler: { (action) in
-                        //some action
+                        
+                            guard let user = contentDictionary["user"] else { return }
+                            
+                            if self.removedAdvice.contains(user) {
+                                self.blockedUsers.append(user)
+                            } else {
+                                print("no")
+                            
+                        }
                     })
 
                     let cancel = UIAlertAction(title: "cancel", style: .cancel, handler: { (action) in
