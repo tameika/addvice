@@ -11,7 +11,6 @@ import Firebase
 import FirebaseDatabase
 import CoreData
 
-
 class ViewController: UIViewController {
     
     // MARK: UI Properties
