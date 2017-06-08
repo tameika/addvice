@@ -28,7 +28,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var flagAdviceBtn: UIButton!
     @IBOutlet weak var navBarDisplayName: UINavigationItem!
     
-    
     // MARK: Logic Properties
     
     let badWordsArray = BadWords.sharedInstance
@@ -43,8 +42,6 @@ class ViewController: UIViewController {
     var displayName = String()
     
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         giveAdviceTextField.delegate = self
@@ -54,7 +51,6 @@ class ViewController: UIViewController {
         setupAdviceButtons()
         store.fetchData()
     }
-    
     
     // MARK: Setting Up UI Objects
     
@@ -96,7 +92,6 @@ class ViewController: UIViewController {
         self.flagAdviceBtn.clipsToBounds = true
         self.flagAdviceBtn.layer.cornerRadius = flagAdviceBtn.bounds.height * 0.50
         self.flagAdviceBtn.backgroundColor = UIColor.eggplantDark
-        
     }
     
     
@@ -116,42 +111,25 @@ class ViewController: UIViewController {
         })
     }
     
-    
-    
     // MARK: Logo Animation
     
     func animateInLogoTitle() {
         
         UIView.animate(withDuration: 0.6,
-                       delay: 0.0,
-                       usingSpringWithDamping: 0.50, initialSpringVelocity: CGFloat(1.0),
-                       options: .curveLinear,
-                       animations: {
+                       delay: 0.0, usingSpringWithDamping: 0.50, initialSpringVelocity: CGFloat(1.0), options: .curveLinear, animations: {
                         self.logoTitle.center.x += self.view.bounds.width
         })
         
-        
         logoA.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
-        UIView.animate(withDuration: 1.0,
-                       delay: 0.5,
-                       usingSpringWithDamping: 0.5,
-                       initialSpringVelocity: 10.0,
-                       options: .curveLinear,
-                       animations: {
-                        self.logoA.transform = CGAffineTransform.identity
+        UIView.animate(withDuration: 1.0, delay: 0.5, usingSpringWithDamping: 0.5, initialSpringVelocity: 10.0, options: .curveLinear, animations: {
+            self.logoA.transform = CGAffineTransform.identity
         })
         
-        
-        UIView.animate(withDuration: 0.6,
-                       delay: 0.1, usingSpringWithDamping: 0.50,
-                       initialSpringVelocity: CGFloat(1.0),
-                       options: .curveLinear,
-                       animations: {
-                        self.logoA.center.x += self.view.bounds.width
+        UIView.animate(withDuration: 0.6, delay: 0.1, usingSpringWithDamping: 0.50, initialSpringVelocity: CGFloat(1.0), options: .curveLinear, animations: {
+            self.logoA.center.x += self.view.bounds.width
         }) { _ in
             (self.childViewControllers.first as? ContainerViewController)?.isUsersFirstTime()
         }
-        
     }
     
     // MARK: Button Animation
@@ -159,7 +137,6 @@ class ViewController: UIViewController {
     func animateGiveButtonPress() {
         UIView.animate(withDuration: 0.1, animations: {
             self.giveAdviceBtnOutlet.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
-            
         },
                        completion: { _ in
                         UIView.animate(withDuration: 0.1, animations: {
@@ -171,7 +148,6 @@ class ViewController: UIViewController {
     func animateGetButtonPress() {
         UIView.animate(withDuration: 0.1, animations: {
             self.getAdviceBtnOutlet.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
-            
         },
                        completion: { _ in
                         UIView.animate(withDuration: 0.1, animations: {
@@ -183,23 +159,19 @@ class ViewController: UIViewController {
     func animateSaveButtonPress() {
         UIView.animate(withDuration: 0.1, animations: {
             self.savedAdviceBtn.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
-            
         },
                        completion: { _ in
                         UIView.animate(withDuration: 0.1, animations: {
                             self.savedAdviceBtn.transform = CGAffineTransform.identity
                         })
         })
-        
     }
     
     func animateInFlagButton() {
         UIView.animate(withDuration: 0.8, delay: 0.6, options: .curveEaseInOut, animations: {
             self.flagAdviceBtn.alpha = 0.9
         })
-        
     }
-    
     
     // MARK: Dismiss Keyboard
     
@@ -218,17 +190,14 @@ class ViewController: UIViewController {
                 for (_, value) in firAdvice {
                     if let contentsDictionary = value as? [String : String] {
                         let content = contentsDictionary["content"] ?? "NO CONTENT"
-                        print("☔️", content)
                         self.firAdviceCollection.insert(content)
                     }
                 }
                 
             }
             handler()
-            print("🌽\(self.firAdviceCollection.count)")
         })
     }
-    
     
     // MARK: Giving Advice Logic
     
@@ -248,6 +217,18 @@ class ViewController: UIViewController {
         newRef.setValue(["user": displayName, "content": adviceReceived])
     }
     
+    //MARK: Blocking User Logic
+    
+    func blockUser() {
+        for advice in firAdviceCollection{
+            for user in blockedUsers {
+                if advice.contains(user) {
+                    guard let index = firAdviceCollection.index(of: advice) else { return }
+                    firAdviceCollection.remove(at: index)
+                }
+            }
+        }
+    }
     
     //MARK: Getting Advice Logic
     
@@ -255,16 +236,7 @@ class ViewController: UIViewController {
         animateGetButtonPress()
         animateInFlagButton()
         animateInFlagButton()
-        
-        for advice in firAdviceCollection{
-            for user in blockedUsers {
-                if advice.contains(user) {
-                    guard let index = firAdviceCollection.index(of: advice) else { return }
-                    print("🍧", index)
-                    firAdviceCollection.remove(at: index)
-                }
-            }
-        }
+        blockUser()
         guard firAdviceCollection.count >= 1 else {
             displayAdviceTextLabel.textColor = UIColor.eggplant
             displayAdviceTextLabel.text = "no more advice available"
@@ -272,13 +244,9 @@ class ViewController: UIViewController {
         }
         savedAdviceBtn.isEnabled = true
         let randomFIRAdviceIndex = Int(arc4random_uniform(UInt32(firAdviceCollection.count)))
-        print("🌮\(randomFIRAdviceIndex)")
-        print("🍿\(self.firAdviceCollection.count)")
         removedAdvice = firAdviceCollection.remove(at: firAdviceCollection.index(firAdviceCollection.startIndex, offsetBy: randomFIRAdviceIndex))
         displayAdviceTextLabel.text = removedAdvice
-        print("🍧", removedAdvice)
     }
-    
     
     // MARK: Saving Advice Logic
     
@@ -286,14 +254,12 @@ class ViewController: UIViewController {
         let advice = Advice(context: store.persistentContainer.viewContext)
         advice.content = selectedAdvice
         advice.isFavorited = true
-        print("📢selected advice is now of type Advice")
     }
     
     @IBAction func saveAdvicePressed(_ sender: Any) {
         animateSaveButtonPress()
         if displayAdviceTextLabel.text != nil {
             saveThisAdvice(selectedAdvice: removedAdvice)
-            print("🔮", removedAdvice)
             store.saveContext()
             adviceIsSavedAlert()
         }
@@ -301,14 +267,12 @@ class ViewController: UIViewController {
     
     func adviceIsSavedAlert() {
         let alert = UIAlertController(title: "Advice Saved!", message: "Click sav❥d Up Top To See", preferredStyle: UIAlertControllerStyle.alert)
-        print("advice is saved alert")
         let okAction = UIAlertAction(title: "Great", style: .destructive, handler: nil)
         alert.addAction(okAction)
         self.present(alert, animated: true, completion: nil)
     }
     
-    
-    // MARK : Flagging Advice Logic
+    // MARK : Flagging Content Logic
     
     @IBAction func flagAdviceBtn(_ sender: Any) {
         let ref = FIRDatabase.database().reference()
@@ -317,51 +281,33 @@ class ViewController: UIViewController {
             guard let firAdvice = snapshot.value as? [String : Any] else { return }
             for (key, value) in firAdvice {
                 guard var contentDictionary = value as? [String : String] else { print("nothing"); return }
-                if contentDictionary["content"] == self.removedAdvice {
-                    //availableRef.child(key).removeValue()
-                    print("🍕", self.removedAdvice)
-                    
-                    
-                    
-                    let alert = UIAlertController(title: "Choose One", message: "Some message here.", preferredStyle: .alert)
-                    
-                    let block = UIAlertAction(title: "block this user", style: .destructive, handler: { (action) in
-                        
-                            guard let user = contentDictionary["user"] else { return }
-                            
-                            if self.removedAdvice.contains(user) {
-                                self.blockedUsers.append(user)
-                            } else {
-                                print("no")
-                            
-                        }
-                    })
-
-                    let cancel = UIAlertAction(title: "cancel", style: .cancel, handler: { (action) in
-                        print("cancel button tapped")
-                    })
-
-                    let hide = UIAlertAction(title: "hide this advice", style: .destructive, handler: { (action) in
-                        //soe actino
-                    })
-
-                    let actions = [hide, block, cancel]
-                    
-                    for a in actions {
-                        alert.addAction(a)
+                
+                let alert = UIAlertController(title: "Choose One", message: "Some message here.", preferredStyle: .alert)
+                let block = UIAlertAction(title: "block this user", style: .destructive, handler: { (action) in
+                    guard let user = contentDictionary["user"] else { return }
+                    if self.removedAdvice.contains(user) {
+                        self.blockedUsers.append(user)
                     }
-                    
-                    self.present(alert, animated: true, completion: nil)
-                    //self.displayAdviceTextLabel.text = ""
-                    
-                } else {
-                    print("IS NOT OBJECTIONABLE CONTENT")
+                })
+                
+                let cancel = UIAlertAction(title: "cancel", style: .cancel, handler: { (action) in
+                })
+                
+                let hide = UIAlertAction(title: "hide this advice", style: .destructive, handler: { (action) in
+                    if contentDictionary["content"] == self.removedAdvice {
+                        availableRef.child(key).removeValue()
+                    }
+                })
+                
+                let actions = [hide, block, cancel]
+                for a in actions {
+                    alert.addAction(a)
                 }
+                self.present(alert, animated: true, completion: nil)
+                self.displayAdviceTextLabel.text = ""
             }
         })
-        
     }
-    
     
     // MARK: Filtering Bad Words
     
@@ -369,9 +315,7 @@ class ViewController: UIViewController {
         for word in badWordsArray.badWordsList {
             if let adviceText = giveAdviceTextField.text {
                 if adviceText.contains(word) {
-                    print(word)
                     let alert = UIAlertController(title: "Chill, chill, chill", message: "Watch your language.", preferredStyle: UIAlertControllerStyle.alert)
-                    print("bad word alert")
                     let okAction = UIAlertAction(title: "OK Cool", style: .default, handler: nil)
                     alert.addAction(okAction)
                     self.present(alert, animated: true, completion: nil)
@@ -382,9 +326,7 @@ class ViewController: UIViewController {
         }
         return false
     }
-    
 }
-
 
 // MARK: UITextFieldDelegate Methods
 
