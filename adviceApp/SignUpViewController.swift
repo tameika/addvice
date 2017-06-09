@@ -117,7 +117,15 @@ class SignUpViewController: UIViewController {
         
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "adviceIdentifier" {
+            if let dest = segue.destination as? ViewController {
+                guard let username = usernameField.text else { print("SETTING USERNAME FAILED"); return }
+                dest.displayName = username
+
+            }
+        }
+    }
     
     
     @IBAction func enterBtn(_ sender: Any) {
