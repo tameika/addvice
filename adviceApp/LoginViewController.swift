@@ -70,7 +70,6 @@ class LoginViewController: UIViewController {
         enterBtn.layer.borderWidth = 0.50
         enterBtn.layer.cornerRadius = enterBtn.bounds.height * 0.50
         enterBtn.layer.borderColor = UIColor.seafoamGreen.cgColor
-        self.enterBtn.isEnabled = false
     }
     
     
@@ -113,22 +112,28 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func enterBtn(_ sender: Any) {
-        guard let username = usernameField.text else { return }
-        guard let password = passwordField.text else { return }
+        guard let username = usernameField.text else {print(1); return }
+        guard let password = passwordField.text else {print(2); return }
         if username != "" && password != "" {
-            FIRAuth.auth()?.signIn(withEmail: username, password: password, completion: { (user, error) in
+            print(3)
+            FIRAuth.auth()?.createUser(withEmail: username, password: password, completion: { (user, error) in
                 if error == nil {
-                    guard let adviceVC = self.storyboard?.instantiateViewController(withIdentifier: "showAddviceIdentifier") else { return }
-                    self.present(adviceVC, animated: true, completion: nil)
+                    print(4)
+                    self.performSegue(withIdentifier: "adviceIdentifier", sender: self)
+                } else {
+                    print(6)
+                    self.alert.isErrorAlert(presenting: self, error: error?.localizedDescription)
+                    print(7)
                 }
             })
             
         }
         
     }
+  
     
     
-    
+//end
 }
 
 

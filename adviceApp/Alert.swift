@@ -25,11 +25,14 @@ struct Alert {
         vc.present(wordAlert, animated: true, completion: nil)
     }
     
-    func isUnavailableAlert(presenting vc: UIViewController) {
-        let usernameAlert = UIAlertController(title: "Username Unavailable", message: "Try adding a number.", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        usernameAlert.addAction(okAction)
-        vc.present(usernameAlert, animated: true, completion: nil)
-    }
+    func isErrorAlert(presenting vc: UIViewController, error message: String?) {
+        let errorAlert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        
+        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        errorAlert.addAction(defaultAction)
+        
+        vc.present(errorAlert, animated: true, completion: nil)
     
+}
+
 }

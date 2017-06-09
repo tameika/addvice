@@ -297,6 +297,7 @@
                                 </state>
                                 <connections>
                                     <action selector="enterBtn:" destination="tHZ-bb-S0A" eventType="touchUpInside" id="UBA-lA-cih"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="adviceIdentifier" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="LlS-rG-2fM"/>
                                 </connections>
                             </button>
                         </subviews>
