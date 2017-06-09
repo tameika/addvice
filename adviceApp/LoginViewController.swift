@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import Fira
 
 class LoginViewController: UIViewController {
     
@@ -15,7 +17,7 @@ class LoginViewController: UIViewController {
     
     var containerVC = ContainerViewController()
     var adviceVC: ViewController!
-    
+    var allUsers = [String]()
     
     override func viewDidLoad() {
         
@@ -111,7 +113,27 @@ class LoginViewController: UIViewController {
             enterBtn.isEnabled = false
             return makeFieldBackgroundRed()
         }
-        
+    }
+    
+    
+    func retrieveExistingUsers() {
+        let ref = FIRDatabase.database().reference()
+        let availableRef = ref.child("Advice")
+        availableRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let existingUsers = snapshot.value as? [String: Any] else { return }
+            for (key, value) in existingUsers {
+                guard var userDictionary = value as? [String: String] else { return }
+                print(userDictionary)
+                let user = userDictionary["user"] ?? "NO USER"
+                self.allUsers.append(user)
+            }
+        })
+
+    }
+    
+    func usernameAlertMessage() {
+        let alert = UIAlertController(title: "Username Unavailable", message: "Try adding a number.", preferredStyle: .alert)
+    
     }
     
     
