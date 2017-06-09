@@ -286,9 +286,14 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xKo-Dr-ZQ3">
-                                <rect key="frame" x="163" y="633" width="46" height="30"/>
+                                <rect key="frame" x="163" y="633" width="68" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="cancel">
+                                    <color key="titleColor" red="0.69411764710000001" green="0.68627450980000004" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelBtn:" destination="tHZ-bb-S0A" eventType="touchUpInside" id="kLS-Lx-1tJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ief-ZZ-zmM">
                                 <rect key="frame" x="70" y="478" width="274" height="45"/>
@@ -339,7 +344,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mrt-WP-fUK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3129" y="1268"/>
+            <point key="canvasLocation" x="3128.985507246377" y="1267.663043478261"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="fDb-AW-EMa">
@@ -433,7 +438,7 @@
                         <outlet property="loginBtn" destination="PZz-qG-mij" id="lQR-O3-4wa"/>
                         <outlet property="passwordField" destination="6dk-2J-uVV" id="gZh-TS-NgG"/>
                         <outlet property="signUpBtn" destination="eSW-nf-6di" id="G05-fO-Rch"/>
-                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="loginAdviceIdentifier" action="showViewController:sender:" id="FD6-Sj-hTa"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="loginAdviceIdentifier" id="FD6-Sj-hTa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gta-Gy-Inb" userLabel="First Responder" sceneMemberID="firstResponder"/>
