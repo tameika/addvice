@@ -52,6 +52,13 @@ class ViewController: UIViewController {
         store.fetchData()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        
+//        alert.isBadAlert(presenting: self)
+//        alert.isSavedAlert(presenting: self)
+//        alert.isUnavailableAlert(presenting: self)
+    }
+    
     // MARK: Setting Up UI Objects
     
     func setUpAdviceTextLabel() {
@@ -267,7 +274,6 @@ class ViewController: UIViewController {
         }
     }
     
-        
     // MARK : Flagging Content Logic
     
     @IBAction func flagAdviceBtn(_ sender: Any) {

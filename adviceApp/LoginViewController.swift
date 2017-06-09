@@ -8,12 +8,15 @@
 
 import UIKit
 import FirebaseDatabase
+import FirebaseAuth
 
 
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var enterBtn: UIButton!
+    @IBOutlet weak var passwordField: UITextField!
+    
     
     var containerVC = ContainerViewController()
     var adviceVC: ViewController!
@@ -26,36 +29,12 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         setUpUsernameField()
         setUpEnterButton()
-        retrieveExistingUsers()
+        //retrieveExistingUsers()
         self.navigationController?.navigationBar.isHidden = true
         
     }
     
     
-    // determines whether a segue w the indentifieer should be performed
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        print("should perform segue fired")
-        if containerVC.userDefaults.bool(forKey: "isFirstLaunch") == false {
-            print("🍌 user is not new; isFirstLaunch = false")
-            
-            
-            // if is current user return true and perform
-            return true
-        } else {
-            
-            //if is not current user return false and stay
-            return false
-        }
-        
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showAddviceIdentifier" {
-            guard let username = usernameField.text else { return }
-            guard let dest = segue.destination as? ViewController else { return }
-            dest.displayName = username
-        }
-    }
     
     
     // MARK: Dismiss keyboard
@@ -72,8 +51,17 @@ class LoginViewController: UIViewController {
         usernameField.clipsToBounds = true
         usernameField.layer.borderWidth = 0.60
         usernameField.layer.cornerRadius = usernameField.bounds.height * 0.50
-        usernameField.attributedPlaceholder = NSAttributedString(string: "start typing", attributes: [NSForegroundColorAttributeName: UIColor.seafoamGreen])
+        usernameField.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSForegroundColorAttributeName: UIColor.seafoamGreen])
         usernameField.layer.borderColor = UIColor.seafoamGreen.cgColor
+    }
+    
+    func setUpPasswordField() {
+        passwordField.clipsToBounds = true
+        passwordField.layer.borderWidth = 0.60
+        passwordField.layer.cornerRadius = passwordField.bounds.height * 0.50
+        passwordField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSForegroundColorAttributeName: UIColor.seafoamGreen])
+        passwordField.layer.borderColor = UIColor.seafoamGreen.cgColor
+
     }
     
     func setUpEnterButton() {
@@ -103,46 +91,38 @@ class LoginViewController: UIViewController {
     // MARK: Username validation logic
     
     @IBAction func usernameFieldAction(_ sender: Any) {
-        checkAvailability()
-
-        guard let username = usernameField.text else { return }
-        if (username != "") && !(username.contains(" ")) && (username.characters.count >= 5) && (username.characters.count <= 12) {
-            makeFieldBackgroundLilac()
-            enterBtn.isEnabled = true
+        if usernameField.text == "" {
+            makeFieldBackgroundRed()
+            
         } else {
-            enterBtn.isEnabled = false
-            return makeFieldBackgroundRed()
+            makeFieldBackgroundLilac()
         }
     }
     
     
-    
-    func retrieveExistingUsers() {
-        let ref = FIRDatabase.database().reference()
-        let availableRef = ref.child("Advice")
-        availableRef.observeSingleEvent(of: .value, with: { (snapshot) in
-            guard let existingUsers = snapshot.value as? [String: Any] else { return }
-            for (_, value) in existingUsers {
-                guard var userDictionary = value as? [String: String] else { return }
-                let user = userDictionary["user"] ?? "NO USER"
-                self.allUsers.append(user)
-            }
-        })
-        checkAvailability()
-    }
-    
-    func checkAvailability() {
-        print("inside checking availability")
-        guard let username = usernameField.text else { print("i didn't get passed here"); return }
-        for user in self.allUsers {
-            if user == username {
-                alert.isUnavailableAlert(presenting: self)
-            }
+    @IBAction func passwordFieldAction(_ sender: Any) {
+        if usernameField.text == "" {
+            makeFieldBackgroundRed()
+        } else {
+            makeFieldBackgroundLilac()
         }
     }
+    
+    
     
     
     @IBAction func enterBtn(_ sender: Any) {
+        guard let username = usernameField.text else { return }
+        guard let password = passwordField.text else { return }
+        if username != "" && password != "" {
+            FIRAuth.auth()?.signIn(withEmail: username, password: password, completion: { (user, error) in
+                if error == nil {
+                    guard let adviceVC = self.storyboard?.instantiateViewController(withIdentifier: "showAddviceIdentifier") else { return }
+                    self.present(adviceVC, animated: true, completion: nil)
+                }
+            })
+            
+        }
         
     }
     
@@ -152,6 +132,33 @@ class LoginViewController: UIViewController {
 
 
 
+
+
+
+
+//    func retrieveExistingUsers() {
+//        let ref = FIRDatabase.database().reference()
+//        let availableRef = ref.child("Advice")
+//        availableRef.observeSingleEvent(of: .value, with: { (snapshot) in
+//            guard let existingUsers = snapshot.value as? [String: Any] else { return }
+//            for (_, value) in existingUsers {
+//                guard var userDictionary = value as? [String: String] else { return }
+//                let user = userDictionary["user"] ?? "NO USER"
+//                self.allUsers.append(user)
+//            }
+//        })
+//        checkAvailability()
+//    }
+
+//    func checkAvailability() {
+//        print("inside checking availability")
+//        guard let username = usernameField.text else { print("i didn't get passed here"); return }
+//        for user in self.allUsers {
+//            if user == username {
+//                alert.isUnavailableAlert(presenting: self)
+//            }
+//        }
+//    }
 
 
 
