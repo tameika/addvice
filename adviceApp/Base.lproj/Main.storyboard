@@ -263,14 +263,14 @@
                                     <constraint firstAttribute="width" constant="130" id="ZZP-AV-YgF"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ief-ZZ-zmM">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ief-ZZ-zmM">
                                 <rect key="frame" x="70" y="481" width="274" height="45"/>
                                 <color key="backgroundColor" red="0.64279128750000003" green="0.81979166670000003" blue="0.70334766059999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="ElP-rt-JcL"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
-                                <state key="normal" title="type here">
+                                <state key="normal" title="enter">
                                     <color key="titleColor" red="0.11904106590000001" green="0.057622839289999998" blue="0.18086939099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>

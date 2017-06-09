@@ -8,7 +8,7 @@
 
 import UIKit
 import FirebaseDatabase
-import Fira
+
 
 class LoginViewController: UIViewController {
     
@@ -17,7 +17,9 @@ class LoginViewController: UIViewController {
     
     var containerVC = ContainerViewController()
     var adviceVC: ViewController!
+    var username: String!
     var allUsers = [String]()
+    var isAvailable = true
     
     override func viewDidLoad() {
         
@@ -115,7 +117,7 @@ class LoginViewController: UIViewController {
         }
     }
     
-    
+    //place retrieving user here
     func retrieveExistingUsers() {
         let ref = FIRDatabase.database().reference()
         let availableRef = ref.child("Advice")
@@ -123,7 +125,7 @@ class LoginViewController: UIViewController {
             guard let existingUsers = snapshot.value as? [String: Any] else { return }
             for (key, value) in existingUsers {
                 guard var userDictionary = value as? [String: String] else { return }
-                print(userDictionary)
+                print("☔️", userDictionary)
                 let user = userDictionary["user"] ?? "NO USER"
                 self.allUsers.append(user)
             }
@@ -131,8 +133,23 @@ class LoginViewController: UIViewController {
 
     }
     
-    func usernameAlertMessage() {
+    func checkAvailability() {
+        for user in allUsers {
+            if user == username {
+                print("🍟", user)
+                print("🍔", username)
+                usernameUnavailableAlert()
+            }
+        }
+    }
+    
+    
+    
+    func usernameUnavailableAlert() {
         let alert = UIAlertController(title: "Username Unavailable", message: "Try adding a number.", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
     
     }
     

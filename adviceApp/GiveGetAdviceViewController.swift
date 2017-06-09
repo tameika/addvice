@@ -31,7 +31,7 @@ class ViewController: UIViewController {
     
     let badWordsArray = BadWords.sharedInstance
     let store = DataStore.sharedInstance
-    var badWordFlag = false
+    var isBadWord = false
     var savedAdvice = [Advice]()
     var displayedFIRAdvice: String = ""
     var ref: FIRDatabaseReference!
@@ -202,7 +202,7 @@ class ViewController: UIViewController {
     
     @IBAction func submitAdviceBtnPressed(_ sender: UIButton) {
         animateGiveButtonPress()
-        guard !badWordFlag else { return }
+        guard !isBadWord else { return }
         guard var adviceReceived = giveAdviceTextField.text else { return }
         adviceReceived += (" - " + displayName)
         let newAdvice = Advice(context: store.persistentContainer.viewContext)
@@ -295,6 +295,7 @@ class ViewController: UIViewController {
                 let hide = UIAlertAction(title: "hide this advice", style: .destructive, handler: { (action) in
                     if contentDictionary["content"] == self.removedAdvice {
                         availableRef.child(key).removeValue()
+                        self.displayAdviceTextLabel.text = ""
                     }
                 })
                 
@@ -303,7 +304,6 @@ class ViewController: UIViewController {
                     alert.addAction(a)
                 }
                 self.present(alert, animated: true, completion: nil)
-                self.displayAdviceTextLabel.text = ""
             }
         })
     }
