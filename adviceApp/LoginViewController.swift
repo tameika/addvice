@@ -28,6 +28,7 @@ class LoginViewController: UIViewController {
         
         super.viewDidLoad()
         setUpUsernameField()
+        setUpPasswordField()
         setUpEnterButton()
         //retrieveExistingUsers()
         self.navigationController?.navigationBar.isHidden = true
