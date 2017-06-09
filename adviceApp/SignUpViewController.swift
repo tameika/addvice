@@ -16,6 +16,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var enterBtn: UIButton!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var emailField: UITextField!
     
     
     var containerVC = ContainerViewController()
@@ -27,6 +28,7 @@ class SignUpViewController: UIViewController {
         
         super.viewDidLoad()
         setUpUsernameField()
+        setUpEmailField()
         setUpPasswordField()
         setUpEnterButton()
         //retrieveExistingUsers()
@@ -53,6 +55,15 @@ class SignUpViewController: UIViewController {
         usernameField.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSForegroundColorAttributeName: UIColor.seafoamGreen])
         usernameField.layer.borderColor = UIColor.seafoamGreen.cgColor
     }
+    
+    func setUpEmailField() {
+        emailField.clipsToBounds = true
+        emailField.layer.borderWidth = 0.60
+        emailField.layer.cornerRadius = emailField.bounds.height * 0.50
+        emailField.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSForegroundColorAttributeName: UIColor.seafoamGreen])
+        emailField.layer.borderColor = UIColor.seafoamGreen.cgColor
+    }
+    
     
     func setUpPasswordField() {
         passwordField.clipsToBounds = true
@@ -88,32 +99,32 @@ class SignUpViewController: UIViewController {
     
     // MARK: Username validation logic
     
+    
+   
+    
+    
     @IBAction func usernameFieldAction(_ sender: Any) {
-        if usernameField.text == "" {
-            makeFieldBackgroundRed()
-            
-        } else {
-            makeFieldBackgroundLilac()
-        }
+        
     }
     
     
+    @IBAction func emailFieldAction(_ sender: Any) {
+    }
+    
+    
+    
     @IBAction func passwordFieldAction(_ sender: Any) {
-        if usernameField.text == "" {
-            makeFieldBackgroundRed()
-        } else {
-            makeFieldBackgroundLilac()
-        }
+        
     }
     
     
     
     
     @IBAction func enterBtn(_ sender: Any) {
-        guard let username = usernameField.text, let password = passwordField.text else {print(1); return }
-        if username != "" && password != "" {
+        guard let username = usernameField.text, let email = emailField.text, let password = passwordField.text else {print(1); return }
+        if (username != "") && (email != "") && (password != "") {
             print(3)
-            FIRAuth.auth()?.createUser(withEmail: username, password: password, completion: { (FIRUser, error) in
+            FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (FIRUser, error) in
                 if error == nil {
                     print(4)
                     self.performSegue(withIdentifier: "adviceIdentifier", sender: self)
