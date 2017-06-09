@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
     
@@ -15,7 +16,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet weak var signUpBtn: UIButton!
     
-    
+    var alert = Alert()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,4 +53,27 @@ class LoginViewController: UIViewController {
         loginBtn.layer.borderColor = UIColor.seafoamGreen.cgColor
 
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+        super.touchesBegan(touches, with: event)
+    }
+    
+  
+    
+    @IBAction func loginBtn(_ sender: Any) {
+        
+        guard let username = emailField.text, let password = passwordField.text else { return }
+        if username != "" && password != "" {
+            FIRAuth.auth()?.signIn(withEmail: username, password: password, completion: { (FIRUser, error) in
+                if error == nil {
+                    self.performSegue(withIdentifier: "loginAdviceIdentifier", sender: self)
+                } else {
+                    self.alert.isErrorAlert(presenting: self, error: error?.localizedDescription)
+                }
+            })
+        }
+    }
+    
+    
 }
