@@ -292,10 +292,9 @@ class ViewController: UIViewController {
                 let cancel = UIAlertAction(title: "cancel", style: .cancel, handler: { (action) in
                 })
                 
-                let hide = UIAlertAction(title: "hide this advice", style: .destructive, handler: { (action) in
+                let hide = UIAlertAction(title: "remove this advice", style: .destructive, handler: { (action) in
                     if contentDictionary["content"] == self.removedAdvice {
                         availableRef.child(key).removeValue()
-                        self.displayAdviceTextLabel.text = ""
                     }
                 })
                 

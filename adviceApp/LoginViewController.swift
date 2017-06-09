@@ -17,7 +17,7 @@ class LoginViewController: UIViewController {
     
     var containerVC = ContainerViewController()
     var adviceVC: ViewController!
-    var username: String!
+    //var username: String!
     var allUsers = [String]()
     var isAvailable = true
     
@@ -26,6 +26,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         setUpUsernameField()
         setUpEnterButton()
+        retrieveExistingUsers()
         self.navigationController?.navigationBar.isHidden = true
         
     }
@@ -107,6 +108,8 @@ class LoginViewController: UIViewController {
     // MARK: Username validation logic
     
     @IBAction func usernameFieldAction(_ sender: Any) {
+        checkAvailability()
+
         guard let username = usernameField.text else { return }
         if (username != "") && !(username.contains(" ")) && (username.characters.count >= 5) && (username.characters.count <= 12) {
             makeFieldBackgroundLilac()
@@ -117,24 +120,31 @@ class LoginViewController: UIViewController {
         }
     }
     
+    
+    
     //place retrieving user here
     func retrieveExistingUsers() {
         let ref = FIRDatabase.database().reference()
         let availableRef = ref.child("Advice")
         availableRef.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let existingUsers = snapshot.value as? [String: Any] else { return }
-            for (key, value) in existingUsers {
+            for (_, value) in existingUsers {
                 guard var userDictionary = value as? [String: String] else { return }
                 print("☔️", userDictionary)
                 let user = userDictionary["user"] ?? "NO USER"
                 self.allUsers.append(user)
+                print("🌶", self.allUsers)
             }
         })
-
+        checkAvailability()
     }
     
     func checkAvailability() {
-        for user in allUsers {
+        print("inside checking availability")
+        guard let username = usernameField.text else { print("i didn't get passed here"); return }
+        for user in self.allUsers {
+            print("🍐", user)
+            print("❌", allUsers)
             if user == username {
                 print("🍟", user)
                 print("🍔", username)
@@ -150,7 +160,7 @@ class LoginViewController: UIViewController {
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(action)
         self.present(alert, animated: true, completion: nil)
-    
+        
     }
     
     
