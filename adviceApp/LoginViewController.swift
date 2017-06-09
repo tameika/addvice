@@ -17,7 +17,6 @@ class LoginViewController: UIViewController {
     
     var containerVC = ContainerViewController()
     var adviceVC: ViewController!
-    //var username: String!
     var allUsers = [String]()
     var isAvailable = true
     
@@ -49,13 +48,11 @@ class LoginViewController: UIViewController {
         
     }
     
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showAddviceIdentifier" {
             guard let username = usernameField.text else { return }
             guard let dest = segue.destination as? ViewController else { return }
             dest.displayName = username
-            
         }
     }
     
@@ -74,9 +71,8 @@ class LoginViewController: UIViewController {
         usernameField.clipsToBounds = true
         usernameField.layer.borderWidth = 0.60
         usernameField.layer.cornerRadius = usernameField.bounds.height * 0.50
-        usernameField.attributedPlaceholder = NSAttributedString(string: "start typing here", attributes: [NSForegroundColorAttributeName: UIColor.seafoamGreen])
+        usernameField.attributedPlaceholder = NSAttributedString(string: "start typing", attributes: [NSForegroundColorAttributeName: UIColor.seafoamGreen])
         usernameField.layer.borderColor = UIColor.seafoamGreen.cgColor
-        
     }
     
     func setUpEnterButton() {
@@ -85,7 +81,6 @@ class LoginViewController: UIViewController {
         enterBtn.layer.cornerRadius = enterBtn.bounds.height * 0.50
         enterBtn.layer.borderColor = UIColor.seafoamGreen.cgColor
         self.enterBtn.isEnabled = false
-        
     }
     
     
@@ -102,7 +97,6 @@ class LoginViewController: UIViewController {
     func makeFieldBackgroundRed() {
         usernameField.layer.backgroundColor = UIColor.errorRed.cgColor
     }
-    
     
     
     // MARK: Username validation logic
@@ -122,7 +116,6 @@ class LoginViewController: UIViewController {
     
     
     
-    //place retrieving user here
     func retrieveExistingUsers() {
         let ref = FIRDatabase.database().reference()
         let availableRef = ref.child("Advice")
@@ -154,18 +147,15 @@ class LoginViewController: UIViewController {
     }
     
     
-    
     func usernameUnavailableAlert() {
         let alert = UIAlertController(title: "Username Unavailable", message: "Try adding a number.", preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(action)
         self.present(alert, animated: true, completion: nil)
-        
     }
     
     
     @IBAction func enterBtn(_ sender: Any) {
-        
         
     }
     
