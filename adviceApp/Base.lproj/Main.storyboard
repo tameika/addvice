@@ -285,9 +285,9 @@
                                     <action selector="passwordFieldAction:" destination="tHZ-bb-S0A" eventType="editingDidEnd" id="fzC-ZI-ziD"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xKo-Dr-ZQ3">
-                                <rect key="frame" x="163" y="633" width="68" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xKo-Dr-ZQ3">
+                                <rect key="frame" x="70" y="603" width="254" height="36"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <state key="normal" title="cancel">
                                     <color key="titleColor" red="0.69411764710000001" green="0.68627450980000004" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -317,13 +317,16 @@
                             <constraint firstItem="jLh-Np-ZOV" firstAttribute="leading" secondItem="trI-3P-Gyg" secondAttribute="leadingMargin" constant="50" id="3LQ-h9-9m2"/>
                             <constraint firstItem="CkZ-Tx-XYg" firstAttribute="top" secondItem="dOu-fV-hkJ" secondAttribute="bottom" constant="31" id="4gu-44-0Ue"/>
                             <constraint firstItem="xnE-ab-QaC" firstAttribute="leading" secondItem="trI-3P-Gyg" secondAttribute="leadingMargin" constant="27" id="8Wm-V9-4RQ"/>
+                            <constraint firstItem="xKo-Dr-ZQ3" firstAttribute="top" secondItem="Ief-ZZ-zmM" secondAttribute="bottom" constant="80" id="ArH-4x-OHd"/>
                             <constraint firstItem="xnE-ab-QaC" firstAttribute="centerX" secondItem="trI-3P-Gyg" secondAttribute="centerX" id="G2r-tv-y4I"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xnE-ab-QaC" secondAttribute="trailing" constant="26" id="HJY-ME-eyu"/>
+                            <constraint firstItem="xKo-Dr-ZQ3" firstAttribute="centerX" secondItem="trI-3P-Gyg" secondAttribute="centerX" constant="-10" id="NgU-re-EWg"/>
                             <constraint firstItem="Ief-ZZ-zmM" firstAttribute="top" secondItem="CkZ-Tx-XYg" secondAttribute="bottom" constant="39" id="O72-Ek-uv8"/>
                             <constraint firstItem="Ief-ZZ-zmM" firstAttribute="trailing" secondItem="trI-3P-Gyg" secondAttribute="trailingMargin" constant="-50" id="Pcy-o4-vy7"/>
                             <constraint firstItem="Ief-ZZ-zmM" firstAttribute="leading" secondItem="trI-3P-Gyg" secondAttribute="leadingMargin" constant="50" id="SZE-QZ-cgB"/>
                             <constraint firstItem="CkZ-Tx-XYg" firstAttribute="leading" secondItem="trI-3P-Gyg" secondAttribute="leadingMargin" constant="50" id="Wgd-g2-bhE"/>
                             <constraint firstItem="zCG-gH-jPm" firstAttribute="centerY" secondItem="trI-3P-Gyg" secondAttribute="centerY" constant="-232" id="X37-md-PgB"/>
+                            <constraint firstItem="xKo-Dr-ZQ3" firstAttribute="leading" secondItem="trI-3P-Gyg" secondAttribute="leadingMargin" constant="50" id="Zyv-Mn-MHJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jLh-Np-ZOV" secondAttribute="trailing" constant="50" id="dTH-sA-zEA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CkZ-Tx-XYg" secondAttribute="trailing" constant="50" id="eK3-le-q3v"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dOu-fV-hkJ" secondAttribute="trailing" constant="50" id="fFU-Ab-aVf"/>
@@ -373,7 +376,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSW-nf-6di">
-                                <rect key="frame" x="70" y="544" width="274" height="36"/>
+                                <rect key="frame" x="70" y="561" width="274" height="36"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
                                 <state key="normal" title="sign up">
                                     <color key="titleColor" red="0.66875411620000003" green="0.8527644231" blue="0.72492828210000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -418,7 +421,7 @@
                             <constraint firstItem="6dk-2J-uVV" firstAttribute="trailing" secondItem="Q0F-mo-dAA" secondAttribute="trailing" id="8Ko-BJ-D0l"/>
                             <constraint firstItem="6dk-2J-uVV" firstAttribute="leading" secondItem="Q0F-mo-dAA" secondAttribute="leading" id="FpE-IJ-37P"/>
                             <constraint firstItem="6dk-2J-uVV" firstAttribute="top" secondItem="Q0F-mo-dAA" secondAttribute="bottom" constant="32" id="ILO-YB-fXP"/>
-                            <constraint firstItem="eSW-nf-6di" firstAttribute="top" secondItem="PZz-qG-mij" secondAttribute="bottom" constant="53" id="JeH-ng-f96"/>
+                            <constraint firstItem="eSW-nf-6di" firstAttribute="top" secondItem="PZz-qG-mij" secondAttribute="bottom" constant="70" id="JeH-ng-f96"/>
                             <constraint firstItem="WhC-Jc-pFz" firstAttribute="top" secondItem="IZA-by-Nf6" secondAttribute="bottom" constant="147" id="L6N-U0-L3z"/>
                             <constraint firstItem="Q0F-mo-dAA" firstAttribute="top" secondItem="WhC-Jc-pFz" secondAttribute="bottom" constant="95" id="N7q-Hd-NJd"/>
                             <constraint firstItem="eSW-nf-6di" firstAttribute="centerX" secondItem="5NG-Y2-jt9" secondAttribute="centerX" id="P3I-rW-Sbf"/>
@@ -710,6 +713,6 @@
         <image name="star2.png" width="1400" height="980"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="LlS-rG-2fM"/>
+        <segue reference="FD6-Sj-hTa"/>
     </inferredMetricsTieBreakers>
 </document>
