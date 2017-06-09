@@ -167,7 +167,7 @@ class ViewController: UIViewController {
     }
     
     func animateInFlagButton() {
-        UIView.animate(withDuration: 0.8, delay: 0.6, options: .curveEaseInOut, animations: {
+        UIView.animate(withDuration: 0.1, delay: 0.0, options: .curveEaseInOut, animations: {
             self.flagAdviceBtn.alpha = 0.9
         })
     }
@@ -278,27 +278,48 @@ class ViewController: UIViewController {
         let availableRef = ref.child("Advice")
         availableRef.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let firAdvice = snapshot.value as? [String : Any] else { return }
+            print("💕got passed unwrapping firadvice")
             for (key, value) in firAdvice {
                 guard var contentDictionary = value as? [String : String] else { print("nothing"); return }
+                print("🗂", contentDictionary)
+                    let alert = UIAlertController(title: "Choose One", message: "Some message here.", preferredStyle: .actionSheet)
+                print(1)
                 
-                let alert = UIAlertController(title: "Choose One", message: "Some message here.", preferredStyle: .alert)
+                
+                
                 let block = UIAlertAction(title: "block this user", style: .destructive, handler: { (action) in
                     guard let user = contentDictionary["user"] else { return }
+                    print(2)
+                    print("💔", user)
                     if self.removedAdvice.contains(user) {
                         self.blockedUsers.append(user)
+                        print("😜", user)
                     }
                 })
+                
+                
                 
                 let cancel = UIAlertAction(title: "cancel", style: .cancel, handler: { (action) in
+                    print("cancel tapped")
                 })
                 
-                let hide = UIAlertAction(title: "remove this advice", style: .destructive, handler: { (action) in
+                
+                
+                
+                let remove = UIAlertAction(title: "remove this advice", style: .destructive, handler: { (action) in
+                    print("remove tapped")
                     if contentDictionary["content"] == self.removedAdvice {
                         availableRef.child(key).removeValue()
+                        print(self.removedAdvice)
+                        print("got pass remove logic")
+                        
                     }
                 })
                 
-                let actions = [hide, block, cancel]
+                
+                
+                
+                let actions = [remove, block, cancel]
                 for a in actions {
                     alert.addAction(a)
                 }

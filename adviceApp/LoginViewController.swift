@@ -148,10 +148,10 @@ class LoginViewController: UIViewController {
     
     
     func usernameUnavailableAlert() {
-        let alert = UIAlertController(title: "Username Unavailable", message: "Try adding a number.", preferredStyle: .alert)
+        let alertU = UIAlertController(title: "Username Unavailable", message: "Try adding a number.", preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alert.addAction(action)
-        self.present(alert, animated: true, completion: nil)
+        alertU.addAction(action)
+        self.present(alertU, animated: true, completion: nil)
     }
     
     
