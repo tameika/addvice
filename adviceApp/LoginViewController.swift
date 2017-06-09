@@ -32,7 +32,7 @@ class LoginViewController: UIViewController {
         emailField.clipsToBounds = true
         emailField.layer.borderWidth = 0.60
         emailField.layer.cornerRadius = emailField.bounds.height * 0.50
-        emailField.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSForegroundColorAttributeName: UIColor.seafoamGreen])
+        emailField.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSForegroundColorAttributeName: UIColor.eggplantDark])
         emailField.layer.borderColor = UIColor.seafoamGreen.cgColor
     }
     
@@ -40,15 +40,15 @@ class LoginViewController: UIViewController {
         passwordField.clipsToBounds = true
         passwordField.layer.borderWidth = 0.60
         passwordField.layer.cornerRadius = passwordField.bounds.height * 0.50
-        passwordField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSForegroundColorAttributeName: UIColor.seafoamGreen])
+        passwordField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSForegroundColorAttributeName: UIColor.eggplantDark])
         passwordField.layer.borderColor = UIColor.seafoamGreen.cgColor
     }
    
     func setUpLoginButton() {
         loginBtn.clipsToBounds = true
-        loginBtn.layer.borderWidth = 0.60
+        //loginBtn.layer.borderWidth = 0.60
         loginBtn.layer.cornerRadius = loginBtn.bounds.height * 0.50
-        loginBtn.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSForegroundColorAttributeName: UIColor.seafoamGreen])
+        //loginBtn.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSForegroundColorAttributeName: UIColor.seafoamGreen])
         loginBtn.layer.borderColor = UIColor.seafoamGreen.cgColor
 
     }
