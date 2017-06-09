@@ -39,6 +39,7 @@ class ViewController: UIViewController {
     var removedAdvice = String()
     var blockedUsers = [String]()
     var displayName = String()
+    var alert = Alert()
     
     
     override func viewDidLoad() {
@@ -96,6 +97,8 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        
         
         navigationController?.navigationBar.isHidden = true
         logoA.center.x -= view.bounds.width
@@ -172,14 +175,14 @@ class ViewController: UIViewController {
         })
     }
     
-    // MARK: Dismiss Keyboard
+    // MARK : Dismiss Keyboard
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
         super.touchesBegan(touches, with: event)
     }
     
-    // MARK: Retrieving Database Data
+    // MARK : Retrieving Database Data
     
     func getFIRAdvice(handler: @escaping () -> Void) {
         let ref = FIRDatabase.database().reference()
@@ -198,7 +201,7 @@ class ViewController: UIViewController {
         })
     }
     
-    // MARK: Giving Advice Logic
+    // MARK : Giving Advice Logic
     
     @IBAction func submitAdviceBtnPressed(_ sender: UIButton) {
         animateGiveButtonPress()
@@ -216,7 +219,7 @@ class ViewController: UIViewController {
         newRef.setValue(["user": displayName, "content": adviceReceived])
     }
     
-    //MARK: Blocking User Logic
+    //MARK : Blocking User Logic
     
     func blockUser() {
         for advice in firAdviceCollection{
@@ -229,7 +232,7 @@ class ViewController: UIViewController {
         }
     }
     
-    //MARK: Getting Advice Logic
+    //MARK : Getting Advice Logic
     
     @IBAction func receiveAdviceBtnPressed(_ sender: UIButton) {
         animateGetButtonPress()
@@ -247,7 +250,7 @@ class ViewController: UIViewController {
         displayAdviceTextLabel.text = removedAdvice
     }
     
-    // MARK: Saving Advice Logic
+    // MARK : Saving Advice Logic
     
     func saveThisAdvice(selectedAdvice: String) {
         let advice = Advice(context: store.persistentContainer.viewContext)
@@ -260,17 +263,11 @@ class ViewController: UIViewController {
         if displayAdviceTextLabel.text != nil {
             saveThisAdvice(selectedAdvice: removedAdvice)
             store.saveContext()
-            adviceIsSavedAlert()
+            alert.isSavedAlert(presenting: self)
         }
     }
     
-    func adviceIsSavedAlert() {
-        let alert = UIAlertController(title: "Advice Saved!", message: "Click sav❥d Up Top To See", preferredStyle: UIAlertControllerStyle.alert)
-        let okAction = UIAlertAction(title: "Great", style: .destructive, handler: nil)
-        alert.addAction(okAction)
-        self.present(alert, animated: true, completion: nil)
-    }
-    
+        
     // MARK : Flagging Content Logic
     
     @IBAction func flagAdviceBtn(_ sender: Any) {
@@ -282,30 +279,25 @@ class ViewController: UIViewController {
             for (key, value) in firAdvice {
                 guard var contentDictionary = value as? [String : String] else { print("nothing"); return }
                 print("🗂", contentDictionary)
-                    let alert = UIAlertController(title: "Choose One", message: "Some message here.", preferredStyle: .actionSheet)
+
+                let alertC = UIAlertController(title: "Choose One", message: "Some message here.", preferredStyle: .alert)
                 print(1)
-                
-                
-                
+
                 let block = UIAlertAction(title: "block this user", style: .destructive, handler: { (action) in
                     guard let user = contentDictionary["user"] else { return }
                     print(2)
                     print("💔", user)
+                    
                     if self.removedAdvice.contains(user) {
                         self.blockedUsers.append(user)
                         print("😜", user)
                     }
                 })
                 
-                
-                
                 let cancel = UIAlertAction(title: "cancel", style: .cancel, handler: { (action) in
                     print("cancel tapped")
                 })
-                
-                
-                
-                
+
                 let remove = UIAlertAction(title: "remove this advice", style: .destructive, handler: { (action) in
                     print("remove tapped")
                     if contentDictionary["content"] == self.removedAdvice {
@@ -315,39 +307,37 @@ class ViewController: UIViewController {
                         
                     }
                 })
-                
-                
-                
-                
+
                 let actions = [remove, block, cancel]
                 for a in actions {
-                    alert.addAction(a)
+                    alertC.addAction(a)
                 }
-                self.present(alert, animated: true, completion: nil)
+                self.present(alertC, animated: true, completion: nil)
+                
+                print(3)
             }
         })
     }
     
-    // MARK: Filtering Bad Words
+    
+    // MARK : Filtering Bad Words
     
     func badWordFilter() -> Bool {
         for word in badWordsArray.badWordsList {
             if let adviceText = giveAdviceTextField.text {
                 if adviceText.contains(word) {
-                    let alert = UIAlertController(title: "Chill, chill, chill", message: "Watch your language.", preferredStyle: UIAlertControllerStyle.alert)
-                    let okAction = UIAlertAction(title: "OK Cool", style: .default, handler: nil)
-                    alert.addAction(okAction)
-                    self.present(alert, animated: true, completion: nil)
+                    alert.isBadAlert(presenting: self)
+                    }
                     return true
                 } else {
-                }
+                
             }
         }
         return false
     }
 }
 
-// MARK: UITextFieldDelegate Methods
+// MARK : UITextFieldDelegate Methods
 
 extension ViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

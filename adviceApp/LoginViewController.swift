@@ -19,6 +19,7 @@ class LoginViewController: UIViewController {
     var adviceVC: ViewController!
     var allUsers = [String]()
     var isAvailable = true
+    var alert = Alert()
     
     override func viewDidLoad() {
         
@@ -123,10 +124,8 @@ class LoginViewController: UIViewController {
             guard let existingUsers = snapshot.value as? [String: Any] else { return }
             for (_, value) in existingUsers {
                 guard var userDictionary = value as? [String: String] else { return }
-                print("☔️", userDictionary)
                 let user = userDictionary["user"] ?? "NO USER"
                 self.allUsers.append(user)
-                print("🌶", self.allUsers)
             }
         })
         checkAvailability()
@@ -136,22 +135,10 @@ class LoginViewController: UIViewController {
         print("inside checking availability")
         guard let username = usernameField.text else { print("i didn't get passed here"); return }
         for user in self.allUsers {
-            print("🍐", user)
-            print("❌", allUsers)
             if user == username {
-                print("🍟", user)
-                print("🍔", username)
-                usernameUnavailableAlert()
+                alert.isUnavailableAlert(presenting: self)
             }
         }
-    }
-    
-    
-    func usernameUnavailableAlert() {
-        let alertU = UIAlertController(title: "Username Unavailable", message: "Try adding a number.", preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alertU.addAction(action)
-        self.present(alertU, animated: true, completion: nil)
     }
     
     
