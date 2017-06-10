@@ -22,7 +22,7 @@ class SignUpViewController: UIViewController {
     var containerVC = ContainerViewController()
     var adviceVC: ViewController!
     var alert = Alert()
-    //var allUsers = [String]()
+    var existingUsers = [String]()
     var blockedUsers = [String]()
     
     override func viewDidLoad() {
@@ -40,7 +40,7 @@ class SignUpViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        //retrieveExistingUsers()
+        retrieveExistingUsers()
         
     }
     
@@ -107,8 +107,7 @@ class SignUpViewController: UIViewController {
     // MARK: Username validation logic
     
     func retrieveExistingUsers() {
-        var existingUsers = [String]()
-        OperationQueue.main.addOperation {
+        //OperationQueue.main.addOperation {
             print(1)
             let ref = FIRDatabase.database().reference()
             print(2)
@@ -120,15 +119,17 @@ class SignUpViewController: UIViewController {
                 guard let users = snapshot.value as? [String: Any] else { return }
                 print(5)
                 
-                
+                //var existingUsers = [String]()
                 for (_, value) in users {
+                    
                     print(6)
                     guard var userDictionary = value as? [String: String] else { return }
                     print(7)
                     let user = userDictionary["user"] ?? "NO USER"
                     print(8)
-                    existingUsers.append(user)
-                    print("♑️", existingUsers)
+                    self.existingUsers.append(user)
+                    print("♑️", self.existingUsers)
+                    
                 }
                 
                 
@@ -136,21 +137,27 @@ class SignUpViewController: UIViewController {
             
             
             
-        }
-        OperationQueue.main.addOperation {
-            self.checkAvailability(for: existingUsers)
-        }
+        //}
+        
+        
         
     }
     
     
     
-    func checkAvailability(for names: [String]) {
+    func checkAvailability() {
         print("inside checking availability")
         guard let username = usernameField.text else { print("i didn't get passed here"); return }
-        for name in names {
-            if name == username {
+        print(0)
+        print("💚",existingUsers)
+        for user in existingUsers {
+            print(user)
+            print("🎈",username)
+
+            if user == username {
+                print(3)
                 self.alert.isUnavailableAlert(presenting: self)
+                print(4)
             }
         }
     }
@@ -159,8 +166,7 @@ class SignUpViewController: UIViewController {
     
     
     @IBAction func usernameFieldAction(_ sender: Any) {
-        retrieveExistingUsers()
-        
+        checkAvailability()
     }
     
     
