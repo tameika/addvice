@@ -22,6 +22,7 @@ class SignUpViewController: UIViewController {
     var containerVC = ContainerViewController()
     var adviceVC: ViewController!
     var alert = Alert()
+    //var allUsers = [String]()
     var blockedUsers = [String]()
     
     override func viewDidLoad() {
@@ -31,14 +32,17 @@ class SignUpViewController: UIViewController {
         setUpEmailField()
         setUpPasswordField()
         setUpEnterButton()
-        //retrieveExistingUsers()
         
         usernameField.autocapitalizationType = .none
         emailField.autocapitalizationType = .none
         passwordField.autocapitalizationType = .none
+        
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        //retrieveExistingUsers()
+        
+    }
     
     
     // MARK: Dismiss keyboard
@@ -74,7 +78,7 @@ class SignUpViewController: UIViewController {
         passwordField.layer.cornerRadius = passwordField.bounds.height * 0.50
         passwordField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSForegroundColorAttributeName: UIColor.seafoamGreen])
         passwordField.layer.borderColor = UIColor.seafoamGreen.cgColor
-
+        
     }
     
     func setUpEnterButton() {
@@ -102,11 +106,60 @@ class SignUpViewController: UIViewController {
     
     // MARK: Username validation logic
     
+    func retrieveExistingUsers() {
+        var existingUsers = [String]()
+        OperationQueue.main.addOperation {
+            print(1)
+            let ref = FIRDatabase.database().reference()
+            print(2)
+            let availableRef = ref.child("Advice")
+            print(3)
+            availableRef.observeSingleEvent(of: .value, with: { (snapshot) in
+                print(4)
+                
+                guard let users = snapshot.value as? [String: Any] else { return }
+                print(5)
+                
+                
+                for (_, value) in users {
+                    print(6)
+                    guard var userDictionary = value as? [String: String] else { return }
+                    print(7)
+                    let user = userDictionary["user"] ?? "NO USER"
+                    print(8)
+                    existingUsers.append(user)
+                    print("♑️", existingUsers)
+                }
+                
+                
+            })
+            
+            
+            
+        }
+        OperationQueue.main.addOperation {
+            self.checkAvailability(for: existingUsers)
+        }
+        
+    }
     
-   
+    
+    
+    func checkAvailability(for names: [String]) {
+        print("inside checking availability")
+        guard let username = usernameField.text else { print("i didn't get passed here"); return }
+        for name in names {
+            if name == username {
+                self.alert.isUnavailableAlert(presenting: self)
+            }
+        }
+    }
+    
+    
     
     
     @IBAction func usernameFieldAction(_ sender: Any) {
+        retrieveExistingUsers()
         
     }
     
@@ -125,7 +178,7 @@ class SignUpViewController: UIViewController {
             if let dest = segue.destination as? ViewController {
                 guard let username = usernameField.text else { print("SETTING USERNAME FAILED"); return }
                 dest.displayName = username
-
+                
             }
         }
     }
@@ -134,29 +187,25 @@ class SignUpViewController: UIViewController {
     @IBAction func enterBtn(_ sender: Any) {
         guard let username = usernameField.text, let email = emailField.text, let password = passwordField.text else {print(1); return }
         if (username != "") && (email != "") && (password != "") {
-            print(3)
             FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (FIRUser, error) in
                 if error == nil {
-                    print(4)
                     self.performSegue(withIdentifier: "adviceIdentifier", sender: self)
                 } else {
-                    print(6)
                     self.alert.isErrorAlert(presenting: self, error: error?.localizedDescription)
-                    print(7)
                 }
             })
             
         }
         
     }
-  
     
-
+    
+    
     @IBAction func cancelBtn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
-//end
+    //end
 }
 
 
@@ -165,29 +214,6 @@ class SignUpViewController: UIViewController {
 
 
 
-//    func retrieveExistingUsers() {
-//        let ref = FIRDatabase.database().reference()
-//        let availableRef = ref.child("Advice")
-//        availableRef.observeSingleEvent(of: .value, with: { (snapshot) in
-//            guard let existingUsers = snapshot.value as? [String: Any] else { return }
-//            for (_, value) in existingUsers {
-//                guard var userDictionary = value as? [String: String] else { return }
-//                let user = userDictionary["user"] ?? "NO USER"
-//                self.allUsers.append(user)
-//            }
-//        })
-//        checkAvailability()
-//    }
-
-//    func checkAvailability() {
-//        print("inside checking availability")
-//        guard let username = usernameField.text else { print("i didn't get passed here"); return }
-//        for user in self.allUsers {
-//            if user == username {
-//                alert.isUnavailableAlert(presenting: self)
-//            }
-//        }
-//    }
 
 
 
