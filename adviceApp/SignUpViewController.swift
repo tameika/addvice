@@ -33,6 +33,9 @@ class SignUpViewController: UIViewController {
         setUpEnterButton()
         //retrieveExistingUsers()
         
+        usernameField.autocapitalizationType = .none
+        emailField.autocapitalizationType = .none
+        passwordField.autocapitalizationType = .none
     }
     
     
@@ -52,7 +55,7 @@ class SignUpViewController: UIViewController {
         usernameField.clipsToBounds = true
         usernameField.layer.borderWidth = 0.60
         usernameField.layer.cornerRadius = usernameField.bounds.height * 0.50
-        usernameField.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSForegroundColorAttributeName: UIColor.seafoamGreen])
+        usernameField.attributedPlaceholder = NSAttributedString(string: "username", attributes: [NSForegroundColorAttributeName: UIColor.seafoamGreen])
         usernameField.layer.borderColor = UIColor.seafoamGreen.cgColor
     }
     

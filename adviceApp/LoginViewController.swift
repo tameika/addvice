@@ -26,6 +26,8 @@ class LoginViewController: UIViewController {
         setUpLoginButton()
 
         self.navigationController?.navigationBar.isHidden = true
+        emailField.autocapitalizationType = .none
+        passwordField.autocapitalizationType = .none
     }
 
        

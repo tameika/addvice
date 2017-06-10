@@ -50,13 +50,11 @@ class ViewController: UIViewController {
         setUpAdviceTextField()
         setupAdviceButtons()
         store.fetchData()
+        giveAdviceTextField.autocapitalizationType = .none
     }
     
     override func viewDidAppear(_ animated: Bool) {
         
-//        alert.isBadAlert(presenting: self)
-//        alert.isSavedAlert(presenting: self)
-//        alert.isUnavailableAlert(presenting: self)
     }
     
     // MARK: Setting Up UI Objects
