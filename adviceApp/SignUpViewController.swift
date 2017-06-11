@@ -100,71 +100,44 @@ class SignUpViewController: UIViewController {
     }
     
     func makeFieldBackgroundRed() {
-        usernameField.layer.backgroundColor = UIColor.errorRed.cgColor
-    }
-    
-    
-    // MARK: Username validation logic
-    
-    func retrieveExistingUsers() {
-        //OperationQueue.main.addOperation {
-            print(1)
-            let ref = FIRDatabase.database().reference()
-            print(2)
-            let availableRef = ref.child("Advice")
-            print(3)
-            availableRef.observeSingleEvent(of: .value, with: { (snapshot) in
-                print(4)
-                
-                guard let users = snapshot.value as? [String: Any] else { return }
-                print(5)
-                
-                //var existingUsers = [String]()
-                for (_, value) in users {
-                    
-                    print(6)
-                    guard var userDictionary = value as? [String: String] else { return }
-                    print(7)
-                    let user = userDictionary["user"] ?? "NO USER"
-                    print(8)
-                    self.existingUsers.append(user)
-                    print("♑️", self.existingUsers)
-                    
-                }
-                
-                
-            })
-            
-            
-            
-        //}
-        
-        
-        
-    }
-    
-    
-    
-    func checkAvailability() {
-        print("inside checking availability")
         guard let username = usernameField.text else { print("i didn't get passed here"); return }
-        print(0)
-        print("💚",existingUsers)
-        for user in existingUsers {
-            print(user)
-            print("🎈",username)
+        if username.contains(" ") {
+            usernameField.layer.backgroundColor = UIColor.errorRed.cgColor
 
-            if user == username {
-                print(3)
-                self.alert.isUnavailableAlert(presenting: self)
-                print(4)
-            }
+        } else {
+            makeFieldBackgroundLilac()
         }
     }
     
+    // MARK : Retrieving Existing Users
     
+    func retrieveExistingUsers() {
+        let ref = FIRDatabase.database().reference()
+        let availableRef = ref.child("Advice")
+        availableRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let users = snapshot.value as? [String: Any] else { return }
+            for (_, value) in users {
+                guard var userDictionary = value as? [String: String] else { return }
+                let user = userDictionary["user"] ?? "NO USER"
+                self.existingUsers.append(user)
+            }
+        })
+    }
     
+    // MARK : Username Validation Logic
     
+    func checkAvailability() {
+        guard let username = usernameField.text else { print("i didn't get passed here"); return }
+        if username.contains(" ") {
+            makeFieldBackgroundRed()
+        } else if existingUsers.contains(username) {
+            alert.isUnavailableAlert(presenting: self)
+        } else {
+            print("CHECKED PASSED")
+        }
+    }
+    
+ 
     @IBAction func usernameFieldAction(_ sender: Any) {
         checkAvailability()
     }

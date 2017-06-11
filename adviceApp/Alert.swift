@@ -29,7 +29,6 @@ struct Alert {
         let errorAlert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
         let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         errorAlert.addAction(defaultAction)
-        
         vc.present(errorAlert, animated: true, completion: nil)
     
 }
@@ -38,6 +37,7 @@ struct Alert {
         let unavailableAlert = UIAlertController(title: "Sorry!", message: "That name is unavailable. Try adding a number.", preferredStyle: .alert)
         let tryAgainAction = UIAlertAction(title: "Try Again", style: .default, handler: nil)
         unavailableAlert.addAction(tryAgainAction)
+        vc.present(unavailableAlert, animated: true, completion: nil)
     }
 
     
