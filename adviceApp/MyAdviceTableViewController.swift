@@ -23,6 +23,7 @@ class MyAdviceTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
         super.viewWillAppear(animated)
         DataStore.sharedInstance.fetchFavorites()
         savedAdviceList = DataStore.sharedInstance.favorites

@@ -43,7 +43,7 @@
                                         <barButtonItem key="rightBarButtonItem" title="sav❥d" id="sJl-pS-67c">
                                             <color key="tintColor" red="0.71501713140000001" green="0.81443250379999999" blue="0.75520653959999995" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="zin-4q-VQY" kind="show" identifier="showSavedAdvice" id="FFQ-ht-xyh"/>
+                                                <segue destination="zin-4q-VQY" kind="show" identifier="showSavedAdvice" id="VfJ-A0-yZz"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -501,7 +501,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="1312" height="400.5"/>
                                         <subviews>
                                             <view userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e4Z-8j-LF6">
-                                                <rect key="frame" x="0.0" y="0.0" width="262" height="400.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="262.5" height="400.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBs-cT-2Rt">
                                                         <rect key="frame" x="106" y="20.5" width="50" height="50"/>
@@ -515,7 +515,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="☞&quot;SWIPE&quot; for a quick tutorial or ◉&quot;TAP&quot; to continue to the app" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o22-xI-vDe">
-                                                        <rect key="frame" x="20" y="20.5" width="222" height="400.5"/>
+                                                        <rect key="frame" x="20" y="20.5" width="222.5" height="400.5"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="25"/>
                                                         <color key="textColor" red="0.69297444649999995" green="0.68386715490000005" blue="0.92139423080000005" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -534,7 +534,7 @@
                                                 </constraints>
                                             </view>
                                             <view userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8uf-Km-j1a">
-                                                <rect key="frame" x="262" y="0.0" width="262.5" height="400.5"/>
+                                                <rect key="frame" x="262.5" y="0.0" width="262.5" height="400.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CD8-u7-uma">
                                                         <rect key="frame" x="107" y="20.5" width="50" height="50"/>
@@ -567,7 +567,7 @@
                                                 </constraints>
                                             </view>
                                             <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PcM-qd-Fow">
-                                                <rect key="frame" x="524.5" y="0.0" width="262.5" height="400.5"/>
+                                                <rect key="frame" x="525" y="0.0" width="262" height="400.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KX0-Or-X6U">
                                                         <rect key="frame" x="106.5" y="20.5" width="50" height="50"/>
@@ -581,7 +581,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✔︎once you've given advice, you can receive advice by pressing &quot;get&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQ2-ph-kMW">
-                                                        <rect key="frame" x="20.5" y="20.5" width="223" height="400.5"/>
+                                                        <rect key="frame" x="20.5" y="20.5" width="222.5" height="400.5"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
                                                         <color key="textColor" red="0.69297444649999995" green="0.68386715490000005" blue="0.92139423080000005" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
