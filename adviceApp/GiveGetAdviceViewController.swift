@@ -40,13 +40,20 @@ class ViewController: UIViewController {
     var removedAdvice = String()
     var blockedUsers = [String]()
     var displayName = String()
+    var emailAddress = String()
     var alert = Alert()
+    var userDefaults = UserDefaults.standard
+    
+
     
     
     override func viewDidLoad() {
+//        let name = userDefaults.object(forKey: "username")
+//        navBarDisplayName.title = name as! String?
         super.viewDidLoad()
         giveAdviceTextField.delegate = self
         navBarDisplayName.title! = displayName
+        setDisplayName()
         setUpAdviceTextLabel()
         setUpAdviceTextField()
         setupAdviceButtons()
@@ -54,7 +61,16 @@ class ViewController: UIViewController {
         giveAdviceTextField.autocapitalizationType = .none
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+   
+    func setDisplayName() {
+       // let storedUserInfo = [emailAddress: displayName]
+        userDefaults.set(displayName, forKey: "username")
+        //userDefaults.set(emailAddress, forKey: "email")
+       // userDefaults.set(storedUserInfo, forKey: "user")
+        userDefaults.synchronize()
+    }
+    
+    func retrievingUserInfo() {
         
     }
     

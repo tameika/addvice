@@ -155,8 +155,10 @@ class SignUpViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "adviceIdentifier" {
             if let dest = segue.destination as? ViewController {
-                guard let username = usernameField.text else { print("SETTING USERNAME FAILED"); return }
+                guard let username = usernameField.text else { print("GETTING USERNAME FAILED"); return }
+                guard let email = emailField.text else { print("GETTING EMAIL FAILED"); return }
                 dest.displayName = username
+                dest.emailAddress = email
                 
             }
         }

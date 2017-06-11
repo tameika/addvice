@@ -17,6 +17,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var signUpBtn: UIButton!
     
     var alert = Alert()
+    var userDefaults = UserDefaults.standard
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,7 @@ class LoginViewController: UIViewController {
         emailField.autocapitalizationType = .none
         passwordField.autocapitalizationType = .none
     }
+    
     
     func setUpEmailField() {
         emailField.clipsToBounds = true
@@ -56,6 +58,15 @@ class LoginViewController: UIViewController {
         super.touchesBegan(touches, with: event)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "loginAdviceIdentifier" {
+            if let dest = segue.destination as? ViewController {
+                guard let username = userDefaults.object(forKey: "username") as? String else { return }
+                dest.displayName = username
+            }
+        }
+    }
+    
   
     
     @IBAction func loginBtn(_ sender: Any) {
@@ -65,6 +76,7 @@ class LoginViewController: UIViewController {
             FIRAuth.auth()?.signIn(withEmail: username, password: password, completion: { (FIRUser, error) in
                 if error == nil {
                     self.performSegue(withIdentifier: "loginAdviceIdentifier", sender: self)
+                    
                 } else {
                     self.alert.isErrorAlert(presenting: self, error: error?.localizedDescription)
                 }
