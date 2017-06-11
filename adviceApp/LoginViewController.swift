@@ -24,13 +24,11 @@ class LoginViewController: UIViewController {
         setUpEmailField()
         setUpPasswordField()
         setUpLoginButton()
-
         self.navigationController?.navigationBar.isHidden = true
         emailField.autocapitalizationType = .none
         passwordField.autocapitalizationType = .none
     }
-
-       
+    
     func setUpEmailField() {
         emailField.clipsToBounds = true
         emailField.layer.borderWidth = 0.60
@@ -49,11 +47,8 @@ class LoginViewController: UIViewController {
    
     func setUpLoginButton() {
         loginBtn.clipsToBounds = true
-        //loginBtn.layer.borderWidth = 0.60
         loginBtn.layer.cornerRadius = loginBtn.bounds.height * 0.50
-        //loginBtn.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSForegroundColorAttributeName: UIColor.seafoamGreen])
         loginBtn.layer.borderColor = UIColor.seafoamGreen.cgColor
-
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

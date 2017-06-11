@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import Firebase
 import FirebaseDatabase
+import FirebaseAuth
 import CoreData
 
 class ViewController: UIViewController {
@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var logoTitle: UILabel!
     @IBOutlet weak var flagAdviceBtn: UIButton!
     @IBOutlet weak var navBarDisplayName: UINavigationItem!
+    
     
     // MARK: Logic Properties
     
@@ -323,6 +324,19 @@ class ViewController: UIViewController {
         })
     }
     
+    @IBAction func logoutBtn(_ sender: UIBarButtonItem) {
+        
+        guard let firebaseAuth = FIRAuth.auth() else { return }
+        do {
+            try firebaseAuth.signOut()
+             performSegue(withIdentifier: "logoutIdentifier", sender: self)
+        } catch let signOutError as NSError {
+            print ("Error signing out: \(firebaseAuth.currentUser)", signOutError)
+        }
+        
+        
+    }
+
     
     // MARK : Filtering Bad Words
     

@@ -33,6 +33,13 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="addvice" id="sUC-l3-TiR" userLabel="addvice">
+                                        <barButtonItem key="leftBarButtonItem" title="Logout" id="XUd-Pa-pJ2">
+                                            <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="logoutBtn:" destination="BYZ-38-t0r" id="UbI-Xa-Cjx"/>
+                                                <segue destination="RnU-S3-8hg" kind="presentation" identifier="logoutIdentifier" modalTransitionStyle="crossDissolve" id="BOK-PC-6a1"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="sav❥d" id="sJl-pS-67c">
                                             <color key="tintColor" red="0.71501713140000001" green="0.81443250379999999" blue="0.75520653959999995" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
@@ -176,6 +183,8 @@
                             </mask>
                         </variation>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="containerView" destination="EQI-4W-D5A" id="vhd-of-gEt"/>
                         <outlet property="displayAdviceTextLabel" destination="yFv-1J-CLp" id="eFC-RN-LJJ"/>

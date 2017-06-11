@@ -30,8 +30,7 @@ struct Alert {
         let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         errorAlert.addAction(defaultAction)
         vc.present(errorAlert, animated: true, completion: nil)
-    
-}
+    }
     
     func isUnavailableAlert(presenting vc: UIViewController) {
         let unavailableAlert = UIAlertController(title: "Sorry!", message: "That name is unavailable. Try adding a number.", preferredStyle: .alert)
