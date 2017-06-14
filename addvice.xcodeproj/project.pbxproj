@@ -10,6 +10,7 @@
 		651437D0093F773DCC561348 /* Pods_addviceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39256E03BEA34EADF8393FB6 /* Pods_addviceUITests.framework */; };
 		7CD2E2ACDA2EE30FC96FC70D /* Pods_addviceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 582D27401F6C075EFEBFDD51 /* Pods_addviceTests.framework */; };
 		B7B21081803E9341A705B8DA /* Pods_addvice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 220D17ED635BE235CB3D938C /* Pods_addvice.framework */; };
+		BC2B81C61EE641CE00557D80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC2B81C51EE641CE00557D80 /* Assets.xcassets */; };
 		BC43C33D1DDBA157000994ED /* APIClient .swift in Sources */ = {isa = PBXBuildFile; fileRef = BC43C33C1DDBA157000994ED /* APIClient .swift */; };
 		BC4B66201E0B5653003EEEC0 /* positive-725842_1920.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC4B661F1E0B5653003EEEC0 /* positive-725842_1920.jpg */; };
 		BC6244C41DDA2E0C00AE6523 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6244C31DDA2E0C00AE6523 /* DataStore.swift */; };
@@ -19,13 +20,16 @@
 		BC99798C1D981513004A572C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC99798B1D981513004A572C /* AppDelegate.swift */; };
 		BC99798E1D981513004A572C /* GiveGetAdviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC99798D1D981513004A572C /* GiveGetAdviceViewController.swift */; };
 		BC9979911D981513004A572C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC99798F1D981513004A572C /* Main.storyboard */; };
-		BC9979931D981513004A572C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC9979921D981513004A572C /* Assets.xcassets */; };
 		BC9979961D981513004A572C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC9979941D981513004A572C /* LaunchScreen.storyboard */; };
+		BCA9FC491EE10ECD009E31A5 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA9FC481EE10ECD009E31A5 /* SignUpViewController.swift */; };
 		BCB17C611DE8BD54004CA1DF /* BadWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB17C601DE8BD54004CA1DF /* BadWords.swift */; };
 		BCBAF3691DEBE59E00B714B5 /* MyAdviceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBAF3681DEBE59E00B714B5 /* MyAdviceTableViewController.swift */; };
 		BCC28E6B1E5A37280051C6FB /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC28E6A1E5A37280051C6FB /* ContainerViewController.swift */; };
 		BCEF6B9B1E52F16400DEF771 /* star2.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEF6B9A1E52F16400DEF771 /* star2.png */; };
 		BCEF6B9F1E5307CE00DEF771 /* logoBubble-a.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEF6B9E1E5307CE00DEF771 /* logoBubble-a.png */; };
+		BCF1276C1EEB24E200F40402 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF1276B1EEB24E200F40402 /* LoginViewController.swift */; };
+		BCFF68EF1EEA306A00BA87E9 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF68EE1EEA306A00BA87E9 /* Alert.swift */; };
+		BCFF68F11EEA322300BA87E9 /* FIRDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF68F01EEA322300BA87E9 /* FIRDatabase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +72,9 @@
 		7C04745CF633CA5322B1A1F1 /* Pods-addvice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-addvice.debug.xcconfig"; path = "Pods/Target Support Files/Pods-addvice/Pods-addvice.debug.xcconfig"; sourceTree = "<group>"; };
 		AB660EBB11EE805F98F8A112 /* Pods-addvice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-addvice.release.xcconfig"; path = "Pods/Target Support Files/Pods-addvice/Pods-addvice.release.xcconfig"; sourceTree = "<group>"; };
 		BC20D3FA1E09B8F3000DD097 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC2B81C31EE6396B00557D80 /* addviceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = addviceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC2B81C41EE6396B00557D80 /* addviceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = addviceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC2B81C51EE641CE00557D80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC43C33C1DDBA157000994ED /* APIClient .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APIClient .swift"; sourceTree = "<group>"; };
 		BC4B661F1E0B5653003EEEC0 /* positive-725842_1920.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "positive-725842_1920.jpg"; sourceTree = "<group>"; };
 		BC4C3A8A1E6005B3001BA80D /* addvice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = addvice.entitlements; sourceTree = "<group>"; };
@@ -79,15 +86,16 @@
 		BC99798B1D981513004A572C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC99798D1D981513004A572C /* GiveGetAdviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiveGetAdviceViewController.swift; sourceTree = "<group>"; };
 		BC9979901D981513004A572C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BC9979921D981513004A572C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC9979951D981513004A572C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BC99799C1D981513004A572C /* addviceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = addviceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BC9979A71D981513004A572C /* addviceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = addviceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCA9FC481EE10ECD009E31A5 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		BCB17C601DE8BD54004CA1DF /* BadWords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadWords.swift; sourceTree = "<group>"; };
 		BCBAF3681DEBE59E00B714B5 /* MyAdviceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAdviceTableViewController.swift; sourceTree = "<group>"; };
 		BCC28E6A1E5A37280051C6FB /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		BCEF6B9A1E52F16400DEF771 /* star2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star2.png; sourceTree = "<group>"; };
 		BCEF6B9E1E5307CE00DEF771 /* logoBubble-a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logoBubble-a.png"; sourceTree = "<group>"; };
+		BCF1276B1EEB24E200F40402 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BCFF68EE1EEA306A00BA87E9 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		BCFF68F01EEA322300BA87E9 /* FIRDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FIRDatabase.swift; sourceTree = "<group>"; };
 		F7ED18A2D5D4C1F898CFE204 /* Pods-addviceUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-addviceUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-addviceUITests/Pods-addviceUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,7 +155,6 @@
 			children = (
 				BC4C3A8A1E6005B3001BA80D /* addvice.entitlements */,
 				BC99798A1D981513004A572C /* addviceApp */,
-				BC9979891D981513004A572C /* Products */,
 				A582106572F989356FDEFEE6 /* Pods */,
 				328AB9A16CC1FED8EF616E18 /* Frameworks */,
 			);
@@ -157,10 +164,11 @@
 			isa = PBXGroup;
 			children = (
 				BC9979881D981513004A572C /* addvice.app */,
-				BC99799C1D981513004A572C /* addviceTests.xctest */,
-				BC9979A71D981513004A572C /* addviceUITests.xctest */,
+				BC2B81C31EE6396B00557D80 /* addviceTests.xctest */,
+				BC2B81C41EE6396B00557D80 /* addviceUITests.xctest */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		BC99798A1D981513004A572C /* addviceApp */ = {
@@ -178,6 +186,8 @@
 		BCCE55A01E55350F001C6927 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BCA9FC481EE10ECD009E31A5 /* SignUpViewController.swift */,
+				BCF1276B1EEB24E200F40402 /* LoginViewController.swift */,
 				BCC28E6A1E5A37280051C6FB /* ContainerViewController.swift */,
 				BC99798D1D981513004A572C /* GiveGetAdviceViewController.swift */,
 				BCBAF3681DEBE59E00B714B5 /* MyAdviceTableViewController.swift */,
@@ -197,11 +207,13 @@
 		BCCE55A21E55351C001C6927 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BC99798B1D981513004A572C /* AppDelegate.swift */,
+				BC6244C31DDA2E0C00AE6523 /* DataStore.swift */,
 				BCB17C601DE8BD54004CA1DF /* BadWords.swift */,
 				BC43C33C1DDBA157000994ED /* APIClient .swift */,
-				BC6244C31DDA2E0C00AE6523 /* DataStore.swift */,
+				BCFF68F01EEA322300BA87E9 /* FIRDatabase.swift */,
+				BCFF68EE1EEA306A00BA87E9 /* Alert.swift */,
 				BC7EA1931E35A3B700FEDC6C /* Extensions.swift */,
-				BC99798B1D981513004A572C /* AppDelegate.swift */,
 				BC6244C51DDA308500AE6523 /* adviceApp.xcdatamodeld */,
 			);
 			name = Models;
@@ -210,12 +222,13 @@
 		BCCE55A31E553545001C6927 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BC9979921D981513004A572C /* Assets.xcassets */,
+				BC2B81C51EE641CE00557D80 /* Assets.xcassets */,
 				BC20D3FA1E09B8F3000DD097 /* Info.plist */,
 				BC7527C81E5EEF0B00C6A08F /* GoogleService-Info.plist */,
 				BCEF6B9E1E5307CE00DEF771 /* logoBubble-a.png */,
 				BCEF6B9A1E52F16400DEF771 /* star2.png */,
 				BC4B661F1E0B5653003EEEC0 /* positive-725842_1920.jpg */,
+				BC9979891D981513004A572C /* Products */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -262,7 +275,7 @@
 			);
 			name = addviceTests;
 			productName = adviceAppTests;
-			productReference = BC99799C1D981513004A572C /* addviceTests.xctest */;
+			productReference = BC2B81C31EE6396B00557D80 /* addviceTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		BC9979A61D981513004A572C /* addviceUITests */ = {
@@ -283,7 +296,7 @@
 			);
 			name = addviceUITests;
 			productName = adviceAppUITests;
-			productReference = BC9979A71D981513004A572C /* addviceUITests.xctest */;
+			productReference = BC2B81C41EE6396B00557D80 /* addviceUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -347,9 +360,9 @@
 			files = (
 				BC9979961D981513004A572C /* LaunchScreen.storyboard in Resources */,
 				BCEF6B9F1E5307CE00DEF771 /* logoBubble-a.png in Resources */,
-				BC9979931D981513004A572C /* Assets.xcassets in Resources */,
 				BC9979911D981513004A572C /* Main.storyboard in Resources */,
 				BC7527C91E5EEF0B00C6A08F /* GoogleService-Info.plist in Resources */,
+				BC2B81C61EE641CE00557D80 /* Assets.xcassets in Resources */,
 				BCEF6B9B1E52F16400DEF771 /* star2.png in Resources */,
 				BC4B66201E0B5653003EEEC0 /* positive-725842_1920.jpg in Resources */,
 			);
@@ -520,9 +533,13 @@
 				BC6244C41DDA2E0C00AE6523 /* DataStore.swift in Sources */,
 				BC99798C1D981513004A572C /* AppDelegate.swift in Sources */,
 				BC43C33D1DDBA157000994ED /* APIClient .swift in Sources */,
+				BCFF68F11EEA322300BA87E9 /* FIRDatabase.swift in Sources */,
 				BCBAF3691DEBE59E00B714B5 /* MyAdviceTableViewController.swift in Sources */,
 				BC6244C71DDA308500AE6523 /* adviceApp.xcdatamodeld in Sources */,
+				BCFF68EF1EEA306A00BA87E9 /* Alert.swift in Sources */,
 				BC7EA1941E35A3B700FEDC6C /* Extensions.swift in Sources */,
+				BCF1276C1EEB24E200F40402 /* LoginViewController.swift in Sources */,
+				BCA9FC491EE10ECD009E31A5 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
