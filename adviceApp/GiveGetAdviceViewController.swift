@@ -44,12 +44,10 @@ class ViewController: UIViewController {
     var alert = Alert()
     var userDefaults = UserDefaults.standard
     
-
+    
     
     
     override func viewDidLoad() {
-//        let name = userDefaults.object(forKey: "username")
-//        navBarDisplayName.title = name as! String?
         super.viewDidLoad()
         giveAdviceTextField.delegate = self
         navBarDisplayName.title! = displayName
@@ -61,23 +59,19 @@ class ViewController: UIViewController {
         giveAdviceTextField.autocapitalizationType = .none
     }
     
-   
+    
     func setDisplayName() {
-       // let storedUserInfo = [emailAddress: displayName]
         userDefaults.set(displayName, forKey: "username")
-        //userDefaults.set(emailAddress, forKey: "email")
-       // userDefaults.set(storedUserInfo, forKey: "user")
         userDefaults.synchronize()
     }
     
-    func retrievingUserInfo() {
-        
+    func storeBlockedUsers() {
     }
     
+   
     // MARK: Setting Up UI Objects
     
     func setUpAdviceTextLabel() {
-        
         self.displayAdviceTextLabel.clipsToBounds = true
         self.displayAdviceTextLabel.layer.cornerRadius = 5.0
         self.displayAdviceTextLabel.layer.borderWidth = 1.0
@@ -85,7 +79,6 @@ class ViewController: UIViewController {
     }
     
     func setUpAdviceTextField() {
-        
         self.giveAdviceTextField.clipsToBounds = true
         self.giveAdviceTextField.layer.borderColor = UIColor.clear.cgColor
         self.giveAdviceTextField.layer.borderWidth = 2.0
@@ -93,7 +86,6 @@ class ViewController: UIViewController {
     }
     
     func setupAdviceButtons() {
-        
         self.getAdviceBtnOutlet.isEnabled = false
         self.savedAdviceBtn.isEnabled = false
         self.giveAdviceBtnOutlet.isEnabled = false
@@ -119,9 +111,6 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        
-        
         navigationController?.navigationBar.isHidden = true
         logoA.center.x -= view.bounds.width
         logoTitle.center.x -= view.bounds.width
@@ -259,7 +248,6 @@ class ViewController: UIViewController {
     @IBAction func receiveAdviceBtnPressed(_ sender: UIButton) {
         animateGetButtonPress()
         animateInFlagButton()
-        animateInFlagButton()
         blockUser()
         guard firAdviceCollection.count >= 1 else {
             displayAdviceTextLabel.textColor = UIColor.eggplant
@@ -300,25 +288,32 @@ class ViewController: UIViewController {
             for (key, value) in firAdvice {
                 guard var contentDictionary = value as? [String : String] else { print("nothing"); return }
                 print("🗂", contentDictionary)
-
-                let alertC = UIAlertController(title: "Choose One", message: "Some message here.", preferredStyle: .alert)
+                
+                let isFlaggedAlert = UIAlertController(title: "Choose One", message: "What would you like to do?", preferredStyle: .alert)
                 print(1)
+                guard let user = contentDictionary["user"] else { return }
+                print("💔", user)
+                
 
+                
                 let block = UIAlertAction(title: "block this user", style: .destructive, handler: { (action) in
-                    guard let user = contentDictionary["user"] else { return }
-                    print(2)
-                    print("💔", user)
-                    
-                    if self.removedAdvice.contains(user) {
+                    for (key, value) in contentDictionary {
+                    //print("💦", key)
+                    print("☀️", value)
+                    if self.removedAdvice.contains(value) {
                         self.blockedUsers.append(user)
                         print("😜", user)
+                        print("🌶", self.blockedUsers)
+                        
+                        
                     }
+                }
                 })
                 
                 let cancel = UIAlertAction(title: "cancel", style: .cancel, handler: { (action) in
                     print("cancel tapped")
                 })
-
+                
                 let remove = UIAlertAction(title: "remove this advice", style: .destructive, handler: { (action) in
                     print("remove tapped")
                     if contentDictionary["content"] == self.removedAdvice {
@@ -328,13 +323,14 @@ class ViewController: UIViewController {
                         
                     }
                 })
-
+                
                 let actions = [remove, block, cancel]
                 for a in actions {
-                    alertC.addAction(a)
+                    isFlaggedAlert.addAction(a)
                 }
-                self.present(alertC, animated: true, completion: nil)
-                
+                self.present(isFlaggedAlert, animated: true, completion: nil)
+                print("❌", self.blockedUsers)
+
                 print(3)
             }
         })
@@ -345,14 +341,14 @@ class ViewController: UIViewController {
         guard let firebaseAuth = FIRAuth.auth() else { return }
         do {
             try firebaseAuth.signOut()
-             performSegue(withIdentifier: "logoutIdentifier", sender: self)
+            performSegue(withIdentifier: "logoutIdentifier", sender: self)
         } catch let signOutError as NSError {
             print ("Error signing out: \(firebaseAuth.currentUser)", signOutError)
         }
         
         
     }
-
+    
     
     // MARK : Filtering Bad Words
     
@@ -361,9 +357,9 @@ class ViewController: UIViewController {
             if let adviceText = giveAdviceTextField.text {
                 if adviceText.contains(word) {
                     alert.isBadAlert(presenting: self)
-                    }
-                    return true
-                } else {
+                }
+                return true
+            } else {
                 
             }
         }
