@@ -5,3 +5,4 @@ a social app that allows users to contribute a random piece of advice in order t
 
 ![addvice-v3-login](https://user-images.githubusercontent.com/17306970/27112681-8d874ff4-5086-11e7-819f-20c327276ed5.png)
 
+![addvice-v3-home](https://user-images.githubusercontent.com/17306970/27112727-d4932666-5086-11e7-8f3e-8b29d7d03651.png)
