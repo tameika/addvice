@@ -320,7 +320,6 @@ class ViewController: UIViewController {
                         availableRef.child(key).removeValue()
                         print(self.removedAdvice)
                         print("got pass remove logic")
-                        
                     }
                 })
                 
@@ -345,8 +344,6 @@ class ViewController: UIViewController {
         } catch let signOutError as NSError {
             print ("Error signing out: \(firebaseAuth.currentUser)", signOutError)
         }
-        
-        
     }
     
     
