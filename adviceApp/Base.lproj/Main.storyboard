@@ -514,9 +514,9 @@
                                                         <color key="textColor" red="0.71501713140000001" green="0.81443250379999999" blue="0.75520653959999995" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="☞&quot;SWIPE&quot; for a quick tutorial or ◉&quot;TAP&quot; to continue to the app" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o22-xI-vDe">
-                                                        <rect key="frame" x="20" y="34" width="335" height="667.5"/>
-                                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="25"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="swipe for a quick tutorial or tap to continue to the app" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o22-xI-vDe">
+                                                        <rect key="frame" x="35" y="34" width="305" height="667.5"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                                         <color key="textColor" red="0.69297444649999995" green="0.68386715490000005" blue="0.92139423080000005" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -527,7 +527,7 @@
                                                     <constraint firstItem="WBs-cT-2Rt" firstAttribute="top" secondItem="e4Z-8j-LF6" secondAttribute="top" constant="20" id="C3S-se-WGW"/>
                                                     <constraint firstItem="o22-xI-vDe" firstAttribute="centerX" secondItem="e4Z-8j-LF6" secondAttribute="centerX" id="KgT-qd-rdR"/>
                                                     <constraint firstItem="o22-xI-vDe" firstAttribute="centerY" secondItem="e4Z-8j-LF6" secondAttribute="centerY" multiplier="1.1" id="SOA-Lk-Dam"/>
-                                                    <constraint firstItem="o22-xI-vDe" firstAttribute="width" secondItem="e4Z-8j-LF6" secondAttribute="width" constant="-40" id="dsh-i5-xsL">
+                                                    <constraint firstItem="o22-xI-vDe" firstAttribute="width" secondItem="e4Z-8j-LF6" secondAttribute="width" constant="-70" id="dsh-i5-xsL">
                                                         <variation key="widthClass=regular" constant="-200"/>
                                                     </constraint>
                                                     <constraint firstItem="o22-xI-vDe" firstAttribute="height" secondItem="e4Z-8j-LF6" secondAttribute="height" id="iEh-vD-6ST"/>
@@ -547,9 +547,9 @@
                                                         <color key="textColor" red="0.71501713140000001" green="0.81443250379999999" blue="0.75520653959999995" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✔︎enter a piece of advice about anything in the textfield and press &quot;give&quot; " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cet-Mg-c3t">
-                                                        <rect key="frame" x="20.5" y="34" width="334.5" height="667.5"/>
-                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="enter a piece of advice about anything in the textfield and press &quot;give&quot; " textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cet-Mg-c3t">
+                                                        <rect key="frame" x="35" y="34" width="305" height="667.5"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                                         <color key="textColor" red="0.69297444649999995" green="0.68386715490000005" blue="0.92139423080000005" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -558,7 +558,7 @@
                                                 <constraints>
                                                     <constraint firstItem="cet-Mg-c3t" firstAttribute="centerY" secondItem="8uf-Km-j1a" secondAttribute="centerY" multiplier="1.1" id="6Tw-pO-Wmv"/>
                                                     <constraint firstItem="CD8-u7-uma" firstAttribute="top" secondItem="8uf-Km-j1a" secondAttribute="top" constant="20" id="Yk0-hV-I8Y"/>
-                                                    <constraint firstItem="cet-Mg-c3t" firstAttribute="width" secondItem="8uf-Km-j1a" secondAttribute="width" constant="-40" id="cxm-LI-lmb">
+                                                    <constraint firstItem="cet-Mg-c3t" firstAttribute="width" secondItem="8uf-Km-j1a" secondAttribute="width" constant="-70" id="cxm-LI-lmb">
                                                         <variation key="widthClass=regular" constant="-200"/>
                                                     </constraint>
                                                     <constraint firstItem="CD8-u7-uma" firstAttribute="centerX" secondItem="8uf-Km-j1a" secondAttribute="centerX" id="dTO-uS-izq"/>
@@ -580,9 +580,9 @@
                                                         <color key="textColor" red="0.71501713140000001" green="0.81443250379999999" blue="0.75520653959999995" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✔︎once you've given advice, you can receive advice by pressing &quot;get&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQ2-ph-kMW">
-                                                        <rect key="frame" x="20.5" y="34" width="335" height="667.5"/>
-                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="once you've given advice, you can receive advice by pressing &quot;get&quot;" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQ2-ph-kMW">
+                                                        <rect key="frame" x="35.5" y="34" width="305" height="667.5"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                                         <color key="textColor" red="0.69297444649999995" green="0.68386715490000005" blue="0.92139423080000005" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -592,7 +592,7 @@
                                                     <constraint firstItem="uQ2-ph-kMW" firstAttribute="centerY" secondItem="PcM-qd-Fow" secondAttribute="centerY" multiplier="1.1" id="5id-Oj-Uzz"/>
                                                     <constraint firstItem="uQ2-ph-kMW" firstAttribute="height" secondItem="PcM-qd-Fow" secondAttribute="height" id="Emp-SH-J7a"/>
                                                     <constraint firstItem="uQ2-ph-kMW" firstAttribute="centerX" secondItem="PcM-qd-Fow" secondAttribute="centerX" id="Lm1-RD-agK"/>
-                                                    <constraint firstItem="uQ2-ph-kMW" firstAttribute="width" secondItem="PcM-qd-Fow" secondAttribute="width" constant="-40" id="Rua-ob-QBe">
+                                                    <constraint firstItem="uQ2-ph-kMW" firstAttribute="width" secondItem="PcM-qd-Fow" secondAttribute="width" constant="-70" id="Rua-ob-QBe">
                                                         <variation key="widthClass=regular" constant="-200"/>
                                                     </constraint>
                                                     <constraint firstItem="KX0-Or-X6U" firstAttribute="centerX" secondItem="PcM-qd-Fow" secondAttribute="centerX" id="WbA-dO-Xrd"/>
@@ -613,9 +613,9 @@
                                                         <color key="textColor" red="0.71501713140000001" green="0.81443250379999999" blue="0.75520653959999995" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✔︎if you like the advice you receive, press &quot;save&quot; to store it. if you find it objectionable, press &quot;!&quot; to remove it" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RmU-jd-jUg">
-                                                        <rect key="frame" x="20.5" y="34" width="335" height="667.5"/>
-                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="if you like the advice you receive, press &quot;save&quot; to store it. if you find it objectionable, press &quot;!&quot; to remove it" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RmU-jd-jUg">
+                                                        <rect key="frame" x="35.5" y="34" width="305" height="667.5"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                                         <color key="textColor" red="0.69297444649999995" green="0.68386715490000005" blue="0.92139423080000005" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -625,7 +625,7 @@
                                                     <constraint firstItem="RmU-jd-jUg" firstAttribute="centerX" secondItem="bP3-Zc-Lgc" secondAttribute="centerX" id="CT3-fF-0Sc"/>
                                                     <constraint firstItem="RmU-jd-jUg" firstAttribute="centerY" secondItem="bP3-Zc-Lgc" secondAttribute="centerY" multiplier="1.1" id="E3U-Aq-pUH"/>
                                                     <constraint firstItem="RmU-jd-jUg" firstAttribute="height" secondItem="bP3-Zc-Lgc" secondAttribute="height" id="HJ2-dK-Q0U"/>
-                                                    <constraint firstItem="RmU-jd-jUg" firstAttribute="width" secondItem="bP3-Zc-Lgc" secondAttribute="width" constant="-40" id="cGV-6C-9iR">
+                                                    <constraint firstItem="RmU-jd-jUg" firstAttribute="width" secondItem="bP3-Zc-Lgc" secondAttribute="width" constant="-70" id="cGV-6C-9iR">
                                                         <variation key="widthClass=regular" constant="-200"/>
                                                     </constraint>
                                                     <constraint firstItem="Jrf-Mo-n7q" firstAttribute="top" secondItem="bP3-Zc-Lgc" secondAttribute="top" constant="20" id="rXH-Vw-NEU"/>
@@ -645,10 +645,10 @@
                                                         <color key="textColor" red="0.71501713140000001" green="0.81443250379999999" blue="0.75520653959999995" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="◉&quot;TAP&quot; anywhere to start!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTY-Au-Y9V">
-                                                        <rect key="frame" x="20" y="34" width="335" height="667.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tap anywhere to start!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTY-Au-Y9V">
+                                                        <rect key="frame" x="35" y="34" width="305" height="667.5"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                                         <color key="textColor" red="0.69297444649999995" green="0.68386715490000005" blue="0.92139423080000005" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -657,7 +657,7 @@
                                                 <constraints>
                                                     <constraint firstItem="wPz-Cv-7O6" firstAttribute="top" secondItem="Q4O-T6-AZl" secondAttribute="top" constant="20" id="5kw-qd-EGN"/>
                                                     <constraint firstItem="oTY-Au-Y9V" firstAttribute="centerY" secondItem="Q4O-T6-AZl" secondAttribute="centerY" multiplier="1.1" id="J6r-nX-sq7"/>
-                                                    <constraint firstItem="oTY-Au-Y9V" firstAttribute="width" secondItem="Q4O-T6-AZl" secondAttribute="width" constant="-40" id="M7P-Oz-B9r">
+                                                    <constraint firstItem="oTY-Au-Y9V" firstAttribute="width" secondItem="Q4O-T6-AZl" secondAttribute="width" constant="-70" id="M7P-Oz-B9r">
                                                         <variation key="widthClass=regular" constant="-200"/>
                                                     </constraint>
                                                     <constraint firstItem="oTY-Au-Y9V" firstAttribute="height" secondItem="Q4O-T6-AZl" secondAttribute="height" id="XAQ-PH-m7I"/>
