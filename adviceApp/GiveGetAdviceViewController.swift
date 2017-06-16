@@ -45,8 +45,6 @@ class ViewController: UIViewController {
     var userDefaults = UserDefaults.standard
     
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         giveAdviceTextField.delegate = self
@@ -335,8 +333,9 @@ class ViewController: UIViewController {
         })
     }
     
+    // MARK: Logout Logic
+    
     @IBAction func logoutBtn(_ sender: UIBarButtonItem) {
-        
         guard let firebaseAuth = FIRAuth.auth() else { return }
         do {
             try firebaseAuth.signOut()

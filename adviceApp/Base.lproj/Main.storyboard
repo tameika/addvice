@@ -218,7 +218,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" tableViewCell="GZh-FK-z1x" id="9uK-Y7-uf1">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -495,16 +495,16 @@
                                 <blurEffect style="dark"/>
                             </visualEffectView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" bounces="NO" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Grh-pW-LqV">
-                                <rect key="frame" x="56.5" y="133.5" width="262.5" height="400"/>
+                                <rect key="frame" x="0.5" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2t2-09-Bcu">
-                                        <rect key="frame" x="0.0" y="0.0" width="1312" height="400.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="1874.5" height="667.5"/>
                                         <subviews>
                                             <view userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e4Z-8j-LF6">
-                                                <rect key="frame" x="0.0" y="0.0" width="262.5" height="400.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="667.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBs-cT-2Rt">
-                                                        <rect key="frame" x="106" y="20.5" width="50" height="50"/>
+                                                        <rect key="frame" x="162" y="20.5" width="50" height="50"/>
                                                         <color key="backgroundColor" red="0.1577418609" green="0.076415820780000004" blue="0.2436298076" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="50" id="6Kn-47-prR"/>
@@ -515,7 +515,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="☞&quot;SWIPE&quot; for a quick tutorial or ◉&quot;TAP&quot; to continue to the app" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o22-xI-vDe">
-                                                        <rect key="frame" x="20" y="20.5" width="222.5" height="400.5"/>
+                                                        <rect key="frame" x="20" y="34" width="335" height="667.5"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="25"/>
                                                         <color key="textColor" red="0.69297444649999995" green="0.68386715490000005" blue="0.92139423080000005" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -534,10 +534,10 @@
                                                 </constraints>
                                             </view>
                                             <view userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8uf-Km-j1a">
-                                                <rect key="frame" x="262.5" y="0.0" width="262.5" height="400.5"/>
+                                                <rect key="frame" x="375" y="0.0" width="375" height="667.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CD8-u7-uma">
-                                                        <rect key="frame" x="107" y="20.5" width="50" height="50"/>
+                                                        <rect key="frame" x="162.5" y="20.5" width="50" height="50"/>
                                                         <color key="backgroundColor" red="0.1577418609" green="0.076415820780000004" blue="0.2436298076" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="50" id="NpM-km-s2a"/>
@@ -548,7 +548,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✔︎enter a piece of advice about anything in the textfield and press &quot;give&quot; " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cet-Mg-c3t">
-                                                        <rect key="frame" x="20.5" y="20.5" width="222" height="400.5"/>
+                                                        <rect key="frame" x="20.5" y="34" width="334.5" height="667.5"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
                                                         <color key="textColor" red="0.69297444649999995" green="0.68386715490000005" blue="0.92139423080000005" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -567,10 +567,10 @@
                                                 </constraints>
                                             </view>
                                             <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PcM-qd-Fow">
-                                                <rect key="frame" x="525" y="0.0" width="262" height="400.5"/>
+                                                <rect key="frame" x="750" y="0.0" width="374.5" height="667.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KX0-Or-X6U">
-                                                        <rect key="frame" x="106.5" y="20.5" width="50" height="50"/>
+                                                        <rect key="frame" x="163" y="20.5" width="50" height="50"/>
                                                         <color key="backgroundColor" red="0.1577418609" green="0.076415820780000004" blue="0.2436298076" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="50" id="0cF-Nu-Osv"/>
@@ -581,7 +581,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✔︎once you've given advice, you can receive advice by pressing &quot;get&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQ2-ph-kMW">
-                                                        <rect key="frame" x="20.5" y="20.5" width="222.5" height="400.5"/>
+                                                        <rect key="frame" x="20.5" y="34" width="335" height="667.5"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
                                                         <color key="textColor" red="0.69297444649999995" green="0.68386715490000005" blue="0.92139423080000005" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -600,10 +600,10 @@
                                                 </constraints>
                                             </view>
                                             <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bP3-Zc-Lgc">
-                                                <rect key="frame" x="787" y="0.0" width="262.5" height="400.5"/>
+                                                <rect key="frame" x="1124.5" y="0.0" width="375" height="667.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jrf-Mo-n7q">
-                                                        <rect key="frame" x="107" y="20.5" width="50" height="50"/>
+                                                        <rect key="frame" x="163" y="20.5" width="50" height="50"/>
                                                         <color key="backgroundColor" red="0.1577418609" green="0.076415820780000004" blue="0.2436298076" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="Jrf-Mo-n7q" secondAttribute="height" multiplier="1:1" id="5Kp-X2-xZq"/>
@@ -614,7 +614,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✔︎if you like the advice you receive, press &quot;save&quot; to store it. if you find it objectionable, press &quot;!&quot; to remove it" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RmU-jd-jUg">
-                                                        <rect key="frame" x="20.5" y="20.5" width="222.5" height="400.5"/>
+                                                        <rect key="frame" x="20.5" y="34" width="335" height="667.5"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
                                                         <color key="textColor" red="0.69297444649999995" green="0.68386715490000005" blue="0.92139423080000005" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -632,10 +632,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q4O-T6-AZl">
-                                                <rect key="frame" x="1049.5" y="0.0" width="262.5" height="400.5"/>
+                                                <rect key="frame" x="1499.5" y="0.0" width="375" height="667.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⚡︎" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wPz-Cv-7O6">
-                                                        <rect key="frame" x="106.5" y="20.5" width="50" height="50"/>
+                                                        <rect key="frame" x="162.5" y="20.5" width="50" height="50"/>
                                                         <color key="backgroundColor" red="0.1577418609" green="0.076415820780000004" blue="0.2436298076" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="wPz-Cv-7O6" secondAttribute="height" multiplier="1:1" id="dGn-pX-Oa7"/>
@@ -646,7 +646,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="◉&quot;TAP&quot; anywhere to start!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTY-Au-Y9V">
-                                                        <rect key="frame" x="20" y="20.5" width="222.5" height="400.5"/>
+                                                        <rect key="frame" x="20" y="34" width="335" height="667.5"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
                                                         <color key="textColor" red="0.69297444649999995" green="0.68386715490000005" blue="0.92139423080000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -682,8 +682,8 @@
                         </subviews>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="Grh-pW-LqV" firstAttribute="width" secondItem="Xzd-JE-7eb" secondAttribute="width" multiplier="0.7" id="6HI-Xo-l8H"/>
-                            <constraint firstItem="Grh-pW-LqV" firstAttribute="height" secondItem="Xzd-JE-7eb" secondAttribute="height" multiplier="0.6" id="7nc-CM-5iN"/>
+                            <constraint firstItem="Grh-pW-LqV" firstAttribute="width" secondItem="Xzd-JE-7eb" secondAttribute="width" id="6HI-Xo-l8H"/>
+                            <constraint firstItem="Grh-pW-LqV" firstAttribute="height" secondItem="Xzd-JE-7eb" secondAttribute="height" id="7nc-CM-5iN"/>
                             <constraint firstItem="Grh-pW-LqV" firstAttribute="centerX" secondItem="Xzd-JE-7eb" secondAttribute="centerX" id="8LS-AS-Lw4"/>
                             <constraint firstItem="UcB-Qn-mWJ" firstAttribute="centerX" secondItem="Xzd-JE-7eb" secondAttribute="centerX" id="8PI-yD-uaw"/>
                             <constraint firstItem="UcB-Qn-mWJ" firstAttribute="width" secondItem="Xzd-JE-7eb" secondAttribute="width" id="HZY-EW-M9W"/>
