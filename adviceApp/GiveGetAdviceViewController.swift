@@ -224,7 +224,7 @@ class ViewController: UIViewController {
         getAdviceBtnOutlet.isEnabled = true
         giveAdviceBtnOutlet.isEnabled = false
         store.saveContext()
-        let newRef = FIRDatabase.database().reference().child("Advice").childByAutoId()
+        let newRef = FIRDatabase.database().reference().child("Advice").child(displayName)
         newRef.setValue(["user": displayName, "content": adviceReceived])
     }
     
@@ -282,21 +282,26 @@ class ViewController: UIViewController {
             let ref = FIRDatabase.database().reference()
             let availableRef = ref.child("Advice")
             availableRef.observeSingleEvent(of: .value, with: { (snapshot) in
-                guard let firAdvice = snapshot.value as? [String : Any] else { return }
-                for (key, value) in firAdvice {
-                    guard var contentDictionary = value as? [String : String] else { print("nothing"); return }
-                    print("🗂", contentDictionary)
+                
+                for child in snapshot.children {
                     
-                    guard let user = contentDictionary["user"] else { return }
-                    var allUsers = [String]()
-                    allUsers.append(user)
-                    for name in allUsers {
-                        if !(allUsers.isEmpty){
-                            allUsers.append(user)
-                        }
-                    }
                     
+                    print("👩🏼", child)
                 }
+//            guard let firAdvice = snapshot.value as? [String : Any] else { return }
+//                for (key, value) in firAdvice {
+//                    guard var contentDictionary = value as? [String : String] else { print("nothing"); return }
+//                    print("🗂", contentDictionary)
+//                    
+//                    guard let user = contentDictionary["user"] else { return }
+//                    var allUsers = [String]()
+//                    allUsers.append(user)
+//                    if !(allUsers.contains(user)) {
+//                        allUsers.append(user)
+//                        print("👥", allUsers)
+//                    }
+//                    
+//                }
                 
                 
 
