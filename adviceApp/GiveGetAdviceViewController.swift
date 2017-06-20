@@ -278,57 +278,64 @@ class ViewController: UIViewController {
     // MARK : Flagging Content Logic
     
     @IBAction func flagAdviceBtn(_ sender: Any) {
-        let ref = FIRDatabase.database().reference()
-        let availableRef = ref.child("Advice")
-        availableRef.observeSingleEvent(of: .value, with: { (snapshot) in
-            guard let firAdvice = snapshot.value as? [String : Any] else { return }
-            print("💕got passed unwrapping firadvice")
-            for (key, value) in firAdvice {
-                guard var contentDictionary = value as? [String : String] else { print("nothing"); return }
-                print("🗂", contentDictionary)
-                
-                let isFlaggedAlert = UIAlertController(title: "Choose One", message: "What would you like to do?", preferredStyle: .alert)
-                print(1)
-                guard let user = contentDictionary["user"] else { return }
-                print("💔", user)
-                                
-                let block = UIAlertAction(title: "block this user", style: .destructive, handler: { (action) in
-                    for (key, value) in contentDictionary {
-                    //print("💦", key)
-                    print("☀️", value)
-                    if self.removedAdvice.contains(value) {
-                        self.blockedUsers.append(user)
-                        print("😜", user)
-                        print("🌶", self.blockedUsers)
-                        
-                        
+        
+            let ref = FIRDatabase.database().reference()
+            let availableRef = ref.child("Advice")
+            availableRef.observeSingleEvent(of: .value, with: { (snapshot) in
+                guard let firAdvice = snapshot.value as? [String : Any] else { return }
+                for (key, value) in firAdvice {
+                    guard var contentDictionary = value as? [String : String] else { print("nothing"); return }
+                    print("🗂", contentDictionary)
+                    
+                    guard let user = contentDictionary["user"] else { return }
+                    var allUsers = [String]()
+                    allUsers.append(user)
+                    for name in allUsers {
+                        if !(allUsers.isEmpty){
+                            allUsers.append(user)
+                        }
                     }
+                    
                 }
-                })
                 
-                let cancel = UIAlertAction(title: "cancel", style: .cancel, handler: { (action) in
-                    print("cancel tapped")
-                })
                 
-                let remove = UIAlertAction(title: "remove this advice", style: .destructive, handler: { (action) in
-                    print("remove tapped")
-                    if contentDictionary["content"] == self.removedAdvice {
-                        availableRef.child(key).removeValue()
-                        print(self.removedAdvice)
-                        print("got pass remove logic")
-                    }
-                })
-                
-                let actions = [remove, block, cancel]
-                for a in actions {
-                    isFlaggedAlert.addAction(a)
-                }
-                self.present(isFlaggedAlert, animated: true, completion: nil)
-                print("❌", self.blockedUsers)
 
-                print(3)
-            }
-        })
+            })
+        
+    
+                    let isFlaggedAlert = UIAlertController(title: "Choose One", message: "What would you like to do?", preferredStyle: .alert)
+                    print(1)
+        
+                    let block = UIAlertAction(title: "block this user", style: .destructive, handler: { (action) in
+                        
+                    
+                        
+                    })
+
+                    let cancel = UIAlertAction(title: "cancel", style: .cancel, handler: { (action) in
+                        print("cancel tapped")
+                    })
+                    
+                    
+                    
+                    
+//                    let remove = UIAlertAction(title: "remove this advice", style: .destructive, handler: { (action) in
+//                        print("remove tapped")
+//                        
+//                    })
+//                    
+//                    let actions = [remove, block, cancel]
+//                    for a in actions {
+//                        isFlaggedAlert.addAction(a)
+//                    }
+//                    self.present(isFlaggedAlert, animated: true, completion: nil)
+//                    print("❌", self.blockedUsers)
+//                    
+//                    print(3)
+                //}
+                
+            //})
+        
     }
     
     // MARK: Logout Logic
