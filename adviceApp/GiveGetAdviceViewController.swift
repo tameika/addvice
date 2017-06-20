@@ -287,7 +287,7 @@ class ViewController: UIViewController {
                     
                     
                     print("👩🏼", child)
-                }
+                
 //            guard let firAdvice = snapshot.value as? [String : Any] else { return }
 //                for (key, value) in firAdvice {
 //                    guard var contentDictionary = value as? [String : String] else { print("nothing"); return }
@@ -305,7 +305,7 @@ class ViewController: UIViewController {
                 
                 
 
-            })
+           
         
     
                     let isFlaggedAlert = UIAlertController(title: "Choose One", message: "What would you like to do?", preferredStyle: .alert)
@@ -313,7 +313,10 @@ class ViewController: UIViewController {
         
                     let block = UIAlertAction(title: "block this user", style: .destructive, handler: { (action) in
                         
-                    
+                        if self.removedAdvice.contains(child as! String) {
+                            self.blockedUsers.append(child as! String)
+                            print("❌", self.blockedUsers)
+                        }
                         
                     })
 
@@ -321,21 +324,23 @@ class ViewController: UIViewController {
                         print("cancel tapped")
                     })
                     
+                    let actions = [block, cancel]
+                    for a in actions {
+                        isFlaggedAlert.addAction(a)
+                    }
+                    self.present(isFlaggedAlert, animated: true, completion: nil)
+                    print("👥", self.blockedUsers)
+
                     
-                    
+                    }
+                     })
                     
 //                    let remove = UIAlertAction(title: "remove this advice", style: .destructive, handler: { (action) in
 //                        print("remove tapped")
 //                        
 //                    })
 //                    
-//                    let actions = [remove, block, cancel]
-//                    for a in actions {
-//                        isFlaggedAlert.addAction(a)
-//                    }
-//                    self.present(isFlaggedAlert, animated: true, completion: nil)
-//                    print("❌", self.blockedUsers)
-//                    
+                   //
 //                    print(3)
                 //}
                 
