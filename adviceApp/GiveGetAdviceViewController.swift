@@ -291,9 +291,7 @@ class ViewController: UIViewController {
                 print(1)
                 guard let user = contentDictionary["user"] else { return }
                 print("💔", user)
-                
-
-                
+                                
                 let block = UIAlertAction(title: "block this user", style: .destructive, handler: { (action) in
                     for (key, value) in contentDictionary {
                     //print("💦", key)
