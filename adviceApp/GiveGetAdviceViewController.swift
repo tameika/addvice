@@ -224,7 +224,7 @@ class ViewController: UIViewController {
         getAdviceBtnOutlet.isEnabled = true
         giveAdviceBtnOutlet.isEnabled = false
         store.saveContext()
-        let newRef = FIRDatabase.database().reference().child("Advice").child(displayName)
+        let newRef = FIRDatabase.database().reference().child("Advice").childByAutoId()
         newRef.setValue(["user": displayName, "content": adviceReceived])
     }
     
@@ -278,32 +278,23 @@ class ViewController: UIViewController {
     // MARK : Flagging Content Logic
     
     @IBAction func flagAdviceBtn(_ sender: Any) {
+        var allUsers = Set([String]())
+        let ref = FIRDatabase.database().reference()
+        let availableRef = ref.child("Advice")
         
-            let ref = FIRDatabase.database().reference()
-            let availableRef = ref.child("Advice")
-            availableRef.observeSingleEvent(of: .value, with: { (snapshot) in
+        availableRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let databaseData = snapshot.value as? [String : Any] else { return }
+            //print("👅",databaseData)
+            for (key, value) in databaseData {
+                guard let contentDict = value as? [String : String] else { return }
+                //print("💤",contentDict)
+                let user = contentDict["user"] ?? "NO USER"
+                allUsers.insert(user)
+                //print("👍🏽",allUsers)
                 
-                for child in snapshot.children {
-                    
-                    
-                    print("👩🏼", child)
-                
-//            guard let firAdvice = snapshot.value as? [String : Any] else { return }
-//                for (key, value) in firAdvice {
-//                    guard var contentDictionary = value as? [String : String] else { print("nothing"); return }
-//                    print("🗂", contentDictionary)
-//                    
-//                    guard let user = contentDictionary["user"] else { return }
-//                    var allUsers = [String]()
-//                    allUsers.append(user)
-//                    if !(allUsers.contains(user)) {
-//                        allUsers.append(user)
-//                        print("👥", allUsers)
-//                    }
-//                    
-//                }
-                
-                
+            }
+            
+        })
 
            
         
@@ -313,11 +304,12 @@ class ViewController: UIViewController {
         
                     let block = UIAlertAction(title: "block this user", style: .destructive, handler: { (action) in
                         
-                        if self.removedAdvice.contains(child as! String) {
-                            self.blockedUsers.append(child as! String)
-                            print("❌", self.blockedUsers)
+                        for name in allUsers {
+                            if self.removedAdvice.contains(name) {
+                                self.blockedUsers.append(name)
+                                print("💔",self.blockedUsers)
+                            }
                         }
-                        
                     })
 
                     let cancel = UIAlertAction(title: "cancel", style: .cancel, handler: { (action) in
@@ -332,8 +324,8 @@ class ViewController: UIViewController {
                     print("👥", self.blockedUsers)
 
                     
-                    }
-                     })
+        
+    
                     
 //                    let remove = UIAlertAction(title: "remove this advice", style: .destructive, handler: { (action) in
 //                        print("remove tapped")
@@ -341,7 +333,6 @@ class ViewController: UIViewController {
 //                    })
 //                    
                    //
-//                    print(3)
                 //}
                 
             //})
