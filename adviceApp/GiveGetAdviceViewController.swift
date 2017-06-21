@@ -54,6 +54,7 @@ class ViewController: UIViewController {
         setUpAdviceTextField()
         setupAdviceButtons()
         store.fetchData()
+        storeBlockedUsers()
         giveAdviceTextField.autocapitalizationType = .none
     }
     
@@ -64,6 +65,7 @@ class ViewController: UIViewController {
     }
     
     func storeBlockedUsers() {
+        userDefaults.set(blockedUsers, forKey: "blocked")
     }
     
    
@@ -266,6 +268,11 @@ class ViewController: UIViewController {
         advice.isFavorited = true
     }
     
+    func saveBlockedUser() {
+        
+        let blocked = Advice(context: store.persistentContainer.viewContext)
+    }
+    
     @IBAction func saveAdvicePressed(_ sender: Any) {
         animateSaveButtonPress()
         if displayAdviceTextLabel.text != nil {
@@ -288,7 +295,7 @@ class ViewController: UIViewController {
             for (key, value) in databaseData {
                 guard let contentDict = value as? [String : String] else { return }
                 //print("💤",contentDict)
-                let user = contentDict["user"] ?? "NO USER"
+                guard let user = contentDict["user"] else { return }
                 allUsers.insert(user)
                 //print("👍🏽",allUsers)
                 
@@ -296,40 +303,40 @@ class ViewController: UIViewController {
             
         })
 
-           
+        
+        
+        
+        let isFlaggedAlert = UIAlertController(title: "Choose One", message: "What would you like to do?", preferredStyle: .alert)
+        print(1)
+        
+        let block = UIAlertAction(title: "block this user", style: .destructive, handler: { (action) in
+            for name in allUsers {
+                if self.removedAdvice.contains(name) {
+                    
+                    self.blockedUsers.append(name)
+                    print("💔",self.blockedUsers)
+                }
+            }
+        })
+        
+        let cancel = UIAlertAction(title: "cancel", style: .cancel, handler: { (action) in
+            print("cancel tapped")
+        })
+        
+        let actions = [block, cancel]
+        for a in actions {
+            isFlaggedAlert.addAction(a)
+        }
+        self.present(isFlaggedAlert, animated: true, completion: nil)
+        print("👥", self.blockedUsers)
+
+        
         
     
-                    let isFlaggedAlert = UIAlertController(title: "Choose One", message: "What would you like to do?", preferredStyle: .alert)
-                    print(1)
         
-                    let block = UIAlertAction(title: "block this user", style: .destructive, handler: { (action) in
-                        
-                        for name in allUsers {
-                            if self.removedAdvice.contains(name) {
-                                self.blockedUsers.append(name)
-                                print("💔",self.blockedUsers)
-                            }
-                        }
-                    })
-
-                    let cancel = UIAlertAction(title: "cancel", style: .cancel, handler: { (action) in
-                        print("cancel tapped")
-                    })
-                    
-                    let actions = [block, cancel]
-                    for a in actions {
-                        isFlaggedAlert.addAction(a)
-                    }
-                    self.present(isFlaggedAlert, animated: true, completion: nil)
-                    print("👥", self.blockedUsers)
-
-                    
-        
-    
-                    
 //                    let remove = UIAlertAction(title: "remove this advice", style: .destructive, handler: { (action) in
 //                        print("remove tapped")
-//                        
+//
 //                    })
 //                    
                    //

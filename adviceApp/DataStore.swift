@@ -14,6 +14,7 @@ final class DataStore {
     
     var adviceArray = [Advice]()
     var favorites = [Advice]()
+    var blockedArray = [Advice]()
     
     static let sharedInstance = DataStore()
     private init() {}
@@ -41,6 +42,15 @@ final class DataStore {
         }
     }
     
+    func fetchBlocked() {
+        let context = persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<Advice>(entityName: "Advice")
+        do {
+           blockedArray = try context.fetch(fetchRequest)
+        } catch {
+            print("Can't find any blocked users.")
+        }
+    }
     
     func fetchData() {
         let context = persistentContainer.viewContext
