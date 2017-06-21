@@ -54,7 +54,6 @@ class ViewController: UIViewController {
         setUpAdviceTextField()
         setupAdviceButtons()
         store.fetchData()
-        storeBlockedUsers()
         giveAdviceTextField.autocapitalizationType = .none
     }
     
@@ -64,11 +63,7 @@ class ViewController: UIViewController {
         userDefaults.synchronize()
     }
     
-    func storeBlockedUsers() {
-        userDefaults.set(blockedUsers, forKey: "blocked")
-    }
     
-   
     // MARK: Setting Up UI Objects
     
     func setUpAdviceTextLabel() {
@@ -270,7 +265,16 @@ class ViewController: UIViewController {
     
     func saveBlockedUser() {
         
-        let blocked = Advice(context: store.persistentContainer.viewContext)
+        let newBlock = Advice(context: store.persistentContainer.viewContext)
+        for user in blockedUsers {
+            print("👫",user)
+            newBlock.blocked = user
+            print("🗣",newBlock)
+            store.blockedArray.append(newBlock)
+            store.saveContext()
+        }
+        
+        print("❗️",store.blockedArray)
     }
     
     @IBAction func saveAdvicePressed(_ sender: Any) {
@@ -315,6 +319,7 @@ class ViewController: UIViewController {
                     
                     self.blockedUsers.append(name)
                     print("💔",self.blockedUsers)
+                    self.saveBlockedUser()
                 }
             }
         })
