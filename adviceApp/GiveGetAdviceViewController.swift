@@ -111,7 +111,7 @@ class ViewController: UIViewController {
         logoTitle.center.x -= view.bounds.width
         animateInLogoTitle()
         giveAdviceBtnOutlet.isUserInteractionEnabled = false
-        
+        store.fetchBlocked()
         getFIRAdvice(handler: { _ in
             DispatchQueue.main.async {
                 self.giveAdviceBtnOutlet.isUserInteractionEnabled = true
@@ -229,8 +229,9 @@ class ViewController: UIViewController {
     
     func blockUser() {
         for advice in firAdviceCollection{
-            for user in blockedUsers {
-                if advice.contains(user) {
+            for user in store.blockedArray {
+                guard let name = user.username else { return }
+                if advice.contains(name) {
                     guard let index = firAdviceCollection.index(of: advice) else { return }
                     firAdviceCollection.remove(at: index)
                 }
@@ -263,19 +264,6 @@ class ViewController: UIViewController {
         advice.isFavorited = true
     }
     
-    func saveBlockedUser() {
-        
-        let newBlock = Advice(context: store.persistentContainer.viewContext)
-        for user in blockedUsers {
-            print("👫",user)
-            newBlock.blocked = user
-            print("🗣",newBlock)
-            store.blockedArray.append(newBlock)
-            store.saveContext()
-        }
-        
-        print("❗️",store.blockedArray)
-    }
     
     @IBAction func saveAdvicePressed(_ sender: Any) {
         animateSaveButtonPress()
@@ -285,6 +273,21 @@ class ViewController: UIViewController {
             alert.isSavedAlert(presenting: self)
         }
     }
+    
+    func saveBlockedUser() {
+        
+        let newBlock = Blocked(context: store.persistentContainer.viewContext)
+        for user in blockedUsers {
+            print("👫",user)
+            newBlock.username = user
+            print("🗣",newBlock)
+            store.blockedArray.append(newBlock)
+            store.saveContext()
+        }
+        
+        print("❗️",store.blockedArray)
+    }
+
     
     // MARK : Flagging Content Logic
     
@@ -302,14 +305,10 @@ class ViewController: UIViewController {
                 guard let user = contentDict["user"] else { return }
                 allUsers.insert(user)
                 //print("👍🏽",allUsers)
-                
             }
             
         })
 
-        
-        
-        
         let isFlaggedAlert = UIAlertController(title: "Choose One", message: "What would you like to do?", preferredStyle: .alert)
         print(1)
         
