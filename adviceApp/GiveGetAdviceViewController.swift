@@ -13,7 +13,7 @@ import CoreData
 
 class ViewController: UIViewController {
     
-    // MARK: UI Properties
+    // MARK : UI Properties
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var giveAdviceTextField: UITextField!
@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var navBarDisplayName: UINavigationItem!
     
     
-    // MARK: Logic Properties
+    // MARK : Logic Properties
     
     let badWordsArray = BadWords.sharedInstance
     let store = DataStore.sharedInstance
@@ -272,6 +272,8 @@ class ViewController: UIViewController {
         }
     }
     
+    // MARK : Blocking User Logic
+    
     func saveBlockedUser() {
         let newBlock = Blocked(context: store.persistentContainer.viewContext)
         for user in blockedUsers {
@@ -315,7 +317,7 @@ class ViewController: UIViewController {
             isFlaggedAlert.addAction(a)
         }
         self.present(isFlaggedAlert, animated: true, completion: nil)
-}
+    }
     
     // MARK: Logout Logic
     
