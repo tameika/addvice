@@ -45,6 +45,21 @@ class ViewController: UIViewController {
     var userDefaults = UserDefaults.standard
     
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
+        logoA.center.x -= view.bounds.width
+        logoTitle.center.x -= view.bounds.width
+        animateInLogoTitle()
+        giveAdviceBtnOutlet.isUserInteractionEnabled = false
+        store.fetchBlocked()
+        getFIRAdvice(handler: { _ in
+            DispatchQueue.main.async {
+                self.giveAdviceBtnOutlet.isUserInteractionEnabled = true
+            }
+        })
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         giveAdviceTextField.delegate = self
@@ -57,14 +72,13 @@ class ViewController: UIViewController {
         giveAdviceTextField.autocapitalizationType = .none
     }
     
-    
     func setDisplayName() {
         userDefaults.set(displayName, forKey: "username")
         userDefaults.synchronize()
     }
     
     
-    // MARK: Setting Up UI Objects
+    // MARK : Setting Up UI Objects
     
     func setUpAdviceTextLabel() {
         self.displayAdviceTextLabel.clipsToBounds = true
@@ -104,22 +118,7 @@ class ViewController: UIViewController {
     }
     
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.navigationBar.isHidden = true
-        logoA.center.x -= view.bounds.width
-        logoTitle.center.x -= view.bounds.width
-        animateInLogoTitle()
-        giveAdviceBtnOutlet.isUserInteractionEnabled = false
-        store.fetchBlocked()
-        getFIRAdvice(handler: { _ in
-            DispatchQueue.main.async {
-                self.giveAdviceBtnOutlet.isUserInteractionEnabled = true
-            }
-        })
-    }
-    
-    // MARK: Logo Animation
+    // MARK : Logo Animation
     
     func animateInLogoTitle() {
         
@@ -140,7 +139,7 @@ class ViewController: UIViewController {
         }
     }
     
-    // MARK: Button Animation
+    // MARK : Button Animation
     
     func animateGiveButtonPress() {
         UIView.animate(withDuration: 0.1, animations: {
@@ -215,7 +214,7 @@ class ViewController: UIViewController {
         guard var adviceReceived = giveAdviceTextField.text else { return }
         adviceReceived += (" - " + displayName)
         let newAdvice = Advice(context: store.persistentContainer.viewContext)
-        newAdvice.content = adviceReceived
+        newAdvice.content = (adviceReceived)
         store.adviceArray.append(newAdvice)
         giveAdviceTextField.text = ""
         getAdviceBtnOutlet.isEnabled = true
@@ -225,7 +224,7 @@ class ViewController: UIViewController {
         newRef.setValue(["user": displayName, "content": adviceReceived])
     }
     
-    //MARK : Blocking User Logic
+    // MARK : Blocking User Logic
     
     func blockUser() {
         for advice in firAdviceCollection{
@@ -239,7 +238,7 @@ class ViewController: UIViewController {
         }
     }
     
-    //MARK : Getting Advice Logic
+    // MARK : Getting Advice Logic
     
     @IBAction func receiveAdviceBtnPressed(_ sender: UIButton) {
         animateGetButtonPress()
@@ -264,7 +263,6 @@ class ViewController: UIViewController {
         advice.isFavorited = true
     }
     
-    
     @IBAction func saveAdvicePressed(_ sender: Any) {
         animateSaveButtonPress()
         if displayAdviceTextLabel.text != nil {
@@ -275,7 +273,6 @@ class ViewController: UIViewController {
     }
     
     func saveBlockedUser() {
-        
         let newBlock = Blocked(context: store.persistentContainer.viewContext)
         for user in blockedUsers {
             print("👫",user)
@@ -284,10 +281,7 @@ class ViewController: UIViewController {
             store.blockedArray.append(newBlock)
             store.saveContext()
         }
-        
-        print("❗️",store.blockedArray)
     }
-
     
     // MARK : Flagging Content Logic
     
@@ -295,60 +289,33 @@ class ViewController: UIViewController {
         var allUsers = Set([String]())
         let ref = FIRDatabase.database().reference()
         let availableRef = ref.child("Advice")
-        
         availableRef.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let databaseData = snapshot.value as? [String : Any] else { return }
-            //print("👅",databaseData)
-            for (key, value) in databaseData {
+            for (_, value) in databaseData {
                 guard let contentDict = value as? [String : String] else { return }
-                //print("💤",contentDict)
                 guard let user = contentDict["user"] else { return }
                 allUsers.insert(user)
-                //print("👍🏽",allUsers)
             }
-            
         })
-
         let isFlaggedAlert = UIAlertController(title: "Choose One", message: "What would you like to do?", preferredStyle: .alert)
-        print(1)
-        
         let block = UIAlertAction(title: "block this user", style: .destructive, handler: { (action) in
             for name in allUsers {
                 if self.removedAdvice.contains(name) {
-                    
                     self.blockedUsers.append(name)
                     print("💔",self.blockedUsers)
                     self.saveBlockedUser()
                 }
             }
         })
-        
         let cancel = UIAlertAction(title: "cancel", style: .cancel, handler: { (action) in
             print("cancel tapped")
         })
-        
         let actions = [block, cancel]
         for a in actions {
             isFlaggedAlert.addAction(a)
         }
         self.present(isFlaggedAlert, animated: true, completion: nil)
-        print("👥", self.blockedUsers)
-
-        
-        
-    
-        
-//                    let remove = UIAlertAction(title: "remove this advice", style: .destructive, handler: { (action) in
-//                        print("remove tapped")
-//
-//                    })
-//                    
-                   //
-                //}
-                
-            //})
-        
-    }
+}
     
     // MARK: Logout Logic
     
@@ -361,7 +328,6 @@ class ViewController: UIViewController {
             print ("Error signing out: \(firebaseAuth.currentUser)", signOutError)
         }
     }
-    
     
     // MARK : Filtering Bad Words
     
