@@ -12,6 +12,7 @@ class ContainerViewController: UIViewController {
     
     @IBOutlet weak var blurView: UIVisualEffectView!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet var numberLabels: [UILabel]!
     
     var userDefaults = UserDefaults.standard
@@ -32,6 +33,13 @@ class ContainerViewController: UIViewController {
     func setUpContainer() {
         self.scrollView.clipsToBounds = true
         self.scrollView.layer.cornerRadius = 20.0
+        
+        self.pageControl.numberOfPages = 5
+        self.pageControl.currentPage = 0
+        self.pageControl.pageIndicatorTintColor = UIColor.lilac
+        self.pageControl.currentPageIndicatorTintColor = UIColor.seafoamGreen
+        //blurView.addSubview(pageControl)
+        
         
         
         for label in numberLabels {
@@ -74,4 +82,13 @@ class ContainerViewController: UIViewController {
         }
     }
     
+}
+
+extension ContainerViewController: UIScrollViewDelegate {
+
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let x = scrollView.contentOffset.x
+        let w = scrollView.bounds.size.width
+        pageControl.currentPage = Int(x/w)
+    }
 }
