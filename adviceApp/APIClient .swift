@@ -10,3 +10,8 @@ import Foundation
 
 let apiClient = "tameikal"
 let apiKey = "TaunWcLohrUL6FOzHJBqKYihMr4Sz8iVG1LlLVbVXIRj2otw"
+
+
+struct User {
+    let name: String
+}

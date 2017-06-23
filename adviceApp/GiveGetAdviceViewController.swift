@@ -13,7 +13,7 @@ import CoreData
 
 class ViewController: UIViewController {
     
-    // MARK: UI Properties
+    // MARK : UI Properties
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var giveAdviceTextField: UITextField!
@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var navBarDisplayName: UINavigationItem!
     
     
-    // MARK: Logic Properties
+    // MARK : Logic Properties
     
     let badWordsArray = BadWords.sharedInstance
     let store = DataStore.sharedInstance
@@ -45,6 +45,21 @@ class ViewController: UIViewController {
     var userDefaults = UserDefaults.standard
     
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
+        logoA.center.x -= view.bounds.width
+        logoTitle.center.x -= view.bounds.width
+        animateInLogoTitle()
+        giveAdviceBtnOutlet.isUserInteractionEnabled = false
+        store.fetchBlocked()
+        getFIRAdvice(handler: { _ in
+            DispatchQueue.main.async {
+                self.giveAdviceBtnOutlet.isUserInteractionEnabled = true
+            }
+        })
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         giveAdviceTextField.delegate = self
@@ -57,17 +72,13 @@ class ViewController: UIViewController {
         giveAdviceTextField.autocapitalizationType = .none
     }
     
-    
     func setDisplayName() {
         userDefaults.set(displayName, forKey: "username")
         userDefaults.synchronize()
     }
     
-    func storeBlockedUsers() {
-    }
     
-   
-    // MARK: Setting Up UI Objects
+    // MARK : Setting Up UI Objects
     
     func setUpAdviceTextLabel() {
         self.displayAdviceTextLabel.clipsToBounds = true
@@ -107,22 +118,7 @@ class ViewController: UIViewController {
     }
     
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.navigationBar.isHidden = true
-        logoA.center.x -= view.bounds.width
-        logoTitle.center.x -= view.bounds.width
-        animateInLogoTitle()
-        giveAdviceBtnOutlet.isUserInteractionEnabled = false
-        
-        getFIRAdvice(handler: { _ in
-            DispatchQueue.main.async {
-                self.giveAdviceBtnOutlet.isUserInteractionEnabled = true
-            }
-        })
-    }
-    
-    // MARK: Logo Animation
+    // MARK : Logo Animation
     
     func animateInLogoTitle() {
         
@@ -143,7 +139,7 @@ class ViewController: UIViewController {
         }
     }
     
-    // MARK: Button Animation
+    // MARK : Button Animation
     
     func animateGiveButtonPress() {
         UIView.animate(withDuration: 0.1, animations: {
@@ -218,7 +214,7 @@ class ViewController: UIViewController {
         guard var adviceReceived = giveAdviceTextField.text else { return }
         adviceReceived += (" - " + displayName)
         let newAdvice = Advice(context: store.persistentContainer.viewContext)
-        newAdvice.content = adviceReceived
+        newAdvice.content = (adviceReceived)
         store.adviceArray.append(newAdvice)
         giveAdviceTextField.text = ""
         getAdviceBtnOutlet.isEnabled = true
@@ -228,12 +224,13 @@ class ViewController: UIViewController {
         newRef.setValue(["user": displayName, "content": adviceReceived])
     }
     
-    //MARK : Blocking User Logic
+    // MARK : Blocking User Logic
     
     func blockUser() {
         for advice in firAdviceCollection{
-            for user in blockedUsers {
-                if advice.contains(user) {
+            for user in store.blockedArray {
+                guard let name = user.username else { return }
+                if advice.contains(name) {
                     guard let index = firAdviceCollection.index(of: advice) else { return }
                     firAdviceCollection.remove(at: index)
                 }
@@ -241,7 +238,7 @@ class ViewController: UIViewController {
         }
     }
     
-    //MARK : Getting Advice Logic
+    // MARK : Getting Advice Logic
     
     @IBAction func receiveAdviceBtnPressed(_ sender: UIButton) {
         animateGetButtonPress()
@@ -275,62 +272,51 @@ class ViewController: UIViewController {
         }
     }
     
+    // MARK : Blocking User Logic
+    
+    func saveBlockedUser() {
+        let newBlock = Blocked(context: store.persistentContainer.viewContext)
+        for user in blockedUsers {
+            print("👫",user)
+            newBlock.username = user
+            print("🗣",newBlock)
+            store.blockedArray.append(newBlock)
+            store.saveContext()
+        }
+    }
+    
     // MARK : Flagging Content Logic
     
     @IBAction func flagAdviceBtn(_ sender: Any) {
+        var allUsers = Set([String]())
         let ref = FIRDatabase.database().reference()
         let availableRef = ref.child("Advice")
         availableRef.observeSingleEvent(of: .value, with: { (snapshot) in
-            guard let firAdvice = snapshot.value as? [String : Any] else { return }
-            print("💕got passed unwrapping firadvice")
-            for (key, value) in firAdvice {
-                guard var contentDictionary = value as? [String : String] else { print("nothing"); return }
-                print("🗂", contentDictionary)
-                
-                let isFlaggedAlert = UIAlertController(title: "Choose One", message: "What would you like to do?", preferredStyle: .alert)
-                print(1)
-                guard let user = contentDictionary["user"] else { return }
-                print("💔", user)
-                
-
-                
-                let block = UIAlertAction(title: "block this user", style: .destructive, handler: { (action) in
-                    for (key, value) in contentDictionary {
-                    //print("💦", key)
-                    print("☀️", value)
-                    if self.removedAdvice.contains(value) {
-                        self.blockedUsers.append(user)
-                        print("😜", user)
-                        print("🌶", self.blockedUsers)
-                        
-                        
-                    }
-                }
-                })
-                
-                let cancel = UIAlertAction(title: "cancel", style: .cancel, handler: { (action) in
-                    print("cancel tapped")
-                })
-                
-                let remove = UIAlertAction(title: "remove this advice", style: .destructive, handler: { (action) in
-                    print("remove tapped")
-                    if contentDictionary["content"] == self.removedAdvice {
-                        availableRef.child(key).removeValue()
-                        print(self.removedAdvice)
-                        print("got pass remove logic")
-                    }
-                })
-                
-                let actions = [remove, block, cancel]
-                for a in actions {
-                    isFlaggedAlert.addAction(a)
-                }
-                self.present(isFlaggedAlert, animated: true, completion: nil)
-                print("❌", self.blockedUsers)
-
-                print(3)
+            guard let databaseData = snapshot.value as? [String : Any] else { return }
+            for (_, value) in databaseData {
+                guard let contentDict = value as? [String : String] else { return }
+                guard let user = contentDict["user"] else { return }
+                allUsers.insert(user)
             }
         })
+        let isFlaggedAlert = UIAlertController(title: "Choose One", message: "What would you like to do?", preferredStyle: .alert)
+        let block = UIAlertAction(title: "block this user", style: .destructive, handler: { (action) in
+            for name in allUsers {
+                if self.removedAdvice.contains(name) {
+                    self.blockedUsers.append(name)
+                    print("💔",self.blockedUsers)
+                    self.saveBlockedUser()
+                }
+            }
+        })
+        let cancel = UIAlertAction(title: "cancel", style: .cancel, handler: { (action) in
+            print("cancel tapped")
+        })
+        let actions = [block, cancel]
+        for a in actions {
+            isFlaggedAlert.addAction(a)
+        }
+        self.present(isFlaggedAlert, animated: true, completion: nil)
     }
     
     // MARK: Logout Logic
@@ -344,7 +330,6 @@ class ViewController: UIViewController {
             print ("Error signing out: \(firebaseAuth.currentUser)", signOutError)
         }
     }
-    
     
     // MARK : Filtering Bad Words
     
