@@ -23,6 +23,7 @@ class ContainerViewController: UIViewController {
         userDefaults.set(true, forKey: "isFirstLaunch")
         hideContainerView()
         setUpContainer()
+        scrollView.delegate = self
     }
     
     func hideContainerView() {
@@ -38,8 +39,7 @@ class ContainerViewController: UIViewController {
         self.pageControl.currentPage = 0
         self.pageControl.pageIndicatorTintColor = UIColor.lilac
         self.pageControl.currentPageIndicatorTintColor = UIColor.seafoamGreen
-        //blurView.addSubview(pageControl)
-        
+        self.pageControl.addTarget(self, action: #selector(self.changePage(sender:)), for: UIControlEvents.valueChanged)
         
         
         for label in numberLabels {
@@ -85,10 +85,20 @@ class ContainerViewController: UIViewController {
 }
 
 extension ContainerViewController: UIScrollViewDelegate {
+    
+    
+    
+    func changePage(sender: AnyObject) -> () {
+        let x = CGFloat(pageControl.currentPage) * scrollView.frame.size.width
+        scrollView.setContentOffset(CGPoint(x: x, y: 0), animated: true)
+    }
 
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let x = scrollView.contentOffset.x
-        let w = scrollView.bounds.size.width
-        pageControl.currentPage = Int(x/w)
+        let pageNumber = round(scrollView.contentOffset.x/scrollView.frame.size.width)
+        pageControl.currentPage = Int(pageNumber)
     }
 }
+
+
+
+

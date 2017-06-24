@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RnU-S3-8hg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -494,13 +494,12 @@
                                 </view>
                                 <blurEffect style="dark"/>
                             </visualEffectView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" bounces="NO" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Grh-pW-LqV">
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="8wL-eZ-GX7">
+                                <rect key="frame" x="168" y="570" width="39" height="37"/>
+                            </pageControl>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" bounces="NO" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Grh-pW-LqV">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="8wL-eZ-GX7">
-                                        <rect key="frame" x="30" y="280" width="312.5" height="667"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </pageControl>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2t2-09-Bcu">
                                         <rect key="frame" x="0.0" y="0.0" width="1875" height="667"/>
                                         <subviews>
@@ -694,6 +693,8 @@
                             <constraint firstItem="Grh-pW-LqV" firstAttribute="centerY" secondItem="Xzd-JE-7eb" secondAttribute="centerY" id="Jlq-X6-NZd"/>
                             <constraint firstItem="UcB-Qn-mWJ" firstAttribute="centerY" secondItem="Xzd-JE-7eb" secondAttribute="centerY" id="KfS-hG-gHo"/>
                             <constraint firstItem="UcB-Qn-mWJ" firstAttribute="height" secondItem="Xzd-JE-7eb" secondAttribute="height" id="RsR-qR-Ver"/>
+                            <constraint firstItem="8wL-eZ-GX7" firstAttribute="centerY" secondItem="Xzd-JE-7eb" secondAttribute="centerY" constant="255" id="cui-ki-ktr"/>
+                            <constraint firstItem="8wL-eZ-GX7" firstAttribute="centerX" secondItem="Xzd-JE-7eb" secondAttribute="centerX" id="yBp-Gw-oWa"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="1pf-am-LR8" appends="YES" id="5nh-B1-zk2"/>
