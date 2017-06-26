@@ -224,19 +224,6 @@ class ViewController: UIViewController {
         newRef.setValue(["user": displayName, "content": adviceReceived])
     }
     
-    // MARK : Blocking User Logic
-    
-    func blockUser() {
-        for advice in firAdviceCollection{
-            for user in store.blockedArray {
-                guard let name = user.username else { return }
-                if advice.contains(name) {
-                    guard let index = firAdviceCollection.index(of: advice) else { return }
-                    firAdviceCollection.remove(at: index)
-                }
-            }
-        }
-    }
     
     // MARK : Getting Advice Logic
     
@@ -273,6 +260,21 @@ class ViewController: UIViewController {
     }
     
     // MARK : Blocking User Logic
+    
+    func blockUser() {
+        for advice in firAdviceCollection{
+            for user in store.blockedArray {
+                guard let name = user.username else { return }
+                if advice.contains(name) {
+                    guard let index = firAdviceCollection.index(of: advice) else { return }
+                    firAdviceCollection.remove(at: index)
+                }
+            }
+        }
+    }
+
+    
+    // MARK : Storing Blocked User
     
     func saveBlockedUser() {
         let newBlock = Blocked(context: store.persistentContainer.viewContext)
