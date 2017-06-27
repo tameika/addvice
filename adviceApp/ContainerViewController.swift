@@ -13,7 +13,6 @@ class ContainerViewController: UIViewController {
     @IBOutlet weak var blurView: UIVisualEffectView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
-    @IBOutlet var numberLabels: [UILabel]!
     
     var userDefaults = UserDefaults.standard
     
@@ -40,14 +39,8 @@ class ContainerViewController: UIViewController {
         self.pageControl.pageIndicatorTintColor = UIColor.lilac
         self.pageControl.currentPageIndicatorTintColor = UIColor.seafoamGreen
         self.pageControl.addTarget(self, action: #selector(self.changePage(sender:)), for: UIControlEvents.valueChanged)
-        
-        
-        for label in numberLabels {
-            label.clipsToBounds = true
-            label.layer.cornerRadius = label.bounds.height * 0.50
-        }
     }
-    
+        
     
     func isUsersFirstTime() {
         print(userDefaults.bool(forKey: "isFirstLaunch"))
