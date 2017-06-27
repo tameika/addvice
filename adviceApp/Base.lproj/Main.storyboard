@@ -581,7 +581,7 @@
                                             <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bP3-Zc-Lgc">
                                                 <rect key="frame" x="1125" y="0.0" width="375" height="667"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Favicon" translatesAutoresizingMaskIntoConstraints="NO" id="JLs-a3-P6k">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_favorite_3x" translatesAutoresizingMaskIntoConstraints="NO" id="JLs-a3-P6k">
                                                         <rect key="frame" x="151.5" y="100" width="72" height="72"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="if you like the advice you receive, press &quot;save&quot; to store it. if you find it objectionable, press &quot;!&quot; to remove it" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RmU-jd-jUg">
@@ -695,8 +695,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Favicon" width="72" height="72"/>
         <image name="ic_create_3x" width="72" height="72"/>
+        <image name="ic_favorite_3x" width="72" height="72"/>
         <image name="ic_gesture_3x" width="72" height="72"/>
         <image name="ic_import_export_3x" width="72" height="72"/>
         <image name="ic_touch_app_3x" width="72" height="72"/>
