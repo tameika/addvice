@@ -373,7 +373,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mrt-WP-fUK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3128.985507246377" y="1267.663043478261"/>
+            <point key="canvasLocation" x="3128" y="1267.4662668665669"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="fDb-AW-EMa">

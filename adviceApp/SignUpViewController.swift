@@ -106,8 +106,7 @@ class SignUpViewController: UIViewController {
     
     func checkAvailability() {
         guard let username = usernameField.text else { return }
-        if username.contains(" ") {
-        } else if existingUsers.contains(username) {
+       if existingUsers.contains(username) {
             alert.isUnavailableAlert(presenting: self)
         } else {
             print("CHECKED PASSED")
@@ -116,7 +115,16 @@ class SignUpViewController: UIViewController {
     
  
     @IBAction func usernameFieldAction(_ sender: Any) {
-                checkAvailability()
+        guard var username = usernameField.text else { return }
+        var nameArr = Array(username.characters)
+        for i in nameArr.enumerated() {
+            if i.element == " " {
+                nameArr.remove(at: i.offset)
+            }
+        }
+        username = String(nameArr)
+        print(nameArr)
+        checkAvailability()
     }
     
     
