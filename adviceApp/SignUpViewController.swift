@@ -33,10 +33,6 @@ class SignUpViewController: UIViewController {
         setUpPasswordField()
         setUpEnterButton()
         
-        usernameField.autocapitalizationType = .none
-        emailField.autocapitalizationType = .none
-        passwordField.autocapitalizationType = .none
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -56,6 +52,8 @@ class SignUpViewController: UIViewController {
     // MARK: Setting up UI Objects
     
     func setUpUsernameField() {
+        usernameField.autocorrectionType = .no
+        usernameField.autocapitalizationType = .none
         usernameField.clipsToBounds = true
         usernameField.layer.borderWidth = 0.60
         usernameField.layer.cornerRadius = usernameField.bounds.height * 0.50
@@ -89,26 +87,6 @@ class SignUpViewController: UIViewController {
     }
     
     
-    // MARK: Username field validation animation
-    
-    func makeFieldBackgroundLilac() {
-        UIView.animate(withDuration: 1.0, delay: 0.0, options: [.curveEaseIn], animations: {
-            self.usernameField.layer.backgroundColor = UIColor.lilac.cgColor
-            self.usernameField.textColor = UIColor.eggplantDark
-        })
-        UIView.setAnimationRepeatCount(3.0)
-    }
-    
-    func makeFieldBackgroundRed() {
-        guard let username = usernameField.text else { print("i didn't get passed here"); return }
-        if username.contains(" ") {
-            usernameField.layer.backgroundColor = UIColor.errorRed.cgColor
-
-        } else {
-            makeFieldBackgroundLilac()
-        }
-    }
-    
     // MARK : Retrieving Existing Users
     
     func retrieveExistingUsers() {
@@ -127,9 +105,8 @@ class SignUpViewController: UIViewController {
     // MARK : Username Validation Logic
     
     func checkAvailability() {
-        guard let username = usernameField.text else { print("i didn't get passed here"); return }
+        guard let username = usernameField.text else { return }
         if username.contains(" ") {
-            makeFieldBackgroundRed()
         } else if existingUsers.contains(username) {
             alert.isUnavailableAlert(presenting: self)
         } else {
@@ -139,7 +116,7 @@ class SignUpViewController: UIViewController {
     
  
     @IBAction func usernameFieldAction(_ sender: Any) {
-        checkAvailability()
+                checkAvailability()
     }
     
     
@@ -164,7 +141,7 @@ class SignUpViewController: UIViewController {
         }
     }
     
-    
+
     @IBAction func enterBtn(_ sender: Any) {
         guard let username = usernameField.text, let email = emailField.text, let password = passwordField.text else {print(1); return }
         if (username != "") && (email != "") && (password != "") {
@@ -186,7 +163,6 @@ class SignUpViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    //end
 }
 
 
