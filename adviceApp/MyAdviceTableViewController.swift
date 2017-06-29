@@ -9,15 +9,15 @@
 import UIKit
 
 
-
 class MyAdviceTableViewController: UITableViewController {
+    
+    // MARK : Logic Property
     
     var savedAdviceList = [Advice]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         navigationController?.navigationBar.isHidden = false
         tableView.estimatedRowHeight = 50.0
     }
@@ -32,14 +32,9 @@ class MyAdviceTableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
-    }
+
+    // MARK : Tableview Delegate Methods
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -48,7 +43,6 @@ class MyAdviceTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return savedAdviceList.count
     }
-    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "adviceCell", for: indexPath)
@@ -81,6 +75,11 @@ class MyAdviceTableViewController: UITableViewController {
         return [delete]
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
+    // MARK : Tableview Animation
     
     func animateTableView() {
         
@@ -91,7 +90,6 @@ class MyAdviceTableViewController: UITableViewController {
             let cell = i as UITableViewCell
             cell.transform = CGAffineTransform(translationX: 0.0, y: tableHeight)
         }
-        
         var index = 0
         for m in cell {
             let cell = m as UITableViewCell
@@ -102,10 +100,4 @@ class MyAdviceTableViewController: UITableViewController {
             index += 1
         }
     }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
-    }
-    
-    
 }
