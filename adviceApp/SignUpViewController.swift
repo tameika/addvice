@@ -18,6 +18,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     
+    // MARK : Logic Properties
     
     var containerVC = ContainerViewController()
     var adviceVC: ViewController!
@@ -26,30 +27,25 @@ class SignUpViewController: UIViewController {
     var blockedUsers = [String]()
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         setUpUsernameField()
         setUpEmailField()
         setUpPasswordField()
         setUpEnterButton()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         retrieveExistingUsers()
-        
     }
     
-    
-    // MARK: Dismiss keyboard
+    // MARK : Dismiss Keyboard
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
         super.touchesBegan(touches, with: event)
     }
     
-    
-    // MARK: Setting up UI Objects
+    // MARK : Set Up UI Objects
     
     func setUpUsernameField() {
         usernameField.autocorrectionType = .no
@@ -69,14 +65,12 @@ class SignUpViewController: UIViewController {
         emailField.layer.borderColor = UIColor.seafoamGreen.cgColor
     }
     
-    
     func setUpPasswordField() {
         passwordField.clipsToBounds = true
         passwordField.layer.borderWidth = 0.60
         passwordField.layer.cornerRadius = passwordField.bounds.height * 0.50
         passwordField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSForegroundColorAttributeName: UIColor.seafoamGreen])
         passwordField.layer.borderColor = UIColor.seafoamGreen.cgColor
-        
     }
     
     func setUpEnterButton() {
@@ -86,8 +80,7 @@ class SignUpViewController: UIViewController {
         enterBtn.layer.borderColor = UIColor.seafoamGreen.cgColor
     }
     
-    
-    // MARK : Retrieving Existing Users
+    // MARK : Retrieve Existing Users
     
     func retrieveExistingUsers() {
         let ref = FIRDatabase.database().reference()
@@ -106,14 +99,15 @@ class SignUpViewController: UIViewController {
     
     func checkAvailability() {
         guard let username = usernameField.text else { return }
-       if existingUsers.contains(username) {
+        if existingUsers.contains(username) {
             alert.isUnavailableAlert(presenting: self)
         } else {
             print("CHECKED PASSED")
         }
     }
     
- 
+    // MARK : Delete Username Field End Space
+    
     @IBAction func usernameFieldAction(_ sender: Any) {
         guard var username = usernameField.text else { return }
         var nameArr = Array(username.characters)
@@ -127,15 +121,7 @@ class SignUpViewController: UIViewController {
         checkAvailability()
     }
     
-    
-    @IBAction func emailFieldAction(_ sender: Any) {
-    }
-    
-    
-    
-    @IBAction func passwordFieldAction(_ sender: Any) {
-        
-    }
+    // MARK : Prepare for Segue to Advice Home
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "adviceIdentifier" {
@@ -144,12 +130,12 @@ class SignUpViewController: UIViewController {
                 guard let email = emailField.text else { print("GETTING EMAIL FAILED"); return }
                 dest.displayName = username
                 dest.emailAddress = email
-                
             }
         }
     }
     
-
+    // MARK : Button Action Methods
+    
     @IBAction func enterBtn(_ sender: Any) {
         guard let username = usernameField.text, let email = emailField.text, let password = passwordField.text else {print(1); return }
         if (username != "") && (email != "") && (password != "") {
@@ -160,29 +146,12 @@ class SignUpViewController: UIViewController {
                     self.alert.isErrorAlert(presenting: self, error: error?.localizedDescription)
                 }
             })
-            
         }
-        
     }
-    
-    
     
     @IBAction func cancelBtn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
