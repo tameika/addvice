@@ -207,6 +207,7 @@ class ViewController: UIViewController {
     
     @IBAction func submitAdviceBtnPressed(_ sender: UIButton) {
         animateGiveButtonPress()
+        badWordFilter()
         guard !isBadWord else { return }
         guard var adviceReceived = giveAdviceTextField.text else { return }
         adviceReceived += (" - " + displayName)
@@ -330,18 +331,18 @@ class ViewController: UIViewController {
     
     // MARK : Filter Bad Words
     
-    func badWordFilter() -> Bool {
+    func badWordFilter() {
         for word in badWordsArray.badWordsList {
             if let adviceText = giveAdviceTextField.text {
                 if adviceText.contains(word) {
+                    isBadWord = true
                     alert.isBadAlert(presenting: self)
+                    
                 }
-                return true
             } else {
-                
+               isBadWord = false
             }
         }
-        return false
     }
 }
 
