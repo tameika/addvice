@@ -123,7 +123,7 @@ class SignUpViewController: UIViewController {
         checkAvailability()
     }
     
-    // MARK : Prepare for Segue to Advice Home
+    // MARK : Prepare for Segue to Addvice Home
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "adviceIdentifier" {

@@ -11,17 +11,20 @@ import FirebaseAuth
 
 class LoginViewController: UIViewController {
     
+    // MARK : UI Properties
+    
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet weak var signUpBtn: UIButton!
+    
+    // MARK : Logic Properties
     
     var alert = Alert()
     var userDefaults = UserDefaults.standard
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setUpEmailField()
         setUpPasswordField()
         setUpLoginButton()
@@ -30,6 +33,7 @@ class LoginViewController: UIViewController {
         passwordField.autocapitalizationType = .none
     }
     
+    // MARK : Set Up UI Objects
     
     func setUpEmailField() {
         emailField.clipsToBounds = true
@@ -53,10 +57,14 @@ class LoginViewController: UIViewController {
         loginBtn.layer.borderColor = UIColor.seafoamGreen.cgColor
     }
     
+    // MARK : Responder Method 
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
         super.touchesBegan(touches, with: event)
     }
+    
+    // MARK : Prepare for Segue to Addvice Home 
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "loginAdviceIdentifier" {
@@ -67,7 +75,7 @@ class LoginViewController: UIViewController {
         }
     }
     
-  
+  // MARK : Button Method
     
     @IBAction func loginBtn(_ sender: Any) {
         
@@ -83,6 +91,4 @@ class LoginViewController: UIViewController {
             })
         }
     }
-    
-    
 }
