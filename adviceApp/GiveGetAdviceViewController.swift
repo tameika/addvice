@@ -118,7 +118,6 @@ class ViewController: UIViewController {
     // MARK : Logo Animation
     
     func animateInLogoTitle() {
-        
         UIView.animate(withDuration: 0.6,
                        delay: 0.0, usingSpringWithDamping: 0.50, initialSpringVelocity: CGFloat(1.0), options: .curveLinear, animations: {
                         self.logoTitle.center.x += self.view.bounds.width
@@ -337,7 +336,6 @@ class ViewController: UIViewController {
                 if adviceText.contains(word) {
                     isBadWord = true
                     alert.isBadAlert(presenting: self)
-                    
                 }
             } else {
                isBadWord = false
