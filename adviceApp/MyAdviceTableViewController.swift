@@ -34,7 +34,7 @@ class MyAdviceTableViewController: UITableViewController {
         super.viewDidAppear(animated)
     }
 
-    // MARK : Tableview Delegate Methods
+    // MARK : Tableview Datasource Methods
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
