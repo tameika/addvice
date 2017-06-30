@@ -27,7 +27,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var flagAdviceBtn: UIButton!
     @IBOutlet weak var navBarDisplayName: UINavigationItem!
     
-    
     // MARK : Logic Properties
     
     let badWordsArray = BadWords.sharedInstance
@@ -43,7 +42,7 @@ class ViewController: UIViewController {
     var emailAddress = String()
     var alert = Alert()
     var userDefaults = UserDefaults.standard
-    
+
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -77,8 +76,7 @@ class ViewController: UIViewController {
         userDefaults.synchronize()
     }
     
-    
-    // MARK : Setting Up UI Objects
+    // MARK : Set Up UI Objects
     
     func setUpAdviceTextLabel() {
         self.displayAdviceTextLabel.clipsToBounds = true
@@ -116,7 +114,6 @@ class ViewController: UIViewController {
         self.flagAdviceBtn.layer.cornerRadius = flagAdviceBtn.bounds.height * 0.50
         self.flagAdviceBtn.backgroundColor = UIColor.eggplantDark
     }
-    
     
     // MARK : Logo Animation
     
@@ -187,7 +184,7 @@ class ViewController: UIViewController {
         super.touchesBegan(touches, with: event)
     }
     
-    // MARK : Retrieving Database Data
+    // MARK : Retrieve Database Data
     
     func getFIRAdvice(handler: @escaping () -> Void) {
         let ref = FIRDatabase.database().reference()
@@ -206,7 +203,7 @@ class ViewController: UIViewController {
         })
     }
     
-    // MARK : Giving Advice Logic
+    // MARK : Give Advice Logic
     
     @IBAction func submitAdviceBtnPressed(_ sender: UIButton) {
         animateGiveButtonPress()
@@ -224,8 +221,7 @@ class ViewController: UIViewController {
         newRef.setValue(["user": displayName, "content": adviceReceived])
     }
     
-    
-    // MARK : Getting Advice Logic
+    // MARK : Get Advice Logic
     
     @IBAction func receiveAdviceBtnPressed(_ sender: UIButton) {
         animateGetButtonPress()
@@ -242,7 +238,7 @@ class ViewController: UIViewController {
         displayAdviceTextLabel.text = removedAdvice
     }
     
-    // MARK : Saving Advice Logic
+    // MARK : Save Advice Logic
     
     func saveThisAdvice(selectedAdvice: String) {
         let advice = Advice(context: store.persistentContainer.viewContext)
@@ -259,7 +255,7 @@ class ViewController: UIViewController {
         }
     }
     
-    // MARK : Blocking User Logic
+    // MARK : Block User Logic
     
     func blockUser() {
         for advice in firAdviceCollection{
@@ -272,9 +268,8 @@ class ViewController: UIViewController {
             }
         }
     }
-
     
-    // MARK : Storing Blocked User
+    // MARK : Store Blocked User
     
     func saveBlockedUser() {
         let newBlock = Blocked(context: store.persistentContainer.viewContext)
@@ -287,7 +282,7 @@ class ViewController: UIViewController {
         }
     }
     
-    // MARK : Flagging Content Logic
+    // MARK : Flag Content Logic
     
     @IBAction func flagAdviceBtn(_ sender: Any) {
         var allUsers = Set([String]())
@@ -333,7 +328,7 @@ class ViewController: UIViewController {
         }
     }
     
-    // MARK : Filtering Bad Words
+    // MARK : Filter Bad Words
     
     func badWordFilter() -> Bool {
         for word in badWordsArray.badWordsList {
@@ -350,7 +345,7 @@ class ViewController: UIViewController {
     }
 }
 
-// MARK : UITextFieldDelegate Methods
+// MARK : UITextFieldDelegate Method
 
 extension ViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
