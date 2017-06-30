@@ -42,7 +42,7 @@ class ViewController: UIViewController {
     var emailAddress = String()
     var alert = Alert()
     var userDefaults = UserDefaults.standard
-
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

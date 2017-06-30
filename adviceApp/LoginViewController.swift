@@ -22,7 +22,7 @@ class LoginViewController: UIViewController {
     
     var alert = Alert()
     var userDefaults = UserDefaults.standard
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpEmailField()
@@ -50,21 +50,21 @@ class LoginViewController: UIViewController {
         passwordField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSForegroundColorAttributeName: UIColor.eggplantDark])
         passwordField.layer.borderColor = UIColor.seafoamGreen.cgColor
     }
-   
+    
     func setUpLoginButton() {
         loginBtn.clipsToBounds = true
         loginBtn.layer.cornerRadius = loginBtn.bounds.height * 0.50
         loginBtn.layer.borderColor = UIColor.seafoamGreen.cgColor
     }
     
-    // MARK : Responder Method 
+    // MARK : Responder Method
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
         super.touchesBegan(touches, with: event)
     }
     
-    // MARK : Prepare for Segue to Addvice Home 
+    // MARK : Prepare for Segue to Addvice Home
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "loginAdviceIdentifier" {
@@ -75,7 +75,7 @@ class LoginViewController: UIViewController {
         }
     }
     
-  // MARK : Button Method
+    // MARK : Button Method
     
     @IBAction func loginBtn(_ sender: Any) {
         

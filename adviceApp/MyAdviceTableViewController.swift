@@ -33,7 +33,7 @@ class MyAdviceTableViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
-
+    
     // MARK : Tableview Datasource Methods
     
     override func numberOfSections(in tableView: UITableView) -> Int {

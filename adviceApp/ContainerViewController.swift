@@ -16,7 +16,7 @@ class ContainerViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     
-    // MARK : Logic Property 
+    // MARK : Logic Property
     
     var userDefaults = UserDefaults.standard
     
@@ -79,14 +79,14 @@ class ContainerViewController: UIViewController {
     }
 }
 
-    // MARK : Scrollview Delegate Methods
+// MARK : Scrollview Delegate Methods
 
 extension ContainerViewController: UIScrollViewDelegate {
     func changePage(sender: AnyObject) -> () {
         let x = CGFloat(pageControl.currentPage) * scrollView.frame.size.width
         scrollView.setContentOffset(CGPoint(x: x, y: 0), animated: true)
     }
-
+    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let pageNumber = round(scrollView.contentOffset.x/scrollView.frame.size.width)
         pageControl.currentPage = Int(pageNumber)
