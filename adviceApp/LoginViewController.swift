@@ -78,13 +78,11 @@ class LoginViewController: UIViewController {
     // MARK : Button Method
     
     @IBAction func loginBtn(_ sender: Any) {
-        
         guard let username = emailField.text, let password = passwordField.text else { return }
         if username != "" && password != "" {
             FIRAuth.auth()?.signIn(withEmail: username, password: password, completion: { (FIRUser, error) in
                 if error == nil {
                     self.performSegue(withIdentifier: "loginAdviceIdentifier", sender: self)
-                    
                 } else {
                     self.alert.isErrorAlert(presenting: self, error: error?.localizedDescription)
                 }
