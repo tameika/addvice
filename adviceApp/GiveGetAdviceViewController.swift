@@ -196,7 +196,6 @@ class ViewController: UIViewController {
                         self.firAdviceCollection.insert(content)
                     }
                 }
-                
             }
             handler()
         })
@@ -355,7 +354,6 @@ extension ViewController: UITextFieldDelegate {
         return true
     }
 }
-
 
 
 
