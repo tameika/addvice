@@ -11,7 +11,6 @@
 		7CD2E2ACDA2EE30FC96FC70D /* Pods_addviceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 582D27401F6C075EFEBFDD51 /* Pods_addviceTests.framework */; };
 		B7B21081803E9341A705B8DA /* Pods_addvice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 220D17ED635BE235CB3D938C /* Pods_addvice.framework */; };
 		BC2B81C61EE641CE00557D80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC2B81C51EE641CE00557D80 /* Assets.xcassets */; };
-		BC43C33D1DDBA157000994ED /* APIClient .swift in Sources */ = {isa = PBXBuildFile; fileRef = BC43C33C1DDBA157000994ED /* APIClient .swift */; };
 		BC4B66201E0B5653003EEEC0 /* positive-725842_1920.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC4B661F1E0B5653003EEEC0 /* positive-725842_1920.jpg */; };
 		BC6244C41DDA2E0C00AE6523 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6244C31DDA2E0C00AE6523 /* DataStore.swift */; };
 		BC6244C71DDA308500AE6523 /* adviceApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC6244C51DDA308500AE6523 /* adviceApp.xcdatamodeld */; };
@@ -75,7 +74,6 @@
 		BC2B81C31EE6396B00557D80 /* addviceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = addviceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC2B81C41EE6396B00557D80 /* addviceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = addviceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC2B81C51EE641CE00557D80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BC43C33C1DDBA157000994ED /* APIClient .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APIClient .swift"; sourceTree = "<group>"; };
 		BC4B661F1E0B5653003EEEC0 /* positive-725842_1920.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "positive-725842_1920.jpg"; sourceTree = "<group>"; };
 		BC4C3A8A1E6005B3001BA80D /* addvice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = addvice.entitlements; sourceTree = "<group>"; };
 		BC6244C31DDA2E0C00AE6523 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
@@ -210,7 +208,6 @@
 				BC99798B1D981513004A572C /* AppDelegate.swift */,
 				BC6244C31DDA2E0C00AE6523 /* DataStore.swift */,
 				BCB17C601DE8BD54004CA1DF /* BadWords.swift */,
-				BC43C33C1DDBA157000994ED /* APIClient .swift */,
 				BCFF68F01EEA322300BA87E9 /* FIRDatabase.swift */,
 				BCFF68EE1EEA306A00BA87E9 /* Alert.swift */,
 				BC7EA1931E35A3B700FEDC6C /* Extensions.swift */,
@@ -532,7 +529,6 @@
 				BCB17C611DE8BD54004CA1DF /* BadWords.swift in Sources */,
 				BC6244C41DDA2E0C00AE6523 /* DataStore.swift in Sources */,
 				BC99798C1D981513004A572C /* AppDelegate.swift in Sources */,
-				BC43C33D1DDBA157000994ED /* APIClient .swift in Sources */,
 				BCFF68F11EEA322300BA87E9 /* FIRDatabase.swift in Sources */,
 				BCBAF3691DEBE59E00B714B5 /* MyAdviceTableViewController.swift in Sources */,
 				BC6244C71DDA308500AE6523 /* adviceApp.xcdatamodeld in Sources */,
