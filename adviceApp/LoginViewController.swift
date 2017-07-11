@@ -41,6 +41,7 @@ class LoginViewController: UIViewController {
         emailField.layer.cornerRadius = emailField.bounds.height * 0.50
         emailField.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSForegroundColorAttributeName: UIColor.eggplantDark])
         emailField.layer.borderColor = UIColor.seafoamGreen.cgColor
+        emailField.autocorrectionType = .no
     }
     
     func setUpPasswordField() {
