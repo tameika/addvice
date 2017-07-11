@@ -295,7 +295,7 @@ class ViewController: UIViewController {
                 allUsers.insert(user)
             }
         })
-        let isFlaggedAlert = UIAlertController(title: "Choose One", message: "What would you like to do?", preferredStyle: .alert)
+        let isFlaggedAlert = UIAlertController(title: "Add A Block", message: "Chooose an action", preferredStyle: .alert)
         let block = UIAlertAction(title: "block this user", style: .destructive, handler: { (action) in
             for name in allUsers {
                 if self.removedAdvice.contains(name) {

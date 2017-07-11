@@ -19,7 +19,7 @@ struct Alert {
     }
     
     func isBadAlert(presenting vc: UIViewController) {
-        let wordAlert = UIAlertController(title: "Chill, chill, chill", message: "Watch your language.", preferredStyle: UIAlertControllerStyle.alert)
+        let wordAlert = UIAlertController(title: "What Did You Say?", message: "Watch your language.", preferredStyle: UIAlertControllerStyle.alert)
         let okAction = UIAlertAction(title: "OK Cool", style: .default, handler: nil)
         wordAlert.addAction(okAction)
         vc.present(wordAlert, animated: true, completion: nil)
