@@ -11,7 +11,6 @@ import CoreData
 
 
 final class DataStore {
-    
     var adviceArray = [Advice]()
     var favorites = [Advice]()
     var blockedArray = [Blocked]()

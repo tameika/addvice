@@ -105,7 +105,6 @@ class SignUpViewController: UIViewController {
         if existingUsers.contains(username) {
             alert.isUnavailableAlert(presenting: self)
         } else {
-            print("CHECKED PASSED")
         }
     }
     

@@ -9,8 +9,8 @@
 import Foundation
 import UIKit
 
+
 struct Alert {
-    
     func isSavedAlert(presenting vc: UIViewController) {
         let savedAlert = UIAlertController(title: "Advice Saved!", message: "Click sav❥d up top to sUee", preferredStyle: UIAlertControllerStyle.alert)
         let okAction = UIAlertAction(title: "Great", style: .destructive, handler: nil)
@@ -38,7 +38,4 @@ struct Alert {
         unavailableAlert.addAction(tryAgainAction)
         vc.present(unavailableAlert, animated: true, completion: nil)
     }
-
-    
-    
 }
