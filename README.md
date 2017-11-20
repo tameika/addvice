@@ -10,7 +10,7 @@ Addvice is a social app that allows users to contribute a random piece of advice
 
 This advice app allows a user to __submit__ , __receive__ , and __save__ content from the main (master) screen. Saved content is stored locally (offline) on the device using core data.
 
-If a user finds any piece of content diplayed objectionable, they can flag it by tapping the "!". An alert view will pop up with the option to permanently block any future content from the offending user.
+If a user finds any piece of content diplayed objectionable, they can flag it by tapping the "!". An alert view will pop up with the option to permanently __block__ any future content from the offending user.
 
 
 ## Library
