@@ -1,4 +1,4 @@
-# Addvice
+# Addvice App
 
 ## Description
 
@@ -7,7 +7,14 @@ Addvice is a social app that allows users to contribute a random piece of advice
 
 ## Features
 
-This advice app allows a user to submit , receive , and save content from the main (master) screen. Saved content is stored locally (offline) on the device using core data.
+This advice app allows a user to __submit__ , __receive__ , and __save__ content from the main (master) screen. Saved content is stored locally (offline) on the device using core data.
+
+## Library
+
+* Firebase: Used to create and authenticate user accounts; and remotely stores user submitted content in a database.
+
+
+## Visuals 
 
 ![addvice_register_9 copy](https://user-images.githubusercontent.com/17306970/28295499-fc9010f8-6b2e-11e7-9bc4-40b07b28ae77.png)
 
@@ -16,6 +23,4 @@ This advice app allows a user to submit , receive , and save content from the ma
 ![addvice_saved_9 copy](https://user-images.githubusercontent.com/17306970/28295522-27e1da5c-6b2f-11e7-87b5-0e3b0fb081b6.png)
 
 
-Frameworks
 
-Firebase
